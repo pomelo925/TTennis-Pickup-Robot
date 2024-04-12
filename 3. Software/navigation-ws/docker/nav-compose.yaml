@@ -1,0 +1,26 @@
+version: '3.0'
+services:
+  # Container-1
+  ros2-orbslam3:
+    # Build or Reference the image
+    build: .
+    image: pomelo/ros2-humble:navigation
+    container_name: TTennis-nav
+    stdin_open: true
+    tty: true
+    privileged: true
+    command: bash
+    network_mode: host
+
+    # working_dir: /home/ros2-agv-essentials/orbslam3_ws
+
+    # Container Settings
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /dev/dri:/dev/dri
+      # Mount workspace
+      # - ..:/home/ros2-agv-essentials/orbslam3_ws。
