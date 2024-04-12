@@ -4,7 +4,7 @@ services:
   ros2-nav:
     # Build or Reference the image
     build: .
-    image: pomelo/ros2-humble:navigation
+    image: pomelo/ros2-humble:localization
     container_name: TTennis-nav
     stdin_open: true
     tty: true
