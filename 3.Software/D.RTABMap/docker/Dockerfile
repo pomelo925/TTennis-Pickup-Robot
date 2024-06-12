@@ -3,17 +3,34 @@ FROM osrf/ros:noetic-desktop-full
 
 LABEL org.opencontainers.image.authors="yoseph.huang@gmail.com"
 
-###########
+ARG USERNAME=user
+ARG USER_UID=1000
+ARG USER_GID=$USER_UID
+
+##########################
+## create non-root user
+##########################
+RUN groupadd --gid $USER_GID $USERNAME \
+    && useradd --uid $USER_UID --gid $USER_GID -m $USERNAME -s /bin/bash \
+    ## passwordless
+    && apt-get update \
+    && apt-get install -y sudo \
+    && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
+    && chmod 0440 /etc/sudoers.d/$USERNAME \
+    && rm -rf /var/lib/apt/lists/*
+
+    
+##########################
 ## pkgs installation
-###########
+##########################
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     net-tools ssh nano git usbutils x11-apps apt-utils udev \
     && rm -rf /var/lib/apt/lists/*d
 
 
-###########
+##########################
 ## Intel Realsense SDK
-###########
+##########################
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     libssl-dev libusb-1.0-0-dev libudev-dev pkg-config udev \
     libx11-dev libxrandr-dev libxinerama-dev libxcursor-dev \
@@ -53,9 +70,9 @@ RUN apt-get update && rosdep update && \
     && rm -rf /var/lib/apt/lists/* 
 
 
-###########
+##########################
 ## RTABMap dependencies
-###########
+##########################
 RUN apt-get update && apt install -y ros-noetic-rtabmap* && \
     cd ~ && git clone https://github.com/introlab/rtabmap.git && \
     cd rtabmap/build && \
@@ -69,3 +86,11 @@ RUN git clone https://github.com/introlab/rtabmap_ros.git src/rtabmap_ros && \
     /bin/bash -c 'source /opt/ros/$ROS_DISTRO/setup.bash; catkin_make -j4' && \
     echo "source /opt/ros/$ROS_DISTRO/setup.bash" >> ~/.bashrc \
     && sudo rm -rf /var/lib/apt/lists/* 
+
+
+##########################
+## Final Touch
+##########################
+# USER $USERNAME
+ENV SHELL /bin/bash
+CMD ["/bin/bash"]

@@ -18,4 +18,4 @@ services:
       - /dev/bus/usb  
     
     # command: >
-      # /bin/bash -c "cd /home/startup/univ; ./univ-inspection.sh"
+      # /bin/bash -c "rtabmap"
