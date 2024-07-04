@@ -1,0 +1,45 @@
+#############################
+###   shared settings     ###
+#############################
+x-shared-settings: &shared-settings
+  image: pomelo925/ttennis-humble:rtabmap
+  tty: true
+  network_mode: host
+  privileged: true
+  volumes:
+    - /dev/bus/usb:/dev/bus/usb
+    - /tmp/.X11-unix:/tmp/.X11-unix
+    - $HOME/.Xauthority:/root/.Xauthority
+    - ../slam-ws:/root/slam-ws
+  environment:
+    - DISPLAY=${DISPLAY}
+  devices:
+    - /dev/bus/usb:/dev/bus/usb
+
+
+######################
+###   deployment   ###
+######################
+services:
+  rtabmap-build:
+    build: 
+      context: .  
+      dockerfile: Dockerfile
+    <<: *shared-settings
+    container_name: rtabmap-build
+    command: >
+      /bin/bash -c "
+      cd /root/slam-ws
+      && catkin_make_isolated
+      && chmod +x /root/slam-ws/devel/lib
+      "
+
+
+  rtabmap-run:
+    <<: *shared-settings
+    container_name: rtabmap-run
+    # command: >
+    #   /bin/bash -c "
+    #   roslaunch realsense2_camera rs_camera.launch align_depth:=true &
+    #   roslaunch rtabmap_ros rtabmap.launch rtabmap_args:='--delete_db_on_start --Optimizer/GravitySigma 0.3' depth_topic:=/camera/aligned_depth_to_color/image_raw rgb_topic:=/camera/color/image_raw camera_info_topic:=/camera/color/camera_info approx_sync:=false
+    #   "

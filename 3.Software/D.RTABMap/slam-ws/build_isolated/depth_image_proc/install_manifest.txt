@@ -1,0 +1,17 @@
+/root/slam-ws/install_isolated/_setup_util.py
+/root/slam-ws/install_isolated/env.sh
+/root/slam-ws/install_isolated/setup.bash
+/root/slam-ws/install_isolated/local_setup.bash
+/root/slam-ws/install_isolated/setup.sh
+/root/slam-ws/install_isolated/local_setup.sh
+/root/slam-ws/install_isolated/setup.zsh
+/root/slam-ws/install_isolated/local_setup.zsh
+/root/slam-ws/install_isolated/.rosinstall
+/root/slam-ws/install_isolated/lib/pkgconfig/depth_image_proc.pc
+/root/slam-ws/install_isolated/share/depth_image_proc/cmake/depth_image_procConfig.cmake
+/root/slam-ws/install_isolated/share/depth_image_proc/cmake/depth_image_procConfig-version.cmake
+/root/slam-ws/install_isolated/share/depth_image_proc/package.xml
+/root/slam-ws/install_isolated/include/depth_image_proc/depth_conversions.h
+/root/slam-ws/install_isolated/include/depth_image_proc/depth_traits.h
+/root/slam-ws/install_isolated/lib/libdepth_image_proc.so
+/root/slam-ws/install_isolated/share/depth_image_proc/nodelet_plugins.xml

@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /root/slam-ws/install_isolated/setup.sh

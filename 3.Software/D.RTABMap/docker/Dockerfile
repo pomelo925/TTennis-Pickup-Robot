@@ -39,14 +39,14 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     ros-noetic-pcl-conversions ros-noetic-pcl-ros pcl-tools \
     && rm -rf /var/lib/apt/lists/*
 
-COPY /bugs/fix-tf2.sh /fix-tf2.sh
-RUN /bin/bash /fix-tf2.sh 
+COPY /bugs-fix/tf2-nodelet.sh /tf2-nodelet.sh
+RUN /bin/bash /tf2-nodelet.sh 
 
 WORKDIR /opt/librealsense
 RUN git clone https://github.com/IntelRealSense/librealsense.git /opt/librealsense \
     && rm -rf .git
 
-COPY /bugs/rm-controlTransfer-warning.sh /rm-controlTransfer-warning.sh
+COPY /bugs-fix/rm-controlTransfer-warning.sh /rm-controlTransfer-warning.sh
 RUN /bin/bash /rm-controlTransfer-warning.sh
 
 WORKDIR /opt/librealsense/build
@@ -73,19 +73,19 @@ RUN apt-get update && rosdep update && \
 ##########################
 ## RTABMap dependencies
 ##########################
+# pkg: rtabmap
+WORKDIR /root/slam-ws
 RUN apt-get update && apt install -y ros-noetic-rtabmap* && \
-    cd ~ && git clone https://github.com/introlab/rtabmap.git && \
-    cd rtabmap/build && \
+    git clone https://github.com/introlab/rtabmap.git src/rtabmap && \
+    cd src/rtabmap/build && \
     cmake .. && \
     make -j6 && make install \
     && rm -rf /var/lib/apt/lists/*
 
-## workspace setup
+# pkg: rtabmap_ros
 WORKDIR /root/slam-ws
 RUN git clone https://github.com/introlab/rtabmap_ros.git src/rtabmap_ros && \
-    /bin/bash -c 'source /opt/ros/$ROS_DISTRO/setup.bash; catkin_make -j4' && \
-    echo "source /opt/ros/$ROS_DISTRO/setup.bash" >> ~/.bashrc \
-    && sudo rm -rf /var/lib/apt/lists/* 
+    /bin/bash -c 'source /opt/ros/$ROS_DISTRO/setup.bash; catkin_make_isolated -j4 --install'
 
 
 ##########################

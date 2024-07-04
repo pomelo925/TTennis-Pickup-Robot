@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /root/slam-ws/devel/setup.sh

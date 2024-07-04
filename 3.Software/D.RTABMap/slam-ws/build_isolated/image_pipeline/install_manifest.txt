@@ -1,0 +1,10 @@
+/root/slam-ws/install_isolated/_setup_util.py
+/root/slam-ws/install_isolated/env.sh
+/root/slam-ws/install_isolated/setup.bash
+/root/slam-ws/install_isolated/local_setup.bash
+/root/slam-ws/install_isolated/setup.sh
+/root/slam-ws/install_isolated/local_setup.sh
+/root/slam-ws/install_isolated/setup.zsh
+/root/slam-ws/install_isolated/local_setup.zsh
+/root/slam-ws/install_isolated/.rosinstall
+/root/slam-ws/install_isolated/share/image_pipeline/package.xml
