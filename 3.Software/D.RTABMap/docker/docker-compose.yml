@@ -17,9 +17,9 @@ x-shared-settings: &shared-settings
     - /dev/bus/usb:/dev/bus/usb
 
 
-######################
-###   deployment   ###
-######################
+#######################
+###   Image Build   ###
+#######################
 services:
   rtabmap-build:
     build: 
@@ -34,10 +34,12 @@ services:
       && chmod +x /root/slam-ws/devel/lib
       "
 
-
-  rtabmap-run:
+#############################
+###   Container Startup   ###
+#############################
+  mapping-mode:
     <<: *shared-settings
-    container_name: rtabmap-run
+    container_name: mapping-mode
     command: >
       /bin/bash -c "
       /root/slam-ws/app/mapping.sh
