@@ -18,7 +18,6 @@ echo "[RTABMAP] Compiling..."
 docker compose -p rtabmap-mapping up rtabmap-build
 docker compose -p rtabmap-mapping down --volumes --remove-orphans
 
-
 ## 4. deployment
 xhost +local:docker
 echo "[RTABMAP] Deploying..."
