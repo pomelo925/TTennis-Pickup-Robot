@@ -1,11 +1,11 @@
-name: Docker Image Build & Push
+name: RTABMap Image 
 
 on:
   push:
     branches: [ main ]
     paths:
-      - D.RTABMAP/docker/Dockerfile
-      - .github/workflows/build-inspection-ws.yml
+      - 3.Software/D.RTABMap/docker/Dockerfile
+      - .github/workflows/rtabmap.yml
 
 jobs:
   docker:
@@ -33,7 +33,7 @@ jobs:
     - name: Build Docker image
       uses: docker/build-push-action@v4
       with:
-        context: D.RTABMAP/docker
+        context: 3.Software/D.RTABMap/docke
         load: true # Load the image into Docker environment
         tags: ${{ steps.meta.outputs.tags }}
         push: false
@@ -42,6 +42,6 @@ jobs:
     - name: Push Docker image
       uses: docker/build-push-action@v4
       with:
-        context: D.RTABMAP/docker
+        context: 3.Software/D.RTABMap/docke
         push: true
         tags: ${{ steps.meta.outputs.tags }}
