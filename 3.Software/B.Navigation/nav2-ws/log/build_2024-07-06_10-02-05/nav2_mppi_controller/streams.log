@@ -1,0 +1,194 @@
+[0.311s] Invoking command in '/root/nav2-ws/build/nav2_mppi_controller': AMENT_PREFIX_PATH=/root/nav2-ws/install/nav2_core:/root/nav2-ws/install/nav2_costmap_2d:/root/nav2-ws/install/nav2_map_server:/root/nav2-ws/install/nav2_lifecycle_manager:/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_voxel_grid:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/nav2-ws/install/nav2_core:/root/nav2-ws/install/nav2_costmap_2d:/root/nav2-ws/install/nav2_map_server:/root/nav2-ws/install/nav2_lifecycle_manager:/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_voxel_grid:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:/opt/ros/humble LD_LIBRARY_PATH=/root/nav2-ws/install/nav2_costmap_2d/lib:/root/nav2-ws/install/nav2_map_server/lib:/root/nav2-ws/install/nav2_lifecycle_manager/lib:/root/nav2-ws/install/nav2_util/lib:/root/nav2-ws/install/nav2_voxel_grid/lib:/root/nav2-ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/root/nav2-ws/install/nav2_common/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /root/nav2-ws/src/navigation2/nav2_mppi_controller -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/root/nav2-ws/install/nav2_mppi_controller
+[7.729s] -- The C compiler identification is GNU 11.4.0
+[7.729s] -- The CXX compiler identification is GNU 11.4.0
+[7.729s] -- Detecting C compiler ABI info
+[7.729s] -- Detecting C compiler ABI info - done
+[7.729s] -- Check for working C compiler: /usr/bin/cc - skipped
+[7.729s] -- Detecting C compile features
+[7.729s] -- Detecting C compile features - done
+[7.730s] -- Detecting CXX compiler ABI info
+[7.730s] -- Detecting CXX compiler ABI info - done
+[7.730s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[7.730s] -- Detecting CXX compile features
+[7.730s] -- Detecting CXX compile features - done
+[7.731s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[7.731s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[7.731s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[7.731s] -- Performing Test arch_native_supported
+[7.731s] -- Performing Test arch_native_supported - Success
+[7.731s] -- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)
+[7.731s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[7.731s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[7.731s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[7.731s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[7.732s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[7.732s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[7.732s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[7.732s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[7.732s] -- Found FastRTPS: /opt/ros/humble/include  
+[7.732s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[7.732s] -- Looking for pthread.h
+[7.732s] -- Looking for pthread.h - found
+[7.732s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[7.732s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[7.733s] -- Found Threads: TRUE  
+[7.733s] -- Found nav2_common: 1.1.15 (/root/nav2-ws/install/nav2_common/share/nav2_common/cmake)
+[7.733s] -- Found pluginlib: 5.1.0 (/opt/ros/humble/share/pluginlib/cmake)
+[7.733s] -- Found tf2: 0.25.7 (/opt/ros/humble/share/tf2/cmake)
+[7.733s] -- Found visualization_msgs: 4.2.4 (/opt/ros/humble/share/visualization_msgs/cmake)
+[7.733s] -- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)
+[7.733s] -- Found nav2_core: 1.1.15 (/root/nav2-ws/install/nav2_core/share/nav2_core/cmake)
+[8.984s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[8.986s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[12.153s] -- Found tf2_eigen: 0.25.7 (/opt/ros/humble/share/tf2_eigen/cmake)
+[12.181s] -- Setting build type to Release as none was specified.
+[12.181s] -- Performing Test COMPILER_SUPPORTS_AVX512
+[12.332s] -- Performing Test COMPILER_SUPPORTS_AVX512 - Success
+[12.333s] -- Performing Test COMPILER_SUPPORTS_SSE4
+[12.478s] -- Performing Test COMPILER_SUPPORTS_SSE4 - Success
+[12.482s] -- Performing Test COMPILER_SUPPORTS_AVX2
+[12.681s] -- Performing Test COMPILER_SUPPORTS_AVX2 - Success
+[12.681s] -- Performing Test COMPILER_SUPPORTS_FMA
+[12.912s] -- Performing Test COMPILER_SUPPORTS_FMA - Success
+[20.450s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[20.456s] -- Found ament_cmake_gtest: 1.3.9 (/opt/ros/humble/share/ament_cmake_gtest/cmake)
+[20.620s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[64.581s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[64.584s] -- Configured cppcheck include dirs: /root/nav2-ws/src/navigation2/nav2_mppi_controller/include
+[64.585s] -- Configured cppcheck exclude dirs and/or files: 
+[64.588s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[64.588s] -- Configured cpplint exclude dirs and/or files: 
+[64.591s] -- Added test 'lint_cmake' to check CMake code style
+[64.596s] -- Added test 'uncrustify' to check C / C++ code style
+[64.597s] -- Configured uncrustify additional arguments: 
+[64.598s] -- Added test 'xmllint' to check XML markup files
+[64.605s] -- Configuring done
+[65.660s] -- Generating done
+[65.666s] -- Build files have been written to: /root/nav2-ws/build/nav2_mppi_controller
+[65.691s] Invoked command in '/root/nav2-ws/build/nav2_mppi_controller' returned '0': AMENT_PREFIX_PATH=/root/nav2-ws/install/nav2_core:/root/nav2-ws/install/nav2_costmap_2d:/root/nav2-ws/install/nav2_map_server:/root/nav2-ws/install/nav2_lifecycle_manager:/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_voxel_grid:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/nav2-ws/install/nav2_core:/root/nav2-ws/install/nav2_costmap_2d:/root/nav2-ws/install/nav2_map_server:/root/nav2-ws/install/nav2_lifecycle_manager:/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_voxel_grid:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:/opt/ros/humble LD_LIBRARY_PATH=/root/nav2-ws/install/nav2_costmap_2d/lib:/root/nav2-ws/install/nav2_map_server/lib:/root/nav2-ws/install/nav2_lifecycle_manager/lib:/root/nav2-ws/install/nav2_util/lib:/root/nav2-ws/install/nav2_voxel_grid/lib:/root/nav2-ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/root/nav2-ws/install/nav2_common/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /root/nav2-ws/src/navigation2/nav2_mppi_controller -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/root/nav2-ws/install/nav2_mppi_controller
+[65.709s] Invoking command in '/root/nav2-ws/build/nav2_mppi_controller': AMENT_PREFIX_PATH=/root/nav2-ws/install/nav2_core:/root/nav2-ws/install/nav2_costmap_2d:/root/nav2-ws/install/nav2_map_server:/root/nav2-ws/install/nav2_lifecycle_manager:/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_voxel_grid:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/nav2-ws/install/nav2_core:/root/nav2-ws/install/nav2_costmap_2d:/root/nav2-ws/install/nav2_map_server:/root/nav2-ws/install/nav2_lifecycle_manager:/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_voxel_grid:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:/opt/ros/humble LD_LIBRARY_PATH=/root/nav2-ws/install/nav2_costmap_2d/lib:/root/nav2-ws/install/nav2_map_server/lib:/root/nav2-ws/install/nav2_lifecycle_manager/lib:/root/nav2-ws/install/nav2_util/lib:/root/nav2-ws/install/nav2_voxel_grid/lib:/root/nav2-ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/root/nav2-ws/install/nav2_common/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /root/nav2-ws/build/nav2_mppi_controller -- -j8 -l8
+[83.064s] [  2%] [32mBuilding CXX object CMakeFiles/mppi_controller.dir/src/controller.cpp.o[0m
+[89.923s] [  4%] [32mBuilding CXX object CMakeFiles/mppi_controller.dir/src/path_handler.cpp.o[0m
+[106.571s] [  6%] [32mBuilding CXX object CMakeFiles/mppi_controller.dir/src/parameters_handler.cpp.o[0m
+[113.667s] [  8%] [32mBuilding CXX object CMakeFiles/mppi_controller.dir/src/noise_generator.cpp.o[0m
+[126.338s] [ 10%] [32mBuilding CXX object CMakeFiles/mppi_controller.dir/src/trajectory_visualizer.cpp.o[0m
+[149.914s] [ 12%] [32mBuilding CXX object CMakeFiles/mppi_controller.dir/src/critic_manager.cpp.o[0m
+[176.342s] [ 14%] [32mBuilding CXX object CMakeFiles/mppi_controller.dir/src/optimizer.cpp.o[0m
+[213.538s] [ 16%] [32m[1mLinking CXX shared library libmppi_controller.so[0m
+[214.401s] [ 16%] Built target mppi_controller
+[214.434s] [ 18%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[228.169s] [ 20%] [32m[1mLinking CXX static library libgtest.a[0m
+[228.501s] [ 20%] Built target gtest
+[228.541s] [ 22%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[230.352s] [ 24%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[230.452s] [ 24%] Built target gtest_main
+[230.489s] [ 26%] [32mBuilding CXX object CMakeFiles/mppi_critics.dir/src/critics/obstacles_critic.cpp.o[0m
+[251.833s] [ 28%] [32mBuilding CXX object CMakeFiles/mppi_critics.dir/src/critics/cost_critic.cpp.o[0m
+[272.620s] [ 30%] [32mBuilding CXX object CMakeFiles/mppi_critics.dir/src/critics/goal_critic.cpp.o[0m
+[292.919s] [ 32%] [32mBuilding CXX object CMakeFiles/mppi_critics.dir/src/critics/goal_angle_critic.cpp.o[0m
+[314.864s] [ 34%] [32mBuilding CXX object CMakeFiles/mppi_critics.dir/src/critics/path_align_critic.cpp.o[0m
+[334.736s] [ 36%] [32mBuilding CXX object CMakeFiles/mppi_critics.dir/src/critics/path_align_legacy_critic.cpp.o[0m
+[351.655s] [ 38%] [32mBuilding CXX object test/CMakeFiles/trajectory_visualizer_tests.dir/trajectory_visualizer_tests.cpp.o[0m
+[352.180s] [ 40%] [32mBuilding CXX object CMakeFiles/mppi_critics.dir/src/critics/path_follow_critic.cpp.o[0m
+[353.777s] [ 42%] [32mBuilding CXX object test/CMakeFiles/motion_model_tests.dir/motion_model_tests.cpp.o[0m
+[355.871s] [ 44%] [32mBuilding CXX object test/CMakeFiles/parameter_handler_test.dir/parameter_handler_test.cpp.o[0m
+[381.691s] [ 46%] [32m[1mLinking CXX executable parameter_handler_test[0m
+[383.854s] [ 46%] Built target parameter_handler_test
+[389.835s] [ 48%] [32m[1mLinking CXX executable motion_model_tests[0m
+[391.024s] [ 48%] Built target motion_model_tests
+[391.335s] [ 51%] [32mBuilding CXX object CMakeFiles/mppi_critics.dir/src/critics/path_angle_critic.cpp.o[0m
+[420.737s] [ 53%] [32m[1mLinking CXX executable trajectory_visualizer_tests[0m
+[421.561s] [ 55%] [32mBuilding CXX object CMakeFiles/mppi_critics.dir/src/critics/prefer_forward_critic.cpp.o[0m
+[422.110s] [ 55%] Built target trajectory_visualizer_tests
+[440.306s] [ 57%] [32mBuilding CXX object CMakeFiles/mppi_critics.dir/src/critics/twirling_critic.cpp.o[0m
+[454.841s] [ 59%] [32mBuilding CXX object CMakeFiles/mppi_critics.dir/src/critics/constraint_critic.cpp.o[0m
+[457.180s] [ 61%] [32mBuilding CXX object test/CMakeFiles/critic_manager_test.dir/critic_manager_test.cpp.o[0m
+[458.301s] [ 63%] [32mBuilding CXX object test/CMakeFiles/path_handler_test.dir/path_handler_test.cpp.o[0m
+[459.392s] [ 65%] [32mBuilding CXX object test/CMakeFiles/utils_test.dir/utils_test.cpp.o[0m
+[460.518s] [ 67%] [32mBuilding CXX object test/CMakeFiles/noise_generator_test.dir/noise_generator_test.cpp.o[0m
+[460.579s] [ 69%] [32mBuilding CXX object test/CMakeFiles/models_test.dir/models_test.cpp.o[0m
+[500.670s] [ 71%] [32m[1mLinking CXX executable path_handler_test[0m
+[504.464s] [ 73%] [32m[1mLinking CXX executable noise_generator_test[0m
+[504.687s] [ 73%] Built target path_handler_test
+[506.534s] [ 73%] Built target noise_generator_test
+[506.579s] [ 75%] [32m[1mLinking CXX executable models_test[0m
+[507.967s] [ 75%] Built target models_test
+[509.422s] [ 77%] [32mBuilding CXX object CMakeFiles/mppi_critics.dir/src/critics/velocity_deadband_critic.cpp.o[0m
+[518.736s] [ 79%] [32m[1mLinking CXX executable critic_manager_test[0m
+[519.693s] [ 81%] [32m[1mLinking CXX executable utils_test[0m
+[519.739s] [ 81%] Built target critic_manager_test
+[520.366s] [ 81%] Built target utils_test
+[527.985s] [ 83%] [32m[1mLinking CXX shared library libmppi_critics.so[0m
+[528.614s] [ 83%] Built target mppi_critics
+[528.646s] [ 85%] [32mBuilding CXX object test/CMakeFiles/optimizer_unit_tests.dir/optimizer_unit_tests.cpp.o[0m
+[550.979s] [ 87%] [32m[1mLinking CXX executable optimizer_unit_tests[0m
+[551.497s] [ 87%] Built target optimizer_unit_tests
+[551.523s] [ 89%] [32mBuilding CXX object test/CMakeFiles/critics_tests.dir/critics_tests.cpp.o[0m
+[573.341s] [ 91%] [32m[1mLinking CXX executable critics_tests[0m
+[573.890s] [ 91%] Built target critics_tests
+[573.917s] [ 95%] [32mBuilding CXX object test/CMakeFiles/optimizer_smoke_test.dir/optimizer_smoke_test.cpp.o[0m
+[573.917s] [ 95%] [32mBuilding CXX object test/CMakeFiles/controller_state_transition_test.dir/controller_state_transition_test.cpp.o[0m
+[602.855s] [ 97%] [32m[1mLinking CXX executable controller_state_transition_test[0m
+[604.564s] [ 97%] Built target controller_state_transition_test
+[605.597s] [100%] [32m[1mLinking CXX executable optimizer_smoke_test[0m
+[606.727s] [100%] Built target optimizer_smoke_test
+[606.758s] Invoked command in '/root/nav2-ws/build/nav2_mppi_controller' returned '0': AMENT_PREFIX_PATH=/root/nav2-ws/install/nav2_core:/root/nav2-ws/install/nav2_costmap_2d:/root/nav2-ws/install/nav2_map_server:/root/nav2-ws/install/nav2_lifecycle_manager:/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_voxel_grid:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/nav2-ws/install/nav2_core:/root/nav2-ws/install/nav2_costmap_2d:/root/nav2-ws/install/nav2_map_server:/root/nav2-ws/install/nav2_lifecycle_manager:/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_voxel_grid:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:/opt/ros/humble LD_LIBRARY_PATH=/root/nav2-ws/install/nav2_costmap_2d/lib:/root/nav2-ws/install/nav2_map_server/lib:/root/nav2-ws/install/nav2_lifecycle_manager/lib:/root/nav2-ws/install/nav2_util/lib:/root/nav2-ws/install/nav2_voxel_grid/lib:/root/nav2-ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/root/nav2-ws/install/nav2_common/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /root/nav2-ws/build/nav2_mppi_controller -- -j8 -l8
+[606.915s] Invoking command in '/root/nav2-ws/build/nav2_mppi_controller': AMENT_PREFIX_PATH=/root/nav2-ws/install/nav2_core:/root/nav2-ws/install/nav2_costmap_2d:/root/nav2-ws/install/nav2_map_server:/root/nav2-ws/install/nav2_lifecycle_manager:/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_voxel_grid:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/nav2-ws/install/nav2_core:/root/nav2-ws/install/nav2_costmap_2d:/root/nav2-ws/install/nav2_map_server:/root/nav2-ws/install/nav2_lifecycle_manager:/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_voxel_grid:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:/opt/ros/humble LD_LIBRARY_PATH=/root/nav2-ws/install/nav2_costmap_2d/lib:/root/nav2-ws/install/nav2_map_server/lib:/root/nav2-ws/install/nav2_lifecycle_manager/lib:/root/nav2-ws/install/nav2_util/lib:/root/nav2-ws/install/nav2_voxel_grid/lib:/root/nav2-ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/root/nav2-ws/install/nav2_common/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /root/nav2-ws/build/nav2_mppi_controller
+[606.932s] -- Install configuration: "Release"
+[606.934s] -- Execute custom install script
+[606.936s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/lib/libmppi_controller.so
+[606.952s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/lib/libmppi_critics.so
+[606.975s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/controller.hpp
+[606.990s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/critic_data.hpp
+[607.007s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/critic_function.hpp
+[607.023s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/critic_manager.hpp
+[607.042s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/critics/constraint_critic.hpp
+[607.056s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/critics/cost_critic.hpp
+[607.069s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/critics/goal_angle_critic.hpp
+[607.082s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/critics/goal_critic.hpp
+[607.095s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/critics/obstacles_critic.hpp
+[607.109s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/critics/path_align_critic.hpp
+[607.124s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/critics/path_align_legacy_critic.hpp
+[607.137s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/critics/path_angle_critic.hpp
+[607.151s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/critics/path_follow_critic.hpp
+[607.164s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/critics/prefer_forward_critic.hpp
+[607.178s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/critics/twirling_critic.hpp
+[607.191s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/critics/velocity_deadband_critic.hpp
+[607.206s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/models/constraints.hpp
+[607.221s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/models/control_sequence.hpp
+[607.235s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/models/optimizer_settings.hpp
+[607.250s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/models/path.hpp
+[607.264s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/models/state.hpp
+[607.278s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/models/trajectories.hpp
+[607.292s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/motion_models.hpp
+[607.306s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/optimizer.hpp
+[607.320s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/tools/noise_generator.hpp
+[607.334s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/tools/parameters_handler.hpp
+[607.348s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/tools/path_handler.hpp
+[607.362s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/tools/trajectory_visualizer.hpp
+[607.375s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/tools/utils.hpp
+[607.391s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/environment/library_path.sh
+[607.406s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/environment/library_path.dsv
+[607.419s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller//mppic.xml
+[607.436s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller//critics.xml
+[607.449s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/ament_index/resource_index/package_run_dependencies/nav2_mppi_controller
+[607.462s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/ament_index/resource_index/parent_prefix_path/nav2_mppi_controller
+[607.477s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/environment/ament_prefix_path.sh
+[607.491s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/environment/ament_prefix_path.dsv
+[607.505s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/environment/path.sh
+[607.519s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/environment/path.dsv
+[607.534s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/local_setup.bash
+[607.548s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/local_setup.sh
+[607.561s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/local_setup.zsh
+[607.574s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/local_setup.dsv
+[607.587s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/package.dsv
+[607.601s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/ament_index/resource_index/packages/nav2_mppi_controller
+[607.616s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/ament_index/resource_index/nav2_core__pluginlib__plugin/nav2_mppi_controller
+[607.630s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/ament_index/resource_index/nav2_mppi_controller__pluginlib__plugin/nav2_mppi_controller
+[607.642s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/cmake/ament_cmake_export_libraries-extras.cmake
+[607.657s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/cmake/ament_cmake_export_dependencies-extras.cmake
+[607.672s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/cmake/ament_cmake_export_include_directories-extras.cmake
+[607.686s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/cmake/nav2_mppi_controllerConfig.cmake
+[607.700s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/cmake/nav2_mppi_controllerConfig-version.cmake
+[607.715s] -- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/package.xml
+[607.731s] Invoked command in '/root/nav2-ws/build/nav2_mppi_controller' returned '0': AMENT_PREFIX_PATH=/root/nav2-ws/install/nav2_core:/root/nav2-ws/install/nav2_costmap_2d:/root/nav2-ws/install/nav2_map_server:/root/nav2-ws/install/nav2_lifecycle_manager:/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_voxel_grid:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/nav2-ws/install/nav2_core:/root/nav2-ws/install/nav2_costmap_2d:/root/nav2-ws/install/nav2_map_server:/root/nav2-ws/install/nav2_lifecycle_manager:/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_voxel_grid:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:/opt/ros/humble LD_LIBRARY_PATH=/root/nav2-ws/install/nav2_costmap_2d/lib:/root/nav2-ws/install/nav2_map_server/lib:/root/nav2-ws/install/nav2_lifecycle_manager/lib:/root/nav2-ws/install/nav2_util/lib:/root/nav2-ws/install/nav2_voxel_grid/lib:/root/nav2-ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/root/nav2-ws/install/nav2_common/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /root/nav2-ws/build/nav2_mppi_controller

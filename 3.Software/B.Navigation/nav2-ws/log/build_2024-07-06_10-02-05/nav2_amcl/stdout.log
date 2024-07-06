@@ -1,0 +1,132 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found nav2_common: 1.1.15 (/root/nav2-ws/install/nav2_common/share/nav2_common/cmake)
+-- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found rclcpp_lifecycle: 16.0.9 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+-- Found rclcpp_components: 16.0.9 (/opt/ros/humble/share/rclcpp_components/cmake)
+-- Found message_filters: 4.3.4 (/opt/ros/humble/share/message_filters/cmake)
+-- Found tf2_geometry_msgs: 0.25.7 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+-- Found Eigen3: TRUE (found version "3.4.0") 
+-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+-- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)
+-- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+-- Found std_srvs: 4.2.4 (/opt/ros/humble/share/std_srvs/cmake)
+-- Found nav2_util: 1.1.15 (/root/nav2-ws/install/nav2_util/share/nav2_util/cmake)
+-- Found pluginlib: 5.1.0 (/opt/ros/humble/share/pluginlib/cmake)
+-- Setting build type to Release as none was specified.
+-- Looking for drand48
+-- Looking for drand48 - found
+-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /root/nav2-ws/src/navigation2/nav2_amcl/include;/root/nav2-ws/src/navigation2/nav2_amcl/src/include
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /root/nav2-ws/build/nav2_amcl
+[  4%] [32mBuilding C object src/map/CMakeFiles/map_lib.dir/map.c.o[0m
+[  8%] [32mBuilding C object src/map/CMakeFiles/map_lib.dir/map_range.c.o[0m
+[ 12%] [32mBuilding C object src/pf/CMakeFiles/pf_lib.dir/pf.c.o[0m
+[ 25%] [32mBuilding C object src/pf/CMakeFiles/pf_lib.dir/pf_vector.c.o[0m
+[ 25%] [32mBuilding C object src/pf/CMakeFiles/pf_lib.dir/pf_pdf.c.o[0m
+[ 29%] [32mBuilding C object src/map/CMakeFiles/map_lib.dir/map_draw.c.o[0m
+[ 29%] [32mBuilding CXX object src/map/CMakeFiles/map_lib.dir/map_cspace.cpp.o[0m
+[ 33%] [32mBuilding C object src/pf/CMakeFiles/pf_lib.dir/pf_kdtree.c.o[0m
+[ 37%] [32mBuilding C object src/pf/CMakeFiles/pf_lib.dir/pf_draw.c.o[0m
+[ 41%] [32mBuilding C object src/pf/CMakeFiles/pf_lib.dir/eig3.c.o[0m
+[ 45%] [32m[1mLinking C shared library libpf_lib.so[0m
+[ 45%] Built target pf_lib
+[ 50%] [32mBuilding CXX object src/motion_model/CMakeFiles/motions_lib.dir/omni_motion_model.cpp.o[0m
+[ 54%] [32mBuilding CXX object src/motion_model/CMakeFiles/motions_lib.dir/differential_motion_model.cpp.o[0m
+[ 58%] [32m[1mLinking CXX shared library libmap_lib.so[0m
+[ 58%] Built target map_lib
+[ 62%] [32mBuilding CXX object src/sensors/CMakeFiles/sensors_lib.dir/laser/laser.cpp.o[0m
+[ 66%] [32mBuilding CXX object src/sensors/CMakeFiles/sensors_lib.dir/laser/beam_model.cpp.o[0m
+[ 70%] [32mBuilding CXX object src/sensors/CMakeFiles/sensors_lib.dir/laser/likelihood_field_model.cpp.o[0m
+[ 75%] [32mBuilding CXX object src/sensors/CMakeFiles/sensors_lib.dir/laser/likelihood_field_model_prob.cpp.o[0m
+[ 79%] [32m[1mLinking CXX shared library libsensors_lib.so[0m
+[ 79%] Built target sensors_lib
+[ 83%] [32mBuilding CXX object CMakeFiles/amcl_core.dir/src/amcl_node.cpp.o[0m
+[ 87%] [32m[1mLinking CXX shared library libmotions_lib.so[0m
+[ 87%] Built target motions_lib
+[ 91%] [32m[1mLinking CXX shared library libamcl_core.so[0m
+[ 91%] Built target amcl_core
+[ 95%] [32mBuilding CXX object CMakeFiles/amcl.dir/src/main.cpp.o[0m
+[100%] [32m[1mLinking CXX executable amcl[0m
+[100%] Built target amcl
+-- Install configuration: "Release"
+-- Execute custom install script
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/lib/libpf_lib.so
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/lib/libmap_lib.so
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/lib/libmotions_lib.so
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/lib/libsensors_lib.so
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/lib/libamcl_core.so
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/lib/nav2_amcl/amcl
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/include//nav2_amcl/amcl_node.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/include//nav2_amcl/angleutils.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/include//nav2_amcl/map/map.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/include//nav2_amcl/motion_model/differential_motion_model.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/include//nav2_amcl/motion_model/motion_model.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/include//nav2_amcl/motion_model/omni_motion_model.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/include//nav2_amcl/pf/eig3.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/include//nav2_amcl/pf/pf.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/include//nav2_amcl/pf/pf_kdtree.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/include//nav2_amcl/pf/pf_pdf.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/include//nav2_amcl/pf/pf_vector.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/include//nav2_amcl/portable_utils.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/include//nav2_amcl/sensors/laser/laser.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/environment/library_path.sh
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/environment/library_path.dsv
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl//plugins.xml
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/share/ament_index/resource_index/package_run_dependencies/nav2_amcl
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/share/ament_index/resource_index/parent_prefix_path/nav2_amcl
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/environment/ament_prefix_path.sh
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/environment/ament_prefix_path.dsv
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/environment/path.sh
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/environment/path.dsv
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/local_setup.bash
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/local_setup.sh
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/local_setup.zsh
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/local_setup.dsv
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/package.dsv
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/share/ament_index/resource_index/packages/nav2_amcl
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/share/ament_index/resource_index/nav2_amcl__pluginlib__plugin/nav2_amcl
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/share/ament_index/resource_index/rclcpp_components/nav2_amcl
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/cmake/ament_cmake_export_libraries-extras.cmake
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/cmake/nav2_amclConfig.cmake
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/cmake/nav2_amclConfig-version.cmake
+-- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/package.xml

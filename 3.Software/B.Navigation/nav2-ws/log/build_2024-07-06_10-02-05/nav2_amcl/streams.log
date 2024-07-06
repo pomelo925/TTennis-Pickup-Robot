@@ -1,0 +1,138 @@
+[0.028s] Invoking command in '/root/nav2-ws/build/nav2_amcl': AMENT_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:/opt/ros/humble LD_LIBRARY_PATH=/root/nav2-ws/install/nav2_util/lib:/root/nav2-ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/root/nav2-ws/install/nav2_common/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /root/nav2-ws/src/navigation2/nav2_amcl -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/root/nav2-ws/install/nav2_amcl
+[0.114s] -- The C compiler identification is GNU 11.4.0
+[0.189s] -- The CXX compiler identification is GNU 11.4.0
+[0.198s] -- Detecting C compiler ABI info
+[0.293s] -- Detecting C compiler ABI info - done
+[0.303s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.304s] -- Detecting C compile features
+[0.304s] -- Detecting C compile features - done
+[0.308s] -- Detecting CXX compiler ABI info
+[0.431s] -- Detecting CXX compiler ABI info - done
+[0.441s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.441s] -- Detecting CXX compile features
+[0.442s] -- Detecting CXX compile features - done
+[0.447s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.662s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.746s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.790s] -- Found nav2_common: 1.1.15 (/root/nav2-ws/install/nav2_common/share/nav2_common/cmake)
+[0.793s] -- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)
+[0.855s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.865s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.877s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.895s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.922s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.019s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.024s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.167s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.209s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.294s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.310s] -- Looking for pthread.h
+[1.416s] -- Looking for pthread.h - found
+[1.416s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.517s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.518s] -- Found Threads: TRUE  
+[1.726s] -- Found rclcpp_lifecycle: 16.0.9 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[1.787s] -- Found rclcpp_components: 16.0.9 (/opt/ros/humble/share/rclcpp_components/cmake)
+[1.885s] -- Found message_filters: 4.3.4 (/opt/ros/humble/share/message_filters/cmake)
+[1.894s] -- Found tf2_geometry_msgs: 0.25.7 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[1.975s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.977s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.977s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.352s] -- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)
+[2.454s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[2.563s] -- Found std_srvs: 4.2.4 (/opt/ros/humble/share/std_srvs/cmake)
+[2.583s] -- Found nav2_util: 1.1.15 (/root/nav2-ws/install/nav2_util/share/nav2_util/cmake)
+[3.149s] -- Found pluginlib: 5.1.0 (/opt/ros/humble/share/pluginlib/cmake)
+[3.177s] -- Setting build type to Release as none was specified.
+[3.178s] -- Looking for drand48
+[3.270s] -- Looking for drand48 - found
+[7.936s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[8.158s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[8.166s] -- Configured cppcheck include dirs: /root/nav2-ws/src/navigation2/nav2_amcl/include;/root/nav2-ws/src/navigation2/nav2_amcl/src/include
+[8.166s] -- Configured cppcheck exclude dirs and/or files: 
+[8.172s] -- Added test 'lint_cmake' to check CMake code style
+[8.181s] -- Added test 'uncrustify' to check C / C++ code style
+[8.181s] -- Configured uncrustify additional arguments: 
+[8.186s] -- Added test 'xmllint' to check XML markup files
+[8.224s] -- Configuring done
+[8.559s] -- Generating done
+[8.563s] -- Build files have been written to: /root/nav2-ws/build/nav2_amcl
+[8.614s] Invoked command in '/root/nav2-ws/build/nav2_amcl' returned '0': AMENT_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:/opt/ros/humble LD_LIBRARY_PATH=/root/nav2-ws/install/nav2_util/lib:/root/nav2-ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/root/nav2-ws/install/nav2_common/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /root/nav2-ws/src/navigation2/nav2_amcl -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/root/nav2-ws/install/nav2_amcl
+[8.614s] Invoking command in '/root/nav2-ws/build/nav2_amcl': AMENT_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:/opt/ros/humble LD_LIBRARY_PATH=/root/nav2-ws/install/nav2_util/lib:/root/nav2-ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/root/nav2-ws/install/nav2_common/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /root/nav2-ws/build/nav2_amcl -- -j8 -l8
+[8.880s] [  4%] [32mBuilding C object src/map/CMakeFiles/map_lib.dir/map.c.o[0m
+[8.885s] [  8%] [32mBuilding C object src/map/CMakeFiles/map_lib.dir/map_range.c.o[0m
+[8.906s] [ 12%] [32mBuilding C object src/pf/CMakeFiles/pf_lib.dir/pf.c.o[0m
+[8.926s] [ 25%] [32mBuilding C object src/pf/CMakeFiles/pf_lib.dir/pf_vector.c.o[0m
+[8.927s] [ 25%] [32mBuilding C object src/pf/CMakeFiles/pf_lib.dir/pf_pdf.c.o[0m
+[8.928s] [ 29%] [32mBuilding C object src/map/CMakeFiles/map_lib.dir/map_draw.c.o[0m
+[8.929s] [ 29%] [32mBuilding CXX object src/map/CMakeFiles/map_lib.dir/map_cspace.cpp.o[0m
+[8.937s] [ 33%] [32mBuilding C object src/pf/CMakeFiles/pf_lib.dir/pf_kdtree.c.o[0m
+[9.074s] [ 37%] [32mBuilding C object src/pf/CMakeFiles/pf_lib.dir/pf_draw.c.o[0m
+[9.084s] [ 41%] [32mBuilding C object src/pf/CMakeFiles/pf_lib.dir/eig3.c.o[0m
+[9.730s] [ 45%] [32m[1mLinking C shared library libpf_lib.so[0m
+[9.957s] [ 45%] Built target pf_lib
+[10.087s] [ 50%] [32mBuilding CXX object src/motion_model/CMakeFiles/motions_lib.dir/omni_motion_model.cpp.o[0m
+[10.109s] [ 54%] [32mBuilding CXX object src/motion_model/CMakeFiles/motions_lib.dir/differential_motion_model.cpp.o[0m
+[10.167s] [ 58%] [32m[1mLinking CXX shared library libmap_lib.so[0m
+[10.576s] [ 58%] Built target map_lib
+[10.764s] [ 62%] [32mBuilding CXX object src/sensors/CMakeFiles/sensors_lib.dir/laser/laser.cpp.o[0m
+[10.768s] [ 66%] [32mBuilding CXX object src/sensors/CMakeFiles/sensors_lib.dir/laser/beam_model.cpp.o[0m
+[10.797s] [ 70%] [32mBuilding CXX object src/sensors/CMakeFiles/sensors_lib.dir/laser/likelihood_field_model.cpp.o[0m
+[10.809s] [ 75%] [32mBuilding CXX object src/sensors/CMakeFiles/sensors_lib.dir/laser/likelihood_field_model_prob.cpp.o[0m
+[12.434s] [ 79%] [32m[1mLinking CXX shared library libsensors_lib.so[0m
+[12.792s] [ 79%] Built target sensors_lib
+[12.893s] [ 83%] [32mBuilding CXX object CMakeFiles/amcl_core.dir/src/amcl_node.cpp.o[0m
+[13.421s] [ 87%] [32m[1mLinking CXX shared library libmotions_lib.so[0m
+[13.980s] [ 87%] Built target motions_lib
+[70.021s] [ 91%] [32m[1mLinking CXX shared library libamcl_core.so[0m
+[70.564s] [ 91%] Built target amcl_core
+[70.586s] [ 95%] [32mBuilding CXX object CMakeFiles/amcl.dir/src/main.cpp.o[0m
+[76.679s] [100%] [32m[1mLinking CXX executable amcl[0m
+[77.116s] [100%] Built target amcl
+[77.149s] Invoked command in '/root/nav2-ws/build/nav2_amcl' returned '0': AMENT_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:/opt/ros/humble LD_LIBRARY_PATH=/root/nav2-ws/install/nav2_util/lib:/root/nav2-ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/root/nav2-ws/install/nav2_common/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /root/nav2-ws/build/nav2_amcl -- -j8 -l8
+[77.218s] Invoking command in '/root/nav2-ws/build/nav2_amcl': AMENT_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:/opt/ros/humble LD_LIBRARY_PATH=/root/nav2-ws/install/nav2_util/lib:/root/nav2-ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/root/nav2-ws/install/nav2_common/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /root/nav2-ws/build/nav2_amcl
+[77.230s] -- Install configuration: "Release"
+[77.232s] -- Execute custom install script
+[77.236s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/lib/libpf_lib.so
+[77.250s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/lib/libmap_lib.so
+[77.265s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/lib/libmotions_lib.so
+[77.280s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/lib/libsensors_lib.so
+[77.296s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/lib/libamcl_core.so
+[77.312s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/lib/nav2_amcl/amcl
+[77.327s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/include//nav2_amcl/amcl_node.hpp
+[77.343s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/include//nav2_amcl/angleutils.hpp
+[77.357s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/include//nav2_amcl/map/map.hpp
+[77.371s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/include//nav2_amcl/motion_model/differential_motion_model.hpp
+[77.385s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/include//nav2_amcl/motion_model/motion_model.hpp
+[77.399s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/include//nav2_amcl/motion_model/omni_motion_model.hpp
+[77.413s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/include//nav2_amcl/pf/eig3.hpp
+[77.434s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/include//nav2_amcl/pf/pf.hpp
+[77.447s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/include//nav2_amcl/pf/pf_kdtree.hpp
+[77.461s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/include//nav2_amcl/pf/pf_pdf.hpp
+[77.474s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/include//nav2_amcl/pf/pf_vector.hpp
+[77.488s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/include//nav2_amcl/portable_utils.hpp
+[77.502s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/include//nav2_amcl/sensors/laser/laser.hpp
+[77.517s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/environment/library_path.sh
+[77.531s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/environment/library_path.dsv
+[77.545s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl//plugins.xml
+[77.560s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/share/ament_index/resource_index/package_run_dependencies/nav2_amcl
+[77.575s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/share/ament_index/resource_index/parent_prefix_path/nav2_amcl
+[77.589s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/environment/ament_prefix_path.sh
+[77.603s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/environment/ament_prefix_path.dsv
+[77.617s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/environment/path.sh
+[77.645s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/environment/path.dsv
+[77.655s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/local_setup.bash
+[77.667s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/local_setup.sh
+[77.679s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/local_setup.zsh
+[77.693s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/local_setup.dsv
+[77.705s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/package.dsv
+[77.719s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/share/ament_index/resource_index/packages/nav2_amcl
+[77.732s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/share/ament_index/resource_index/nav2_amcl__pluginlib__plugin/nav2_amcl
+[77.745s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/share/ament_index/resource_index/rclcpp_components/nav2_amcl
+[77.757s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/cmake/ament_cmake_export_include_directories-extras.cmake
+[77.770s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/cmake/ament_cmake_export_libraries-extras.cmake
+[77.782s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/cmake/ament_cmake_export_dependencies-extras.cmake
+[77.795s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/cmake/nav2_amclConfig.cmake
+[77.809s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/cmake/nav2_amclConfig-version.cmake
+[77.822s] -- Symlinking: /root/nav2-ws/install/nav2_amcl/share/nav2_amcl/package.xml
+[77.842s] Invoked command in '/root/nav2-ws/build/nav2_amcl' returned '0': AMENT_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:/opt/ros/humble LD_LIBRARY_PATH=/root/nav2-ws/install/nav2_util/lib:/root/nav2-ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/root/nav2-ws/install/nav2_common/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /root/nav2-ws/build/nav2_amcl

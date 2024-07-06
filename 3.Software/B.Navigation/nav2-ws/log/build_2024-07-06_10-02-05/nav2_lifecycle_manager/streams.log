@@ -1,0 +1,110 @@
+[0.029s] Invoking command in '/root/nav2-ws/build/nav2_lifecycle_manager': AMENT_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:/opt/ros/humble LD_LIBRARY_PATH=/root/nav2-ws/install/nav2_util/lib:/root/nav2-ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/root/nav2-ws/install/nav2_common/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /root/nav2-ws/src/navigation2/nav2_lifecycle_manager -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/root/nav2-ws/install/nav2_lifecycle_manager
+[0.107s] -- The C compiler identification is GNU 11.4.0
+[0.187s] -- The CXX compiler identification is GNU 11.4.0
+[0.199s] -- Detecting C compiler ABI info
+[0.301s] -- Detecting C compiler ABI info - done
+[0.311s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.312s] -- Detecting C compile features
+[0.313s] -- Detecting C compile features - done
+[0.317s] -- Detecting CXX compiler ABI info
+[0.420s] -- Detecting CXX compiler ABI info - done
+[0.430s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.430s] -- Detecting CXX compile features
+[0.431s] -- Detecting CXX compile features - done
+[0.434s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.646s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.737s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.788s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.840s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.851s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.862s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.883s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.908s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.064s] -- Found lifecycle_msgs: 1.2.1 (/opt/ros/humble/share/lifecycle_msgs/cmake)
+[1.085s] -- Found nav2_common: 1.1.15 (/root/nav2-ws/install/nav2_common/share/nav2_common/cmake)
+[1.086s] -- Found nav2_msgs: 1.1.15 (/root/nav2-ws/install/nav2_msgs/share/nav2_msgs/cmake)
+[1.555s] -- Found nav2_util: 1.1.15 (/root/nav2-ws/install/nav2_util/share/nav2_util/cmake)
+[1.740s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.746s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.899s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.937s] -- Found FastRTPS: /opt/ros/humble/include  
+[2.008s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.024s] -- Looking for pthread.h
+[2.116s] -- Looking for pthread.h - found
+[2.116s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.217s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.218s] -- Found Threads: TRUE  
+[2.704s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[2.706s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[2.706s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.968s] -- Found std_srvs: 4.2.4 (/opt/ros/humble/share/std_srvs/cmake)
+[2.991s] -- Found diagnostic_updater: 4.0.0 (/opt/ros/humble/share/diagnostic_updater/cmake)
+[3.078s] -- Setting build type to Release as none was specified.
+[4.623s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[4.767s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[7.576s] -- Added test 'copyright' to check source files copyright and LICENSE
+[7.581s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[7.584s] -- Configured cppcheck include dirs: /root/nav2-ws/src/navigation2/nav2_lifecycle_manager/include
+[7.587s] -- Configured cppcheck exclude dirs and/or files: 
+[7.592s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[7.595s] -- Configured cpplint exclude dirs and/or files: 
+[7.600s] -- Added test 'flake8' to check Python code syntax and style conventions
+[7.604s] -- Added test 'lint_cmake' to check CMake code style
+[7.611s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[7.614s] -- Added test 'uncrustify' to check C / C++ code style
+[7.616s] -- Configured uncrustify additional arguments: 
+[7.619s] -- Added test 'xmllint' to check XML markup files
+[7.649s] -- Configuring done
+[7.915s] -- Generating done
+[7.937s] -- Build files have been written to: /root/nav2-ws/build/nav2_lifecycle_manager
+[7.974s] Invoked command in '/root/nav2-ws/build/nav2_lifecycle_manager' returned '0': AMENT_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:/opt/ros/humble LD_LIBRARY_PATH=/root/nav2-ws/install/nav2_util/lib:/root/nav2-ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/root/nav2-ws/install/nav2_common/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /root/nav2-ws/src/navigation2/nav2_lifecycle_manager -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/root/nav2-ws/install/nav2_lifecycle_manager
+[7.975s] Invoking command in '/root/nav2-ws/build/nav2_lifecycle_manager': AMENT_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:/opt/ros/humble LD_LIBRARY_PATH=/root/nav2-ws/install/nav2_util/lib:/root/nav2-ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/root/nav2-ws/install/nav2_common/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /root/nav2-ws/build/nav2_lifecycle_manager -- -j8 -l8
+[8.128s] [ 15%] [32mBuilding CXX object CMakeFiles/nav2_lifecycle_manager_core.dir/src/lifecycle_manager_client.cpp.o[0m
+[8.128s] [ 15%] [32mBuilding CXX object CMakeFiles/nav2_lifecycle_manager_core.dir/src/lifecycle_manager.cpp.o[0m
+[8.181s] [ 23%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[8.193s] [ 30%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[11.766s] [ 38%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[12.000s] [ 38%] Built target gtest_main
+[27.363s] [ 46%] [32m[1mLinking CXX static library libgtest.a[0m
+[27.694s] [ 46%] Built target gtest
+[31.493s] [ 53%] [32m[1mLinking CXX shared library libnav2_lifecycle_manager_core.so[0m
+[32.533s] [ 53%] Built target nav2_lifecycle_manager_core
+[32.668s] [ 61%] [32mBuilding CXX object CMakeFiles/lifecycle_manager.dir/src/main.cpp.o[0m
+[32.696s] [ 69%] [32mBuilding CXX object test/CMakeFiles/test_lifecycle_gtest.dir/test_lifecycle_manager.cpp.o[0m
+[32.722s] [ 76%] [32mBuilding CXX object test/CMakeFiles/test_bond_gtest.dir/test_bond.cpp.o[0m
+[44.777s] [ 84%] [32m[1mLinking CXX executable lifecycle_manager[0m
+[45.163s] [ 92%] [32m[1mLinking CXX executable test_lifecycle_gtest[0m
+[45.473s] [ 92%] Built target lifecycle_manager
+[45.716s] [ 92%] Built target test_lifecycle_gtest
+[47.832s] [100%] [32m[1mLinking CXX executable test_bond_gtest[0m
+[48.171s] [100%] Built target test_bond_gtest
+[48.184s] Invoked command in '/root/nav2-ws/build/nav2_lifecycle_manager' returned '0': AMENT_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:/opt/ros/humble LD_LIBRARY_PATH=/root/nav2-ws/install/nav2_util/lib:/root/nav2-ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/root/nav2-ws/install/nav2_common/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /root/nav2-ws/build/nav2_lifecycle_manager -- -j8 -l8
+[48.233s] Invoking command in '/root/nav2-ws/build/nav2_lifecycle_manager': AMENT_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:/opt/ros/humble LD_LIBRARY_PATH=/root/nav2-ws/install/nav2_util/lib:/root/nav2-ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/root/nav2-ws/install/nav2_common/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /root/nav2-ws/build/nav2_lifecycle_manager
+[48.243s] -- Install configuration: "Release"
+[48.244s] -- Execute custom install script
+[48.246s] -- Symlinking: /root/nav2-ws/install/nav2_lifecycle_manager/lib/libnav2_lifecycle_manager_core.so
+[48.259s] -- Symlinking: /root/nav2-ws/install/nav2_lifecycle_manager/lib/nav2_lifecycle_manager/lifecycle_manager
+[48.273s] -- Symlinking: /root/nav2-ws/install/nav2_lifecycle_manager/include//nav2_lifecycle_manager/lifecycle_manager.hpp
+[48.284s] -- Symlinking: /root/nav2-ws/install/nav2_lifecycle_manager/include//nav2_lifecycle_manager/lifecycle_manager_client.hpp
+[48.294s] -- Symlinking: /root/nav2-ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/environment/library_path.sh
+[48.305s] -- Symlinking: /root/nav2-ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/environment/library_path.dsv
+[48.315s] -- Symlinking: /root/nav2-ws/install/nav2_lifecycle_manager/share/ament_index/resource_index/package_run_dependencies/nav2_lifecycle_manager
+[48.325s] -- Symlinking: /root/nav2-ws/install/nav2_lifecycle_manager/share/ament_index/resource_index/parent_prefix_path/nav2_lifecycle_manager
+[48.335s] -- Symlinking: /root/nav2-ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/environment/ament_prefix_path.sh
+[48.345s] -- Symlinking: /root/nav2-ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/environment/ament_prefix_path.dsv
+[48.355s] -- Symlinking: /root/nav2-ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/environment/path.sh
+[48.365s] -- Symlinking: /root/nav2-ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/environment/path.dsv
+[48.375s] -- Symlinking: /root/nav2-ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/local_setup.bash
+[48.386s] -- Symlinking: /root/nav2-ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/local_setup.sh
+[48.396s] -- Symlinking: /root/nav2-ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/local_setup.zsh
+[48.406s] -- Symlinking: /root/nav2-ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/local_setup.dsv
+[48.416s] -- Symlinking: /root/nav2-ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/package.dsv
+[48.426s] -- Symlinking: /root/nav2-ws/install/nav2_lifecycle_manager/share/ament_index/resource_index/packages/nav2_lifecycle_manager
+[48.436s] -- Symlinking: /root/nav2-ws/install/nav2_lifecycle_manager/share/ament_index/resource_index/rclcpp_components/nav2_lifecycle_manager
+[48.446s] -- Symlinking: /root/nav2-ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/cmake/ament_cmake_export_include_directories-extras.cmake
+[48.456s] -- Symlinking: /root/nav2-ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/cmake/ament_cmake_export_libraries-extras.cmake
+[48.466s] -- Symlinking: /root/nav2-ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/cmake/ament_cmake_export_dependencies-extras.cmake
+[48.478s] -- Symlinking: /root/nav2-ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/cmake/nav2_lifecycle_managerConfig.cmake
+[48.489s] -- Symlinking: /root/nav2-ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/cmake/nav2_lifecycle_managerConfig-version.cmake
+[48.502s] -- Symlinking: /root/nav2-ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/package.xml
+[48.517s] Invoked command in '/root/nav2-ws/build/nav2_lifecycle_manager' returned '0': AMENT_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:/opt/ros/humble LD_LIBRARY_PATH=/root/nav2-ws/install/nav2_util/lib:/root/nav2-ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/root/nav2-ws/install/nav2_common/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /root/nav2-ws/build/nav2_lifecycle_manager

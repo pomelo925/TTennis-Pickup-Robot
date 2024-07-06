@@ -1,0 +1,152 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found nav2_common: 1.1.15 (/root/nav2-ws/install/nav2_common/share/nav2_common/cmake)
+-- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found nav2_util: 1.1.15 (/root/nav2-ws/install/nav2_util/share/nav2_util/cmake)
+-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+-- Found Eigen3: TRUE (found version "3.4.0") 
+-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+-- Found nav2_map_server: 1.1.15 (/root/nav2-ws/install/nav2_map_server/share/nav2_map_server/cmake)
+-- Found nav2_behavior_tree: 1.1.15 (/root/nav2-ws/install/nav2_behavior_tree/share/nav2_behavior_tree/cmake)
+-- Found visualization_msgs: 4.2.4 (/opt/ros/humble/share/visualization_msgs/cmake)
+-- Found gazebo_ros_pkgs: 3.7.0 (/opt/ros/humble/share/gazebo_ros_pkgs/cmake)
+-- Found nav2_amcl: 1.1.15 (/root/nav2-ws/install/nav2_amcl/share/nav2_amcl/cmake)
+-- Found nav2_lifecycle_manager: 1.1.15 (/root/nav2-ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/cmake)
+-- Found nav2_navfn_planner: 1.1.15 (/root/nav2-ws/install/nav2_navfn_planner/share/nav2_navfn_planner/cmake)
+-- Found nav2_planner: 1.1.15 (/root/nav2-ws/install/nav2_planner/share/nav2_planner/cmake)
+-- Found navigation2: 1.1.15 (/root/nav2-ws/install/navigation2/share/navigation2/cmake)
+-- Setting build type to Release as none was specified.
+-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem 
+-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: 
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /root/nav2-ws/build/nav2_system_tests
+[  8%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[  8%] [32mBuilding CXX object src/updown/CMakeFiles/test_updown.dir/test_updown.cpp.o[0m
+[  8%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[ 10%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[ 10%] Built target gtest_main
+[ 13%] [32m[1mLinking CXX executable test_updown[0m
+[ 13%] Built target test_updown
+[ 16%] [32m[1mLinking CXX static library libgtest.a[0m
+[ 16%] Built target gtest
+[ 18%] [32mBuilding CXX object src/planning/CMakeFiles/test_planner_is_path_valid.dir/test_planner_is_path_valid.cpp.o[0m
+[ 27%] [32mBuilding CXX object src/behaviors/spin/CMakeFiles/test_spin_behavior_node.dir/test_spin_behavior_node.cpp.o[0m
+[ 27%] [32mBuilding CXX object src/behavior_tree/CMakeFiles/test_behavior_tree_node.dir/test_behavior_tree_node.cpp.o[0m
+[ 24%] [32mBuilding CXX object src/planning/CMakeFiles/test_planner_plugins.dir/test_planner_plugins.cpp.o[0m
+[ 29%] [32mBuilding CXX object src/behaviors/wait/CMakeFiles/test_wait_behavior_node.dir/test_wait_behavior_node.cpp.o[0m
+[ 32%] [32mBuilding CXX object src/localization/CMakeFiles/test_localization_node.dir/test_localization_node.cpp.o[0m
+[ 37%] [32mBuilding CXX object src/planning/CMakeFiles/test_planner_costmaps_node.dir/test_planner_costmaps_node.cpp.o[0m
+[ 37%] [32mBuilding CXX object src/planning/CMakeFiles/test_planner_random_node.dir/test_planner_random_node.cpp.o[0m
+[ 40%] [32mBuilding CXX object src/behaviors/wait/CMakeFiles/test_wait_behavior_node.dir/wait_behavior_tester.cpp.o[0m
+[ 43%] [32mBuilding CXX object src/behaviors/spin/CMakeFiles/test_spin_behavior_node.dir/spin_behavior_tester.cpp.o[0m
+[ 45%] [32mBuilding CXX object src/planning/CMakeFiles/test_planner_random_node.dir/planner_tester.cpp.o[0m
+[ 48%] [32mBuilding CXX object src/planning/CMakeFiles/test_planner_is_path_valid.dir/planner_tester.cpp.o[0m
+[ 51%] [32mBuilding CXX object src/planning/CMakeFiles/test_planner_costmaps_node.dir/planner_tester.cpp.o[0m
+[ 54%] [32m[1mLinking CXX executable test_localization_node[0m
+[ 54%] Built target test_localization_node
+[ 56%] [32mBuilding CXX object src/behaviors/backup/CMakeFiles/test_backup_behavior_node.dir/test_backup_behavior_node.cpp.o[0m
+[ 59%] [32m[1mLinking CXX executable test_planner_plugins[0m
+[ 59%] Built target test_planner_plugins
+[ 62%] [32mBuilding CXX object src/behaviors/drive_on_heading/CMakeFiles/test_drive_on_heading_behavior_node.dir/test_drive_on_heading_behavior_node.cpp.o[0m
+[ 64%] [32mBuilding CXX object src/behavior_tree/CMakeFiles/test_behavior_tree_node.dir/server_handler.cpp.o[0m
+[ 67%] [32m[1mLinking CXX executable test_planner_random_node[0m
+[ 70%] [32m[1mLinking CXX executable test_planner_costmaps_node[0m
+[ 72%] [32m[1mLinking CXX executable test_planner_is_path_valid[0m
+[ 72%] Built target test_planner_is_path_valid
+[ 75%] [32mBuilding CXX object src/behaviors/assisted_teleop/CMakeFiles/test_assisted_teleop_behavior_node.dir/test_assisted_teleop_behavior_node.cpp.o[0m
+[ 78%] [32mBuilding CXX object src/behaviors/backup/CMakeFiles/test_backup_behavior_node.dir/backup_behavior_tester.cpp.o[0m
+[ 81%] [32m[1mLinking CXX executable test_wait_behavior_node[0m
+[ 81%] Built target test_planner_random_node
+[ 83%] [32mBuilding CXX object src/behaviors/assisted_teleop/CMakeFiles/test_assisted_teleop_behavior_node.dir/assisted_teleop_behavior_tester.cpp.o[0m
+[ 83%] Built target test_planner_costmaps_node
+[ 86%] [32mBuilding CXX object src/behaviors/drive_on_heading/CMakeFiles/test_drive_on_heading_behavior_node.dir/drive_on_heading_behavior_tester.cpp.o[0m
+[ 86%] Built target test_wait_behavior_node
+[ 89%] [32m[1mLinking CXX executable test_spin_behavior_node[0m
+[ 89%] Built target test_spin_behavior_node
+[ 91%] [32m[1mLinking CXX executable test_behavior_tree_node[0m
+[ 91%] Built target test_behavior_tree_node
+[ 94%] [32m[1mLinking CXX executable test_backup_behavior_node[0m
+[ 94%] Built target test_backup_behavior_node
+[ 97%] [32m[1mLinking CXX executable test_drive_on_heading_behavior_node[0m
+[ 97%] Built target test_drive_on_heading_behavior_node
+[100%] [32m[1mLinking CXX executable test_assisted_teleop_behavior_node[0m
+[100%] Built target test_assisted_teleop_behavior_node
+-- Install configuration: "Release"
+-- Execute custom install script
+-- Symlinking: /root/nav2-ws/install/nav2_system_tests/lib/nav2_system_tests/test_updown
+-- Symlinking: /root/nav2-ws/install/nav2_system_tests/share/nav2_system_tests/test_updown_launch.py
+-- Symlinking: /root/nav2-ws/install/nav2_system_tests/share/nav2_system_tests/maps/empty_room.pgm
+-- Symlinking: /root/nav2-ws/install/nav2_system_tests/share/nav2_system_tests/maps/empty_room.png
+-- Symlinking: /root/nav2-ws/install/nav2_system_tests/share/nav2_system_tests/maps/empty_room.yaml
+-- Symlinking: /root/nav2-ws/install/nav2_system_tests/share/nav2_system_tests/maps/keepout_mask.pgm
+-- Symlinking: /root/nav2-ws/install/nav2_system_tests/share/nav2_system_tests/maps/keepout_mask.yaml
+-- Symlinking: /root/nav2-ws/install/nav2_system_tests/share/nav2_system_tests/maps/map.pgm
+-- Symlinking: /root/nav2-ws/install/nav2_system_tests/share/nav2_system_tests/maps/map.xcf
+-- Symlinking: /root/nav2-ws/install/nav2_system_tests/share/nav2_system_tests/maps/map_circular.pgm
+-- Symlinking: /root/nav2-ws/install/nav2_system_tests/share/nav2_system_tests/maps/map_circular.yaml
+-- Symlinking: /root/nav2-ws/install/nav2_system_tests/share/nav2_system_tests/maps/speed_mask.pgm
+-- Symlinking: /root/nav2-ws/install/nav2_system_tests/share/nav2_system_tests/maps/speed_mask.yaml
+-- Symlinking: /root/nav2-ws/install/nav2_system_tests/share/ament_index/resource_index/package_run_dependencies/nav2_system_tests
+-- Symlinking: /root/nav2-ws/install/nav2_system_tests/share/ament_index/resource_index/parent_prefix_path/nav2_system_tests
+-- Symlinking: /root/nav2-ws/install/nav2_system_tests/share/nav2_system_tests/environment/ament_prefix_path.sh
+-- Symlinking: /root/nav2-ws/install/nav2_system_tests/share/nav2_system_tests/environment/ament_prefix_path.dsv
+-- Symlinking: /root/nav2-ws/install/nav2_system_tests/share/nav2_system_tests/environment/path.sh
+-- Symlinking: /root/nav2-ws/install/nav2_system_tests/share/nav2_system_tests/environment/path.dsv
+-- Symlinking: /root/nav2-ws/install/nav2_system_tests/share/nav2_system_tests/local_setup.bash
+-- Symlinking: /root/nav2-ws/install/nav2_system_tests/share/nav2_system_tests/local_setup.sh
+-- Symlinking: /root/nav2-ws/install/nav2_system_tests/share/nav2_system_tests/local_setup.zsh
+-- Symlinking: /root/nav2-ws/install/nav2_system_tests/share/nav2_system_tests/local_setup.dsv
+-- Symlinking: /root/nav2-ws/install/nav2_system_tests/share/nav2_system_tests/package.dsv
+-- Symlinking: /root/nav2-ws/install/nav2_system_tests/share/ament_index/resource_index/packages/nav2_system_tests
+-- Symlinking: /root/nav2-ws/install/nav2_system_tests/share/nav2_system_tests/cmake/nav2_system_testsConfig.cmake
+-- Symlinking: /root/nav2-ws/install/nav2_system_tests/share/nav2_system_tests/cmake/nav2_system_testsConfig-version.cmake
+-- Symlinking: /root/nav2-ws/install/nav2_system_tests/share/nav2_system_tests/package.xml

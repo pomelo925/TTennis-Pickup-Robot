@@ -1,0 +1,15 @@
+/root/nav2-ws/install/navigation2/share/ament_index/resource_index/package_run_dependencies/navigation2
+/root/nav2-ws/install/navigation2/share/ament_index/resource_index/parent_prefix_path/navigation2
+/root/nav2-ws/install/navigation2/share/navigation2/environment/ament_prefix_path.sh
+/root/nav2-ws/install/navigation2/share/navigation2/environment/ament_prefix_path.dsv
+/root/nav2-ws/install/navigation2/share/navigation2/environment/path.sh
+/root/nav2-ws/install/navigation2/share/navigation2/environment/path.dsv
+/root/nav2-ws/install/navigation2/share/navigation2/local_setup.bash
+/root/nav2-ws/install/navigation2/share/navigation2/local_setup.sh
+/root/nav2-ws/install/navigation2/share/navigation2/local_setup.zsh
+/root/nav2-ws/install/navigation2/share/navigation2/local_setup.dsv
+/root/nav2-ws/install/navigation2/share/navigation2/package.dsv
+/root/nav2-ws/install/navigation2/share/ament_index/resource_index/packages/navigation2
+/root/nav2-ws/install/navigation2/share/navigation2/cmake/navigation2Config.cmake
+/root/nav2-ws/install/navigation2/share/navigation2/cmake/navigation2Config-version.cmake
+/root/nav2-ws/install/navigation2/share/navigation2/package.xml

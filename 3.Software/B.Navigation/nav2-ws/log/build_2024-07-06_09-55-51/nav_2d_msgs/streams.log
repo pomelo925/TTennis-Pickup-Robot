@@ -1,0 +1,32 @@
+[0.008s] Invoking command in '/root/nav2-ws/build/nav_2d_msgs': /usr/bin/cmake /root/nav2-ws/src/navigation2/nav2_dwb_controller/nav_2d_msgs -DCMAKE_INSTALL_PREFIX=/root/nav2-ws/install/nav_2d_msgs
+[0.061s] -- The C compiler identification is GNU 11.4.0
+[0.114s] -- The CXX compiler identification is GNU 11.4.0
+[0.120s] -- Detecting C compiler ABI info
+[0.176s] -- Detecting C compiler ABI info - done
+[0.182s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.183s] -- Detecting C compile features
+[0.183s] -- Detecting C compile features - done
+[0.186s] -- Detecting CXX compiler ABI info
+[0.250s] -- Detecting CXX compiler ABI info - done
+[0.257s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.258s] -- Detecting CXX compile features
+[0.258s] -- Detecting CXX compile features - done
+[0.270s] [31mCMake Error at CMakeLists.txt:4 (find_package):
+[0.271s]   By not providing "Findgeometry_msgs.cmake" in CMAKE_MODULE_PATH this
+[0.271s]   project has asked CMake to find a package configuration file provided by
+[0.271s]   "geometry_msgs", but CMake did not find one.
+[0.271s] 
+[0.271s]   Could not find a package configuration file provided by "geometry_msgs"
+[0.271s]   with any of the following names:
+[0.271s] 
+[0.271s]     geometry_msgsConfig.cmake
+[0.271s]     geometry_msgs-config.cmake
+[0.271s] 
+[0.271s]   Add the installation prefix of "geometry_msgs" to CMAKE_PREFIX_PATH or set
+[0.271s]   "geometry_msgs_DIR" to a directory containing one of the above files.  If
+[0.271s]   "geometry_msgs" provides a separate development package or SDK, be sure it
+[0.271s]   has been installed.
+[0.272s] 
+[0.272s] [0m
+[0.272s] -- Configuring incomplete, errors occurred!
+[0.272s] See also "/root/nav2-ws/build/nav_2d_msgs/CMakeFiles/CMakeOutput.log".

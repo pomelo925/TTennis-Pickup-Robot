@@ -1,0 +1,1 @@
+/root/nav2-ws/build/nav_2d_msgs/rosidl_generator_py/nav_2d_msgs/msg/_pose2_d_stamped_s.c

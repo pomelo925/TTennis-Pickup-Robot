@@ -1,0 +1,1 @@
+/root/nav2-ws/build/dwb_msgs/rosidl_cmake/srv/GenerateTrajectory_Response.msg

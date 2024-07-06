@@ -1,0 +1,971 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found nav2_common: 1.1.15 (/root/nav2-ws/install/nav2_common/share/nav2_common/cmake)
+-- Found builtin_interfaces: 1.2.1 (/opt/ros/humble/share/builtin_interfaces/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)
+-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+-- Found action_msgs: 1.2.1 (/opt/ros/humble/share/action_msgs/cmake)
+-- Setting build type to Release as none was specified.
+-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+-- Found PythonExtra: .so  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /root/nav2-ws/build/nav2_msgs
+[  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[  1%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[  1%] Built target ament_cmake_python_symlink_nav2_msgs
+running egg_info
+creating nav2_msgs.egg-info
+writing nav2_msgs.egg-info/PKG-INFO
+writing dependency_links to nav2_msgs.egg-info/dependency_links.txt
+writing top-level names to nav2_msgs.egg-info/top_level.txt
+writing manifest file 'nav2_msgs.egg-info/SOURCES.txt'
+reading manifest file 'nav2_msgs.egg-info/SOURCES.txt'
+writing manifest file 'nav2_msgs.egg-info/SOURCES.txt'
+[  1%] Built target ament_cmake_python_build_nav2_msgs_egg
+[  1%] Built target nav2_msgs__cpp
+[  2%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[  3%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[  4%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[  4%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/msg/detail/costmap__functions.c.o[0m
+[  4%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/msg/detail/costmap_meta_data__functions.c.o[0m
+[  4%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/msg/detail/speed_limit__functions.c.o[0m
+[  5%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/msg/detail/costmap_filter_info__functions.c.o[0m
+[  5%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/msg/detail/voxel_grid__functions.c.o[0m
+[  6%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/msg/detail/behavior_tree_status_change__functions.c.o[0m
+[  6%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/msg/detail/behavior_tree_log__functions.c.o[0m
+[  7%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/msg/detail/particle__functions.c.o[0m
+[  7%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/srv/detail/get_costmap__functions.c.o[0m
+[  7%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/msg/detail/particle_cloud__functions.c.o[0m
+[  8%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/srv/detail/is_path_valid__functions.c.o[0m
+[  8%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/srv/detail/clear_costmap_except_region__functions.c.o[0m
+[  8%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/srv/detail/clear_costmap_around_robot__functions.c.o[0m
+[  9%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/srv/detail/clear_entire_costmap__functions.c.o[0m
+[  9%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/srv/detail/manage_lifecycle_nodes__functions.c.o[0m
+[ 10%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/srv/detail/load_map__functions.c.o[0m
+[ 10%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/srv/detail/save_map__functions.c.o[0m
+[ 10%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/srv/detail/set_initial_pose__functions.c.o[0m
+[ 11%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/action/detail/assisted_teleop__functions.c.o[0m
+[ 11%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/action/detail/back_up__functions.c.o[0m
+[ 11%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/action/detail/compute_path_to_pose__functions.c.o[0m
+[ 12%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/action/detail/compute_path_through_poses__functions.c.o[0m
+[ 12%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/action/detail/drive_on_heading__functions.c.o[0m
+[ 12%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/action/detail/smooth_path__functions.c.o[0m
+[ 13%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/action/detail/follow_path__functions.c.o[0m
+[ 13%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/action/detail/navigate_to_pose__functions.c.o[0m
+[ 14%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/action/detail/navigate_through_poses__functions.c.o[0m
+[ 14%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/action/detail/wait__functions.c.o[0m
+[ 14%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/action/detail/spin__functions.c.o[0m
+[ 15%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/action/detail/dummy_behavior__functions.c.o[0m
+[ 15%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/action/detail/follow_waypoints__functions.c.o[0m
+[ 15%] [32m[1mLinking C shared library libnav2_msgs__rosidl_generator_c.so[0m
+[ 15%] Built target nav2_msgs__rosidl_generator_c
+[ 16%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[ 17%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[ 18%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[ 19%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/msg/costmap_filter_info__type_support.cpp.o[0m
+[ 19%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/msg/costmap__type_support.cpp.o[0m
+[ 19%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/msg/costmap_meta_data__type_support.cpp.o[0m
+[ 19%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/msg/speed_limit__type_support.cpp.o[0m
+[ 19%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/msg/voxel_grid__type_support.cpp.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/msg/behavior_tree_status_change__type_support.cpp.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/msg/behavior_tree_log__type_support.cpp.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/msg/particle__type_support.cpp.o[0m
+[ 21%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/msg/particle_cloud__type_support.cpp.o[0m
+[ 21%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/srv/get_costmap__type_support.cpp.o[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/srv/is_path_valid__type_support.cpp.o[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/srv/clear_costmap_except_region__type_support.cpp.o[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/msg/detail/costmap__type_support.cpp.o[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/srv/clear_costmap_around_robot__type_support.cpp.o[0m
+[ 23%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/srv/clear_entire_costmap__type_support.cpp.o[0m
+[ 23%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/srv/manage_lifecycle_nodes__type_support.cpp.o[0m
+[ 23%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/srv/load_map__type_support.cpp.o[0m
+[ 24%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/srv/save_map__type_support.cpp.o[0m
+[ 24%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/msg/detail/dds_fastrtps/costmap__type_support.cpp.o[0m
+[ 24%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/msg/detail/dds_fastrtps/costmap_meta_data__type_support.cpp.o[0m
+[ 24%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/msg/detail/costmap_meta_data__type_support.cpp.o[0m
+[ 24%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/srv/set_initial_pose__type_support.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/action/assisted_teleop__type_support.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/action/back_up__type_support.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/msg/costmap__type_support.cpp.o[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/msg/detail/dds_fastrtps/costmap_filter_info__type_support.cpp.o[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/msg/costmap_meta_data__type_support.cpp.o[0m
+[ 27%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/msg/costmap_filter_info__type_support.cpp.o[0m
+[ 27%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/msg/detail/dds_fastrtps/speed_limit__type_support.cpp.o[0m
+[ 28%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/msg/detail/costmap_filter_info__type_support.cpp.o[0m
+[ 28%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/msg/speed_limit__type_support.cpp.o[0m
+[ 28%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/msg/voxel_grid__type_support.cpp.o[0m
+[ 28%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/action/compute_path_to_pose__type_support.cpp.o[0m
+[ 29%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/msg/behavior_tree_status_change__type_support.cpp.o[0m
+[ 29%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/msg/behavior_tree_log__type_support.cpp.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/msg/particle__type_support.cpp.o[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/action/compute_path_through_poses__type_support.cpp.o[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/msg/particle_cloud__type_support.cpp.o[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/action/drive_on_heading__type_support.cpp.o[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/srv/get_costmap__type_support.cpp.o[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/msg/detail/dds_fastrtps/voxel_grid__type_support.cpp.o[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/msg/detail/speed_limit__type_support.cpp.o[0m
+[ 32%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/srv/is_path_valid__type_support.cpp.o[0m
+[ 32%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/srv/clear_costmap_except_region__type_support.cpp.o[0m
+[ 32%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/srv/clear_costmap_around_robot__type_support.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/msg/detail/voxel_grid__type_support.cpp.o[0m
+[ 34%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/srv/clear_entire_costmap__type_support.cpp.o[0m
+[ 34%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/srv/manage_lifecycle_nodes__type_support.cpp.o[0m
+[ 34%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/srv/load_map__type_support.cpp.o[0m
+[ 35%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/srv/save_map__type_support.cpp.o[0m
+[ 35%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/msg/detail/behavior_tree_status_change__type_support.cpp.o[0m
+[ 35%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/srv/set_initial_pose__type_support.cpp.o[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/msg/detail/dds_fastrtps/behavior_tree_status_change__type_support.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/action/assisted_teleop__type_support.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/action/smooth_path__type_support.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/msg/detail/dds_fastrtps/behavior_tree_log__type_support.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/action/back_up__type_support.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/action/compute_path_to_pose__type_support.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/msg/detail/behavior_tree_log__type_support.cpp.o[0m
+[ 38%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/action/compute_path_through_poses__type_support.cpp.o[0m
+[ 38%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/action/drive_on_heading__type_support.cpp.o[0m
+[ 38%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/msg/detail/costmap__type_support.c.o[0m
+[ 39%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/msg/detail/costmap_meta_data__type_support.c.o[0m
+[ 39%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/action/smooth_path__type_support.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/msg/detail/particle__type_support.cpp.o[0m
+[ 40%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/msg/detail/costmap_filter_info__type_support.c.o[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/msg/detail/dds_fastrtps/particle__type_support.cpp.o[0m
+[ 41%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/msg/detail/speed_limit__type_support.c.o[0m
+[ 42%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/action/follow_path__type_support.cpp.o[0m
+[ 42%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/msg/detail/costmap__type_support_c.cpp.o[0m
+[ 43%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/msg/detail/voxel_grid__type_support.c.o[0m
+[ 44%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/action/follow_path__type_support.cpp.o[0m
+[ 44%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/msg/detail/behavior_tree_status_change__type_support.c.o[0m
+[ 44%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/action/navigate_to_pose__type_support.cpp.o[0m
+[ 44%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/msg/detail/behavior_tree_log__type_support.c.o[0m
+[ 44%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/action/navigate_to_pose__type_support.cpp.o[0m
+[ 45%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/action/navigate_through_poses__type_support.cpp.o[0m
+[ 46%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/msg/detail/particle__type_support.c.o[0m
+[ 46%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/msg/detail/particle_cloud__type_support.cpp.o[0m
+[ 46%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/action/wait__type_support.cpp.o[0m
+[ 46%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/msg/detail/particle_cloud__type_support.c.o[0m
+[ 46%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/action/spin__type_support.cpp.o[0m
+[ 46%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/srv/detail/get_costmap__type_support.c.o[0m
+[ 47%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/action/dummy_behavior__type_support.cpp.o[0m
+[ 47%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/action/follow_waypoints__type_support.cpp.o[0m
+[ 47%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/msg/detail/dds_fastrtps/particle_cloud__type_support.cpp.o[0m
+[ 48%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/msg/detail/costmap_meta_data__type_support_c.cpp.o[0m
+[ 48%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/srv/detail/is_path_valid__type_support.c.o[0m
+[ 49%] [32m[1mLinking CXX shared library libnav2_msgs__rosidl_typesupport_c.so[0m
+[ 49%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/msg/detail/costmap_filter_info__type_support_c.cpp.o[0m
+[ 49%] Built target nav2_msgs__rosidl_typesupport_c
+[ 49%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/srv/detail/clear_costmap_except_region__type_support.c.o[0m
+[ 49%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/srv/detail/dds_fastrtps/get_costmap__type_support.cpp.o[0m
+[ 49%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/action/navigate_through_poses__type_support.cpp.o[0m
+[ 50%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/srv/detail/clear_costmap_around_robot__type_support.c.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/srv/detail/get_costmap__type_support.cpp.o[0m
+[ 51%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/srv/detail/is_path_valid__type_support.cpp.o[0m
+[ 51%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/srv/detail/clear_entire_costmap__type_support.c.o[0m
+[ 51%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/srv/detail/manage_lifecycle_nodes__type_support.c.o[0m
+[ 51%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/msg/detail/speed_limit__type_support_c.cpp.o[0m
+[ 52%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/srv/detail/load_map__type_support.c.o[0m
+[ 53%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/srv/detail/dds_fastrtps/is_path_valid__type_support.cpp.o[0m
+[ 53%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/srv/detail/save_map__type_support.c.o[0m
+[ 54%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/msg/detail/voxel_grid__type_support_c.cpp.o[0m
+[ 54%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/srv/detail/dds_fastrtps/clear_costmap_except_region__type_support.cpp.o[0m
+[ 54%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/srv/detail/set_initial_pose__type_support.c.o[0m
+[ 55%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/action/detail/assisted_teleop__type_support.c.o[0m
+[ 55%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/srv/detail/clear_costmap_except_region__type_support.cpp.o[0m
+[ 56%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/action/wait__type_support.cpp.o[0m
+[ 56%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/action/detail/back_up__type_support.c.o[0m
+[ 57%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/action/detail/compute_path_to_pose__type_support.c.o[0m
+[ 57%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/srv/detail/clear_costmap_around_robot__type_support.cpp.o[0m
+[ 57%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/msg/detail/behavior_tree_status_change__type_support_c.cpp.o[0m
+[ 57%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/action/detail/compute_path_through_poses__type_support.c.o[0m
+[ 57%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/msg/detail/behavior_tree_log__type_support_c.cpp.o[0m
+[ 57%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/action/detail/drive_on_heading__type_support.c.o[0m
+[ 58%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/msg/detail/particle__type_support_c.cpp.o[0m
+[ 58%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/srv/detail/dds_fastrtps/clear_costmap_around_robot__type_support.cpp.o[0m
+[ 59%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/action/detail/smooth_path__type_support.c.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/srv/detail/clear_entire_costmap__type_support.cpp.o[0m
+[ 60%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/action/detail/follow_path__type_support.c.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/action/spin__type_support.cpp.o[0m
+[ 60%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/action/detail/navigate_to_pose__type_support.c.o[0m
+[ 61%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/action/detail/navigate_through_poses__type_support.c.o[0m
+[ 61%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/msg/detail/particle_cloud__type_support_c.cpp.o[0m
+[ 61%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/action/detail/wait__type_support.c.o[0m
+[ 62%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/action/detail/spin__type_support.c.o[0m
+[ 62%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/action/dummy_behavior__type_support.cpp.o[0m
+[ 62%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/action/follow_waypoints__type_support.cpp.o[0m
+[ 63%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/action/detail/dummy_behavior__type_support.c.o[0m
+[ 63%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/srv/detail/get_costmap__type_support_c.cpp.o[0m
+[ 63%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/action/detail/follow_waypoints__type_support.c.o[0m
+[ 63%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/srv/detail/manage_lifecycle_nodes__type_support.cpp.o[0m
+[ 64%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/srv/detail/dds_fastrtps/clear_entire_costmap__type_support.cpp.o[0m
+[ 65%] [32m[1mLinking C shared library libnav2_msgs__rosidl_typesupport_introspection_c.so[0m
+[ 65%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/srv/detail/dds_fastrtps/manage_lifecycle_nodes__type_support.cpp.o[0m
+[ 65%] Built target nav2_msgs__rosidl_typesupport_introspection_c
+[ 66%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/srv/detail/dds_fastrtps/load_map__type_support.cpp.o[0m
+[ 67%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/srv/detail/is_path_valid__type_support_c.cpp.o[0m
+[ 67%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/srv/detail/clear_costmap_except_region__type_support_c.cpp.o[0m
+[ 67%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/srv/detail/clear_costmap_around_robot__type_support_c.cpp.o[0m
+[ 68%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/srv/detail/load_map__type_support.cpp.o[0m
+[ 68%] [32m[1mLinking CXX shared library libnav2_msgs__rosidl_typesupport_cpp.so[0m
+[ 68%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/srv/detail/dds_fastrtps/save_map__type_support.cpp.o[0m
+[ 68%] Built target nav2_msgs__rosidl_typesupport_cpp
+[ 68%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/srv/detail/dds_fastrtps/set_initial_pose__type_support.cpp.o[0m
+[ 69%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/action/detail/dds_fastrtps/assisted_teleop__type_support.cpp.o[0m
+[ 69%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/action/detail/dds_fastrtps/back_up__type_support.cpp.o[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/srv/detail/clear_entire_costmap__type_support_c.cpp.o[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/srv/detail/manage_lifecycle_nodes__type_support_c.cpp.o[0m
+[ 71%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/srv/detail/load_map__type_support_c.cpp.o[0m
+[ 71%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/srv/detail/save_map__type_support.cpp.o[0m
+[ 71%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/action/detail/dds_fastrtps/compute_path_to_pose__type_support.cpp.o[0m
+[ 72%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/action/detail/dds_fastrtps/compute_path_through_poses__type_support.cpp.o[0m
+[ 72%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/srv/detail/save_map__type_support_c.cpp.o[0m
+[ 72%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/srv/detail/set_initial_pose__type_support_c.cpp.o[0m
+[ 73%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/action/detail/assisted_teleop__type_support_c.cpp.o[0m
+[ 73%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/action/detail/dds_fastrtps/drive_on_heading__type_support.cpp.o[0m
+[ 73%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/action/detail/dds_fastrtps/smooth_path__type_support.cpp.o[0m
+[ 73%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/srv/detail/set_initial_pose__type_support.cpp.o[0m
+[ 73%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/action/detail/back_up__type_support_c.cpp.o[0m
+[ 73%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/action/detail/compute_path_to_pose__type_support_c.cpp.o[0m
+[ 74%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/action/detail/dds_fastrtps/follow_path__type_support.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/action/detail/compute_path_through_poses__type_support_c.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/action/detail/dds_fastrtps/navigate_to_pose__type_support.cpp.o[0m
+[ 76%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/action/detail/assisted_teleop__type_support.cpp.o[0m
+[ 77%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/action/detail/dds_fastrtps/navigate_through_poses__type_support.cpp.o[0m
+[ 77%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/action/detail/drive_on_heading__type_support_c.cpp.o[0m
+[ 77%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/action/detail/dds_fastrtps/wait__type_support.cpp.o[0m
+[ 78%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/action/detail/smooth_path__type_support_c.cpp.o[0m
+[ 78%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/action/detail/follow_path__type_support_c.cpp.o[0m
+[ 78%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/action/detail/dds_fastrtps/spin__type_support.cpp.o[0m
+[ 79%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/action/detail/dds_fastrtps/dummy_behavior__type_support.cpp.o[0m
+[ 79%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/action/detail/back_up__type_support.cpp.o[0m
+[ 79%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/action/detail/navigate_to_pose__type_support_c.cpp.o[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/action/detail/navigate_through_poses__type_support_c.cpp.o[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/action/detail/wait__type_support_c.cpp.o[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/action/detail/dds_fastrtps/follow_waypoints__type_support.cpp.o[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/action/detail/spin__type_support_c.cpp.o[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/action/detail/compute_path_to_pose__type_support.cpp.o[0m
+[ 81%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/action/detail/dummy_behavior__type_support_c.cpp.o[0m
+[ 81%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/action/detail/follow_waypoints__type_support_c.cpp.o[0m
+[ 82%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/action/detail/compute_path_through_poses__type_support.cpp.o[0m
+[ 82%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/action/detail/drive_on_heading__type_support.cpp.o[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/action/detail/smooth_path__type_support.cpp.o[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/action/detail/follow_path__type_support.cpp.o[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/action/detail/navigate_to_pose__type_support.cpp.o[0m
+[ 83%] [32m[1mLinking CXX shared library libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[ 83%] [32m[1mLinking CXX shared library libnav2_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[ 84%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/action/detail/navigate_through_poses__type_support.cpp.o[0m
+[ 84%] Built target nav2_msgs__rosidl_typesupport_fastrtps_cpp
+[ 84%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/action/detail/wait__type_support.cpp.o[0m
+[ 84%] Built target nav2_msgs__rosidl_typesupport_fastrtps_c
+[ 84%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/action/detail/spin__type_support.cpp.o[0m
+[ 85%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/action/detail/dummy_behavior__type_support.cpp.o[0m
+[ 85%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/action/detail/follow_waypoints__type_support.cpp.o[0m
+[ 86%] [32m[1mLinking CXX shared library libnav2_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[ 86%] Built target nav2_msgs__rosidl_typesupport_introspection_cpp
+[ 86%] Built target nav2_msgs
+[ 86%] [34m[1mGenerating Python code for ROS interfaces[0m
+[ 86%] Built target nav2_msgs__py
+[ 87%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_py.dir/rosidl_generator_py/nav2_msgs/msg/_costmap_meta_data_s.c.o[0m
+[ 88%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_py.dir/rosidl_generator_py/nav2_msgs/msg/_costmap_filter_info_s.c.o[0m
+[ 88%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_py.dir/rosidl_generator_py/nav2_msgs/msg/_voxel_grid_s.c.o[0m
+[ 89%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_py.dir/rosidl_generator_py/nav2_msgs/msg/_behavior_tree_status_change_s.c.o[0m
+[ 89%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_py.dir/rosidl_generator_py/nav2_msgs/msg/_costmap_s.c.o[0m
+[ 88%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_py.dir/rosidl_generator_py/nav2_msgs/msg/_speed_limit_s.c.o[0m
+[ 88%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_py.dir/rosidl_generator_py/nav2_msgs/msg/_behavior_tree_log_s.c.o[0m
+[ 89%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_py.dir/rosidl_generator_py/nav2_msgs/msg/_particle_s.c.o[0m
+[ 90%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_py.dir/rosidl_generator_py/nav2_msgs/msg/_particle_cloud_s.c.o[0m
+[ 90%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_py.dir/rosidl_generator_py/nav2_msgs/srv/_get_costmap_s.c.o[0m
+[ 90%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_py.dir/rosidl_generator_py/nav2_msgs/srv/_is_path_valid_s.c.o[0m
+[ 91%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_py.dir/rosidl_generator_py/nav2_msgs/srv/_clear_costmap_except_region_s.c.o[0m
+[ 91%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_py.dir/rosidl_generator_py/nav2_msgs/srv/_clear_costmap_around_robot_s.c.o[0m
+[ 92%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_py.dir/rosidl_generator_py/nav2_msgs/srv/_clear_entire_costmap_s.c.o[0m
+[ 92%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_py.dir/rosidl_generator_py/nav2_msgs/srv/_manage_lifecycle_nodes_s.c.o[0m
+[ 92%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_py.dir/rosidl_generator_py/nav2_msgs/srv/_load_map_s.c.o[0m
+[ 93%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_py.dir/rosidl_generator_py/nav2_msgs/srv/_save_map_s.c.o[0m
+[ 93%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_py.dir/rosidl_generator_py/nav2_msgs/srv/_set_initial_pose_s.c.o[0m
+[ 93%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_py.dir/rosidl_generator_py/nav2_msgs/action/_assisted_teleop_s.c.o[0m
+[ 94%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_py.dir/rosidl_generator_py/nav2_msgs/action/_back_up_s.c.o[0m
+[ 94%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_py.dir/rosidl_generator_py/nav2_msgs/action/_compute_path_to_pose_s.c.o[0m
+[ 95%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_py.dir/rosidl_generator_py/nav2_msgs/action/_compute_path_through_poses_s.c.o[0m
+[ 95%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_py.dir/rosidl_generator_py/nav2_msgs/action/_drive_on_heading_s.c.o[0m
+[ 95%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_py.dir/rosidl_generator_py/nav2_msgs/action/_smooth_path_s.c.o[0m
+[ 96%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_py.dir/rosidl_generator_py/nav2_msgs/action/_navigate_to_pose_s.c.o[0m
+[ 96%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_py.dir/rosidl_generator_py/nav2_msgs/action/_follow_path_s.c.o[0m
+[ 96%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_py.dir/rosidl_generator_py/nav2_msgs/action/_navigate_through_poses_s.c.o[0m
+[ 97%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_py.dir/rosidl_generator_py/nav2_msgs/action/_wait_s.c.o[0m
+[ 97%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_py.dir/rosidl_generator_py/nav2_msgs/action/_spin_s.c.o[0m
+[ 97%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_py.dir/rosidl_generator_py/nav2_msgs/action/_dummy_behavior_s.c.o[0m
+[ 98%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_py.dir/rosidl_generator_py/nav2_msgs/action/_follow_waypoints_s.c.o[0m
+[ 98%] [32m[1mLinking C shared library rosidl_generator_py/nav2_msgs/libnav2_msgs__rosidl_generator_py.so[0m
+[ 98%] Built target nav2_msgs__rosidl_generator_py
+[100%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/nav2_msgs/_nav2_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[100%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/nav2_msgs/_nav2_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[100%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/nav2_msgs/_nav2_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[100%] [32m[1mLinking C shared library rosidl_generator_py/nav2_msgs/nav2_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[100%] [32m[1mLinking C shared library rosidl_generator_py/nav2_msgs/nav2_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[100%] [32m[1mLinking C shared library rosidl_generator_py/nav2_msgs/nav2_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[100%] Built target nav2_msgs__rosidl_typesupport_fastrtps_c__pyext
+[100%] Built target nav2_msgs__rosidl_typesupport_introspection_c__pyext
+[100%] Built target nav2_msgs__rosidl_typesupport_c__pyext
+-- Install configuration: "Release"
+-- Execute custom install script
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/ament_index/resource_index/rosidl_interfaces/nav2_msgs
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/assisted_teleop.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/back_up.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/compute_path_through_poses.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/compute_path_to_pose.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/assisted_teleop__functions.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/assisted_teleop__struct.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/assisted_teleop__type_support.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/back_up__functions.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/back_up__struct.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/back_up__type_support.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/compute_path_through_poses__functions.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/compute_path_through_poses__struct.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/compute_path_through_poses__type_support.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/compute_path_to_pose__functions.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/compute_path_to_pose__struct.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/compute_path_to_pose__type_support.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/drive_on_heading__functions.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/drive_on_heading__struct.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/drive_on_heading__type_support.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/dummy_behavior__functions.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/dummy_behavior__struct.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/dummy_behavior__type_support.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/follow_path__functions.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/follow_path__struct.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/follow_path__type_support.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/follow_waypoints__functions.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/follow_waypoints__struct.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/follow_waypoints__type_support.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/navigate_through_poses__functions.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/navigate_through_poses__struct.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/navigate_through_poses__type_support.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/navigate_to_pose__functions.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/navigate_to_pose__struct.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/navigate_to_pose__type_support.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/smooth_path__functions.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/smooth_path__struct.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/smooth_path__type_support.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/spin__functions.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/spin__struct.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/spin__type_support.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/wait__functions.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/wait__struct.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/wait__type_support.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/drive_on_heading.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/dummy_behavior.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/follow_path.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/follow_waypoints.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/navigate_through_poses.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/navigate_to_pose.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/smooth_path.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/spin.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/wait.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/behavior_tree_log.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/behavior_tree_status_change.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/costmap.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/costmap_filter_info.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/costmap_meta_data.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/behavior_tree_log__functions.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/behavior_tree_log__struct.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/behavior_tree_log__type_support.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/behavior_tree_status_change__functions.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/behavior_tree_status_change__struct.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/behavior_tree_status_change__type_support.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/costmap__functions.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/costmap__struct.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/costmap__type_support.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/costmap_filter_info__functions.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/costmap_filter_info__struct.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/costmap_filter_info__type_support.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/costmap_meta_data__functions.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/costmap_meta_data__struct.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/costmap_meta_data__type_support.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/particle__functions.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/particle__struct.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/particle__type_support.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/particle_cloud__functions.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/particle_cloud__struct.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/particle_cloud__type_support.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/speed_limit__functions.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/speed_limit__struct.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/speed_limit__type_support.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/voxel_grid__functions.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/voxel_grid__struct.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/voxel_grid__type_support.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/particle.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/particle_cloud.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/rosidl_generator_c__visibility_control.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/speed_limit.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/voxel_grid.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/clear_costmap_around_robot.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/clear_costmap_except_region.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/clear_entire_costmap.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/clear_costmap_around_robot__functions.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/clear_costmap_around_robot__struct.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/clear_costmap_around_robot__type_support.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/clear_costmap_except_region__functions.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/clear_costmap_except_region__struct.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/clear_costmap_except_region__type_support.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/clear_entire_costmap__functions.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/clear_entire_costmap__struct.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/clear_entire_costmap__type_support.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/get_costmap__functions.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/get_costmap__struct.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/get_costmap__type_support.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/is_path_valid__functions.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/is_path_valid__struct.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/is_path_valid__type_support.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/load_map__functions.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/load_map__struct.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/load_map__type_support.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/manage_lifecycle_nodes__functions.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/manage_lifecycle_nodes__struct.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/manage_lifecycle_nodes__type_support.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/save_map__functions.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/save_map__struct.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/save_map__type_support.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/set_initial_pose__functions.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/set_initial_pose__struct.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/set_initial_pose__type_support.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/get_costmap.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/is_path_valid.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/load_map.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/manage_lifecycle_nodes.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/save_map.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/set_initial_pose.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/environment/library_path.sh
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/environment/library_path.dsv
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/assisted_teleop__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/back_up__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/compute_path_through_poses__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/compute_path_to_pose__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/drive_on_heading__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/dummy_behavior__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/follow_path__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/follow_waypoints__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/navigate_through_poses__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/navigate_to_pose__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/smooth_path__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/spin__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/wait__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/behavior_tree_log__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/behavior_tree_status_change__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/costmap__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/costmap_filter_info__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/costmap_meta_data__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/particle__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/particle_cloud__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/speed_limit__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/voxel_grid__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/clear_costmap_around_robot__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/clear_costmap_except_region__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/clear_entire_costmap__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/get_costmap__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/is_path_valid__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/load_map__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/manage_lifecycle_nodes__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/save_map__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/set_initial_pose__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/assisted_teleop.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/back_up.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/compute_path_through_poses.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/compute_path_to_pose.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/assisted_teleop__builder.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/assisted_teleop__struct.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/assisted_teleop__traits.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/back_up__builder.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/back_up__struct.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/back_up__traits.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/compute_path_through_poses__builder.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/compute_path_through_poses__struct.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/compute_path_through_poses__traits.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/compute_path_to_pose__builder.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/compute_path_to_pose__struct.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/compute_path_to_pose__traits.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/drive_on_heading__builder.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/drive_on_heading__struct.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/drive_on_heading__traits.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/dummy_behavior__builder.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/dummy_behavior__struct.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/dummy_behavior__traits.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/follow_path__builder.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/follow_path__struct.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/follow_path__traits.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/follow_waypoints__builder.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/follow_waypoints__struct.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/follow_waypoints__traits.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/navigate_through_poses__builder.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/navigate_through_poses__struct.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/navigate_through_poses__traits.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/navigate_to_pose__builder.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/navigate_to_pose__struct.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/navigate_to_pose__traits.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/smooth_path__builder.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/smooth_path__struct.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/smooth_path__traits.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/spin__builder.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/spin__struct.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/spin__traits.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/wait__builder.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/wait__struct.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/wait__traits.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/drive_on_heading.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/dummy_behavior.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/follow_path.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/follow_waypoints.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/navigate_through_poses.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/navigate_to_pose.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/smooth_path.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/spin.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/wait.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/behavior_tree_log.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/behavior_tree_status_change.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/costmap.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/costmap_filter_info.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/costmap_meta_data.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/behavior_tree_log__builder.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/behavior_tree_log__struct.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/behavior_tree_log__traits.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/behavior_tree_status_change__builder.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/behavior_tree_status_change__struct.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/behavior_tree_status_change__traits.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/costmap__builder.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/costmap__struct.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/costmap__traits.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/costmap_filter_info__builder.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/costmap_filter_info__struct.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/costmap_filter_info__traits.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/costmap_meta_data__builder.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/costmap_meta_data__struct.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/costmap_meta_data__traits.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/particle__builder.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/particle__struct.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/particle__traits.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/particle_cloud__builder.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/particle_cloud__struct.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/particle_cloud__traits.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/speed_limit__builder.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/speed_limit__struct.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/speed_limit__traits.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/voxel_grid__builder.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/voxel_grid__struct.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/voxel_grid__traits.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/particle.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/particle_cloud.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/speed_limit.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/voxel_grid.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/clear_costmap_around_robot.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/clear_costmap_except_region.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/clear_entire_costmap.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/clear_costmap_around_robot__builder.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/clear_costmap_around_robot__struct.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/clear_costmap_around_robot__traits.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/clear_costmap_except_region__builder.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/clear_costmap_except_region__struct.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/clear_costmap_except_region__traits.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/clear_entire_costmap__builder.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/clear_entire_costmap__struct.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/clear_entire_costmap__traits.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/get_costmap__builder.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/get_costmap__struct.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/get_costmap__traits.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/is_path_valid__builder.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/is_path_valid__struct.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/is_path_valid__traits.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/load_map__builder.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/load_map__struct.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/load_map__traits.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/manage_lifecycle_nodes__builder.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/manage_lifecycle_nodes__struct.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/manage_lifecycle_nodes__traits.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/save_map__builder.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/save_map__struct.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/save_map__traits.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/set_initial_pose__builder.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/set_initial_pose__struct.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/set_initial_pose__traits.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/get_costmap.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/is_path_valid.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/load_map.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/manage_lifecycle_nodes.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/save_map.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/set_initial_pose.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/assisted_teleop__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/back_up__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/compute_path_through_poses__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/compute_path_to_pose__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/drive_on_heading__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/dummy_behavior__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/follow_path__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/follow_waypoints__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/navigate_through_poses__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/navigate_to_pose__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/smooth_path__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/spin__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/wait__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/behavior_tree_log__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/behavior_tree_status_change__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/costmap__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/costmap_filter_info__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/costmap_meta_data__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/particle__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/particle_cloud__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/speed_limit__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/voxel_grid__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/clear_costmap_around_robot__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/clear_costmap_except_region__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/clear_entire_costmap__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/get_costmap__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/is_path_valid__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/load_map__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/manage_lifecycle_nodes__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/save_map__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/set_initial_pose__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/assisted_teleop__rosidl_typesupport_introspection_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/back_up__rosidl_typesupport_introspection_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/compute_path_through_poses__rosidl_typesupport_introspection_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/compute_path_to_pose__rosidl_typesupport_introspection_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/drive_on_heading__rosidl_typesupport_introspection_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/dummy_behavior__rosidl_typesupport_introspection_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/follow_path__rosidl_typesupport_introspection_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/follow_waypoints__rosidl_typesupport_introspection_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/navigate_through_poses__rosidl_typesupport_introspection_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/navigate_to_pose__rosidl_typesupport_introspection_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/smooth_path__rosidl_typesupport_introspection_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/spin__rosidl_typesupport_introspection_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/wait__rosidl_typesupport_introspection_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/behavior_tree_log__rosidl_typesupport_introspection_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/behavior_tree_status_change__rosidl_typesupport_introspection_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/costmap__rosidl_typesupport_introspection_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/costmap_filter_info__rosidl_typesupport_introspection_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/costmap_meta_data__rosidl_typesupport_introspection_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/particle__rosidl_typesupport_introspection_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/particle_cloud__rosidl_typesupport_introspection_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/speed_limit__rosidl_typesupport_introspection_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/voxel_grid__rosidl_typesupport_introspection_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/clear_costmap_around_robot__rosidl_typesupport_introspection_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/clear_costmap_except_region__rosidl_typesupport_introspection_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/clear_entire_costmap__rosidl_typesupport_introspection_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/get_costmap__rosidl_typesupport_introspection_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/is_path_valid__rosidl_typesupport_introspection_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/load_map__rosidl_typesupport_introspection_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/manage_lifecycle_nodes__rosidl_typesupport_introspection_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/save_map__rosidl_typesupport_introspection_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/set_initial_pose__rosidl_typesupport_introspection_c.h
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/assisted_teleop__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/back_up__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/compute_path_through_poses__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/compute_path_to_pose__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/drive_on_heading__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/dummy_behavior__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/follow_path__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/follow_waypoints__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/navigate_through_poses__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/navigate_to_pose__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/smooth_path__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/spin__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/action/detail/wait__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/behavior_tree_log__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/behavior_tree_status_change__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/costmap__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/costmap_filter_info__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/costmap_meta_data__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/particle__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/particle_cloud__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/speed_limit__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/msg/detail/voxel_grid__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/clear_costmap_around_robot__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/clear_costmap_except_region__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/clear_entire_costmap__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/get_costmap__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/is_path_valid__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/load_map__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/manage_lifecycle_nodes__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/save_map__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/include/nav2_msgs/nav2_msgs/srv/detail/set_initial_pose__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/environment/pythonpath.sh
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/environment/pythonpath.dsv
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs-1.1.15-py3.10.egg-info/PKG-INFO
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs-1.1.15-py3.10.egg-info/SOURCES.txt
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs-1.1.15-py3.10.egg-info/dependency_links.txt
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs-1.1.15-py3.10.egg-info/top_level.txt
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/__init__.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/_nav2_msgs_s.ep.rosidl_typesupport_c.c
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/_nav2_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/_nav2_msgs_s.ep.rosidl_typesupport_introspection_c.c
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/__init__.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_assisted_teleop.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_assisted_teleop_s.c
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_back_up.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_back_up_s.c
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_compute_path_through_poses.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_compute_path_through_poses_s.c
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_compute_path_to_pose.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_compute_path_to_pose_s.c
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_drive_on_heading.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_drive_on_heading_s.c
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_dummy_behavior.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_dummy_behavior_s.c
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_follow_path.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_follow_path_s.c
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_follow_waypoints.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_follow_waypoints_s.c
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_navigate_through_poses.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_navigate_through_poses_s.c
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_navigate_to_pose.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_navigate_to_pose_s.c
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_smooth_path.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_smooth_path_s.c
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_spin.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_spin_s.c
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_wait.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_wait_s.c
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/libnav2_msgs__rosidl_generator_py.so
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/msg/__init__.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/msg/_behavior_tree_log.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/msg/_behavior_tree_log_s.c
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/msg/_behavior_tree_status_change.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/msg/_behavior_tree_status_change_s.c
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/msg/_costmap.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/msg/_costmap_filter_info.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/msg/_costmap_filter_info_s.c
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/msg/_costmap_meta_data.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/msg/_costmap_meta_data_s.c
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/msg/_costmap_s.c
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/msg/_particle.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/msg/_particle_cloud.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/msg/_particle_cloud_s.c
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/msg/_particle_s.c
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/msg/_speed_limit.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/msg/_speed_limit_s.c
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/msg/_voxel_grid.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/msg/_voxel_grid_s.c
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/nav2_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/nav2_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/nav2_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/srv/__init__.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/srv/_clear_costmap_around_robot.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/srv/_clear_costmap_around_robot_s.c
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/srv/_clear_costmap_except_region.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/srv/_clear_costmap_except_region_s.c
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/srv/_clear_entire_costmap.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/srv/_clear_entire_costmap_s.c
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/srv/_get_costmap.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/srv/_get_costmap_s.c
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/srv/_is_path_valid.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/srv/_is_path_valid_s.c
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/srv/_load_map.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/srv/_load_map_s.c
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/srv/_manage_lifecycle_nodes.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/srv/_manage_lifecycle_nodes_s.c
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/srv/_save_map.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/srv/_save_map_s.c
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/srv/_set_initial_pose.py
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/srv/_set_initial_pose_s.c
+-- Up-to-date symlink: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/nav2_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+-- Up-to-date symlink: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/nav2_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+-- Up-to-date symlink: /root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/nav2_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/msg/Costmap.idl
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/msg/CostmapMetaData.idl
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/msg/CostmapFilterInfo.idl
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/msg/SpeedLimit.idl
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/msg/VoxelGrid.idl
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/msg/BehaviorTreeStatusChange.idl
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/msg/BehaviorTreeLog.idl
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/msg/Particle.idl
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/msg/ParticleCloud.idl
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/GetCostmap.idl
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/IsPathValid.idl
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/ClearCostmapExceptRegion.idl
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/ClearCostmapAroundRobot.idl
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/ClearEntireCostmap.idl
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/ManageLifecycleNodes.idl
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/LoadMap.idl
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/SaveMap.idl
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/SetInitialPose.idl
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/action/AssistedTeleop.idl
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/action/BackUp.idl
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/action/ComputePathToPose.idl
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/action/ComputePathThroughPoses.idl
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/action/DriveOnHeading.idl
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/action/SmoothPath.idl
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/action/FollowPath.idl
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/action/NavigateToPose.idl
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/action/NavigateThroughPoses.idl
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/action/Wait.idl
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/action/Spin.idl
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/action/DummyBehavior.idl
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/action/FollowWaypoints.idl
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/msg/Costmap.msg
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/msg/CostmapMetaData.msg
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/msg/CostmapFilterInfo.msg
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/msg/SpeedLimit.msg
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/msg/VoxelGrid.msg
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/msg/BehaviorTreeStatusChange.msg
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/msg/BehaviorTreeLog.msg
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/msg/Particle.msg
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/msg/ParticleCloud.msg
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/GetCostmap.srv
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/GetCostmap_Request.msg
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/GetCostmap_Response.msg
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/IsPathValid.srv
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/IsPathValid_Request.msg
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/IsPathValid_Response.msg
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/ClearCostmapExceptRegion.srv
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/ClearCostmapExceptRegion_Request.msg
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/ClearCostmapExceptRegion_Response.msg
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/ClearCostmapAroundRobot.srv
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/ClearCostmapAroundRobot_Request.msg
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/ClearCostmapAroundRobot_Response.msg
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/ClearEntireCostmap.srv
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/ClearEntireCostmap_Request.msg
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/ClearEntireCostmap_Response.msg
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/ManageLifecycleNodes.srv
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/ManageLifecycleNodes_Request.msg
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/ManageLifecycleNodes_Response.msg
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/LoadMap.srv
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/LoadMap_Request.msg
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/LoadMap_Response.msg
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/SaveMap.srv
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/SaveMap_Request.msg
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/SaveMap_Response.msg
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/SetInitialPose.srv
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/SetInitialPose_Request.msg
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/srv/SetInitialPose_Response.msg
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/action/AssistedTeleop.action
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/action/BackUp.action
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/action/ComputePathToPose.action
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/action/ComputePathThroughPoses.action
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/action/DriveOnHeading.action
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/action/SmoothPath.action
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/action/FollowPath.action
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/action/NavigateToPose.action
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/action/NavigateThroughPoses.action
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/action/Wait.action
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/action/Spin.action
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/action/DummyBehavior.action
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/action/FollowWaypoints.action
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/ament_index/resource_index/package_run_dependencies/nav2_msgs
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/ament_index/resource_index/parent_prefix_path/nav2_msgs
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/environment/ament_prefix_path.sh
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/environment/ament_prefix_path.dsv
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/environment/path.sh
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/environment/path.dsv
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/local_setup.bash
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/local_setup.sh
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/local_setup.zsh
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/local_setup.dsv
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/package.dsv
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/ament_index/resource_index/packages/nav2_msgs
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/cmake/rosidl_cmake-extras.cmake
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/cmake/ament_cmake_export_targets-extras.cmake
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/cmake/nav2_msgsConfig.cmake
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/cmake/nav2_msgsConfig-version.cmake
+-- Symlinking: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/package.xml
+-- Installing: /root/nav2-ws/install/nav2_msgs/lib/libnav2_msgs__rosidl_generator_c.so
+-- Set runtime path of "/root/nav2-ws/install/nav2_msgs/lib/libnav2_msgs__rosidl_generator_c.so" to ""
+-- Installing: /root/nav2-ws/install/nav2_msgs/lib/libnav2_msgs__rosidl_typesupport_fastrtps_c.so
+-- Set runtime path of "/root/nav2-ws/install/nav2_msgs/lib/libnav2_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+-- Installing: /root/nav2-ws/install/nav2_msgs/lib/libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so
+-- Set runtime path of "/root/nav2-ws/install/nav2_msgs/lib/libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+-- Installing: /root/nav2-ws/install/nav2_msgs/lib/libnav2_msgs__rosidl_typesupport_introspection_c.so
+-- Set runtime path of "/root/nav2-ws/install/nav2_msgs/lib/libnav2_msgs__rosidl_typesupport_introspection_c.so" to ""
+-- Installing: /root/nav2-ws/install/nav2_msgs/lib/libnav2_msgs__rosidl_typesupport_c.so
+-- Set runtime path of "/root/nav2-ws/install/nav2_msgs/lib/libnav2_msgs__rosidl_typesupport_c.so" to ""
+-- Installing: /root/nav2-ws/install/nav2_msgs/lib/libnav2_msgs__rosidl_typesupport_introspection_cpp.so
+-- Set runtime path of "/root/nav2-ws/install/nav2_msgs/lib/libnav2_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+-- Installing: /root/nav2-ws/install/nav2_msgs/lib/libnav2_msgs__rosidl_typesupport_cpp.so
+-- Set runtime path of "/root/nav2-ws/install/nav2_msgs/lib/libnav2_msgs__rosidl_typesupport_cpp.so" to ""
+Listing '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/__init__.py'...
+Listing '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/__init__.py'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_assisted_teleop.py'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_back_up.py'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_compute_path_through_poses.py'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_compute_path_to_pose.py'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_drive_on_heading.py'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_dummy_behavior.py'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_follow_path.py'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_follow_waypoints.py'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_navigate_through_poses.py'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_navigate_to_pose.py'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_smooth_path.py'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_spin.py'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/action/_wait.py'...
+Listing '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/msg'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/msg/__init__.py'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/msg/_behavior_tree_log.py'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/msg/_behavior_tree_status_change.py'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/msg/_costmap.py'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/msg/_costmap_filter_info.py'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/msg/_costmap_meta_data.py'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/msg/_particle.py'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/msg/_particle_cloud.py'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/msg/_speed_limit.py'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/msg/_voxel_grid.py'...
+Listing '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/srv'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/srv/__init__.py'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/srv/_clear_costmap_around_robot.py'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/srv/_clear_costmap_except_region.py'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/srv/_clear_entire_costmap.py'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/srv/_get_costmap.py'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/srv/_is_path_valid.py'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/srv/_load_map.py'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/srv/_manage_lifecycle_nodes.py'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/srv/_save_map.py'...
+Compiling '/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages/nav2_msgs/srv/_set_initial_pose.py'...
+-- Installing: /root/nav2-ws/install/nav2_msgs/lib/libnav2_msgs__rosidl_generator_py.so
+-- Set runtime path of "/root/nav2-ws/install/nav2_msgs/lib/libnav2_msgs__rosidl_generator_py.so" to ""
+-- Installing: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/cmake/export_nav2_msgs__rosidl_generator_cExport.cmake
+-- Installing: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/cmake/export_nav2_msgs__rosidl_generator_cExport-release.cmake
+-- Installing: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/cmake/export_nav2_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+-- Installing: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/cmake/export_nav2_msgs__rosidl_typesupport_fastrtps_cExport-release.cmake
+-- Installing: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/cmake/export_nav2_msgs__rosidl_generator_cppExport.cmake
+-- Installing: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/cmake/export_nav2_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+-- Installing: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/cmake/export_nav2_msgs__rosidl_typesupport_fastrtps_cppExport-release.cmake
+-- Installing: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/cmake/nav2_msgs__rosidl_typesupport_introspection_cExport.cmake
+-- Installing: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/cmake/nav2_msgs__rosidl_typesupport_introspection_cExport-release.cmake
+-- Installing: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/cmake/nav2_msgs__rosidl_typesupport_cExport.cmake
+-- Installing: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/cmake/nav2_msgs__rosidl_typesupport_cExport-release.cmake
+-- Installing: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/cmake/nav2_msgs__rosidl_typesupport_introspection_cppExport.cmake
+-- Installing: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/cmake/nav2_msgs__rosidl_typesupport_introspection_cppExport-release.cmake
+-- Installing: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/cmake/nav2_msgs__rosidl_typesupport_cppExport.cmake
+-- Installing: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/cmake/nav2_msgs__rosidl_typesupport_cppExport-release.cmake
+-- Installing: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/cmake/export_nav2_msgs__rosidl_generator_pyExport.cmake
+-- Installing: /root/nav2-ws/install/nav2_msgs/share/nav2_msgs/cmake/export_nav2_msgs__rosidl_generator_pyExport-release.cmake

@@ -1,0 +1,1 @@
+/root/nav2-ws/build/nav_2d_msgs/rosidl_typesupport_introspection_c/nav_2d_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h

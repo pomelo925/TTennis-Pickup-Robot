@@ -1,0 +1,188 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Performing Test arch_native_supported
+-- Performing Test arch_native_supported - Success
+-- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found nav2_common: 1.1.15 (/root/nav2-ws/install/nav2_common/share/nav2_common/cmake)
+-- Found pluginlib: 5.1.0 (/opt/ros/humble/share/pluginlib/cmake)
+-- Found tf2: 0.25.7 (/opt/ros/humble/share/tf2/cmake)
+-- Found visualization_msgs: 4.2.4 (/opt/ros/humble/share/visualization_msgs/cmake)
+-- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)
+-- Found nav2_core: 1.1.15 (/root/nav2-ws/install/nav2_core/share/nav2_core/cmake)
+-- Found Eigen3: TRUE (found version "3.4.0") 
+-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+-- Found tf2_eigen: 0.25.7 (/opt/ros/humble/share/tf2_eigen/cmake)
+-- Setting build type to Release as none was specified.
+-- Performing Test COMPILER_SUPPORTS_AVX512
+-- Performing Test COMPILER_SUPPORTS_AVX512 - Success
+-- Performing Test COMPILER_SUPPORTS_SSE4
+-- Performing Test COMPILER_SUPPORTS_SSE4 - Success
+-- Performing Test COMPILER_SUPPORTS_AVX2
+-- Performing Test COMPILER_SUPPORTS_AVX2 - Success
+-- Performing Test COMPILER_SUPPORTS_FMA
+-- Performing Test COMPILER_SUPPORTS_FMA - Success
+-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Found ament_cmake_gtest: 1.3.9 (/opt/ros/humble/share/ament_cmake_gtest/cmake)
+-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /root/nav2-ws/src/navigation2/nav2_mppi_controller/include
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /root/nav2-ws/build/nav2_mppi_controller
+[  2%] [32mBuilding CXX object CMakeFiles/mppi_controller.dir/src/controller.cpp.o[0m
+[  4%] [32mBuilding CXX object CMakeFiles/mppi_controller.dir/src/path_handler.cpp.o[0m
+[  6%] [32mBuilding CXX object CMakeFiles/mppi_controller.dir/src/parameters_handler.cpp.o[0m
+[  8%] [32mBuilding CXX object CMakeFiles/mppi_controller.dir/src/noise_generator.cpp.o[0m
+[ 10%] [32mBuilding CXX object CMakeFiles/mppi_controller.dir/src/trajectory_visualizer.cpp.o[0m
+[ 12%] [32mBuilding CXX object CMakeFiles/mppi_controller.dir/src/critic_manager.cpp.o[0m
+[ 14%] [32mBuilding CXX object CMakeFiles/mppi_controller.dir/src/optimizer.cpp.o[0m
+[ 16%] [32m[1mLinking CXX shared library libmppi_controller.so[0m
+[ 16%] Built target mppi_controller
+[ 18%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[ 20%] [32m[1mLinking CXX static library libgtest.a[0m
+[ 20%] Built target gtest
+[ 22%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[ 24%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[ 24%] Built target gtest_main
+[ 26%] [32mBuilding CXX object CMakeFiles/mppi_critics.dir/src/critics/obstacles_critic.cpp.o[0m
+[ 28%] [32mBuilding CXX object CMakeFiles/mppi_critics.dir/src/critics/cost_critic.cpp.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/mppi_critics.dir/src/critics/goal_critic.cpp.o[0m
+[ 32%] [32mBuilding CXX object CMakeFiles/mppi_critics.dir/src/critics/goal_angle_critic.cpp.o[0m
+[ 34%] [32mBuilding CXX object CMakeFiles/mppi_critics.dir/src/critics/path_align_critic.cpp.o[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/mppi_critics.dir/src/critics/path_align_legacy_critic.cpp.o[0m
+[ 38%] [32mBuilding CXX object test/CMakeFiles/trajectory_visualizer_tests.dir/trajectory_visualizer_tests.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/mppi_critics.dir/src/critics/path_follow_critic.cpp.o[0m
+[ 42%] [32mBuilding CXX object test/CMakeFiles/motion_model_tests.dir/motion_model_tests.cpp.o[0m
+[ 44%] [32mBuilding CXX object test/CMakeFiles/parameter_handler_test.dir/parameter_handler_test.cpp.o[0m
+[ 46%] [32m[1mLinking CXX executable parameter_handler_test[0m
+[ 46%] Built target parameter_handler_test
+[ 48%] [32m[1mLinking CXX executable motion_model_tests[0m
+[ 48%] Built target motion_model_tests
+[ 51%] [32mBuilding CXX object CMakeFiles/mppi_critics.dir/src/critics/path_angle_critic.cpp.o[0m
+[ 53%] [32m[1mLinking CXX executable trajectory_visualizer_tests[0m
+[ 55%] [32mBuilding CXX object CMakeFiles/mppi_critics.dir/src/critics/prefer_forward_critic.cpp.o[0m
+[ 55%] Built target trajectory_visualizer_tests
+[ 57%] [32mBuilding CXX object CMakeFiles/mppi_critics.dir/src/critics/twirling_critic.cpp.o[0m
+[ 59%] [32mBuilding CXX object CMakeFiles/mppi_critics.dir/src/critics/constraint_critic.cpp.o[0m
+[ 61%] [32mBuilding CXX object test/CMakeFiles/critic_manager_test.dir/critic_manager_test.cpp.o[0m
+[ 63%] [32mBuilding CXX object test/CMakeFiles/path_handler_test.dir/path_handler_test.cpp.o[0m
+[ 65%] [32mBuilding CXX object test/CMakeFiles/utils_test.dir/utils_test.cpp.o[0m
+[ 67%] [32mBuilding CXX object test/CMakeFiles/noise_generator_test.dir/noise_generator_test.cpp.o[0m
+[ 69%] [32mBuilding CXX object test/CMakeFiles/models_test.dir/models_test.cpp.o[0m
+[ 71%] [32m[1mLinking CXX executable path_handler_test[0m
+[ 73%] [32m[1mLinking CXX executable noise_generator_test[0m
+[ 73%] Built target path_handler_test
+[ 73%] Built target noise_generator_test
+[ 75%] [32m[1mLinking CXX executable models_test[0m
+[ 75%] Built target models_test
+[ 77%] [32mBuilding CXX object CMakeFiles/mppi_critics.dir/src/critics/velocity_deadband_critic.cpp.o[0m
+[ 79%] [32m[1mLinking CXX executable critic_manager_test[0m
+[ 81%] [32m[1mLinking CXX executable utils_test[0m
+[ 81%] Built target critic_manager_test
+[ 81%] Built target utils_test
+[ 83%] [32m[1mLinking CXX shared library libmppi_critics.so[0m
+[ 83%] Built target mppi_critics
+[ 85%] [32mBuilding CXX object test/CMakeFiles/optimizer_unit_tests.dir/optimizer_unit_tests.cpp.o[0m
+[ 87%] [32m[1mLinking CXX executable optimizer_unit_tests[0m
+[ 87%] Built target optimizer_unit_tests
+[ 89%] [32mBuilding CXX object test/CMakeFiles/critics_tests.dir/critics_tests.cpp.o[0m
+[ 91%] [32m[1mLinking CXX executable critics_tests[0m
+[ 91%] Built target critics_tests
+[ 95%] [32mBuilding CXX object test/CMakeFiles/optimizer_smoke_test.dir/optimizer_smoke_test.cpp.o[0m
+[ 95%] [32mBuilding CXX object test/CMakeFiles/controller_state_transition_test.dir/controller_state_transition_test.cpp.o[0m
+[ 97%] [32m[1mLinking CXX executable controller_state_transition_test[0m
+[ 97%] Built target controller_state_transition_test
+[100%] [32m[1mLinking CXX executable optimizer_smoke_test[0m
+[100%] Built target optimizer_smoke_test
+-- Install configuration: "Release"
+-- Execute custom install script
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/lib/libmppi_controller.so
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/lib/libmppi_critics.so
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/controller.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/critic_data.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/critic_function.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/critic_manager.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/critics/constraint_critic.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/critics/cost_critic.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/critics/goal_angle_critic.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/critics/goal_critic.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/critics/obstacles_critic.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/critics/path_align_critic.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/critics/path_align_legacy_critic.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/critics/path_angle_critic.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/critics/path_follow_critic.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/critics/prefer_forward_critic.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/critics/twirling_critic.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/critics/velocity_deadband_critic.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/models/constraints.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/models/control_sequence.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/models/optimizer_settings.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/models/path.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/models/state.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/models/trajectories.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/motion_models.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/optimizer.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/tools/noise_generator.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/tools/parameters_handler.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/tools/path_handler.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/tools/trajectory_visualizer.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/include//nav2_mppi_controller/tools/utils.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/environment/library_path.sh
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/environment/library_path.dsv
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller//mppic.xml
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller//critics.xml
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/ament_index/resource_index/package_run_dependencies/nav2_mppi_controller
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/ament_index/resource_index/parent_prefix_path/nav2_mppi_controller
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/environment/ament_prefix_path.sh
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/environment/ament_prefix_path.dsv
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/environment/path.sh
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/environment/path.dsv
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/local_setup.bash
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/local_setup.sh
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/local_setup.zsh
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/local_setup.dsv
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/package.dsv
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/ament_index/resource_index/packages/nav2_mppi_controller
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/ament_index/resource_index/nav2_core__pluginlib__plugin/nav2_mppi_controller
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/ament_index/resource_index/nav2_mppi_controller__pluginlib__plugin/nav2_mppi_controller
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/cmake/ament_cmake_export_libraries-extras.cmake
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/cmake/nav2_mppi_controllerConfig.cmake
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/cmake/nav2_mppi_controllerConfig-version.cmake
+-- Symlinking: /root/nav2-ws/install/nav2_mppi_controller/share/nav2_mppi_controller/package.xml

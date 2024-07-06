@@ -1,0 +1,21 @@
+[0.010s] Invoking command in '/root/nav2-ws/build/nav2_common': /usr/bin/cmake /root/nav2-ws/src/navigation2/nav2_common -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/root/nav2-ws/install/nav2_common
+[0.021s] [31mCMake Error at CMakeLists.txt:5 (find_package):
+[0.021s]   By not providing "Findament_cmake_core.cmake" in CMAKE_MODULE_PATH this
+[0.021s]   project has asked CMake to find a package configuration file provided by
+[0.021s]   "ament_cmake_core", but CMake did not find one.
+[0.021s] 
+[0.021s]   Could not find a package configuration file provided by "ament_cmake_core"
+[0.021s]   with any of the following names:
+[0.021s] 
+[0.022s]     ament_cmake_coreConfig.cmake
+[0.022s]     ament_cmake_core-config.cmake
+[0.022s] 
+[0.022s]   Add the installation prefix of "ament_cmake_core" to CMAKE_PREFIX_PATH or
+[0.023s]   set "ament_cmake_core_DIR" to a directory containing one of the above
+[0.023s]   files.  If "ament_cmake_core" provides a separate development package or
+[0.023s]   SDK, be sure it has been installed.
+[0.023s] 
+[0.024s] [0m
+[0.025s] -- Configuring incomplete, errors occurred!
+[0.025s] See also "/root/nav2-ws/build/nav2_common/CMakeFiles/CMakeOutput.log".
+[0.025s] Invoked command in '/root/nav2-ws/build/nav2_common' returned '1': /usr/bin/cmake /root/nav2-ws/src/navigation2/nav2_common -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/root/nav2-ws/install/nav2_common

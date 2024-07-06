@@ -1,0 +1,20 @@
+[0.011s] Invoking command in '/root/nav2-ws/build/nav_2d_msgs': /usr/bin/cmake /root/nav2-ws/src/navigation2/nav2_dwb_controller/nav_2d_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/root/nav2-ws/install/nav_2d_msgs
+[0.037s] [31mCMake Error at CMakeLists.txt:4 (find_package):
+[0.038s]   By not providing "Findgeometry_msgs.cmake" in CMAKE_MODULE_PATH this
+[0.038s]   project has asked CMake to find a package configuration file provided by
+[0.039s]   "geometry_msgs", but CMake did not find one.
+[0.039s] 
+[0.040s]   Could not find a package configuration file provided by "geometry_msgs"
+[0.040s]   with any of the following names:
+[0.040s] 
+[0.041s]     geometry_msgsConfig.cmake
+[0.041s]     geometry_msgs-config.cmake
+[0.042s] 
+[0.042s]   Add the installation prefix of "geometry_msgs" to CMAKE_PREFIX_PATH or set
+[0.042s]   "geometry_msgs_DIR" to a directory containing one of the above files.  If
+[0.042s]   "geometry_msgs" provides a separate development package or SDK, be sure it
+[0.042s]   has been installed.
+[0.042s] 
+[0.042s] [0m
+[0.042s] -- Configuring incomplete, errors occurred!
+[0.042s] See also "/root/nav2-ws/build/nav_2d_msgs/CMakeFiles/CMakeOutput.log".

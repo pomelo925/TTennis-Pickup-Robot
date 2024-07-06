@@ -1,0 +1,250 @@
+[0.024s] Invoking command in '/root/nav2-ws/build/nav2_costmap_2d': AMENT_PREFIX_PATH=/root/nav2-ws/install/nav2_map_server:/root/nav2-ws/install/nav2_lifecycle_manager:/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_voxel_grid:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/nav2-ws/install/nav2_map_server:/root/nav2-ws/install/nav2_lifecycle_manager:/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_voxel_grid:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:/opt/ros/humble LD_LIBRARY_PATH=/root/nav2-ws/install/nav2_map_server/lib:/root/nav2-ws/install/nav2_lifecycle_manager/lib:/root/nav2-ws/install/nav2_util/lib:/root/nav2-ws/install/nav2_voxel_grid/lib:/root/nav2-ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/root/nav2-ws/install/nav2_common/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /root/nav2-ws/src/navigation2/nav2_costmap_2d -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/root/nav2-ws/install/nav2_costmap_2d
+[0.092s] -- The C compiler identification is GNU 11.4.0
+[0.154s] -- The CXX compiler identification is GNU 11.4.0
+[0.162s] -- Detecting C compiler ABI info
+[0.241s] -- Detecting C compiler ABI info - done
+[0.248s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.248s] -- Detecting C compile features
+[0.249s] -- Detecting C compile features - done
+[0.253s] -- Detecting CXX compiler ABI info
+[0.341s] -- Detecting CXX compiler ABI info - done
+[0.350s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.350s] -- Detecting CXX compile features
+[0.351s] -- Detecting CXX compile features - done
+[0.355s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.531s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.607s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.656s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.713s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.721s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.733s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.752s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.778s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.926s] -- Found laser_geometry: 2.4.0 (/opt/ros/humble/share/laser_geometry/cmake)
+[1.029s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.035s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.175s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.215s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.285s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.303s] -- Looking for pthread.h
+[1.381s] -- Looking for pthread.h - found
+[1.382s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.467s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.469s] -- Found Threads: TRUE  
+[1.775s] -- Found map_msgs: 2.1.0 (/opt/ros/humble/share/map_msgs/cmake)
+[2.080s] -- Found message_filters: 4.3.4 (/opt/ros/humble/share/message_filters/cmake)
+[2.087s] -- Found nav2_common: 1.1.15 (/root/nav2-ws/install/nav2_common/share/nav2_common/cmake)
+[2.088s] -- Found nav2_msgs: 1.1.15 (/root/nav2-ws/install/nav2_msgs/share/nav2_msgs/cmake)
+[2.344s] -- Found nav2_util: 1.1.15 (/root/nav2-ws/install/nav2_util/share/nav2_util/cmake)
+[2.720s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[2.720s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.982s] -- Found nav2_voxel_grid: 1.1.15 (/root/nav2-ws/install/nav2_voxel_grid/share/nav2_voxel_grid/cmake)
+[2.989s] -- Found pluginlib: 5.1.0 (/opt/ros/humble/share/pluginlib/cmake)
+[3.017s] -- Found std_srvs: 4.2.4 (/opt/ros/humble/share/std_srvs/cmake)
+[3.041s] -- Found tf2_sensor_msgs: 0.25.7 (/opt/ros/humble/share/tf2_sensor_msgs/cmake)
+[3.065s] -- Found visualization_msgs: 4.2.4 (/opt/ros/humble/share/visualization_msgs/cmake)
+[3.207s] -- Found angles: 1.15.0 (/opt/ros/humble/share/angles/cmake)
+[3.210s] -- Found Eigen3: TRUE (found suitable version "3.4.0", minimum required is "3.3") 
+[3.210s] -- Setting build type to Release as none was specified.
+[6.921s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[9.106s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[9.129s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[9.141s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[9.790s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[9.792s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/root/nav2-ws/src/navigation2/nav2_costmap_2d/include>
+[9.792s] -- Configured cppcheck exclude dirs and/or files: 
+[9.793s] -- Added test 'flake8' to check Python code syntax and style conventions
+[9.795s] -- Added test 'lint_cmake' to check CMake code style
+[9.796s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[9.800s] -- Added test 'uncrustify' to check C / C++ code style
+[9.801s] -- Configured uncrustify additional arguments: 
+[9.802s] -- Added test 'xmllint' to check XML markup files
+[9.805s] -- Configuring done
+[10.577s] -- Generating done
+[10.583s] -- Build files have been written to: /root/nav2-ws/build/nav2_costmap_2d
+[10.603s] Invoked command in '/root/nav2-ws/build/nav2_costmap_2d' returned '0': AMENT_PREFIX_PATH=/root/nav2-ws/install/nav2_map_server:/root/nav2-ws/install/nav2_lifecycle_manager:/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_voxel_grid:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/nav2-ws/install/nav2_map_server:/root/nav2-ws/install/nav2_lifecycle_manager:/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_voxel_grid:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:/opt/ros/humble LD_LIBRARY_PATH=/root/nav2-ws/install/nav2_map_server/lib:/root/nav2-ws/install/nav2_lifecycle_manager/lib:/root/nav2-ws/install/nav2_util/lib:/root/nav2-ws/install/nav2_voxel_grid/lib:/root/nav2-ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/root/nav2-ws/install/nav2_common/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /root/nav2-ws/src/navigation2/nav2_costmap_2d -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/root/nav2-ws/install/nav2_costmap_2d
+[10.605s] Invoking command in '/root/nav2-ws/build/nav2_costmap_2d': AMENT_PREFIX_PATH=/root/nav2-ws/install/nav2_map_server:/root/nav2-ws/install/nav2_lifecycle_manager:/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_voxel_grid:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/nav2-ws/install/nav2_map_server:/root/nav2-ws/install/nav2_lifecycle_manager:/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_voxel_grid:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:/opt/ros/humble LD_LIBRARY_PATH=/root/nav2-ws/install/nav2_map_server/lib:/root/nav2-ws/install/nav2_lifecycle_manager/lib:/root/nav2-ws/install/nav2_util/lib:/root/nav2-ws/install/nav2_voxel_grid/lib:/root/nav2-ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/root/nav2-ws/install/nav2_common/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /root/nav2-ws/build/nav2_costmap_2d -- -j8 -l8
+[10.668s] [  2%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/array_parser.cpp.o[0m
+[10.669s] [  2%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[10.670s] [  3%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/costmap_2d.cpp.o[0m
+[10.671s] [  4%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/layer.cpp.o[0m
+[10.672s] [  6%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/costmap_2d_publisher.cpp.o[0m
+[10.675s] [  7%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[10.675s] [  8%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/costmap_2d_ros.cpp.o[0m
+[10.685s] [  9%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/layered_costmap.cpp.o[0m
+[11.820s] [ 10%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/costmap_math.cpp.o[0m
+[12.800s] [ 12%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[13.024s] [ 12%] Built target gtest_main
+[13.088s] [ 13%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/footprint.cpp.o[0m
+[13.219s] [ 14%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/costmap_layer.cpp.o[0m
+[13.386s] [ 15%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/observation_buffer.cpp.o[0m
+[20.850s] [ 17%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/clear_costmap_service.cpp.o[0m
+[21.826s] [ 18%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/footprint_collision_checker.cpp.o[0m
+[34.748s] [ 19%] [32m[1mLinking CXX static library libgtest.a[0m
+[34.953s] [ 19%] Built target gtest
+[47.737s] [ 20%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/plugins/costmap_filters/costmap_filter.cpp.o[0m
+[52.539s] [ 21%] [32m[1mLinking CXX shared library libnav2_costmap_2d_core.so[0m
+[52.926s] [ 21%] Built target nav2_costmap_2d_core
+[52.948s] [ 23%] [32mBuilding CXX object CMakeFiles/layers.dir/plugins/inflation_layer.cpp.o[0m
+[57.762s] [ 24%] [32mBuilding CXX object CMakeFiles/layers.dir/plugins/static_layer.cpp.o[0m
+[59.975s] [ 26%] [32mBuilding CXX object test/unit/CMakeFiles/collision_footprint_test.dir/footprint_collision_checker_test.cpp.o[0m
+[59.976s] [ 26%] [32mBuilding CXX object test/unit/CMakeFiles/costmap_convesion_test.dir/costmap_conversion_test.cpp.o[0m
+[61.090s] [ 28%] [32mBuilding CXX object test/unit/CMakeFiles/array_parser_test.dir/array_parser_test.cpp.o[0m
+[61.127s] [ 29%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_cloud.dir/src/costmap_2d_cloud.cpp.o[0m
+[62.201s] [ 30%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_markers.dir/src/costmap_2d_markers.cpp.o[0m
+[62.226s] [ 31%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_client.dir/src/footprint_subscriber.cpp.o[0m
+[63.341s] [ 32%] [32mBuilding CXX object CMakeFiles/filters.dir/plugins/costmap_filters/keepout_filter.cpp.o[0m
+[65.564s] [ 34%] [32m[1mLinking CXX executable array_parser_test[0m
+[66.287s] [ 34%] Built target array_parser_test
+[72.276s] [ 35%] [32m[1mLinking CXX executable costmap_convesion_test[0m
+[73.512s] [ 35%] Built target costmap_convesion_test
+[75.290s] [ 36%] [32m[1mLinking CXX executable collision_footprint_test[0m
+[76.526s] [ 36%] Built target collision_footprint_test
+[88.639s] [ 37%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_client.dir/src/costmap_subscriber.cpp.o[0m
+[89.043s] [ 39%] [32mBuilding CXX object CMakeFiles/layers.dir/plugins/obstacle_layer.cpp.o[0m
+[89.156s] [ 40%] [32m[1mLinking CXX executable nav2_costmap_2d_cloud[0m
+[89.519s] [ 40%] Built target nav2_costmap_2d_cloud
+[89.828s] [ 41%] [32m[1mLinking CXX executable nav2_costmap_2d_markers[0m
+[90.150s] [ 41%] Built target nav2_costmap_2d_markers
+[94.106s] [ 42%] [32mBuilding CXX object CMakeFiles/filters.dir/plugins/costmap_filters/speed_filter.cpp.o[0m
+[102.195s] [ 43%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_client.dir/src/costmap_topic_collision_checker.cpp.o[0m
+[106.681s] [ 45%] [32m[1mLinking CXX shared library libnav2_costmap_2d_client.so[0m
+[107.218s] [ 45%] Built target nav2_costmap_2d_client
+[110.232s] [ 46%] [32mBuilding CXX object CMakeFiles/layers.dir/plugins/voxel_layer.cpp.o[0m
+[110.248s] [ 47%] [32mBuilding CXX object test/unit/CMakeFiles/costmap_filter_service_test.dir/costmap_filter_service_test.cpp.o[0m
+[111.252s] [ 48%] [32mBuilding CXX object CMakeFiles/layers.dir/src/observation_buffer.cpp.o[0m
+[111.344s] [ 50%] [32mBuilding CXX object test/unit/CMakeFiles/copy_window_test.dir/copy_window_test.cpp.o[0m
+[112.418s] [ 51%] [32mBuilding CXX object test/unit/CMakeFiles/costmap_filter_test.dir/costmap_filter_test.cpp.o[0m
+[113.499s] [ 52%] [32mBuilding CXX object test/unit/CMakeFiles/declare_parameter_test.dir/declare_parameter_test.cpp.o[0m
+[115.014s] [ 53%] [32mBuilding CXX object CMakeFiles/filters.dir/plugins/costmap_filters/binary_filter.cpp.o[0m
+[122.066s] [ 54%] [32m[1mLinking CXX executable copy_window_test[0m
+[123.105s] [ 54%] Built target copy_window_test
+[124.219s] [ 56%] [32m[1mLinking CXX executable costmap_filter_test[0m
+[124.510s] [ 57%] [32m[1mLinking CXX executable costmap_filter_service_test[0m
+[124.903s] [ 57%] Built target costmap_filter_test
+[125.201s] [ 58%] [32m[1mLinking CXX executable declare_parameter_test[0m
+[125.324s] [ 58%] Built target costmap_filter_service_test
+[125.689s] [ 58%] Built target declare_parameter_test
+[129.255s] [ 59%] [32mBuilding CXX object CMakeFiles/layers.dir/plugins/denoise_layer.cpp.o[0m
+[134.791s] [ 60%] [32mBuilding CXX object CMakeFiles/layers.dir/plugins/range_sensor_layer.cpp.o[0m
+[138.645s] [ 62%] [32m[1mLinking CXX shared library libfilters.so[0m
+[139.197s] [ 62%] Built target filters
+[151.821s] [ 63%] [32m[1mLinking CXX shared library liblayers.so[0m
+[153.410s] [ 63%] Built target layers
+[153.460s] [ 64%] [32mBuilding CXX object test/unit/CMakeFiles/binary_filter_test.dir/binary_filter_test.cpp.o[0m
+[153.474s] [ 65%] [32mBuilding CXX object test/unit/CMakeFiles/speed_filter_test.dir/speed_filter_test.cpp.o[0m
+[164.484s] [ 68%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d.dir/src/costmap_2d_node.cpp.o[0m
+[164.485s] [ 68%] [32mBuilding CXX object test/unit/CMakeFiles/keepout_filter_test.dir/keepout_filter_test.cpp.o[0m
+[165.502s] [ 69%] [32mBuilding CXX object test/regression/CMakeFiles/plugin_api_order.dir/plugin_api_order.cpp.o[0m
+[166.526s] [ 70%] [32mBuilding CXX object test/regression/CMakeFiles/costmap_bresenham_2d.dir/costmap_bresenham_2d.cpp.o[0m
+[166.528s] [ 71%] [32mBuilding CXX object test/regression/CMakeFiles/order_layer.dir/order_layer.cpp.o[0m
+[167.629s] [ 73%] [32mBuilding CXX object test/integration/CMakeFiles/dyn_params_tests.dir/dyn_params_tests.cpp.o[0m
+[170.032s] [ 74%] [32m[1mLinking CXX executable costmap_bresenham_2d[0m
+[170.776s] [ 74%] Built target costmap_bresenham_2d
+[170.808s] [ 75%] [32mBuilding CXX object test/unit/CMakeFiles/denoise_layer_test.dir/denoise_layer_test.cpp.o[0m
+[173.396s] [ 78%] [32m[1mLinking CXX shared library liborder_layer.so[0m
+[173.398s] [ 78%] [32m[1mLinking CXX executable nav2_costmap_2d[0m
+[174.119s] [ 78%] Built target order_layer
+[174.165s] [ 78%] Built target nav2_costmap_2d
+[174.203s] [ 79%] [32mBuilding CXX object test/integration/CMakeFiles/footprint_tests_exec.dir/footprint_tests.cpp.o[0m
+[174.262s] [ 80%] [32mBuilding CXX object test/integration/CMakeFiles/test_collision_checker_exec.dir/test_costmap_topic_collision_checker.cpp.o[0m
+[175.985s] [ 81%] [32m[1mLinking CXX executable plugin_api_order[0m
+[176.185s] [ 82%] [32m[1mLinking CXX executable binary_filter_test[0m
+[176.653s] [ 84%] [32m[1mLinking CXX executable speed_filter_test[0m
+[177.113s] [ 84%] Built target plugin_api_order
+[177.196s] [ 84%] Built target binary_filter_test
+[177.799s] [ 84%] Built target speed_filter_test
+[180.552s] [ 85%] [32m[1mLinking CXX executable keepout_filter_test[0m
+[181.687s] [ 85%] Built target keepout_filter_test
+[181.735s] [ 86%] [32mBuilding CXX object test/unit/CMakeFiles/denoise_layer_test.dir/image_test.cpp.o[0m
+[181.831s] [ 87%] [32mBuilding CXX object test/integration/CMakeFiles/range_tests_exec.dir/range_tests.cpp.o[0m
+[182.262s] [ 89%] [32mBuilding CXX object test/unit/CMakeFiles/denoise_layer_test.dir/image_processing_test.cpp.o[0m
+[182.783s] [ 90%] [32m[1mLinking CXX executable dyn_params_tests[0m
+[183.719s] [ 91%] [32m[1mLinking CXX executable footprint_tests_exec[0m
+[183.816s] [ 91%] Built target dyn_params_tests
+[183.972s] [ 92%] [32mBuilding CXX object test/integration/CMakeFiles/obstacle_tests_exec.dir/obstacle_tests.cpp.o[0m
+[185.042s] [ 92%] Built target footprint_tests_exec
+[191.342s] [ 93%] [32m[1mLinking CXX executable denoise_layer_test[0m
+[193.256s] [ 93%] Built target denoise_layer_test
+[196.953s] [ 95%] [32m[1mLinking CXX executable test_collision_checker_exec[0m
+[198.176s] [ 95%] Built target test_collision_checker_exec
+[199.766s] [ 96%] [32m[1mLinking CXX executable range_tests_exec[0m
+[200.430s] [ 96%] Built target range_tests_exec
+[203.738s] [ 97%] [32m[1mLinking CXX executable obstacle_tests_exec[0m
+[204.272s] [ 97%] Built target obstacle_tests_exec
+[204.300s] [ 98%] [32mBuilding CXX object test/integration/CMakeFiles/inflation_tests_exec.dir/inflation_tests.cpp.o[0m
+[214.637s] [100%] [32m[1mLinking CXX executable inflation_tests_exec[0m
+[215.046s] [100%] Built target inflation_tests_exec
+[215.058s] Invoked command in '/root/nav2-ws/build/nav2_costmap_2d' returned '0': AMENT_PREFIX_PATH=/root/nav2-ws/install/nav2_map_server:/root/nav2-ws/install/nav2_lifecycle_manager:/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_voxel_grid:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/nav2-ws/install/nav2_map_server:/root/nav2-ws/install/nav2_lifecycle_manager:/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_voxel_grid:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:/opt/ros/humble LD_LIBRARY_PATH=/root/nav2-ws/install/nav2_map_server/lib:/root/nav2-ws/install/nav2_lifecycle_manager/lib:/root/nav2-ws/install/nav2_util/lib:/root/nav2-ws/install/nav2_voxel_grid/lib:/root/nav2-ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/root/nav2-ws/install/nav2_common/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /root/nav2-ws/build/nav2_costmap_2d -- -j8 -l8
+[215.163s] Invoking command in '/root/nav2-ws/build/nav2_costmap_2d': AMENT_PREFIX_PATH=/root/nav2-ws/install/nav2_map_server:/root/nav2-ws/install/nav2_lifecycle_manager:/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_voxel_grid:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/nav2-ws/install/nav2_map_server:/root/nav2-ws/install/nav2_lifecycle_manager:/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_voxel_grid:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:/opt/ros/humble LD_LIBRARY_PATH=/root/nav2-ws/install/nav2_map_server/lib:/root/nav2-ws/install/nav2_lifecycle_manager/lib:/root/nav2-ws/install/nav2_util/lib:/root/nav2-ws/install/nav2_voxel_grid/lib:/root/nav2-ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/root/nav2-ws/install/nav2_common/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /root/nav2-ws/build/nav2_costmap_2d
+[215.171s] -- Install configuration: "Release"
+[215.171s] -- Execute custom install script
+[215.172s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/lib/nav2_costmap_2d/nav2_costmap_2d_markers
+[215.180s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/lib/nav2_costmap_2d/nav2_costmap_2d_cloud
+[215.189s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/lib/nav2_costmap_2d/nav2_costmap_2d
+[215.198s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/share/nav2_costmap_2d/costmap_plugins.xml
+[215.208s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/array_parser.hpp
+[215.218s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/clear_costmap_service.hpp
+[215.229s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/cost_values.hpp
+[215.238s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/costmap_2d.hpp
+[215.247s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/costmap_2d_publisher.hpp
+[215.264s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/costmap_2d_ros.hpp
+[215.277s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/costmap_filters/binary_filter.hpp
+[215.289s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/costmap_filters/costmap_filter.hpp
+[215.300s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/costmap_filters/filter_values.hpp
+[215.309s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/costmap_filters/keepout_filter.hpp
+[215.318s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/costmap_filters/speed_filter.hpp
+[215.327s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/costmap_layer.hpp
+[215.337s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/costmap_math.hpp
+[215.347s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/costmap_subscriber.hpp
+[215.357s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/costmap_topic_collision_checker.hpp
+[215.366s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/denoise/image.hpp
+[215.376s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/denoise/image_processing.hpp
+[215.386s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/denoise_layer.hpp
+[215.396s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/exceptions.hpp
+[215.406s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/footprint.hpp
+[215.415s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/footprint_collision_checker.hpp
+[215.425s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/footprint_subscriber.hpp
+[215.434s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/inflation_layer.hpp
+[215.443s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/layer.hpp
+[215.452s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/layered_costmap.hpp
+[215.461s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/observation.hpp
+[215.470s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/observation_buffer.hpp
+[215.479s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/obstacle_layer.hpp
+[215.488s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/range_sensor_layer.hpp
+[215.498s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/static_layer.hpp
+[215.507s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/include/nav2_costmap_2d/nav2_costmap_2d/voxel_layer.hpp
+[215.517s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/lib/liborder_layer.so
+[215.526s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/share/nav2_costmap_2d/test/regression/order_layer.xml
+[215.535s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/share/nav2_costmap_2d/environment/library_path.sh
+[215.543s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/share/nav2_costmap_2d/environment/library_path.dsv
+[215.552s] -- Up-to-date symlink: /root/nav2-ws/install/nav2_costmap_2d/share/nav2_costmap_2d//costmap_plugins.xml
+[215.553s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/share/ament_index/resource_index/package_run_dependencies/nav2_costmap_2d
+[215.561s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/share/ament_index/resource_index/parent_prefix_path/nav2_costmap_2d
+[215.571s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/share/nav2_costmap_2d/environment/ament_prefix_path.sh
+[215.581s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/share/nav2_costmap_2d/environment/ament_prefix_path.dsv
+[215.590s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/share/nav2_costmap_2d/environment/path.sh
+[215.599s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/share/nav2_costmap_2d/environment/path.dsv
+[215.609s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/share/nav2_costmap_2d/local_setup.bash
+[215.619s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/share/nav2_costmap_2d/local_setup.sh
+[215.628s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/share/nav2_costmap_2d/local_setup.zsh
+[215.637s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/share/nav2_costmap_2d/local_setup.dsv
+[215.647s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/share/nav2_costmap_2d/package.dsv
+[215.656s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/share/ament_index/resource_index/packages/nav2_costmap_2d
+[215.666s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/share/ament_index/resource_index/nav2_costmap_2d__pluginlib__plugin/nav2_costmap_2d
+[215.676s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/share/nav2_costmap_2d/cmake/ament_cmake_export_targets-extras.cmake
+[215.686s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/share/nav2_costmap_2d/cmake/ament_cmake_export_dependencies-extras.cmake
+[215.695s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/share/nav2_costmap_2d/cmake/nav2_costmap_2dConfig.cmake
+[215.705s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/share/nav2_costmap_2d/cmake/nav2_costmap_2dConfig-version.cmake
+[215.715s] -- Symlinking: /root/nav2-ws/install/nav2_costmap_2d/share/nav2_costmap_2d/package.xml
+[215.725s] -- Installing: /root/nav2-ws/install/nav2_costmap_2d/lib/liblayers.so
+[215.730s] -- Set runtime path of "/root/nav2-ws/install/nav2_costmap_2d/lib/liblayers.so" to ""
+[215.730s] -- Installing: /root/nav2-ws/install/nav2_costmap_2d/lib/libfilters.so
+[215.733s] -- Set runtime path of "/root/nav2-ws/install/nav2_costmap_2d/lib/libfilters.so" to ""
+[215.733s] -- Installing: /root/nav2-ws/install/nav2_costmap_2d/lib/libnav2_costmap_2d_core.so
+[215.736s] -- Set runtime path of "/root/nav2-ws/install/nav2_costmap_2d/lib/libnav2_costmap_2d_core.so" to ""
+[215.736s] -- Installing: /root/nav2-ws/install/nav2_costmap_2d/lib/libnav2_costmap_2d_client.so
+[215.738s] -- Set runtime path of "/root/nav2-ws/install/nav2_costmap_2d/lib/libnav2_costmap_2d_client.so" to ""
+[215.738s] -- Installing: /root/nav2-ws/install/nav2_costmap_2d/share/nav2_costmap_2d/cmake/export_nav2_costmap_2dExport.cmake
+[215.739s] -- Installing: /root/nav2-ws/install/nav2_costmap_2d/share/nav2_costmap_2d/cmake/export_nav2_costmap_2dExport-release.cmake
+[215.742s] Invoked command in '/root/nav2-ws/build/nav2_costmap_2d' returned '0': AMENT_PREFIX_PATH=/root/nav2-ws/install/nav2_map_server:/root/nav2-ws/install/nav2_lifecycle_manager:/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_voxel_grid:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/nav2-ws/install/nav2_map_server:/root/nav2-ws/install/nav2_lifecycle_manager:/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_voxel_grid:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:/opt/ros/humble LD_LIBRARY_PATH=/root/nav2-ws/install/nav2_map_server/lib:/root/nav2-ws/install/nav2_lifecycle_manager/lib:/root/nav2-ws/install/nav2_util/lib:/root/nav2-ws/install/nav2_voxel_grid/lib:/root/nav2-ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/root/nav2-ws/install/nav2_common/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /root/nav2-ws/build/nav2_costmap_2d

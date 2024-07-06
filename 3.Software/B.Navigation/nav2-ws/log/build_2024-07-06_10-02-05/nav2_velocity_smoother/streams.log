@@ -1,0 +1,100 @@
+[0.025s] Invoking command in '/root/nav2-ws/build/nav2_velocity_smoother': AMENT_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:/opt/ros/humble LD_LIBRARY_PATH=/root/nav2-ws/install/nav2_util/lib:/root/nav2-ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/root/nav2-ws/install/nav2_common/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /root/nav2-ws/src/navigation2/nav2_velocity_smoother -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/root/nav2-ws/install/nav2_velocity_smoother
+[0.099s] -- The C compiler identification is GNU 11.4.0
+[0.174s] -- The CXX compiler identification is GNU 11.4.0
+[0.183s] -- Detecting C compiler ABI info
+[0.279s] -- Detecting C compiler ABI info - done
+[0.289s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.289s] -- Detecting C compile features
+[0.289s] -- Detecting C compile features - done
+[0.293s] -- Detecting CXX compiler ABI info
+[0.397s] -- Detecting CXX compiler ABI info - done
+[0.407s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.407s] -- Detecting CXX compile features
+[0.408s] -- Detecting CXX compile features - done
+[0.413s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.622s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.711s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.757s] -- Found nav2_common: 1.1.15 (/root/nav2-ws/install/nav2_common/share/nav2_common/cmake)
+[0.761s] -- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)
+[0.819s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.828s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.840s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.859s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.887s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.983s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.988s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.130s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.171s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.246s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.266s] -- Looking for pthread.h
+[1.367s] -- Looking for pthread.h - found
+[1.367s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.468s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.468s] -- Found Threads: TRUE  
+[1.678s] -- Found rclcpp_components: 16.0.9 (/opt/ros/humble/share/rclcpp_components/cmake)
+[1.773s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[1.831s] -- Found nav2_util: 1.1.15 (/root/nav2-ws/install/nav2_util/share/nav2_util/cmake)
+[2.594s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[2.596s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[2.597s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.857s] -- Setting build type to Release as none was specified.
+[3.815s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[3.924s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[4.403s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[4.404s] -- Configured cppcheck include dirs: /root/nav2-ws/src/navigation2/nav2_velocity_smoother/include
+[4.404s] -- Configured cppcheck exclude dirs and/or files: 
+[4.405s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[4.407s] -- Configured cpplint exclude dirs and/or files: 
+[4.412s] -- Added test 'lint_cmake' to check CMake code style
+[4.412s] -- Added test 'uncrustify' to check C / C++ code style
+[4.413s] -- Configured uncrustify additional arguments: 
+[4.413s] -- Added test 'xmllint' to check XML markup files
+[4.413s] -- Configuring done
+[4.524s] -- Generating done
+[4.533s] -- Build files have been written to: /root/nav2-ws/build/nav2_velocity_smoother
+[4.543s] Invoked command in '/root/nav2-ws/build/nav2_velocity_smoother' returned '0': AMENT_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:/opt/ros/humble LD_LIBRARY_PATH=/root/nav2-ws/install/nav2_util/lib:/root/nav2-ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/root/nav2-ws/install/nav2_common/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /root/nav2-ws/src/navigation2/nav2_velocity_smoother -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/root/nav2-ws/install/nav2_velocity_smoother
+[4.545s] Invoking command in '/root/nav2-ws/build/nav2_velocity_smoother': AMENT_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:/opt/ros/humble LD_LIBRARY_PATH=/root/nav2-ws/install/nav2_util/lib:/root/nav2-ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/root/nav2-ws/install/nav2_common/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /root/nav2-ws/build/nav2_velocity_smoother -- -j8 -l8
+[4.609s] [ 20%] [32mBuilding CXX object CMakeFiles/velocity_smoother_core.dir/src/velocity_smoother.cpp.o[0m
+[4.610s] [ 20%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[4.612s] [ 30%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[6.540s] [ 40%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[6.694s] [ 40%] Built target gtest_main
+[24.597s] [ 50%] [32m[1mLinking CXX static library libgtest.a[0m
+[24.835s] [ 50%] Built target gtest
+[34.700s] [ 60%] [32m[1mLinking CXX shared library libvelocity_smoother_core.so[0m
+[35.643s] [ 60%] Built target velocity_smoother_core
+[35.830s] [ 70%] [32mBuilding CXX object CMakeFiles/velocity_smoother.dir/src/main.cpp.o[0m
+[45.843s] [ 80%] [32m[1mLinking CXX executable velocity_smoother[0m
+[46.239s] [ 80%] Built target velocity_smoother
+[46.284s] [ 90%] [32mBuilding CXX object test/CMakeFiles/velocity_smoother_tests.dir/test_velocity_smoother.cpp.o[0m
+[65.925s] [100%] [32m[1mLinking CXX executable velocity_smoother_tests[0m
+[66.401s] [100%] Built target velocity_smoother_tests
+[66.415s] Invoked command in '/root/nav2-ws/build/nav2_velocity_smoother' returned '0': AMENT_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:/opt/ros/humble LD_LIBRARY_PATH=/root/nav2-ws/install/nav2_util/lib:/root/nav2-ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/root/nav2-ws/install/nav2_common/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /root/nav2-ws/build/nav2_velocity_smoother -- -j8 -l8
+[66.451s] Invoking command in '/root/nav2-ws/build/nav2_velocity_smoother': AMENT_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:/opt/ros/humble LD_LIBRARY_PATH=/root/nav2-ws/install/nav2_util/lib:/root/nav2-ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/root/nav2-ws/install/nav2_common/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /root/nav2-ws/build/nav2_velocity_smoother
+[66.460s] -- Install configuration: "Release"
+[66.462s] -- Execute custom install script
+[66.463s] -- Symlinking: /root/nav2-ws/install/nav2_velocity_smoother/lib/libvelocity_smoother_core.so
+[66.473s] -- Symlinking: /root/nav2-ws/install/nav2_velocity_smoother/lib/nav2_velocity_smoother/velocity_smoother
+[66.482s] -- Symlinking: /root/nav2-ws/install/nav2_velocity_smoother/include//nav2_velocity_smoother/velocity_smoother.hpp
+[66.492s] -- Symlinking: /root/nav2-ws/install/nav2_velocity_smoother/share/nav2_velocity_smoother/environment/library_path.sh
+[66.502s] -- Symlinking: /root/nav2-ws/install/nav2_velocity_smoother/share/nav2_velocity_smoother/environment/library_path.dsv
+[66.512s] -- Symlinking: /root/nav2-ws/install/nav2_velocity_smoother/share/ament_index/resource_index/package_run_dependencies/nav2_velocity_smoother
+[66.521s] -- Symlinking: /root/nav2-ws/install/nav2_velocity_smoother/share/ament_index/resource_index/parent_prefix_path/nav2_velocity_smoother
+[66.532s] -- Symlinking: /root/nav2-ws/install/nav2_velocity_smoother/share/nav2_velocity_smoother/environment/ament_prefix_path.sh
+[66.542s] -- Symlinking: /root/nav2-ws/install/nav2_velocity_smoother/share/nav2_velocity_smoother/environment/ament_prefix_path.dsv
+[66.551s] -- Symlinking: /root/nav2-ws/install/nav2_velocity_smoother/share/nav2_velocity_smoother/environment/path.sh
+[66.562s] -- Symlinking: /root/nav2-ws/install/nav2_velocity_smoother/share/nav2_velocity_smoother/environment/path.dsv
+[66.572s] -- Symlinking: /root/nav2-ws/install/nav2_velocity_smoother/share/nav2_velocity_smoother/local_setup.bash
+[66.582s] -- Symlinking: /root/nav2-ws/install/nav2_velocity_smoother/share/nav2_velocity_smoother/local_setup.sh
+[66.591s] -- Symlinking: /root/nav2-ws/install/nav2_velocity_smoother/share/nav2_velocity_smoother/local_setup.zsh
+[66.601s] -- Symlinking: /root/nav2-ws/install/nav2_velocity_smoother/share/nav2_velocity_smoother/local_setup.dsv
+[66.611s] -- Symlinking: /root/nav2-ws/install/nav2_velocity_smoother/share/nav2_velocity_smoother/package.dsv
+[66.621s] -- Symlinking: /root/nav2-ws/install/nav2_velocity_smoother/share/ament_index/resource_index/packages/nav2_velocity_smoother
+[66.631s] -- Symlinking: /root/nav2-ws/install/nav2_velocity_smoother/share/ament_index/resource_index/rclcpp_components/nav2_velocity_smoother
+[66.641s] -- Symlinking: /root/nav2-ws/install/nav2_velocity_smoother/share/nav2_velocity_smoother/cmake/ament_cmake_export_include_directories-extras.cmake
+[66.651s] -- Symlinking: /root/nav2-ws/install/nav2_velocity_smoother/share/nav2_velocity_smoother/cmake/ament_cmake_export_libraries-extras.cmake
+[66.662s] -- Symlinking: /root/nav2-ws/install/nav2_velocity_smoother/share/nav2_velocity_smoother/cmake/ament_cmake_export_dependencies-extras.cmake
+[66.672s] -- Symlinking: /root/nav2-ws/install/nav2_velocity_smoother/share/nav2_velocity_smoother/cmake/nav2_velocity_smootherConfig.cmake
+[66.681s] -- Symlinking: /root/nav2-ws/install/nav2_velocity_smoother/share/nav2_velocity_smoother/cmake/nav2_velocity_smootherConfig-version.cmake
+[66.690s] -- Symlinking: /root/nav2-ws/install/nav2_velocity_smoother/share/nav2_velocity_smoother/package.xml
+[66.703s] Invoked command in '/root/nav2-ws/build/nav2_velocity_smoother' returned '0': AMENT_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/nav2-ws/install/nav2_util:/root/nav2-ws/install/nav2_msgs:/root/nav2-ws/install/nav2_common:/opt/ros/humble LD_LIBRARY_PATH=/root/nav2-ws/install/nav2_util/lib:/root/nav2-ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/nav2-ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/root/nav2-ws/install/nav2_common/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /root/nav2-ws/build/nav2_velocity_smoother

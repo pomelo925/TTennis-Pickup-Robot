@@ -1,0 +1,110 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found nav2_core: 1.1.15 (/root/nav2-ws/install/nav2_core/share/nav2_core/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found Eigen3: TRUE (found version "3.4.0") 
+-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+-- Found nav2_common: 1.1.15 (/root/nav2-ws/install/nav2_common/share/nav2_common/cmake)
+-- Found nav_2d_utils: 1.1.15 (/root/nav2-ws/install/nav_2d_utils/share/nav_2d_utils/cmake)
+-- Setting build type to Release as none was specified.
+-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /root/nav2-ws/src/navigation2/nav2_smoother/include
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /root/nav2-ws/build/nav2_smoother
+[  5%] [32mBuilding CXX object CMakeFiles/smoother_server_core.dir/src/nav2_smoother.cpp.o[0m
+[ 11%] [32m[1mLinking CXX shared library libsmoother_server_core.so[0m
+[ 11%] Built target smoother_server_core
+[ 16%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[ 22%] [32m[1mLinking CXX static library libgtest.a[0m
+[ 22%] Built target gtest
+[ 27%] [32mBuilding CXX object CMakeFiles/smoother_server.dir/src/main.cpp.o[0m
+[ 33%] [32m[1mLinking CXX executable smoother_server[0m
+[ 33%] Built target smoother_server
+[ 38%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[ 44%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[ 44%] Built target gtest_main
+[ 50%] [32mBuilding CXX object CMakeFiles/savitzky_golay_smoother.dir/src/savitzky_golay_smoother.cpp.o[0m
+[ 55%] [32m[1mLinking CXX shared library libsavitzky_golay_smoother.so[0m
+[ 55%] Built target savitzky_golay_smoother
+[ 61%] [32mBuilding CXX object test/CMakeFiles/test_smoother_server.dir/test_smoother_server.cpp.o[0m
+[ 66%] [32m[1mLinking CXX executable test_smoother_server[0m
+[ 66%] Built target test_smoother_server
+[ 72%] [32mBuilding CXX object test/CMakeFiles/test_savitzky_golay_smoother.dir/test_savitzky_golay_smoother.cpp.o[0m
+[ 77%] [32m[1mLinking CXX executable test_savitzky_golay_smoother[0m
+[ 77%] Built target test_savitzky_golay_smoother
+[ 83%] [32mBuilding CXX object CMakeFiles/simple_smoother.dir/src/simple_smoother.cpp.o[0m
+[ 88%] [32m[1mLinking CXX shared library libsimple_smoother.so[0m
+[ 88%] Built target simple_smoother
+[ 94%] [32mBuilding CXX object test/CMakeFiles/test_simple_smoother.dir/test_simple_smoother.cpp.o[0m
+[100%] [32m[1mLinking CXX executable test_simple_smoother[0m
+[100%] Built target test_simple_smoother
+-- Install configuration: "Release"
+-- Execute custom install script
+-- Symlinking: /root/nav2-ws/install/nav2_smoother/share/nav2_smoother//plugins.xml
+-- Symlinking: /root/nav2-ws/install/nav2_smoother/lib/libsmoother_server_core.so
+-- Symlinking: /root/nav2-ws/install/nav2_smoother/lib/libsimple_smoother.so
+-- Symlinking: /root/nav2-ws/install/nav2_smoother/lib/libsavitzky_golay_smoother.so
+-- Symlinking: /root/nav2-ws/install/nav2_smoother/lib/nav2_smoother/smoother_server
+-- Symlinking: /root/nav2-ws/install/nav2_smoother/include//nav2_smoother/nav2_smoother.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_smoother/include//nav2_smoother/savitzky_golay_smoother.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_smoother/include//nav2_smoother/simple_smoother.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_smoother/include//nav2_smoother/smoother_utils.hpp
+-- Symlinking: /root/nav2-ws/install/nav2_smoother/share/nav2_smoother/environment/library_path.sh
+-- Symlinking: /root/nav2-ws/install/nav2_smoother/share/nav2_smoother/environment/library_path.dsv
+-- Symlinking: /root/nav2-ws/install/nav2_smoother/share/ament_index/resource_index/package_run_dependencies/nav2_smoother
+-- Symlinking: /root/nav2-ws/install/nav2_smoother/share/ament_index/resource_index/parent_prefix_path/nav2_smoother
+-- Symlinking: /root/nav2-ws/install/nav2_smoother/share/nav2_smoother/environment/ament_prefix_path.sh
+-- Symlinking: /root/nav2-ws/install/nav2_smoother/share/nav2_smoother/environment/ament_prefix_path.dsv
+-- Symlinking: /root/nav2-ws/install/nav2_smoother/share/nav2_smoother/environment/path.sh
+-- Symlinking: /root/nav2-ws/install/nav2_smoother/share/nav2_smoother/environment/path.dsv
+-- Symlinking: /root/nav2-ws/install/nav2_smoother/share/nav2_smoother/local_setup.bash
+-- Symlinking: /root/nav2-ws/install/nav2_smoother/share/nav2_smoother/local_setup.sh
+-- Symlinking: /root/nav2-ws/install/nav2_smoother/share/nav2_smoother/local_setup.zsh
+-- Symlinking: /root/nav2-ws/install/nav2_smoother/share/nav2_smoother/local_setup.dsv
+-- Symlinking: /root/nav2-ws/install/nav2_smoother/share/nav2_smoother/package.dsv
+-- Symlinking: /root/nav2-ws/install/nav2_smoother/share/ament_index/resource_index/packages/nav2_smoother
+-- Symlinking: /root/nav2-ws/install/nav2_smoother/share/ament_index/resource_index/nav2_core__pluginlib__plugin/nav2_smoother
+-- Symlinking: /root/nav2-ws/install/nav2_smoother/share/ament_index/resource_index/rclcpp_components/nav2_smoother
+-- Symlinking: /root/nav2-ws/install/nav2_smoother/share/nav2_smoother/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /root/nav2-ws/install/nav2_smoother/share/nav2_smoother/cmake/ament_cmake_export_libraries-extras.cmake
+-- Symlinking: /root/nav2-ws/install/nav2_smoother/share/nav2_smoother/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /root/nav2-ws/install/nav2_smoother/share/nav2_smoother/cmake/nav2_smootherConfig.cmake
+-- Symlinking: /root/nav2-ws/install/nav2_smoother/share/nav2_smoother/cmake/nav2_smootherConfig-version.cmake
+-- Symlinking: /root/nav2-ws/install/nav2_smoother/share/nav2_smoother/package.xml
