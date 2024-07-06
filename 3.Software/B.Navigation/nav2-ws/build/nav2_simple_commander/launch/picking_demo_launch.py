@@ -1,0 +1,1 @@
+/root/nav2-ws/src/navigation2/nav2_simple_commander/launch/picking_demo_launch.py

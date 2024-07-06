@@ -1,0 +1,39 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from nav2_msgs/action/NavigateThroughPoses.action
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Duration.idl"
+#include "geometry_msgs/msg/PoseStamped.idl"
+#include "std_msgs/msg/Empty.idl"
+
+module nav2_msgs {
+  module action {
+    @verbatim (language="comment", text=
+      "goal definition")
+    struct NavigateThroughPoses_Goal {
+      sequence<geometry_msgs::msg::PoseStamped> poses;
+
+      string behavior_tree;
+    };
+    @verbatim (language="comment", text=
+      "result definition")
+    struct NavigateThroughPoses_Result {
+      std_msgs::msg::Empty result;
+    };
+    @verbatim (language="comment", text=
+      "feedback definition")
+    struct NavigateThroughPoses_Feedback {
+      geometry_msgs::msg::PoseStamped current_pose;
+
+      builtin_interfaces::msg::Duration navigation_time;
+
+      builtin_interfaces::msg::Duration estimated_time_remaining;
+
+      int16 number_of_recoveries;
+
+      float distance_remaining;
+
+      int16 number_of_poses_remaining;
+    };
+  };
+};

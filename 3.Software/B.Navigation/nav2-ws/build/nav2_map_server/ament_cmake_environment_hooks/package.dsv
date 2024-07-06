@@ -1,0 +1,4 @@
+source;share/nav2_map_server/local_setup.bash
+source;share/nav2_map_server/local_setup.dsv
+source;share/nav2_map_server/local_setup.sh
+source;share/nav2_map_server/local_setup.zsh

@@ -1,0 +1,6 @@
+setup.py
+nav2_msgs/__init__.py
+nav2_msgs.egg-info/PKG-INFO
+nav2_msgs.egg-info/SOURCES.txt
+nav2_msgs.egg-info/dependency_links.txt
+nav2_msgs.egg-info/top_level.txt

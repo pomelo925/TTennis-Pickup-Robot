@@ -1,0 +1,1 @@
+nav2_common;nav2_core;nav2_util;nav2_costmap_2d;rclcpp;geometry_msgs;nav2_msgs;angles;pluginlib;tf2;ament_cmake_gtest;ament_lint_common;ament_lint_auto;nav2_regulated_pure_pursuit_controller;nav2_controller

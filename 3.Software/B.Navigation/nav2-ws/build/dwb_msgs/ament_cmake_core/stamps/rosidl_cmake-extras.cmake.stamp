@@ -1,0 +1,4 @@
+# generated from rosidl_cmake/cmake/rosidl_cmake-extras.cmake.in
+
+set(dwb_msgs_IDL_FILES "msg/CriticScore.idl;msg/LocalPlanEvaluation.idl;msg/Trajectory2D.idl;msg/TrajectoryScore.idl;srv/DebugLocalPlan.idl;srv/GenerateTrajectory.idl;srv/GenerateTwists.idl;srv/GetCriticScore.idl;srv/ScoreTrajectory.idl")
+set(dwb_msgs_INTERFACE_FILES "msg/CriticScore.msg;msg/LocalPlanEvaluation.msg;msg/Trajectory2D.msg;msg/TrajectoryScore.msg;srv/DebugLocalPlan.srv;srv/DebugLocalPlan_Request.msg;srv/DebugLocalPlan_Response.msg;srv/GenerateTrajectory.srv;srv/GenerateTrajectory_Request.msg;srv/GenerateTrajectory_Response.msg;srv/GenerateTwists.srv;srv/GenerateTwists_Request.msg;srv/GenerateTwists_Response.msg;srv/GetCriticScore.srv;srv/GetCriticScore_Request.msg;srv/GetCriticScore_Response.msg;srv/ScoreTrajectory.srv;srv/ScoreTrajectory_Request.msg;srv/ScoreTrajectory_Response.msg")

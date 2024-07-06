@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from nav2_msgs/srv/ManageLifecycleNodes.srv
+// generated code does not contain a copyright notice
+
+
+module nav2_msgs {
+  module srv {
+    module ManageLifecycleNodes_Request_Constants {
+      const uint8 STARTUP = 0;
+      const uint8 PAUSE = 1;
+      const uint8 RESUME = 2;
+      const uint8 RESET = 3;
+      const uint8 SHUTDOWN = 4;
+    };
+    struct ManageLifecycleNodes_Request {
+      uint8 command;
+    };
+    struct ManageLifecycleNodes_Response {
+      boolean success;
+    };
+  };
+};

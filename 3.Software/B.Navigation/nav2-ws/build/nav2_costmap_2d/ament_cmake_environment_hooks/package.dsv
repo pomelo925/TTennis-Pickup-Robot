@@ -1,0 +1,4 @@
+source;share/nav2_costmap_2d/local_setup.bash
+source;share/nav2_costmap_2d/local_setup.dsv
+source;share/nav2_costmap_2d/local_setup.sh
+source;share/nav2_costmap_2d/local_setup.zsh
