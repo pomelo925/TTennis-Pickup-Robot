@@ -1,0 +1,12 @@
+<launch>
+    <!-- Odometry communication (rosserial server) -->
+    <node pkg="rosserial_server" type="serial_node" name="rosserial_server_dp" unless="$(arg simulation)">
+        <param name="port" value="/dev/ACM0" if="$(eval arg('param')==1)"/>
+        <param name="baud" value="115200" />
+        <rosparam>
+            require:
+                publishers: [ Toposition ]
+                subscribers: [ cmd_vel ]
+        </rosparam>
+    </node>
+</launch>

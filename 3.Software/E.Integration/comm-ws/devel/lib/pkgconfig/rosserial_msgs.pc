@@ -1,0 +1,8 @@
+prefix=/root/comm-ws/devel
+
+Name: rosserial_msgs
+Description: Description of rosserial_msgs
+Version: 0.9.2
+Cflags: -I/root/comm-ws/devel/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime

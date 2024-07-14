@@ -1,0 +1,8 @@
+prefix=/root/comm-ws/install
+
+Name: rosserial_msgs
+Description: Description of rosserial_msgs
+Version: 0.9.2
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime
