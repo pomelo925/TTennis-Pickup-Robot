@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from rtabmap_msgs/srv/ListLabels.srv
+// generated code does not contain a copyright notice
+
+
+module rtabmap_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "request")
+    struct ListLabels_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    @verbatim (language="comment", text=
+      "response ")
+    struct ListLabels_Response {
+      sequence<int32> ids;
+
+      sequence<string> labels;
+    };
+  };
+};

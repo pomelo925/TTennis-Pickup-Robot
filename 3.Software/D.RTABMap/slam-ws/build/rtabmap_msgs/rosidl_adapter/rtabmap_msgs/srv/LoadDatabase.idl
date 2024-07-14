@@ -1,0 +1,26 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from rtabmap_msgs/srv/LoadDatabase.srv
+// generated code does not contain a copyright notice
+
+
+module rtabmap_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "request")
+    struct LoadDatabase_Request {
+      @verbatim (language="comment", text=
+        "Local database path on which rtabmap is running." "\n"
+        "If the path doesn't exist, a new database will be created.")
+      string database_path;
+
+      @verbatim (language="comment", text=
+        "If the database already exists, data will be cleared if true.")
+      boolean clear;
+    };
+    @verbatim (language="comment", text=
+      "response, return false on rtabmap initialization failure.")
+    struct LoadDatabase_Response {
+      uint8 structure_needs_at_least_one_member;
+    };
+  };
+};

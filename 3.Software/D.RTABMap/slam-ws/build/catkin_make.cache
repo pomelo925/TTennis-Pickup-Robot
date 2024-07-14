@@ -1,2 +1,0 @@
-ddynamic_reconfigure:image_pipeline/camera_calibration:image_pipeline/depth_image_proc:image_pipeline/image_pipeline:image_pipeline/image_proc:image_pipeline/image_publisher:image_pipeline/image_rotate:image_pipeline/image_view:image_pipeline/stereo_image_proc:realsense-ros/realsense2_camera:realsense-ros/realsense2_description:usb_cam
--DCATKIN_DEVEL_PREFIX=/root/slam-ws/devel -DCMAKE_INSTALL_PREFIX=/root/slam-ws/install -G Unix Makefiles

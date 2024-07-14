@@ -1,0 +1,24 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from rtabmap_msgs/msg/ScanDescriptor.msg
+// generated code does not contain a copyright notice
+
+#include "rtabmap_msgs/msg/GlobalDescriptor.idl"
+#include "sensor_msgs/msg/LaserScan.idl"
+#include "sensor_msgs/msg/PointCloud2.idl"
+#include "std_msgs/msg/Header.idl"
+
+module rtabmap_msgs {
+  module msg {
+    struct ScanDescriptor {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "scan or scan_cloud is set")
+      sensor_msgs::msg::LaserScan scan;
+
+      sensor_msgs::msg::PointCloud2 scan_cloud;
+
+      rtabmap_msgs::msg::GlobalDescriptor global_descriptor;
+    };
+  };
+};

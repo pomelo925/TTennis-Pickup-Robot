@@ -1,1 +1,0 @@
-Invoking command in '/root/nav2-ws/build/nav_2d_msgs': /usr/bin/cmake /root/nav2-ws/src/navigation2/nav2_dwb_controller/nav_2d_msgs -DCMAKE_INSTALL_PREFIX=/root/nav2-ws/install/nav_2d_msgs

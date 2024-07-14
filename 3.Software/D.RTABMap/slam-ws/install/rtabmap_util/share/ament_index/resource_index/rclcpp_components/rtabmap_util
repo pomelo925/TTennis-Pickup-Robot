@@ -1,0 +1,11 @@
+rtabmap_util::RGBDRelay;lib/librtabmap_util_plugins.so
+rtabmap_util::RGBDSplit;lib/librtabmap_util_plugins.so
+rtabmap_util::DisparityToDepth;lib/librtabmap_util_plugins.so
+rtabmap_util::ImuToTF;lib/librtabmap_util_plugins.so
+rtabmap_util::LidarDeskewing;lib/librtabmap_util_plugins.so
+rtabmap_util::PointCloudXYZ;lib/librtabmap_util_plugins.so
+rtabmap_util::PointCloudXYZRGB;lib/librtabmap_util_plugins.so
+rtabmap_util::PointCloudToDepthImage;lib/librtabmap_util_plugins.so
+rtabmap_util::ObstaclesDetection;lib/librtabmap_util_plugins.so
+rtabmap_util::PointCloudAggregator;lib/librtabmap_util_plugins.so
+rtabmap_util::PointCloudAssembler;lib/librtabmap_util_plugins.so

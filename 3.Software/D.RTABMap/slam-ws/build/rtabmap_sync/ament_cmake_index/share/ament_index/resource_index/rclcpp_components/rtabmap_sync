@@ -1,0 +1,4 @@
+rtabmap_sync::RGBDSync;lib/librtabmap_sync_plugins.so
+rtabmap_sync::StereoSync;lib/librtabmap_sync_plugins.so
+rtabmap_sync::RGBSync;lib/librtabmap_sync_plugins.so
+rtabmap_sync::RGBDXSync;lib/librtabmap_sync_plugins.so

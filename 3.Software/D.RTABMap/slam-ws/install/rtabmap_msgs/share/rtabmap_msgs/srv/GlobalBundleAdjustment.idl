@@ -1,0 +1,39 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from rtabmap_msgs/srv/GlobalBundleAdjustment.srv
+// generated code does not contain a copyright notice
+
+
+module rtabmap_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "Global Bundle Adjustment service" "\n"
+      "" "\n"
+      "      Perform global bundle adjustment. Note that as soon as the map " "\n"
+      "      is modified again, the graph is re-optimized the standard way (without SBA)." "\n"
+      "      It then makes only sense to use this after a mapping run (and after a call " "\n"
+      "      to /rtabmap/pause) when you know that the robot will restart in localization " "\n"
+      "      mode the next time, or at the beginning of the localization session.")
+    struct GlobalBundleAdjustment_Request {
+      @verbatim (language="comment", text=
+        "Optimizer type (0=g2o, 1=CVSBA), default 0")
+      int32 type;
+
+      @verbatim (language="comment", text=
+        "Iterations,        default 0 (use Optimizer/Iterations already loaded in the node)")
+      int32 iterations;
+
+      @verbatim (language="comment", text=
+        "Pixel variance,    default 0 (use g2o/PixelVariance already loaded in the node)")
+      float pixel_variance;
+
+      @verbatim (language="comment", text=
+        "Use vocabulary matches, default false (rematch all features between frames)")
+      boolean voc_matches;
+    };
+    @verbatim (language="comment", text=
+      "return false if failure")
+    struct GlobalBundleAdjustment_Response {
+      uint8 structure_needs_at_least_one_member;
+    };
+  };
+};

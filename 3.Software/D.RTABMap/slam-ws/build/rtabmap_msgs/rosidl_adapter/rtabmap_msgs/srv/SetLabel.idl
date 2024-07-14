@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from rtabmap_msgs/srv/SetLabel.srv
+// generated code does not contain a copyright notice
+
+
+module rtabmap_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "request" "\n"
+      " Set node_id = 0 to set label to last node")
+    struct SetLabel_Request {
+      int32 node_id;
+
+      string node_label;
+    };
+    @verbatim (language="comment", text=
+      "response ")
+    struct SetLabel_Response {
+      uint8 structure_needs_at_least_one_member;
+    };
+  };
+};

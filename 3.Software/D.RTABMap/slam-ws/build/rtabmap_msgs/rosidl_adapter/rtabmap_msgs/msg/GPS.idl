@@ -1,0 +1,34 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from rtabmap_msgs/msg/GPS.msg
+// generated code does not contain a copyright notice
+
+
+module rtabmap_msgs {
+  module msg {
+    struct GPS {
+      @verbatim (language="comment", text=
+        "in seconds")
+      double stamp;
+
+      @verbatim (language="comment", text=
+        "DD format")
+      double longitude;
+
+      @verbatim (language="comment", text=
+        "DD format")
+      double latitude;
+
+      @verbatim (language="comment", text=
+        "in meters")
+      double altitude;
+
+      @verbatim (language="comment", text=
+        "in meters")
+      double error;
+
+      @verbatim (language="comment", text=
+        "North 0->360 deg")
+      double bearing;
+    };
+  };
+};

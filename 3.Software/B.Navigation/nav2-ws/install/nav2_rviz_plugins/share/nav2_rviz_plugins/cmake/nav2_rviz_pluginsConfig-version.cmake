@@ -1,1 +1,0 @@
-/root/nav2-ws/build/nav2_rviz_plugins/ament_cmake_core/nav2_rviz_pluginsConfig-version.cmake

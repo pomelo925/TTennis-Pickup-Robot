@@ -1,3 +1,0 @@
-source;share/nav2_costmap_2d/environment/ament_prefix_path.sh
-source;share/nav2_costmap_2d/environment/library_path.sh
-source;share/nav2_costmap_2d/environment/path.sh

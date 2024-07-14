@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/root/nav2-ws/build/nav2_constrained_smoother/libnav2_constrained_smoother.so" "TARGETS" "nav2_constrained_smoother" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

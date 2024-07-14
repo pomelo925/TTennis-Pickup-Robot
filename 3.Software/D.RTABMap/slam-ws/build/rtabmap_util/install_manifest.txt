@@ -1,0 +1,6 @@
+/home/user/slam-ws/install/rtabmap_util/lib/librtabmap_util_plugins.so
+/home/user/slam-ws/install/rtabmap_util/include/rtabmap_util/ULogToRosout.h
+/home/user/slam-ws/install/rtabmap_util/include/rtabmap_util/visibility.h
+/home/user/slam-ws/install/rtabmap_util/include/rtabmap_util/MapsManager.h
+/home/user/slam-ws/install/rtabmap_util/share/rtabmap_util/cmake/rtabmap_utilExport.cmake
+/home/user/slam-ws/install/rtabmap_util/share/rtabmap_util/cmake/rtabmap_utilExport-release.cmake

@@ -1,0 +1,49 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from rtabmap_msgs/msg/Node.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Pose.idl"
+#include "rtabmap_msgs/msg/KeyPoint.idl"
+#include "rtabmap_msgs/msg/Point3f.idl"
+#include "rtabmap_msgs/msg/SensorData.idl"
+
+module rtabmap_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "class rtabmap::Signature")
+    struct Node {
+      int32 id;
+
+      int32 map_id;
+
+      int32 weight;
+
+      double stamp;
+
+      string label;
+
+      @verbatim (language="comment", text=
+        "Pose from odometry not corrected")
+      geometry_msgs::msg::Pose pose;
+
+      @verbatim (language="comment", text=
+        "std::multimap<wordId, index>" "\n"
+        "std::vector<cv::Keypoint>" "\n"
+        "std::vector<cv::Point3f>")
+      sequence<int32> word_id_keys;
+
+      sequence<int32> word_id_values;
+
+      sequence<rtabmap_msgs::msg::KeyPoint> word_kpts;
+
+      sequence<rtabmap_msgs::msg::Point3f> word_pts;
+
+      @verbatim (language="comment", text=
+        "compressed descriptors" "\n"
+        "use rtabmap::util3d::uncompressData() from \"rtabmap/core/util3d.h\"")
+      sequence<uint8> word_descriptors;
+
+      rtabmap_msgs::msg::SensorData data;
+    };
+  };
+};

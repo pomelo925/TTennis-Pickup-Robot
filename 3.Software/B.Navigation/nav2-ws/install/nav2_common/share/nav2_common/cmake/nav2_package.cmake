@@ -1,1 +1,0 @@
-/root/nav2-ws/src/navigation2/nav2_common/cmake/nav2_package.cmake

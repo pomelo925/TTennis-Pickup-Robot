@@ -1,0 +1,15 @@
+/home/user/slam-ws/install/rtabmap_ros/share/ament_index/resource_index/package_run_dependencies/rtabmap_ros
+/home/user/slam-ws/install/rtabmap_ros/share/ament_index/resource_index/parent_prefix_path/rtabmap_ros
+/home/user/slam-ws/install/rtabmap_ros/share/rtabmap_ros/environment/ament_prefix_path.sh
+/home/user/slam-ws/install/rtabmap_ros/share/rtabmap_ros/environment/ament_prefix_path.dsv
+/home/user/slam-ws/install/rtabmap_ros/share/rtabmap_ros/environment/path.sh
+/home/user/slam-ws/install/rtabmap_ros/share/rtabmap_ros/environment/path.dsv
+/home/user/slam-ws/install/rtabmap_ros/share/rtabmap_ros/local_setup.bash
+/home/user/slam-ws/install/rtabmap_ros/share/rtabmap_ros/local_setup.sh
+/home/user/slam-ws/install/rtabmap_ros/share/rtabmap_ros/local_setup.zsh
+/home/user/slam-ws/install/rtabmap_ros/share/rtabmap_ros/local_setup.dsv
+/home/user/slam-ws/install/rtabmap_ros/share/rtabmap_ros/package.dsv
+/home/user/slam-ws/install/rtabmap_ros/share/ament_index/resource_index/packages/rtabmap_ros
+/home/user/slam-ws/install/rtabmap_ros/share/rtabmap_ros/cmake/rtabmap_rosConfig.cmake
+/home/user/slam-ws/install/rtabmap_ros/share/rtabmap_ros/cmake/rtabmap_rosConfig-version.cmake
+/home/user/slam-ws/install/rtabmap_ros/share/rtabmap_ros/package.xml

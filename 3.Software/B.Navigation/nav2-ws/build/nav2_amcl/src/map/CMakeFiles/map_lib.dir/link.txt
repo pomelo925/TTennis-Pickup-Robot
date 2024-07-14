@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -O3 -DNDEBUG -shared -Wl,-soname,libmap_lib.so -o libmap_lib.so CMakeFiles/map_lib.dir/map.c.o CMakeFiles/map_lib.dir/map_range.c.o CMakeFiles/map_lib.dir/map_draw.c.o CMakeFiles/map_lib.dir/map_cspace.cpp.o 

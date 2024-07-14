@@ -1,1 +1,0 @@
-/root/nav2-ws/build/nav2_velocity_smoother/ament_cmake_core/nav2_velocity_smootherConfig-version.cmake

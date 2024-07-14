@@ -1,0 +1,37 @@
+#############################
+###   shared settings     ###
+#############################
+x-shared-settings: &shared-settings
+  build: 
+    context: .  
+    dockerfile: Dockerfile
+  image: pomelo925/ttennis-humble:nav2
+  tty: true
+  network_mode: host
+  privileged: true
+  volumes:
+    - /dev/bus/usb:/dev/bus/usb
+    - /tmp/.X11-unix:/tmp/.X11-unix
+    - $HOME/.Xauthority:/root/.Xauthority
+    - /dev/shm:/dev/shm
+
+    # - ../nav2-ws/build:/home/user/nav2-ws/build
+    # - ../nav2-ws/install:/home/user/nav2-ws/install
+    # - ../nav2-ws/src:/home/user/nav2-ws/src
+  environment:
+    - DISPLAY=${DISPLAY}
+  devices:
+    - /dev/bus/usb:/dev/bus/usb
+    
+
+#############################
+###   Container Startup   ###
+#############################
+services:
+  exploration:
+    <<: *shared-settings
+    container_name: exploration
+    # command: >
+    #   /bin/bash -c "
+    #   roslaunch rtabmap_ros rtabmap.launch rtabmap_args:="--delete_db_on_start --Optimizer/GravitySigma 0.3" depth_topic:=/camera/aligned_depth_to_color/image_raw rgb_topic:=/camera/color/image_raw camera_info_topic:=/camera/color/camera_info approx_sync:=false
+    #   "

@@ -1,0 +1,29 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from rtabmap_msgs/srv/GetPlan.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/PoseStamped.idl"
+#include "rtabmap_msgs/msg/Path.idl"
+
+module rtabmap_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "Get a plan from the current position to the goal node or pose ")
+    struct GetPlan_Request {
+      @verbatim (language="comment", text=
+        "The final node of the goal (set 0 to use pose instead)")
+      int32 goal_node;
+
+      @verbatim (language="comment", text=
+        "The final pose of the goal position (used only if goalNodeId=0)")
+      geometry_msgs::msg::PoseStamped goal;
+
+      @verbatim (language="comment", text=
+        "How many meters from the map's graph we can plan (0=infinite)")
+      float tolerance;
+    };
+    struct GetPlan_Response {
+      rtabmap_msgs::msg::Path plan;
+    };
+  };
+};

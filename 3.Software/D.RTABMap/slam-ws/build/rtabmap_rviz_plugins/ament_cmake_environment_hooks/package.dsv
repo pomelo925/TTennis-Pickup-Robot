@@ -1,0 +1,4 @@
+source;share/rtabmap_rviz_plugins/local_setup.bash
+source;share/rtabmap_rviz_plugins/local_setup.dsv
+source;share/rtabmap_rviz_plugins/local_setup.sh
+source;share/rtabmap_rviz_plugins/local_setup.zsh

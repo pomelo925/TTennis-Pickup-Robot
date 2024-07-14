@@ -1,0 +1,46 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from rtabmap_msgs/srv/DetectMoreLoopClosures.srv
+// generated code does not contain a copyright notice
+
+
+module rtabmap_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "Detect more loop closures service" "\n"
+      "" "\n"
+      "    Based on the current optimized graph, " "\n"
+      "    this process will try to find more nodes corresponding with each " "\n"
+      "    other, and thus finding more loop closures to add to graph." "\n"
+      "")
+    struct DetectMoreLoopClosures_Request {
+      @verbatim (language="comment", text=
+        "Cluster radius (m),     default 1 m if not set")
+      float cluster_radius_max;
+
+      @verbatim (language="comment", text=
+        "Cluster radius min (m), default 0 m if not set")
+      float cluster_radius_min;
+
+      @verbatim (language="comment", text=
+        "Cluster angle (deg),    default 0 deg if not set")
+      float cluster_angle;
+
+      @verbatim (language="comment", text=
+        "Iterations,             default 1 if not set")
+      int32 iterations;
+
+      @verbatim (language="comment", text=
+        "Add only intra session loop closures")
+      boolean intra_only;
+
+      @verbatim (language="comment", text=
+        "Add only inter session loop closures")
+      boolean inter_only;
+    };
+    @verbatim (language="comment", text=
+      "return the number of loop closures detected, or -1 if it failed.")
+    struct DetectMoreLoopClosures_Response {
+      int32 detected;
+    };
+  };
+};

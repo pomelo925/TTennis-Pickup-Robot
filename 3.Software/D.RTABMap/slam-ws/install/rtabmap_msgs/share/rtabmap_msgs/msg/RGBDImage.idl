@@ -1,0 +1,51 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from rtabmap_msgs/msg/RGBDImage.msg
+// generated code does not contain a copyright notice
+
+#include "rtabmap_msgs/msg/GlobalDescriptor.idl"
+#include "rtabmap_msgs/msg/KeyPoint.idl"
+#include "rtabmap_msgs/msg/Point3f.idl"
+#include "sensor_msgs/msg/CameraInfo.idl"
+#include "sensor_msgs/msg/CompressedImage.idl"
+#include "sensor_msgs/msg/Image.idl"
+#include "std_msgs/msg/Header.idl"
+
+module rtabmap_msgs {
+  module msg {
+    struct RGBDImage {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "For stereo, rgb corresponds to left camera, and depth the right camera." "\n"
+        "camera info")
+      sensor_msgs::msg::CameraInfo rgb_camera_info;
+
+      sensor_msgs::msg::CameraInfo depth_camera_info;
+
+      @verbatim (language="comment", text=
+        "Raw")
+      sensor_msgs::msg::Image rgb;
+
+      sensor_msgs::msg::Image depth;
+
+      @verbatim (language="comment", text=
+        "Compressed")
+      sensor_msgs::msg::CompressedImage rgb_compressed;
+
+      sensor_msgs::msg::CompressedImage depth_compressed;
+
+      @verbatim (language="comment", text=
+        "Local features")
+      sequence<rtabmap_msgs::msg::KeyPoint> key_points;
+
+      sequence<rtabmap_msgs::msg::Point3f> points;
+
+      @verbatim (language="comment", text=
+        "compressed descriptors" "\n"
+        "use rtabmap::util3d::uncompressData() from \"rtabmap/core/util3d.h\"")
+      sequence<uint8> descriptors;
+
+      rtabmap_msgs::msg::GlobalDescriptor global_descriptor;
+    };
+  };
+};

@@ -1,0 +1,9 @@
+#request
+bool global_map
+bool optimized
+bool with_images
+bool with_scans
+bool with_user_data
+bool with_grids
+bool with_words
+bool with_global_descriptors

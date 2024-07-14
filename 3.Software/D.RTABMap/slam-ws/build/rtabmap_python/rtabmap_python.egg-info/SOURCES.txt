@@ -1,0 +1,13 @@
+package.xml
+setup.cfg
+setup.py
+resource/rtabmap_python
+rtabmap_python/__init__.py
+rtabmap_python/compression.py
+rtabmap_python.egg-info/PKG-INFO
+rtabmap_python.egg-info/SOURCES.txt
+rtabmap_python.egg-info/dependency_links.txt
+rtabmap_python.egg-info/entry_points.txt
+rtabmap_python.egg-info/requires.txt
+rtabmap_python.egg-info/top_level.txt
+rtabmap_python.egg-info/zip-safe

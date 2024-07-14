@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from rtabmap_msgs/msg/LandmarkDetections.msg
+// generated code does not contain a copyright notice
+
+#include "rtabmap_msgs/msg/LandmarkDetection.idl"
+#include "std_msgs/msg/Header.idl"
+
+module rtabmap_msgs {
+  module msg {
+    struct LandmarkDetections {
+      @verbatim (language="comment", text=
+        "header.stamp: the timestamp of the detection (e.g. image timestamp)" "\n"
+        "header.frame_id: the base frame of pose (e.g., camera optical frame)")
+      std_msgs::msg::Header header;
+
+      sequence<rtabmap_msgs::msg::LandmarkDetection> landmarks;
+    };
+  };
+};

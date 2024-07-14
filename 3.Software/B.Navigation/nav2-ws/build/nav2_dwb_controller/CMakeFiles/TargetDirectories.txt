@@ -1,9 +1,0 @@
-/root/nav2-ws/build/nav2_dwb_controller/CMakeFiles/uninstall.dir
-/root/nav2-ws/build/nav2_dwb_controller/CMakeFiles/nav2_dwb_controller_uninstall.dir
-/root/nav2-ws/build/nav2_dwb_controller/CMakeFiles/test.dir
-/root/nav2-ws/build/nav2_dwb_controller/CMakeFiles/edit_cache.dir
-/root/nav2-ws/build/nav2_dwb_controller/CMakeFiles/rebuild_cache.dir
-/root/nav2-ws/build/nav2_dwb_controller/CMakeFiles/list_install_components.dir
-/root/nav2-ws/build/nav2_dwb_controller/CMakeFiles/install.dir
-/root/nav2-ws/build/nav2_dwb_controller/CMakeFiles/install/local.dir
-/root/nav2-ws/build/nav2_dwb_controller/CMakeFiles/install/strip.dir

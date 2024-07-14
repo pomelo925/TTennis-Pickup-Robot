@@ -1,6 +1,0 @@
-setup.py
-dwb_msgs/__init__.py
-dwb_msgs.egg-info/PKG-INFO
-dwb_msgs.egg-info/SOURCES.txt
-dwb_msgs.egg-info/dependency_links.txt
-dwb_msgs.egg-info/top_level.txt

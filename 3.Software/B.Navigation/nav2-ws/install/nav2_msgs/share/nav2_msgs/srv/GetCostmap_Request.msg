@@ -1,1 +1,0 @@
-/root/nav2-ws/build/nav2_msgs/rosidl_cmake/srv/GetCostmap_Request.msg

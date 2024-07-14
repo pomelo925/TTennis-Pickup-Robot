@@ -1,0 +1,131 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from rtabmap_msgs/msg/OdomInfo.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Pose.idl"
+#include "geometry_msgs/msg/Transform.idl"
+#include "rtabmap_msgs/msg/CameraModels.idl"
+#include "rtabmap_msgs/msg/KeyPoint.idl"
+#include "rtabmap_msgs/msg/Point2f.idl"
+#include "rtabmap_msgs/msg/Point3f.idl"
+#include "sensor_msgs/msg/PointCloud2.idl"
+#include "std_msgs/msg/Header.idl"
+
+module rtabmap_msgs {
+  module msg {
+    typedef double double__36[36];
+    struct OdomInfo {
+      std_msgs::msg::Header header;
+
+      boolean lost;
+
+      int32 matches;
+
+      int32 inliers;
+
+      float icp_inliers_ratio;
+
+      float icp_rotation;
+
+      float icp_translation;
+
+      float icp_structural_complexity;
+
+      float icp_structural_distribution;
+
+      int32 icp_correspondences;
+
+      double__36 covariance;
+
+      int32 features;
+
+      int32 local_map_size;
+
+      int32 local_scan_map_size;
+
+      int32 local_key_frames;
+
+      int32 local_bundle_outliers;
+
+      int32 local_bundle_constraints;
+
+      float local_bundle_time;
+
+      boolean key_frame_added;
+
+      float time_estimation;
+
+      float time_particle_filtering;
+
+      float stamp;
+
+      float interval;
+
+      float distance_travelled;
+
+      @verbatim (language="comment", text=
+        "MB")
+      int32 memory_usage;
+
+      float gravity_roll_error;
+
+      float gravity_pitch_error;
+
+      @verbatim (language="comment", text=
+        "Local bundle camera ids")
+      sequence<int32> local_bundle_ids;
+
+      @verbatim (language="comment", text=
+        "Local bundle camera models")
+      sequence<rtabmap_msgs::msg::CameraModels> local_bundle_models;
+
+      @verbatim (language="comment", text=
+        "Local bundle camera poses")
+      sequence<geometry_msgs::msg::Pose> local_bundle_poses;
+
+      geometry_msgs::msg::Transform transform;
+
+      geometry_msgs::msg::Transform transform_filtered;
+
+      geometry_msgs::msg::Transform transform_ground_truth;
+
+      geometry_msgs::msg::Transform guess;
+
+      @verbatim (language="comment", text=
+        "0=F2M, 1=F2F")
+      int32 type;
+
+      @verbatim (language="comment", text=
+        "F2M odometry" "\n"
+        "  std::multimap<int, cv::KeyPoint> words;" "\n"
+        "  std::vector<int> wordMatches;" "\n"
+        "  std::vector<int> wordInliers;")
+      sequence<int32> words_keys;
+
+      sequence<rtabmap_msgs::msg::KeyPoint> words_values;
+
+      sequence<int32> word_matches;
+
+      sequence<int32> word_inliers;
+
+      sequence<int32> local_map_keys;
+
+      sequence<rtabmap_msgs::msg::Point3f> local_map_values;
+
+      @verbatim (language="comment", text=
+        "local scan map data")
+      sensor_msgs::msg::PointCloud2 local_scan_map;
+
+      @verbatim (language="comment", text=
+        "F2F odometry" "\n"
+        "  std::vector<cv::Point2f> ref_corners;" "\n"
+        "  std::vector<cv::Point2f> new_corners;" "\n"
+        "  std::vector<int> corner_inliers;")
+      sequence<rtabmap_msgs::msg::Point2f> ref_corners;
+
+      sequence<rtabmap_msgs::msg::Point2f> new_corners;
+
+      sequence<int32> corner_inliers;
+    };
+  };
+};

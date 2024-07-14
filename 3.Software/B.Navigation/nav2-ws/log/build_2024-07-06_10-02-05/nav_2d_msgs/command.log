@@ -1,6 +1,0 @@
-Invoking command in '/root/nav2-ws/build/nav_2d_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /root/nav2-ws/src/navigation2/nav2_dwb_controller/nav_2d_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/root/nav2-ws/install/nav_2d_msgs
-Invoked command in '/root/nav2-ws/build/nav_2d_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /root/nav2-ws/src/navigation2/nav2_dwb_controller/nav_2d_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/root/nav2-ws/install/nav_2d_msgs
-Invoking command in '/root/nav2-ws/build/nav_2d_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /root/nav2-ws/build/nav_2d_msgs -- -j8 -l8
-Invoked command in '/root/nav2-ws/build/nav_2d_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /root/nav2-ws/build/nav_2d_msgs -- -j8 -l8
-Invoking command in '/root/nav2-ws/build/nav_2d_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /root/nav2-ws/build/nav_2d_msgs
-Invoked command in '/root/nav2-ws/build/nav_2d_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /root/nav2-ws/build/nav_2d_msgs

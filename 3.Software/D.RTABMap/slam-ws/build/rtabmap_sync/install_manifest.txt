@@ -1,0 +1,9 @@
+/home/user/slam-ws/install/rtabmap_sync/lib/librtabmap_sync.so
+/home/user/slam-ws/install/rtabmap_sync/lib/librtabmap_sync_plugins.so
+/home/user/slam-ws/install/rtabmap_sync/include/rtabmap_sync/CommonDataSubscriber.h
+/home/user/slam-ws/install/rtabmap_sync/include/rtabmap_sync/SyncDiagnostic.h
+/home/user/slam-ws/install/rtabmap_sync/include/rtabmap_sync/CommonDataSubscriberDefines.h
+/home/user/slam-ws/install/rtabmap_sync/include/rtabmap_sync/visibility.h
+/home/user/slam-ws/install/rtabmap_sync/include/rtabmap_sync/GetTopicName.h
+/home/user/slam-ws/install/rtabmap_sync/share/rtabmap_sync/cmake/rtabmap_syncExport.cmake
+/home/user/slam-ws/install/rtabmap_sync/share/rtabmap_sync/cmake/rtabmap_syncExport-release.cmake

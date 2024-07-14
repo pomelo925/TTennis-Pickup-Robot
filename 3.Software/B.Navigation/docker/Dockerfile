@@ -31,7 +31,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
 ##########################
 ## NAV2 Workspace
 ##########################
-WORKDIR /root/nav2-ws
+WORKDIR /home/user/nav2-ws
 RUN apt-get update && \
     git clone https://github.com/ros-planning/navigation2.git --branch $ROS_DISTRO src/navigation2 && \
     rosdep install -y -r -q --from-paths src --ignore-src --rosdistro $ROS_DISTRO && \
@@ -44,5 +44,7 @@ RUN apt-get update && \
 ## Final Touch
 ##########################
 # USER $USERNAME
+
+## set the entrypoint
 ENV SHELL /bin/bash
 CMD ["/bin/bash"]

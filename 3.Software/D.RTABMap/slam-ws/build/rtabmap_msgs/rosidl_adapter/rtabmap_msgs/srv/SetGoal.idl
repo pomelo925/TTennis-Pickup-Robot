@@ -1,0 +1,32 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from rtabmap_msgs/srv/SetGoal.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Pose.idl"
+
+module rtabmap_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "request")
+    struct SetGoal_Request {
+      @verbatim (language="comment", text=
+        "Set either node_id or node_label")
+      int32 node_id;
+
+      string node_label;
+
+      @verbatim (language="comment", text=
+        "optional: if not set, the base frame of the robot is used")
+      string frame_id;
+    };
+    struct SetGoal_Response {
+      @verbatim (language="comment", text=
+        "response")
+      sequence<int32> path_ids;
+
+      sequence<geometry_msgs::msg::Pose> path_poses;
+
+      float planning_time;
+    };
+  };
+};

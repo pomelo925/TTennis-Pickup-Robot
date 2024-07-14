@@ -1,0 +1,1 @@
+rtabmap_odom;rtabmap_slam;rtabmap_util;rtabmap_rviz_plugins;rtabmap_viz;imu_filter_madgwick;tf2_ros;realsense2_camera;velodyne

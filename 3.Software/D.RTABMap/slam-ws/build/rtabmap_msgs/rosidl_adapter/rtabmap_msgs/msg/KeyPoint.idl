@@ -1,0 +1,33 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from rtabmap_msgs/msg/KeyPoint.msg
+// generated code does not contain a copyright notice
+
+#include "rtabmap_msgs/msg/Point2f.idl"
+
+module rtabmap_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "class cv::KeyPoint" "\n"
+      "{" "\n"
+      "    Point2f pt;" "\n"
+      "    float size;" "\n"
+      "    float angle;" "\n"
+      "    float response;" "\n"
+      "    int octave;" "\n"
+      "    int class_id;" "\n"
+      "}")
+    struct KeyPoint {
+      rtabmap_msgs::msg::Point2f pt;
+
+      float size;
+
+      float angle;
+
+      float response;
+
+      int32 octave;
+
+      int32 class_id;
+    };
+  };
+};

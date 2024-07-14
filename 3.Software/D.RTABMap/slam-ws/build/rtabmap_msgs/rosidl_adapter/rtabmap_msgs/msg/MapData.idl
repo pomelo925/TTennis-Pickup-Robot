@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from rtabmap_msgs/msg/MapData.msg
+// generated code does not contain a copyright notice
+
+#include "rtabmap_msgs/msg/MapGraph.idl"
+#include "rtabmap_msgs/msg/Node.idl"
+#include "std_msgs/msg/Header.idl"
+
+module rtabmap_msgs {
+  module msg {
+    struct MapData {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "Optimized graph")
+      rtabmap_msgs::msg::MapGraph graph;
+
+      @verbatim (language="comment", text=
+        "Graph data")
+      sequence<rtabmap_msgs::msg::Node> nodes;
+    };
+  };
+};

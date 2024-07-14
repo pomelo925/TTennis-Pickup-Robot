@@ -1,0 +1,79 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from rtabmap_msgs/msg/Info.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Transform.idl"
+#include "rtabmap_msgs/msg/MapGraph.idl"
+#include "std_msgs/msg/Header.idl"
+
+module rtabmap_msgs {
+  module msg {
+    struct Info {
+      @verbatim (language="comment", text=
+        "RTAB-Map info with statistics")
+      std_msgs::msg::Header header;
+
+      int32 ref_id;
+
+      int32 loop_closure_id;
+
+      int32 proximity_detection_id;
+
+      int32 landmark_id;
+
+      geometry_msgs::msg::Transform loop_closure_transform;
+
+      @verbatim (language="comment", text=
+        "For statistics..." "\n"
+        "" "\n"
+        "State (node IDs) of the current Working Memory (including STM)")
+      sequence<int32> wm_state;
+
+      @verbatim (language="comment", text=
+        "std::map<int, float> posterior;")
+      sequence<int32> posterior_keys;
+
+      sequence<float> posterior_values;
+
+      @verbatim (language="comment", text=
+        "std::map<int, float> likelihood;")
+      sequence<int32> likelihood_keys;
+
+      sequence<float> likelihood_values;
+
+      @verbatim (language="comment", text=
+        "std::map<int, float> raw_likelihood;")
+      sequence<int32> raw_likelihood_keys;
+
+      sequence<float> raw_likelihood_values;
+
+      @verbatim (language="comment", text=
+        "std::map<int, int> weights;")
+      sequence<int32> weights_keys;
+
+      sequence<int32> weights_values;
+
+      @verbatim (language="comment", text=
+        "std::map<int, std::string> labels;")
+      sequence<int32> labels_keys;
+
+      sequence<string> labels_values;
+
+      @verbatim (language="comment", text=
+        "std::map<std::string, float> stats")
+      sequence<string> stats_keys;
+
+      sequence<float> stats_values;
+
+      @verbatim (language="comment", text=
+        "std::vector<int> local_path")
+      sequence<int32> local_path;
+
+      int32 current_goal_id;
+
+      @verbatim (language="comment", text=
+        "std::vector<int> odomCache")
+      rtabmap_msgs::msg::MapGraph odom_cache;
+    };
+  };
+};

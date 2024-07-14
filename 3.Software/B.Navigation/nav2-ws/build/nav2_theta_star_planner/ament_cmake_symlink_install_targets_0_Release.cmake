@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/root/nav2-ws/build/nav2_theta_star_planner/libnav2_theta_star_planner.so" "TARGETS" "nav2_theta_star_planner" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "lib/nav2_theta_star_planner")

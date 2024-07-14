@@ -1,1 +1,0 @@
-rclcpp_lifecycle;nav_msgs;std_msgs;rclcpp;yaml_cpp_vendor;launch_ros;launch_testing;tf2;nav2_msgs;nav2_util;graphicsmagick;ament_lint_common;ament_lint_auto;ament_cmake_gtest;ament_cmake_pytest;launch

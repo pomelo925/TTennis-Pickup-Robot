@@ -1,0 +1,117 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from rtabmap_msgs/msg/SensorData.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Pose.idl"
+#include "geometry_msgs/msg/Transform.idl"
+#include "rtabmap_msgs/msg/EnvSensor.idl"
+#include "rtabmap_msgs/msg/GPS.idl"
+#include "rtabmap_msgs/msg/GlobalDescriptor.idl"
+#include "rtabmap_msgs/msg/KeyPoint.idl"
+#include "rtabmap_msgs/msg/LandmarkDetection.idl"
+#include "rtabmap_msgs/msg/Point3f.idl"
+#include "sensor_msgs/msg/CameraInfo.idl"
+#include "sensor_msgs/msg/Image.idl"
+#include "sensor_msgs/msg/Imu.idl"
+#include "sensor_msgs/msg/PointCloud2.idl"
+#include "std_msgs/msg/Header.idl"
+
+module rtabmap_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "class rtabmap::SensorData")
+    struct SensorData {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "For RGB-D, left corresponds to rgb camera, and right corresponds to depth camera." "\n"
+        "Raw images")
+      sensor_msgs::msg::Image left;
+
+      sensor_msgs::msg::Image right;
+
+      @verbatim (language="comment", text=
+        "Compressed images" "\n"
+        "use rtabmap::util3d::uncompressImage() from \"rtabmap/core/util3d.h\"")
+      sequence<uint8> left_compressed;
+
+      sequence<uint8> right_compressed;
+
+      @verbatim (language="comment", text=
+        "Camera info")
+      sequence<sensor_msgs::msg::CameraInfo> left_camera_info;
+
+      sequence<sensor_msgs::msg::CameraInfo> right_camera_info;
+
+      @verbatim (language="comment", text=
+        "Transform from base frame to camera frame")
+      sequence<geometry_msgs::msg::Transform> local_transform;
+
+      @verbatim (language="comment", text=
+        "raw 2d or 3D laser scan")
+      sensor_msgs::msg::PointCloud2 laser_scan;
+
+      @verbatim (language="comment", text=
+        "compressed 2D or 3D laser scan" "\n"
+        "use rtabmap::util3d::uncompressData() from \"rtabmap/core/util3d.h\"")
+      sequence<uint8> laser_scan_compressed;
+
+      int32 laser_scan_max_pts;
+
+      float laser_scan_max_range;
+
+      int32 laser_scan_format;
+
+      @verbatim (language="comment", text=
+        "local transform (base frame -> laser frame)")
+      geometry_msgs::msg::Transform laser_scan_local_transform;
+
+      @verbatim (language="comment", text=
+        "compressed user data" "\n"
+        "use rtabmap::util3d::uncompressData() from \"rtabmap/core/util3d.h\"")
+      sequence<uint8> user_data;
+
+      @verbatim (language="comment", text=
+        "compressed occupancy grid" "\n"
+        "use rtabmap::util3d::uncompressData() from \"rtabmap/core/util3d.h\"")
+      sequence<uint8> grid_ground;
+
+      sequence<uint8> grid_obstacles;
+
+      sequence<uint8> grid_empty_cells;
+
+      float grid_cell_size;
+
+      rtabmap_msgs::msg::Point3f grid_view_point;
+
+      @verbatim (language="comment", text=
+        "Local features")
+      sequence<rtabmap_msgs::msg::KeyPoint> key_points;
+
+      sequence<rtabmap_msgs::msg::Point3f> points;
+
+      @verbatim (language="comment", text=
+        "compressed descriptors" "\n"
+        "use rtabmap::util3d::uncompressData() from \"rtabmap/core/util3d.h\"")
+      sequence<uint8> descriptors;
+
+      sequence<rtabmap_msgs::msg::GlobalDescriptor> global_descriptors;
+
+      sequence<rtabmap_msgs::msg::EnvSensor> env_sensors;
+
+      sensor_msgs::msg::Imu imu;
+
+      geometry_msgs::msg::Transform imu_local_transform;
+
+      sequence<rtabmap_msgs::msg::LandmarkDetection> landmarks;
+
+      @verbatim (language="comment", text=
+        "Ground truth")
+      geometry_msgs::msg::Pose ground_truth_pose;
+
+      @verbatim (language="comment", text=
+        "GPS")
+      rtabmap_msgs::msg::GPS gps;
+    };
+  };
+};

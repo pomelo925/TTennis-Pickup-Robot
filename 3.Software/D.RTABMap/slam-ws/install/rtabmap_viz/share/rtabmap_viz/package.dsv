@@ -1,0 +1,8 @@
+source;share/rtabmap_viz/hook/cmake_prefix_path.ps1
+source;share/rtabmap_viz/hook/cmake_prefix_path.dsv
+source;share/rtabmap_viz/hook/cmake_prefix_path.sh
+source;share/rtabmap_viz/local_setup.bash
+source;share/rtabmap_viz/local_setup.dsv
+source;share/rtabmap_viz/local_setup.ps1
+source;share/rtabmap_viz/local_setup.sh
+source;share/rtabmap_viz/local_setup.zsh

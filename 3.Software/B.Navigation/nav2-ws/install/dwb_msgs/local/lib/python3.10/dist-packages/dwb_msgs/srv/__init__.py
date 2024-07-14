@@ -1,1 +1,0 @@
-/root/nav2-ws/build/dwb_msgs/rosidl_generator_py/dwb_msgs/srv/__init__.py

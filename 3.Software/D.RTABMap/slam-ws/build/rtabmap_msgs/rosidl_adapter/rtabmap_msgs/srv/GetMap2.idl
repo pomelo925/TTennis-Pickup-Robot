@@ -1,0 +1,34 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from rtabmap_msgs/srv/GetMap2.srv
+// generated code does not contain a copyright notice
+
+#include "rtabmap_msgs/msg/MapData.idl"
+
+module rtabmap_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "request")
+    struct GetMap2_Request {
+      boolean global_map;
+
+      boolean optimized;
+
+      boolean with_images;
+
+      boolean with_scans;
+
+      boolean with_user_data;
+
+      boolean with_grids;
+
+      boolean with_words;
+
+      boolean with_global_descriptors;
+    };
+    @verbatim (language="comment", text=
+      "response")
+    struct GetMap2_Response {
+      rtabmap_msgs::msg::MapData data;
+    };
+  };
+};

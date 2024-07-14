@@ -1,0 +1,37 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from rtabmap_msgs/msg/LandmarkDetection.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/PoseWithCovariance.idl"
+#include "std_msgs/msg/Header.idl"
+
+module rtabmap_msgs {
+  module msg {
+    struct LandmarkDetection {
+      @verbatim (language="comment", text=
+        "header.stamp: the timestamp of the detection (e.g. image timestamp)" "\n"
+        "header.frame_id: the base frame of pose (e.g., camera optical frame)")
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "Landmark's frame id")
+      string landmark_frame_id;
+
+      @verbatim (language="comment", text=
+        "Landmark's unique ID: should be >0")
+      int32 id;
+
+      @verbatim (language="comment", text=
+        "Size in meters of the landmark/tag (optional, set 0 to not use it).")
+      float size;
+
+      @verbatim (language="comment", text=
+        "Pose of the landmark in header.frame_id frame." "\n"
+        "If covariance is unknown, keep it as null matrix." "\n"
+        "rtabmap_slam/rtabmap's landmark_angular_variance and" "\n"
+        "landmark_linear_variance parameters can be used" "\n"
+        "for convenience if covariance is null.")
+      geometry_msgs::msg::PoseWithCovariance pose;
+    };
+  };
+};

@@ -1,1 +1,0 @@
-geometry_msgs;lifecycle_msgs;nav2_msgs;nav2_util;rclcpp_action;rclcpp_lifecycle;std_msgs;std_srvs;bondcpp;tf2_geometry_msgs;diagnostic_updater;ament_lint_auto;ament_lint_common;ament_cmake_gtest;ament_cmake_pytest

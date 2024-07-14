@@ -1,0 +1,4 @@
+source;share/rtabmap_viz/local_setup.bash
+source;share/rtabmap_viz/local_setup.dsv
+source;share/rtabmap_viz/local_setup.sh
+source;share/rtabmap_viz/local_setup.zsh

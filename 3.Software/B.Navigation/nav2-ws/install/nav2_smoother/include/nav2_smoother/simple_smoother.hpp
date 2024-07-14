@@ -1,1 +1,0 @@
-/root/nav2-ws/src/navigation2/nav2_smoother/include/nav2_smoother/simple_smoother.hpp

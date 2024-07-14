@@ -1,0 +1,51 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from rtabmap_msgs/srv/GetNodesInRadius.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Pose.idl"
+
+module rtabmap_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "request")
+    struct GetNodesInRadius_Request {
+      @verbatim (language="comment", text=
+        "In mapping mode (Mem/IncrementalMemory=true), if target pose" "\n"
+        "  and node_id are all zeros, poses around the latest node" "\n"
+        "  in the graph are returned." "\n"
+        "In localization mode (Mem/IncrementalMemory=false), if target pose" "\n"
+        "  and node_id are all zeros, poses around the latest localization" "\n"
+        "  pose are returned." "\n"
+        "If node_id is not zero, target pose is ignored." "\n"
+        "Node id")
+      int32 node_id;
+
+      @verbatim (language="comment", text=
+        "Target pose:")
+      float x;
+
+      float y;
+
+      float z;
+
+      @verbatim (language="comment", text=
+        "Radius, <=0 means that RGBD/LocalRadius will be used" "\n"
+        "if k is also 0. If k>0 and a radius of 0 means all nearest" "\n"
+        "poses up to k.")
+      float radius;
+
+      @verbatim (language="comment", text=
+        "Maximum number of nearest poses")
+      int32 k;
+    };
+    @verbatim (language="comment", text=
+      "response")
+    struct GetNodesInRadius_Response {
+      sequence<int32> ids;
+
+      sequence<geometry_msgs::msg::Pose> poses;
+
+      sequence<float> dists_sqr;
+    };
+  };
+};

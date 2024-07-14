@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from rtabmap_msgs/msg/Point2f.msg
+// generated code does not contain a copyright notice
+
+
+module rtabmap_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "class cv::Point2f" "\n"
+      "{" "\n"
+      "    float x;" "\n"
+      "    float y;" "\n"
+      "}")
+    struct Point2f {
+      float x;
+
+      float y;
+    };
+  };
+};
