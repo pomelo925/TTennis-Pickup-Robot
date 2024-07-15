@@ -18,10 +18,10 @@ fi
 # Determine the command based on the mode argument
 case "$1" in
   mapping)
-    COMMAND="/home/user/slam-ws/src/app/mapping-mode.sh"
+    COMMAND="/home/user/slam-ws/src/app/mapping-mode/run.sh"
     ;;
   localization)
-    COMMAND="/home/user/slam-ws/src/app/localization-mode.sh"
+    COMMAND="/home/user/slam-ws/src/app/localization-mode/run.sh"
     ;;
   *)
     echo "Invalid mode: $1"
