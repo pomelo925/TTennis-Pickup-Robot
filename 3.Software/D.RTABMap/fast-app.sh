@@ -46,6 +46,7 @@ xhost +local:docker
 cd docker
 
 ## 2. pull image
+echo "[RTAB-Map] Pulling..."
 docker pull pomelo925/ttennis-humble:rtabmap
 
 ## 3. deployment

@@ -46,7 +46,7 @@ xhost +local:docker
 cd docker
 
 ## 3. pull image
-echo "[NAVIGATION] Building..."
+echo "[NAVIGATION] Pulling..."
 docker pull pomelo925/ttennis-humble:nav2
 
 ## 4. deployment
