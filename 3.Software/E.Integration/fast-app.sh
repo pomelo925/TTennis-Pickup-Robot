@@ -14,8 +14,9 @@ cd docker
 
 ## 3. pull images
 echo "[INTEGRATION] Pulling..."
-docker compose -p integration build
+docker pull osrf/ros:noetic-desktop-full
+docker pull j3soon/ros1-bridge-ws
 
-## 3. deployment
+## 4. deployment
 echo "[INTEGRATION] Deploying..."
 docker compose -p integration up -d

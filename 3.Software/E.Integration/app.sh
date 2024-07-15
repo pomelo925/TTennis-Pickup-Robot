@@ -16,6 +16,6 @@ cd docker
 echo "[INTEGRATION] Building..."
 docker compose -p integration build
 
-## 3. deployment
+## 4. deployment
 echo "[INTEGRATION] Deploying..."
 docker compose -p integration up -d
