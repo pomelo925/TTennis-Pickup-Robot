@@ -1,0 +1,27 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from dwb_msgs/msg/Trajectory2D.msg
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Duration.idl"
+#include "geometry_msgs/msg/Pose2D.idl"
+#include "nav_2d_msgs/msg/Twist2D.idl"
+
+module dwb_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "For a given velocity command, the poses that the robot will go to in the allotted time.")
+    struct Trajectory2D {
+      @verbatim (language="comment", text=
+        "Input Velocity")
+      nav_2d_msgs::msg::Twist2D velocity;
+
+      @verbatim (language="comment", text=
+        "Time difference between first and last poses")
+      sequence<builtin_interfaces::msg::Duration> time_offsets;
+
+      @verbatim (language="comment", text=
+        "Poses the robot will go to, given our kinematic model")
+      sequence<geometry_msgs::msg::Pose2D> poses;
+    };
+  };
+};

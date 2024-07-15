@@ -1,0 +1,25 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from nav2_msgs/action/FollowWaypoints.action
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/PoseStamped.idl"
+
+module nav2_msgs {
+  module action {
+    @verbatim (language="comment", text=
+      "goal definition")
+    struct FollowWaypoints_Goal {
+      sequence<geometry_msgs::msg::PoseStamped> poses;
+    };
+    @verbatim (language="comment", text=
+      "result definition")
+    struct FollowWaypoints_Result {
+      sequence<int32> missed_waypoints;
+    };
+    @verbatim (language="comment", text=
+      "feedback definition")
+    struct FollowWaypoints_Feedback {
+      uint32 current_waypoint;
+    };
+  };
+};

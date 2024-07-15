@@ -1,0 +1,16 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from nav2_msgs/srv/SetInitialPose.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/PoseWithCovarianceStamped.idl"
+
+module nav2_msgs {
+  module srv {
+    struct SetInitialPose_Request {
+      geometry_msgs::msg::PoseWithCovarianceStamped pose;
+    };
+    struct SetInitialPose_Response {
+      uint8 structure_needs_at_least_one_member;
+    };
+  };
+};

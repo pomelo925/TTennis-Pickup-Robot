@@ -1,0 +1,30 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from dwb_msgs/msg/LocalPlanEvaluation.msg
+// generated code does not contain a copyright notice
+
+#include "dwb_msgs/msg/TrajectoryScore.idl"
+#include "std_msgs/msg/Header.idl"
+
+module dwb_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "Full Scoring for running the local planner")
+    struct LocalPlanEvaluation {
+      @verbatim (language="comment", text=
+        "Header, used for timestamp")
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "All the trajectories evaluated and their scores")
+      sequence<dwb_msgs::msg::TrajectoryScore> twists;
+
+      @verbatim (language="comment", text=
+        "Convenience index of the best (lowest) score in the twists array")
+      uint16 best_index;
+
+      @verbatim (language="comment", text=
+        "Convenience index of the worst (highest) score in the twists array. Useful for scaling.")
+      uint16 worst_index;
+    };
+  };
+};

@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from nav2_msgs/srv/IsPathValid.srv
+// generated code does not contain a copyright notice
+
+#include "nav_msgs/msg/Path.idl"
+
+module nav2_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "Determine if the current path is still valid")
+    struct IsPathValid_Request {
+      nav_msgs::msg::Path path;
+    };
+    struct IsPathValid_Response {
+      boolean is_valid;
+
+      sequence<int32> invalid_pose_indices;
+    };
+  };
+};
