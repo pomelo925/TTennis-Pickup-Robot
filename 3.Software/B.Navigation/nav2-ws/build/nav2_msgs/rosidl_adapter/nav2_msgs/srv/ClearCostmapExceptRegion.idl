@@ -1,0 +1,18 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from nav2_msgs/srv/ClearCostmapExceptRegion.srv
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Empty.idl"
+
+module nav2_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "Clears the costmap except a rectangular region specified by reset_distance")
+    struct ClearCostmapExceptRegion_Request {
+      float reset_distance;
+    };
+    struct ClearCostmapExceptRegion_Response {
+      std_msgs::msg::Empty response;
+    };
+  };
+};

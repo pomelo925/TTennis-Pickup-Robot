@@ -1,0 +1,1 @@
+nav2_common;geometry_msgs;rclcpp;nav2_msgs;nav_msgs;tf2;tf2_ros;tf2_geometry_msgs;lifecycle_msgs;bondcpp;bond;rclcpp_action;rclcpp_lifecycle;launch;launch_testing_ament_cmake;action_msgs;rcl_interfaces;libboost-program-options;ament_lint_common;ament_lint_auto;ament_cmake_gtest;std_srvs;test_msgs;launch_testing_ros;ament_cmake_pytest

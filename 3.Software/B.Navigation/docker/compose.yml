@@ -15,11 +15,12 @@ x-shared-settings: &shared-settings
     - $HOME/.Xauthority:/root/.Xauthority
     - /dev/shm:/dev/shm
 
-    # - ../nav2-ws/build:/home/user/nav2-ws/build
-    # - ../nav2-ws/install:/home/user/nav2-ws/install
-    # - ../nav2-ws/src:/home/user/nav2-ws/src
+    - ../nav2-ws/build:/home/user/nav2-ws/build
+    - ../nav2-ws/install:/home/user/nav2-ws/install
+    - ../nav2-ws/src:/home/user/nav2-ws/src
   environment:
     - DISPLAY=${DISPLAY}
+    - COMMAND=${COMMAND}
   devices:
     - /dev/bus/usb:/dev/bus/usb
     
@@ -28,10 +29,7 @@ x-shared-settings: &shared-settings
 ###   Container Startup   ###
 #############################
 services:
-  exploration:
+  navigation-deployment:
     <<: *shared-settings
-    container_name: exploration
-    # command: >
-    #   /bin/bash -c "
-    #   roslaunch rtabmap_ros rtabmap.launch rtabmap_args:="--delete_db_on_start --Optimizer/GravitySigma 0.3" depth_topic:=/camera/aligned_depth_to_color/image_raw rgb_topic:=/camera/color/image_raw camera_info_topic:=/camera/color/camera_info approx_sync:=false
-    #   "
+    container_name: navigation-deployment
+    # command: "/bin/bash -c \"${COMMAND}\""

@@ -1,0 +1,44 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from nav2_msgs/msg/CostmapMetaData.msg
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Time.idl"
+#include "geometry_msgs/msg/Pose.idl"
+
+module nav2_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "This hold basic information about the characteristics of the Costmap")
+    struct CostmapMetaData {
+      @verbatim (language="comment", text=
+        "The time at which the static map was loaded")
+      builtin_interfaces::msg::Time map_load_time;
+
+      @verbatim (language="comment", text=
+        "The time of the last update to costmap")
+      builtin_interfaces::msg::Time update_time;
+
+      @verbatim (language="comment", text=
+        "The corresponding layer name")
+      string layer;
+
+      @verbatim (language="comment", text=
+        "The map resolution")
+      @unit (value="m/cell")
+      float resolution;
+
+      @verbatim (language="comment", text=
+        "Number of cells in the horizontal direction")
+      uint32 size_x;
+
+      @verbatim (language="comment", text=
+        "Number of cells in the vertical direction")
+      uint32 size_y;
+
+      @verbatim (language="comment", text=
+        "The origin of the costmap [m, m, rad]." "\n"
+        "This is the real-world pose of the cell (0,0) in the map.")
+      geometry_msgs::msg::Pose origin;
+    };
+  };
+};

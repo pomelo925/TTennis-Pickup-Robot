@@ -1,0 +1,18 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from nav2_msgs/msg/BehaviorTreeLog.msg
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Time.idl"
+#include "nav2_msgs/msg/BehaviorTreeStatusChange.idl"
+
+module nav2_msgs {
+  module msg {
+    struct BehaviorTreeLog {
+      @verbatim (language="comment", text=
+        "ROS time that this log message was sent.")
+      builtin_interfaces::msg::Time timestamp;
+
+      sequence<nav2_msgs::msg::BehaviorTreeStatusChange> event_log;
+    };
+  };
+};

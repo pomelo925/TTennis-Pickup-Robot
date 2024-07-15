@@ -1,0 +1,37 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from nav2_msgs/action/ComputePathToPose.action
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Duration.idl"
+#include "geometry_msgs/msg/PoseStamped.idl"
+#include "nav_msgs/msg/Path.idl"
+
+module nav2_msgs {
+  module action {
+    @verbatim (language="comment", text=
+      "goal definition")
+    struct ComputePathToPose_Goal {
+      geometry_msgs::msg::PoseStamped goal;
+
+      geometry_msgs::msg::PoseStamped start;
+
+      string planner_id;
+
+      @verbatim (language="comment", text=
+        "If false, use current robot pose as path start, if true, use start above instead")
+      boolean use_start;
+    };
+    @verbatim (language="comment", text=
+      "result definition")
+    struct ComputePathToPose_Result {
+      nav_msgs::msg::Path path;
+
+      builtin_interfaces::msg::Duration planning_time;
+    };
+    @verbatim (language="comment", text=
+      "feedback definition")
+    struct ComputePathToPose_Feedback {
+      uint8 structure_needs_at_least_one_member;
+    };
+  };
+};

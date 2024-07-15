@@ -1,0 +1,4 @@
+source;share/nav2_system_tests/local_setup.bash
+source;share/nav2_system_tests/local_setup.dsv
+source;share/nav2_system_tests/local_setup.sh
+source;share/nav2_system_tests/local_setup.zsh

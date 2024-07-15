@@ -1,4 +1,3 @@
-## AMD64 architecture ##
 FROM osrf/ros:humble-desktop-full
 
 LABEL org.opencontainers.image.authors="yoseph.huang@gmail.com"
@@ -31,6 +30,8 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
 ##########################
 ## NAV2 Workspace
 ##########################
+# Note that this workspace would be replaced by the one in the host machine via docker compose volomes.
+# I just want to show the initial installation process here.
 WORKDIR /home/user/nav2-ws
 RUN apt-get update && \
     git clone https://github.com/ros-planning/navigation2.git --branch $ROS_DISTRO src/navigation2 && \

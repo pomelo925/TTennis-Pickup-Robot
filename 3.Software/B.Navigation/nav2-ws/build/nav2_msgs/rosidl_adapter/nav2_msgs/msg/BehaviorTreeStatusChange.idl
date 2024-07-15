@@ -1,0 +1,25 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from nav2_msgs/msg/BehaviorTreeStatusChange.msg
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Time.idl"
+
+module nav2_msgs {
+  module msg {
+    struct BehaviorTreeStatusChange {
+      @verbatim (language="comment", text=
+        "internal behavior tree event timestamp. Typically this is wall clock time")
+      builtin_interfaces::msg::Time timestamp;
+
+      string node_name;
+
+      @verbatim (language="comment", text=
+        "IDLE, RUNNING, SUCCESS or FAILURE")
+      string previous_status;
+
+      @verbatim (language="comment", text=
+        "IDLE, RUNNING, SUCCESS or FAILURE")
+      string current_status;
+    };
+  };
+};
