@@ -24,7 +24,7 @@ RUN groupadd --gid $USER_GID $USERNAME \
 ##########################
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     net-tools ssh nano git usbutils x11-apps apt-utils udev \
-    && rm -rf /var/lib/apt/lists/*d
+    && rm -rf /var/lib/apt/lists/*
 
 
 ##########################
