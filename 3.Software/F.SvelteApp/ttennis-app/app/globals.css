@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  body{
+    @apply font-primary bg-primary text-white leading-loose ;
+  }
+
+  .h1{
+    @apply text-[36px] leading-[1.2] font-semibold;
+  }
+  .h2{
+    @apply text-[24px] leading-[1.2] font-semibold;
+  }
+  .h3{
+    @apply text-[16px] leading-[1.2] font-semibold;
+  }
+  .text-outline {
+    -webkit-text-stroke: 1px #ffffff;
+  }
+  .text-outline-hover {
+    -webkit-text-stroke: 1px #00ff99;
+  }
+  .image-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+  .image-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, transparent 70%, rgba(44, 225, 156, 0.3) 100%);
+    z-index: 1;
+  }
+  .image-wrapper img {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .rounded-md-custom {
+    border-radius: 15px;
+  }
+}
+

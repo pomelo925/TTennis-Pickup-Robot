@@ -137,9 +137,9 @@ FROM base AS release
 # Install ROS core and packages with their dependencies. 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
-    ros-core-dev \
+    libspdlog-dev \
     python3-packaging \
-    libspdlog-dev
+    ros-core-dev 
 
 # Copy files from host and build stage
 COPY --from=build /ros2_humble/install /ros2_humble/install
