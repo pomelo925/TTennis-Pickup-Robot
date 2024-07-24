@@ -48,7 +48,7 @@ const technologies = [
   },
   {
     num: '03',
-    category: 'AI邊緣運算 EDGE-NN',
+    category: '邊緣運算 EDGE-NN',
     description: "機上搭載具有4 TOPS算力的RGB相機，實時針對場上之桌球、桌球桌及運動員 \
     進行物件偵測，本專案採用最新 YOLOv10 深度學習模型，透過邊緣硬體加速協助上位機整合資訊，與追求即時性的 RTAB-Map 雙輔雙成。",
     stack: [
@@ -56,7 +56,7 @@ const technologies = [
     ],
     image: "/assets/photo/edgenn.png",
     live: "",
-    github: ""
+    github: "https://github.com/luxonis/depthai-ros.git"
   },
   {
     num: '04',
@@ -68,9 +68,10 @@ const technologies = [
     ],
     image: "/assets/photo/pcb.png",
     live: "",
-    github: ""
+    github: "https://github.com/pomelo925/TTennis-Pickup-Robot/tree/main/1.Hardware"
   },
 ];
+
 const Techs = () => {
   const [technology, setTechnology] = useState(technologies[0]);
 
@@ -83,7 +84,7 @@ const Techs = () => {
       initial={{ opacity: 0 }}
       animate={{ 
         opacity: 1 , 
-        transition: {delay: 0.2, duration: 0.4, ease: "easeIn"}
+        transition: {delay: 0, duration: 0.4, ease: "easeIn"}
       }}
       className="max-h-[520px] flex flex-col justify-center px-4 py-10"
     >
@@ -96,11 +97,11 @@ const Techs = () => {
                 {technology.num}
               </div>
               {/* buttons */}
-              <div className="flex items-center gap-5">
+              <div className="flex items-center gap-6">
                 <Link href={technology.live}> 
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
-                      <TooltipTrigger className="w-[50px] h-[50px] rounded-full bg-white/5 flex justify-center items-center group">
+                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
                         <BsArrowUpRight className="text-white text-2xl group-hover:text-accent"/>
                       </TooltipTrigger>
                       <TooltipContent>
@@ -112,7 +113,7 @@ const Techs = () => {
                 <Link href={technology.github}> 
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
-                      <TooltipTrigger className="w-[50px] h-[50px] rounded-full bg-white/5 flex justify-center items-center group">
+                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
                         <BsGithub className="text-white text-3xl group-hover:text-accent"/>
                       </TooltipTrigger>
                       <TooltipContent>
@@ -123,7 +124,7 @@ const Techs = () => {
                 </Link>
               </div>
             </div>
-            <div className="flex flex-col gap-[10px]">
+            <div className="flex flex-col gap-[12px]">
               {/* project category */}
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
                 {technology.category}
@@ -170,6 +171,7 @@ const Techs = () => {
                   </div>
                 </SwiperSlide>
               ))}
+              
               {/* Slider Buttons */}
               <div className="absolute inset-y-0 flex justify-between items-center px-4 z-20 w-full">
               <LeftButton 

@@ -5,30 +5,31 @@ import Link from "next/link";
 
 import { motion } from "framer-motion";
 
+
 const services = [
   {
     num: "建圖模式",
     title: "Mapping Mode",
-    description: "An Apple keeps doctor away.",
-    href: "/"
+    description: "建立新桌球場的三圍環境模型.",
+    href: "/services/mapping"
   },
   {
     num: "撿球模式",
     title: "Fetching Mode",
-    description: "An Apple keeps doctor away.",
-    href: "/"
+    description: "An Apple keeps the doctor away.",
+    href: "/services/fetching"
   },
   {
     num: "供球模式",
     title: "Serving Mode",
-    description: "An Apple keeps doctor away.",
-    href: "/"
+    description: "An Apple keeps the doctor away.",
+    href: "/services/serving"
   },
   {
     num: "倒球模式",
     title: "Pouring Mode",
-    description: "An Apple keeps doctor away.",
-    href: "/"
+    description: "An Apple keeps the doctor away.",
+    href: "/services/pouring"
   }
 ];
 
@@ -39,14 +40,14 @@ const Services = () => {
       <div className="container mx-auto"> 
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: {delay:0.3, duration:0.5, ease: "easeIn"}}}
+          animate={{ opacity: 1, transition: {delay:0, duration:0.4, ease: "easeIn"}}}
           className="grid grid-cols-2 gap-[60px]"
         >
           {services.map((service, index) => {
             return (
               <div 
                 key={index} 
-                className="flex-1 flex flex-col justify-center gap-6 group"
+                className="flex-1 flex flex-col justify-center gap-3 group"
               > 
 
               {/* top */}
@@ -60,10 +61,10 @@ const Services = () => {
                 {/* arrow */}
                 <Link 
                   href={service.href} 
-                  className="w-[70px] h-[70px] rounded-full
+                  className="w-[60px] h-[60px] rounded-full
                   bg-white group-hover:bg-accent transition-all duration-500
                   flex justify-center items-center hover:-rotate-45" 
-                  style={{ padding: '20px' }} 
+                  style={{ padding: '20px' }}
                 >
                   <BsArrowDownRight className="text-primary text-3xl hover:text-4xl"/>
                 </Link>
@@ -74,12 +75,12 @@ const Services = () => {
                 <h2 className="text-3xl font-bold leading-none 
                 text-white group-hover:text-accent transition-all duration-500"
                 href={service.href}> 
-                  {service.title} 
+                  {service.title}
                 </h2>
               </Link>
 
               {/* description */}
-              <p className="text-white/80 "> {service.description} </p>
+              <p className="text-white/80"> {service.description} </p>
 
               {/* border */}
               <div className="border-b border-white/20 w-full"> </div>

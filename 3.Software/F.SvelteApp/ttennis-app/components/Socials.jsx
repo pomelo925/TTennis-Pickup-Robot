@@ -4,9 +4,9 @@ import {FaGithub, FaInstagram, FaYoutube} from 'react-icons/fa'
 
 
 const socials = [
-  { icon: <FaGithub/>, path: "" },
+  { icon: <FaGithub/>, path: "https://github.com/pomelo925/TTennis-Pickup-Robot.git" },
   { icon: <FaInstagram/>, path: "" },
-  { icon: <FaYoutube/>, path: "" }
+  { icon: <FaYoutube/>, path: "https://www.youtube.com/@pomelo925" }
 ];
 
 const Socials = ({containerStyles, iconStyles}) => {

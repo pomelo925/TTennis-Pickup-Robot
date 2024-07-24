@@ -33,7 +33,7 @@ const Nav = () => {
             // border-b-2: 設置元素的下邊框（bottom border）為 2px 寬。
             // border-accent: 設置邊框顏色為 accent。
             className={`${
-              link.path === pathname && "text-accent border-b-2 border-accent"
+              link.path === pathname && "text-accent border-b-2 border-accent text-2xl"
             }`}
           > 
           {link.name}

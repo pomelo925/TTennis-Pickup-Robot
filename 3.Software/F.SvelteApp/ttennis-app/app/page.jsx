@@ -10,15 +10,18 @@ const Home = () => {
   return (
     <section className="h-full">
       <div className="container mx-auto max-h-[380px]">
-        <div className="flex flex-row justify-between items-center pb-28 pl-5 pr-3">   
+        <div className="flex flex-row justify-between items-center pb-28 pl-6 pr-6">   
           {/* text */}
-          <div className="text-left order-none">
-            <span> PME25 Graduation Project</span>
+          <div className="text-left order-none ">
+            <span className="text-[16pt] text-yellow-200/90"> PME25 Graduation Project</span>
+          
             <h1 className="h1"> Hello World!<br/> 
               <span className="text-accent"> Let's Gather!</span>
             </h1>
-            <p className="mb-9 text-white/80"> 
-              Autonomous Mobile Robot for fetching Table Tennis ball.
+
+            <br/>
+            <p className="mb-9 text-white text-[14pt]"> 
+              An AMR for fetching & serving Table Tennis ball.
             </p>
 
             {/* buttons & socials  */}
@@ -30,7 +33,7 @@ const Home = () => {
                 <span> Download CV </span>
                 <FiDownload className="text-xl" />
               </Button>
-              <div className="mb-0"> 
+              <div className="mb-"> 
                 <Socials containerStyles="flex gap-4" iconStyles="w-10 h-10
                 border border-accent rounded-full flex justify-center items-center
                 text-accent text-base hover:bg-accent hover:text-primary 
@@ -39,8 +42,7 @@ const Home = () => {
           </div>
 
           {/* photo */}  
-
-          <div className="order-1 mb-8"> <Photo/> </div>
+          <div className="order-1 pr-10 mb-8"> <Photo/> </div>
           
         </div>
       </div>
