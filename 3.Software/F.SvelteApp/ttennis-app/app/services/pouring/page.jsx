@@ -1,12 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-
 import { useState } from 'react';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { FaPlay, FaStop } from 'react-icons/fa';
+import { FaCircle } from 'react-icons/fa';
 
+//components
+import { Button } from '@/components/ui/button';
+import PageButton from '@/components/PageButton';
+import LiveParameters from '@/components/LiveParameters';
 
 const Header = () => {
   return (
@@ -21,7 +22,7 @@ const Header = () => {
         {/* button */}
         <div className="flex items-center">
           <Button className="text-center text-3xl py-2 px-4 bg-accent rounded-2xl h-14">
-            <div>撿球模式 Fetching Mode</div>
+            <div>倒球模式 Pouring Mode</div>
           </Button>
         </div>
       </div>
@@ -29,61 +30,70 @@ const Header = () => {
   );
 };
 
-const LiveParameters = () => {
-  return (
-    <div className= "bg-gray-600 p-4 rounded-3xl flex-grow ">
-      <h2 className="text-2xl font-semibold mb-4">Live Parameters</h2>
-      <p>這裡是 info 區塊的內容。</p>
-    </div>
-  );
-};
 
-const LiveStream = () => {
-  return (
-    <div className="bg-gray-600 p-4 rounded-3xl flex-grow">
-      <h2 className="text-2xl font-semibold mb-4">Live Stream</h2>
-      <p>這裡是 live stream 區塊的內容。</p>
-    </div>
-  );
-};
-
-const PageButton = () => {
-  const [isStarted, setIsStarted] = useState(false);
-
-  const handleToggle = () => {
-    setIsStarted(!isStarted);
+const LiveStream = ({ activeCircle, setActiveCircle }) => {
+  const handleCircleClick = (circle) => {
+    if (activeCircle === circle) setActiveCircle(null); // 如果再次點擊相同的 Circle，則重置為綠色
+    else setActiveCircle(circle);
   };
 
   return (
-    <div className="w-full rounded-3xl flex-grow max-h-[100px] 
-    flex items-center gap-8 justify-center">
-      <Link href="/services">
-        <Button className="text-center bg-accent rounded-2xl text-3xl h-20">
-          <div>返回</div>
-        </Button>
-      </Link>
+    <div className="bg-gray-600 p-4 rounded-3xl flex-grow relative">
+      <div className="justify-center text-center">
+        <h1 className="text-2xl font-semibold text-white ">請選擇供球位置</h1>
+        <p className="text-1xl font-semibold text-white">Please Choose the position of ball serving.</p>
+      </div>
 
-      <Button 
-        onClick={handleToggle}
-        style={{ backgroundColor: isStarted ? '#f43f5e' : '#00ff99' }} 
-        className="text-center rounded-2xl text-3xl h-20
-        flex items-center transition-colors duration-300"
-      >
-        <div className="flex items-center">
-          {isStarted ? <FaStop /> : <FaPlay />}
-        </div>
-        <div>{isStarted ? '停止' : '開始'}</div>
-      </Button>
+      <div className="flex justify-center items-center" style={{ height: '300px' }}>
+        <img 
+          src="/assets/photo/ttennis-table.svg" 
+          alt="Table Tennis" 
+          style={{ display: "block", margin: "auto", transform: "scale(0.8)" }}
+        />
+        <FaCircle 
+          className={`${activeCircle === 'left' ? "text-rose-500" : "text-accent"} text-[52px] absolute ml-[-17rem]`} 
+          onClick={() => handleCircleClick('left')} 
+          style={{ cursor: 'default' }} 
+        />
+        <FaCircle 
+          className={`${activeCircle === 'right' ? "text-rose-500" : "text-accent"} text-[52px] absolute mt-[-1.5rem] mr-[-16rem]`}
+          onClick={() => handleCircleClick('right')} 
+          style={{ cursor: 'default' }} 
+        />
+      </div>
+
+      <FaCircle 
+        className={`${activeCircle === 'top' ? "text-rose-500" : "text-accent"} text-[52px] absolute 
+        mt-[-16rem] mr-[-4rem] right-1/2 transform -translate-x-1/2`} 
+        onClick={() => handleCircleClick('top')} 
+        style={{ cursor: 'default' }}
+      />
+
+      <FaCircle 
+        className={`${activeCircle === 'bottom' ? "text-rose-500" : "text-accent"} text-[52px] absolute mt-[-4rem] ml-[-1rem] left-1/2 transform -translate-x-1/2`} 
+        onClick={() => handleCircleClick('bottom')} 
+        style={{ cursor: 'default' }}
+      />
     </div>
   );
 };
 
-const Pouring=()=>{
+const Pouring = () => {
+  const [showPopup, setShowPopup] = useState(false);
+  const [activeCircle, setActiveCircle] = useState(null);
+
+  const handleStart = () => {
+    setShowPopup(true);
+  };
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      {/* Others */}
       <motion.section 
         initial={{ opacity: 0 }}
         animate={{ 
@@ -93,16 +103,22 @@ const Pouring=()=>{
         className="flex-grow flex flex-col px-6 py-4"
       >
         <div className="flex gap-5 flex-grow">
-          {/* 左方包含 LiveParameters 和 PageOperation 的區塊 */}
           <div className="w-[30%] flex flex-col gap-5">
             <LiveParameters />
-            <PageButton />
+            <PageButton 
+              onStart={handleStart} 
+              onClosePopup={handleClosePopup} 
+              activeCircle={activeCircle} 
+              text="Moving ..."
+            />
           </div>
-
-          {/* 右方的 LiveStream 區塊 */}
-          <LiveStream />
+          <LiveStream 
+            activeCircle={activeCircle} 
+            setActiveCircle={setActiveCircle} 
+          />
         </div>
       </motion.section>
+
     </div>
   );
 };

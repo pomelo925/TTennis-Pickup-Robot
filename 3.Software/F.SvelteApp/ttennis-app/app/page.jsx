@@ -30,11 +30,11 @@ const Home = () => {
                 variant="outline"
                 className="uppercase flex items-center gap-2"
               >
-                <span> Download CV </span>
-                <FiDownload className="text-xl" />
+                <span> Doc. </span>
+                <FiDownload className="text-2xl" />
               </Button>
-              <div className="mb-"> 
-                <Socials containerStyles="flex gap-4" iconStyles="w-10 h-10
+              <div> 
+                <Socials containerStyles="flex gap-4" iconStyles="w-12 h-12 
                 border border-accent rounded-full flex justify-center items-center
                 text-accent text-base hover:bg-accent hover:text-primary 
                 hover:transition-all duration-600" /> </div>

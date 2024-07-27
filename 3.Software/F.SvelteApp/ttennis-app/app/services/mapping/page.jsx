@@ -1,12 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState } from 'react'
 
-import { useState } from 'react';
-import Link from 'next/link';
+//components
 import { Button } from '@/components/ui/button';
-import { FaPlay, FaStop } from 'react-icons/fa';
-
+import PageButton from '@/components/PageButton';
+import LiveParameters from '@/components/LiveParameters';
 
 const Header = () => {
   return (
@@ -21,7 +21,7 @@ const Header = () => {
         {/* button */}
         <div className="flex items-center">
           <Button className="text-center text-3xl py-2 px-4 bg-accent rounded-2xl h-14">
-            <div>撿球模式 Fetching Mode</div>
+            <div>建圖模式 Mapping Mode</div>
           </Button>
         </div>
       </div>
@@ -29,57 +29,57 @@ const Header = () => {
   );
 };
 
-const LiveParameters = () => {
-  return (
-    <div className= "bg-gray-600 p-4 rounded-3xl flex-grow ">
-      <h2 className="text-2xl font-semibold mb-4">Live Parameters</h2>
-      <p>這裡是 info 區塊的內容。</p>
-    </div>
-  );
-};
+const LiveStream = ({ onMapChange }) => {
+  const [selectedMap, setSelectedMap] = useState('');
 
-const LiveStream = () => {
-  return (
-    <div className="bg-gray-600 p-4 rounded-3xl flex-grow">
-      <h2 className="text-2xl font-semibold mb-4">Live Stream</h2>
-      <p>這裡是 live stream 區塊的內容。</p>
-    </div>
-  );
-};
-
-const PageButton = () => {
-  const [isStarted, setIsStarted] = useState(false);
-
-  const handleToggle = () => {
-    setIsStarted(!isStarted);
+  const handleMapChange = (event) => {
+    const selectedValue = event.target.value;
+    setSelectedMap(selectedValue);
+    onMapChange(selectedValue);
   };
-
+  
   return (
-    <div className="w-full rounded-3xl flex-grow max-h-[100px] 
-    flex items-center gap-8 justify-center">
-      <Link href="/services">
-        <Button className="text-center bg-accent rounded-2xl text-3xl h-20">
-          <div>返回</div>
-        </Button>
-      </Link>
-
-      <Button 
-        onClick={handleToggle}
-        style={{ backgroundColor: isStarted ? '#f43f5e' : '#00ff99' }} 
-        className="text-center rounded-2xl text-3xl h-20
-        flex items-center transition-colors duration-300"
-      >
-        <div className="flex items-center">
-          {isStarted ? <FaStop /> : <FaPlay />}
-        </div>
-        <div>{isStarted ? '停止' : '開始'}</div>
-      </Button>
+    <div className="bg-gray-600 p-4 rounded-3xl flex-grow relative">
+      <div className="justify-center text-center">
+        <h1 className="text-2xl font-semibold text-white ">RTAB-Map Mapping</h1>
+      </div>
+      <div className="absolute top-4 right-10">
+        <select 
+          value={selectedMap} 
+          onChange={handleMapChange} 
+          className="bg-orange-200 text-violet-700 p-2 text-2xl rounded-2xl"
+        >
+          <option selected disabled value="">N/A</option>
+          <option value="Map1">Map1</option>
+          <option value="Map2">Map2</option>
+          <option value="Map3">Map3</option>
+        </select>
+      </div>
     </div>
   );
 };
-
 
 const Mapping = () => {
+  const [isStarted, setIsStarted] = useState(false);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+
+  const handleStart = () => {
+    setIsStarted(true);
+  };
+
+  const handleClosePopup = () => {
+    setIsStarted(true);
+  };
+
+  const handleMapChange = (selectedValue) => {
+    // Enable the button if a map is selected
+    setIsButtonDisabled(selectedValue === "");
+    if (selectedValue === 'Map1' || selectedValue === 'Map2' || selectedValue === 'Map3') {
+      handleStart();
+    }
+  };
+
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -97,11 +97,16 @@ const Mapping = () => {
           {/* 左方包含 LiveParameters 和 PageOperation 的區塊 */}
           <div className="w-[30%] flex flex-col gap-5">
             <LiveParameters />
-            <PageButton />
+            <PageButton 
+              onStart={handleStart} 
+              onClosePopup={handleClosePopup} 
+              activeCircle={isStarted} 
+              text="Start Mapping ..."
+            />
           </div>
 
           {/* 右方的 LiveStream 區塊 */}
-          <LiveStream />
+          <LiveStream onMapChange={handleMapChange}/>
         </div>
       </motion.section>
     </div>
