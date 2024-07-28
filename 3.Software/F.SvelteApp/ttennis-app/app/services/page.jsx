@@ -10,25 +10,25 @@ const services = [
   {
     num: "建圖模式",
     title: "Mapping Mode",
-    description: "建立新桌球場的三圍環境模型.",
+    description: "建立桌球場的環境3D模型.",
     href: "/services/mapping"
   },
   {
     num: "撿球模式",
     title: "Fetching Mode",
-    description: "An Apple keeps the doctor away.",
+    description: "在已建立的地圖中尋找並蒐集球.",
     href: "/services/fetching"
   },
   {
     num: "供球模式",
     title: "Serving Mode",
-    description: "An Apple keeps the doctor away.",
+    description: "機器人將移動到指定地點供球.",
     href: "/services/serving"
   },
   {
     num: "倒球模式",
     title: "Pouring Mode",
-    description: "An Apple keeps the doctor away.",
+    description: "機器人將移動到指定地點供球.",
     href: "/services/pouring"
   }
 ];
@@ -80,7 +80,7 @@ const Services = () => {
               </Link>
 
               {/* description */}
-              <p className="text-white/80"> {service.description} </p>
+              <p className="text-white/80 text-[15pt]"> {service.description} </p>
 
               {/* border */}
               <div className="border-b border-white/20 w-full"> </div>

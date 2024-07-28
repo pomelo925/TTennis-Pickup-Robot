@@ -24,8 +24,8 @@ const technologies = [
     num: '01',
     category: '建圖定位 RTAB-Map',
     description: 
-    "RTAB-Map 是一種同步定位與建圖演算法，藉由閉環檢測器對增量式詞袋模型的外觀樣本進行擬和, \
-    其外觀基礎資訊來自RGB-D或立體相機、LiDAR,並再與傳統里程計如IMU或輪路徑積分進行濾波定位。",
+    "RTAB-Map 是一種同步定位與建圖演算法,藉由閉環檢測器對增量式詞袋模型的外觀樣本進行擬和, \
+    其外觀基礎資訊來自RGB-D或立體相機、LiDAR,並再與傳統里程計如IMU或輪路徑積分進行濾波定位.",
     stack: [
       {name: "Intel® RealSense™ D435"}, {name: "ArduIMU V3"},
     ],
@@ -37,8 +37,8 @@ const technologies = [
     num: '02',
     category: '導航堆棧 Nav2',
     description: 
-    "本專案使用 ROS2 Navigation2 導航堆棧框架全面開發機器人自主導航。將外界感測資訊融入具權重的代價柵格地圖中， \
-    並透過控制器、規劃器及恢復器, 實現最優路徑演算、差動底盤速度控制及動態避障。",
+    "本專案使用 ROS2 Navigation2 導航堆棧框架全面開發機器人自主導航.將外界感測資訊融入具權重的代價柵格地圖中,\
+    並透過控制器、規劃器及恢復器, 實現最優路徑演算、差動底盤速度控制及動態避障.",
     stack: [
       {name:"Robot Operating System 2"}, {name:"RViz2"},
     ],
@@ -49,8 +49,8 @@ const technologies = [
   {
     num: '03',
     category: '邊緣運算 EDGE-NN',
-    description: "機上搭載具有4 TOPS算力的RGB相機，實時針對場上之桌球、桌球桌及運動員 \
-    進行物件偵測，本專案採用最新 YOLOv10 深度學習模型，透過邊緣硬體加速協助上位機整合資訊，與追求即時性的 RTAB-Map 雙輔雙成。",
+    description: "機上搭載 4 TOPS 算力的 RGB 相機,實時針對場上之桌球、桌球桌及運動員\
+    進行物件偵測,本專案採用最新 YOLOv10 深度學習模型,透過邊緣硬體加速協助上位機整合資訊,與追求即時性的 RTAB-Map 雙輔雙成.",
     stack: [
       {name: "Luxonix OAK-D"}, {name: "YOLOv10"},
     ],
@@ -61,8 +61,8 @@ const technologies = [
   {
     num: '04',
     category: '電路板 PCB Layout',
-    description: "桌球拾取機器人由高壓工具機電池作為動力來源，故我們自行設計多種 PCB 以滿足 \
-    電壓分配、電流保護、馬達額定工作電壓供給、單晶片穩壓、USB PD 協議芯片、各種客製化端子接口等，並充分考慮濾波降噪。",
+    description: "桌球拾取機器人由高壓工具機電池作為動力來源,故我們自行設計多種 PCB 以滿足\
+    電壓分配、電流保護、馬達額定工作電壓供給、單晶片穩壓、USB PD 協議芯片、各種客製化端子接口,並充分考慮濾波降噪.",
     stack: [
       {name: "SMT"}, {name: "EasyEDA"},
     ],
