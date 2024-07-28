@@ -11,10 +11,6 @@ const links = [
   {
     name: "Techs", 
     path: "/techs",
-  },
-  {
-    name: "Author", 
-    path: "/author",
   }
 ]
 
