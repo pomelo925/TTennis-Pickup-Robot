@@ -1,1 +1,0 @@
-rclcpp;rclcpp_action;rclcpp_lifecycle;visualization_msgs;nav2_util;nav2_msgs;nav_msgs;geometry_msgs;builtin_interfaces;nav2_common;tf2_ros;nav2_costmap_2d;pluginlib;nav2_core;ament_lint_common;ament_lint_auto

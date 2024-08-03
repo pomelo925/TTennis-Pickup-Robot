@@ -1,1 +1,0 @@
-/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/vtest.dir/velocity_iterator_test.cpp.o -o vtest  ../gtest/libgtest_main.a ../gtest/libgtest.a -pthread 

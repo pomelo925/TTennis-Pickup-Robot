@@ -1,4 +1,0 @@
-source;share/costmap_queue/local_setup.bash
-source;share/costmap_queue/local_setup.dsv
-source;share/costmap_queue/local_setup.sh
-source;share/costmap_queue/local_setup.zsh

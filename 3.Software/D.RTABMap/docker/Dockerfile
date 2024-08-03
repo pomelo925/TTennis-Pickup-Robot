@@ -13,20 +13,17 @@ ARG USERNAME=user
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 
-# Set locale
-ENV LC_ALL=en_US.UTF-8
-ENV LANG=en_US.UTF-8
-
 SHELL ["/bin/bash", "-c"]
+
 
 ################################################################################################
 # - User Setup stage
-#   - In this stage, create a non-root user and configure passwordless sudo.
+#   - In this stage, I will create a non-root user and configure passwordless sudo.
 ################################################################################################
 
 FROM base AS user-setup
 
-# Create a non-root user
+## Create a non-root user
 RUN groupadd --gid $USER_GID $USERNAME && \
     useradd --uid $USER_UID --gid $USER_GID -m $USERNAME -s /bin/bash && \
     apt-get update && \
@@ -35,14 +32,15 @@ RUN groupadd --gid $USER_GID $USERNAME && \
     chmod 0440 /etc/sudoers.d/$USERNAME && \
     rm -rf /var/lib/apt/lists/*
 
+    
 ################################################################################################
 # - Tools Installation stage
-#   - In this stage, install convenient tools for development.
+#   - In this stage, I will install convenient tools for development.
 ################################################################################################
 
 FROM user-setup AS tools
 
-# Install necessary packages
+## Install necessary packages
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
     apt-utils \
@@ -51,14 +49,14 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     net-tools \
     ssh \
     usbutils \
-    udev \
-    x11-apps && \
-    rm -rf /var/lib/apt/lists/*
+    udev \ 
+    x11-apps \ 
+    && rm -rf /var/lib/apt/lists/*
 
 
 ################################################################################################
 # - Final stage
-#   - In this stage, install required packages for RTAB-Map and Intel RealSense.
+#   - In this stage, I will install required packages for RTAB-Map and Intel RealSense.
 #   - Reference:
 #       - https://github.com/introlab/rtabmap_ros/tree/humble-devel?tab=readme-ov-file#installation
 #       - https://github.com/introlab/rtabmap_ros.git
@@ -66,20 +64,30 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
 
 FROM tools AS final
 
-# Install Intel RealSense dependencies
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+## Install Intel RealSense dependencies
+RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y \
     ros-humble-librealsense2* \
     ros-humble-realsense2-* && \
     rm -rf /var/lib/apt/lists/*
 
-# Install RTAB-Map dependencies
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
-    ros-humble-rtabmap-ros \
+## Install RTAB-Map dependencies
+RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    ros-humble-rtabmap-ros && \
     rm -rf /var/lib/apt/lists/*
 
-# Set working directory
+## Install foxglove-bridge
+RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    ros-humble-foxglove-bridge && \
+    rm -rf /var/lib/apt/lists/*
+
+
+## Set working directory
+RUN echo "source /opt/ros/$ROS_DISTRO/setup.bash" >> ~/.bashrc
 WORKDIR /home/slam-ws
 
-# Final configurations
-USER $USERNAME
+## Final configurations
+# USER $USERNAME
 CMD ["/bin/bash"]

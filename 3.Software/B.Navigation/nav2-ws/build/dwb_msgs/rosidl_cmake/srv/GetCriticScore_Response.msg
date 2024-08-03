@@ -1,2 +1,0 @@
-
-CriticScore score

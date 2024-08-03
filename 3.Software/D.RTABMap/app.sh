@@ -6,6 +6,7 @@ usage() {
   echo "mode:"
   echo "- mapping       To create a new map"
   echo "- localization  To localize the robot in an existing map"
+  echo "- null          To start without running any command"
   exit 1
 }
 
@@ -22,6 +23,9 @@ case "$1" in
     ;;
   localization)
     COMMAND="/home/user/slam-ws/src/app/localization-mode/run.sh"
+    ;;
+  null)
+    COMMAND="/bin/bash"
     ;;
   *)
     echo "Invalid mode: $1"

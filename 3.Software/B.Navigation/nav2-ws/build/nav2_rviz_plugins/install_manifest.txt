@@ -1,3 +1,0 @@
-/home/user/nav2-ws/install/nav2_rviz_plugins/lib/libnav2_rviz_plugins.so
-/home/user/nav2-ws/install/nav2_rviz_plugins/share/nav2_rviz_plugins/cmake/nav2_rviz_pluginsExport.cmake
-/home/user/nav2-ws/install/nav2_rviz_plugins/share/nav2_rviz_plugins/cmake/nav2_rviz_pluginsExport-noconfig.cmake

@@ -15,9 +15,9 @@ x-shared-settings: &shared-settings
     - $HOME/.Xauthority:/root/.Xauthority
     - /dev/shm:/dev/shm
 
-    - ../nav2-ws/build:/home/user/nav2-ws/build
-    - ../nav2-ws/install:/home/user/nav2-ws/install
-    - ../nav2-ws/src:/home/user/nav2-ws/src
+    - ../nav2-ws/build:/home/nav2-ws/build
+    - ../nav2-ws/install:/home/nav2-ws/install
+    - ../nav2-ws/src:/home/nav2-ws/src
   environment:
     - DISPLAY=${DISPLAY}
     - COMMAND=${COMMAND}
@@ -32,4 +32,4 @@ services:
   navigation-deployment:
     <<: *shared-settings
     container_name: navigation-deployment
-    # command: "/bin/bash -c \"${COMMAND}\""
+    command: "/bin/bash -c \"${COMMAND}\""

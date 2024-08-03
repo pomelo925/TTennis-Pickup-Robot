@@ -1,6 +1,10 @@
 #!/bin/bash
 source /home/user/slam-ws/install/setup.bash
 
+## launch Foxglove Bridge
+ros2 launch foxglove_bridge foxglove_bridge_launch.xml address:=127.0.0.1 &
+sleep 2
+
 ## launch Intel Realsense D435
 ros2 launch realsense2_camera rs_launch.py align_depth.enable:=true &
 

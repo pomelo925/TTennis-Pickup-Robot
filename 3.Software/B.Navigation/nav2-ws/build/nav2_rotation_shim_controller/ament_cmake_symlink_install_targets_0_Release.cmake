@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/user/nav2-ws/build/nav2_rotation_shim_controller/libnav2_rotation_shim_controller.so" "TARGETS" "nav2_rotation_shim_controller" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

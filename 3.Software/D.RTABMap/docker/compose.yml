@@ -5,6 +5,7 @@ x-shared-settings: &shared-settings
   build: 
     context: .  
     dockerfile: Dockerfile
+    target: final
   image: pomelo925/ttennis-humble:rtabmap
   tty: true
   network_mode: host
