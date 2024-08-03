@@ -6,7 +6,7 @@ usage() {
   echo "mode:"
   echo "- mapping       To create a new map"
   echo "- localization  To localize the robot in an existing map"
-  echo "- null          To start without running any command"
+  echo "- null          To start without running any ROS node"
   exit 1
 }
 

@@ -1,1 +1,0 @@
-geometry_msgs;nav2_util;nav2_lifecycle_manager;nav2_msgs;nav_msgs;pluginlib;rclcpp;rclcpp_lifecycle;resource_retriever;rviz_common;rviz_default_plugins;rviz_ogre_vendor;rviz_rendering;std_msgs;tf2_geometry_msgs;visualization_msgs;libqt5-core;libqt5-gui;libqt5-opengl;libqt5-widgets;ament_lint_common;ament_lint_auto

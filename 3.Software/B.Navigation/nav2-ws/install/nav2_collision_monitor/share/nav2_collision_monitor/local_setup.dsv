@@ -1,3 +1,0 @@
-source;share/nav2_collision_monitor/environment/ament_prefix_path.sh
-source;share/nav2_collision_monitor/environment/library_path.sh
-source;share/nav2_collision_monitor/environment/path.sh

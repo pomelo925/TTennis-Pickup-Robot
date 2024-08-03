@@ -1,4 +1,0 @@
-source;share/nav_2d_msgs/environment/ament_prefix_path.sh
-source;share/nav_2d_msgs/environment/library_path.sh
-source;share/nav_2d_msgs/environment/path.sh
-source;share/nav_2d_msgs/environment/pythonpath.sh

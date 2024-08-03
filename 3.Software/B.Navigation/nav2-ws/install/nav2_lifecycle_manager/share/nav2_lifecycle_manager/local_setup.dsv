@@ -1,3 +1,0 @@
-source;share/nav2_lifecycle_manager/environment/ament_prefix_path.sh
-source;share/nav2_lifecycle_manager/environment/library_path.sh
-source;share/nav2_lifecycle_manager/environment/path.sh
