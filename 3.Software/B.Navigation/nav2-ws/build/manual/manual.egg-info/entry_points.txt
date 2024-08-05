@@ -1,0 +1,3 @@
+[console_scripts]
+teleop.py = manual.teleop:main
+

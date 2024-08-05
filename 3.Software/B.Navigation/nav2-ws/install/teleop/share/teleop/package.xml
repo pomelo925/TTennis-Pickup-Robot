@@ -1,1 +1,19 @@
-/home/nav2-ws/src/teleop/package.xml
+<?xml version="1.0"?>
+<package format="2">
+  <name>teleop</name>
+  <version>0.0.0</version>
+  <description>Teleoperation for TurtleBot using PyQt5</description>
+  <maintainer email="your_email@example.com">Your Name</maintainer>
+  <license>Apache License 2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>PyQt5</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

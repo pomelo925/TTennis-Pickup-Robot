@@ -99,6 +99,7 @@ wasd: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_cpp.so
 wasd: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_cpp.so
 wasd: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_cpp.so
 wasd: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_py.so
+wasd: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.3
 wasd: /opt/ros/humble/lib/liblibstatistics_collector.so
 wasd: /opt/ros/humble/lib/librcl.so
 wasd: /opt/ros/humble/lib/librmw_implementation.so
@@ -162,6 +163,8 @@ wasd: /opt/ros/humble/lib/librcpputils.so
 wasd: /opt/ros/humble/lib/librosidl_runtime_c.so
 wasd: /opt/ros/humble/lib/librcutils.so
 wasd: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+wasd: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.3
+wasd: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.3
 wasd: CMakeFiles/wasd.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nav2-ws/build/teleop/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable wasd"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/wasd.dir/link.txt --verbose=$(VERBOSE)

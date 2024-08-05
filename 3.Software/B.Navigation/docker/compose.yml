@@ -6,6 +6,7 @@ x-shared-settings: &shared-settings
     context: .  
     dockerfile: Dockerfile
   image: pomelo925/ttennis-humble:nav2
+  stdin_open: true
   tty: true
   network_mode: host
   privileged: true
