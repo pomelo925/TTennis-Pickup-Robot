@@ -1,2 +1,10 @@
+### vscode ###
 .vscode
+
+### Backup fe7
+
 *oldVersions
+
+### STM32 ###
+2.Firmware/Core-STM32H7/Debug/
+2.Firmware/Core-STM32H7/Release/
