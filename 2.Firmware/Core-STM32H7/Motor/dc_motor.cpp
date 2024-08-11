@@ -18,7 +18,7 @@ extern TIM_HandleTypeDef htim6;
 extern TIM_HandleTypeDef htim15;
 
 
-/** Motors **/
+/** Motors Instances**/
 DC_MOTOR WheelRight(GPIOE, GPIO_PIN_3);
 DC_MOTOR WheelLeft(GPIOC, GPIO_PIN_13);
 // DC_MOTOR Intake;
