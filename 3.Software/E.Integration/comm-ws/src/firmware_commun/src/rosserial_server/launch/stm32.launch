@@ -1,12 +1,12 @@
 <launch>
     <!-- Odometry communication (rosserial server) -->
-    <node pkg="rosserial_server" type="serial_node" name="rosserial_server_dp" unless="$(arg simulation)">
-        <param name="port" value="/dev/ACM0" if="$(eval arg('param')==1)"/>
+    <node pkg="rosserial_server" type="serial_node" name="rosserial_server_dp">
+        <param name="port" value="/dev/ttyUSB0"/>
         <param name="baud" value="115200" />
         <rosparam>
             require:
-                publishers: [ Toposition ]
-                subscribers: [ cmd_vel ]
+                publishers: [ odometry ]
+                subscribers: [ cmd_vel, cmd_intake, cmd_elevator, cmd_elevatorDoor, cmd_basketDoor ]
         </rosparam>
     </node>
 </launch>

@@ -44,11 +44,19 @@ services:
     network_mode: host
     privileged: true
     volumes:
-      - ../comm-ws:/home/comm-ws
+      - ../comm-ws:/root/comm-ws
+      - /dev/bus/usb:/dev/bus/usb
     depends_on:
       ros-core:
         condition: service_healthy
+    command: /bin/bash -c "
+            source /opt/ros/noetic/setup.bash && 
+            source /root/comm-ws/devel/setup.bash && 
+            cd /root/comm-ws &&
+            sudo chmod 777 /dev/ttyUSB0 &&
+            roslaunch rosserial_server stm32.launch"
         
+
   # ros2:
   #   image: osrf/ros:humble-desktop-full
   #   container_name: ros2

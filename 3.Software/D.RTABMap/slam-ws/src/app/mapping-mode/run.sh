@@ -17,7 +17,7 @@ ros2 launch rtabmap_launch rtabmap.launch.py \
   depth_topic:=/camera/camera/aligned_depth_to_color/image_raw \
   approx_sync:=true \
   rviz:=false \
-  qos:=2 &
+  qos:=2 
 
 ## launch rviz 
-rviz2 -d /home/user/slam-ws/src/app/mapping-mode/run.rviz
+# rviz2 -d /home/user/slam-ws/src/app/mapping-mode/run.rviz
