@@ -25,6 +25,5 @@ namespace ROS1 {
 	void callback_BasketDoor(const std_msgs::Bool &msg);
 }
 
-void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart);
 
 #endif

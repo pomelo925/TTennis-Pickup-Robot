@@ -6,13 +6,13 @@
  */
 
 
+#include <dc_motor.h>
 #include <mainpp.h>
 #include <manual.h>
-#include <motor.h>
 #include <ros1.h>
 
 void main_function(void){
-	MOTOR::init();
+	DC_MOTOR::init();
 	ROS1::init();
 
 	while(1){

@@ -23,6 +23,6 @@ extern TIM_HandleTypeDef htim15;
 #define LEFT_DIR_PIN GPIO_PIN_13
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim);
-void motor(void);
+void dc_motor(void);
 
 #endif /* INTERRUPT_H_ */

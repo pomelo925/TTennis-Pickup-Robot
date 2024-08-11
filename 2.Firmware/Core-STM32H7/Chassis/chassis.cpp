@@ -6,7 +6,7 @@
  */
 
 #include <chassis.h>
-#include <motor.h>
+#include <dc_motor.h>
 
 CHASSIS Chassis;
 SpeedVector CHASSIS_CURRENT_SPEED, CHASSIS_TARGET_SPEED;
