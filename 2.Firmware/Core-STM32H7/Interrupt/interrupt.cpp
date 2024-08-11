@@ -5,26 +5,31 @@
  *      Author: pomelo925
  */
 
-
-#include <interrupt.h>
 #include <motor.h>
-#include <ros_core.h>
+#include <interrupt.h>
+
+#include <ros1.h>
 
 
-static int ms=0, test_pwm=100;
+static int ms=0;
+//int test_pwm=100;
+
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 	if (htim->Instance == TIM6) {
 	/* ROS publish */
 		ms++;
-//			ROS::pub_chassis_speed();
-//		}
+		// publish every 100ms
+		if (ms >= 100) {
+			ROS1::pub_chassis_speed();
+			ms = 0;
+		}
+  }
 
 //		__HAL_TIM_SET_COMPARE(&htim15, TIM_CHANNEL_1, test_pwm);
 //		__HAL_TIM_SET_COMPARE(&htim15, TIM_CHANNEL_2, test_pwm);
 
 	/* PID Control */
-		motor();
-	}
+	motor();
 }
 
 void motor(void){

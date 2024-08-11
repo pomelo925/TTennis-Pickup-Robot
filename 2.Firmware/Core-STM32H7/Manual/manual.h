@@ -9,7 +9,7 @@
 #define INC_MANUAL_HPP_
 
 namespace MANUAL{
-	const bool MODE = true;
+	const bool MODE = false;
 
 	/** functions **/
 	const bool runChassis = true;

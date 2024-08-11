@@ -1,23 +1,18 @@
 /*
- * ros_core.h
+ * ros1.h
  *
  *  Created on: Aug 6, 2024
  *      Author: pomelo925
  */
 
-#ifndef ROS_CORE_H_
-#define ROS_CORE_H_
+#ifndef ROS_1_H_
+#define ROS_1_H_
 
-#include "ros.h"
 #include "geometry_msgs/Twist.h"
 #include "std_msgs/Int32.h"
 #include "std_msgs/Bool.h"
 
-void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart);
-void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart);
-
-
-namespace ROS {
+namespace ROS1 {
 	void init(void);
 	void spinCycle(void);
 
@@ -28,6 +23,8 @@ namespace ROS {
 	void callback_Elevator(const std_msgs::Int32 &msg);
 	void callback_ElevatorDoor(const std_msgs::Bool &msg);
 	void callback_BasketDoor(const std_msgs::Bool &msg);
-};
+}
+
+void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart);
 
 #endif

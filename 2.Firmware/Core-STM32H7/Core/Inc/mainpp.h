@@ -6,7 +6,7 @@
  */
 
 #ifndef MAINPP_H_
-#define MAINPP_H_
+#define MAINPP_H
 
 #ifdef __cplusplus
   extern "C"{
