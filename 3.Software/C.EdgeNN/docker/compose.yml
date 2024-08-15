@@ -1,0 +1,28 @@
+x-shared-settings: &shared-settings
+  build: 
+    context: .  
+    dockerfile: Dockerfile
+    target: final
+  image: pomelo925/ttennis-humble:edgeNN
+  tty: true
+  network_mode: host
+  privileged: true
+  volumes:
+    - /tmp/.X11-unix:/tmp/.X11-unix
+    - $HOME/.Xauthority:/root/.Xauthorit
+    - /dev:/dev # Fine
+    # - /dev/shm:/dev/shm
+    ## this is for ros1-ros2 communication (ros1 bridge) 
+    ## error: X_LINK_DEVICE_NOT_FOUND !
+    ## ref: https://github.com/luxonis/depthai-docs-website/blob/master/source/pages/troubleshooting.rst#udev-rules-on-linux
+  environment:
+    - DISPLAY=${DISPLAY}
+    # - COMMAND=${COMMAND}
+  devices:
+    - /dev:/dev
+
+services:
+  edgenNN-deployment:
+    <<: *shared-settings
+    container_name: edgeNN-deployment
+    # command: "/bin/bash -c \"${COMMAND}\""

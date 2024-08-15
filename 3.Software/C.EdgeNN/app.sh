@@ -4,8 +4,7 @@
 usage() {
   echo "usage: $0 [mode]"
   echo "mode:"
-  echo "- mapping       To create a new map"
-  echo "- localization  To localize the robot in an existing map"
+  echo "- picture       To take a picture"
   echo "- null          To start without running any ROS node"
   exit 1
 }
@@ -18,11 +17,8 @@ fi
 
 # Determine the command based on the mode argument
 case "$1" in
-  mapping)
-    COMMAND="/home/slam-ws/app/mapping-mode/run.sh"
-    ;;
-  localization)
-    COMMAND="/home/slam-ws/app/localization-mode/run.sh"
+  picture)
+    COMMAND="/home/edgeNN-ws/src/app/picture-mode/run.sh"
     ;;
   null)
     COMMAND="/bin/bash"
@@ -36,23 +32,24 @@ esac
 
 
 ## 0. clean container within same group
-echo "[RTAB-Map] Removing..."
-docker compose -p rtabmap down --volumes --remove-orphans
+echo "[EdgeNN] Removing..."
+docker compose -p edgenn down --volumes --remove-orphans
 
 ## 1. make scripts & library executable
-find ../D.RTABMap -type f -name "*.sh" -exec sudo chmod +x {} \;
-find ../D.RTABMap/slam-ws/install -type f -exec chmod +x {} \;
+find ../C.EdgeNN -type f -name "*.sh" -exec sudo chmod +x {} \;
 
 ## 2. environment setup  
+sudo udevadm control --reload-rules && sudo udevadm trigger
+
 export COMMAND 
 export DISPLAY=:0
 xhost +local:docker
 cd docker
 
 ## 2. build image
-echo "[RTAB-Map] Building..."
-docker compose -p rtabmap build
+echo "[EdgeNN] Building..."
+docker compose -p edgenn build
 
 ## 3. deployment
-echo "[RTAB-Map] Deploying..."
-docker compose -p rtabmap up -d 
+echo "[EdgeNN] Deploying..."
+docker compose -p edgenn up -d 

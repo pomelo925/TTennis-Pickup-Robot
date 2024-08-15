@@ -1,4 +1,0 @@
-#request
-bool global_map
-bool optimized
-bool graph_only

@@ -64,22 +64,14 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
 
 FROM tools AS final
 
-## Install Intel RealSense dependencies
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    ## Install Intel RealSense dependencies
     ros-humble-librealsense2* \
-    ros-humble-realsense2-* && \
-    rm -rf /var/lib/apt/lists/*
-
-## Install RTAB-Map dependencies
-RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y \
-    ros-humble-rtabmap-ros && \
-    rm -rf /var/lib/apt/lists/*
-
-## Install foxglove-bridge
-RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    ros-humble-realsense2-* \
+    ## Install RTAB-Map dependencies
+    ros-humble-rtabmap-ros \
+    ## Install foxglove-bridge
     ros-humble-foxglove-bridge && \
     rm -rf /var/lib/apt/lists/*
 

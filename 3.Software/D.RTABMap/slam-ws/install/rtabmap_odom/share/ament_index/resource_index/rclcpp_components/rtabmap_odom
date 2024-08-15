@@ -1,3 +1,0 @@
-rtabmap_odom::RGBDOdometry;lib/librtabmap_odom_plugins.so
-rtabmap_odom::StereoOdometry;lib/librtabmap_odom_plugins.so
-rtabmap_odom::ICPOdometry;lib/librtabmap_odom_plugins.so

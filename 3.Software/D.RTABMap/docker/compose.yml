@@ -14,9 +14,7 @@ x-shared-settings: &shared-settings
     - /tmp/.X11-unix:/tmp/.X11-unix
     - $HOME/.Xauthority:/root/.Xauthority
     - /dev/shm:/dev/shm
-
-    - ../slam-ws/build:/home/user/slam-ws/build
-    - ../slam-ws/install:/home/user/slam-ws/install
+    
     - ../slam-ws/src:/home/user/slam-ws/src
   environment:
     - DISPLAY=${DISPLAY}

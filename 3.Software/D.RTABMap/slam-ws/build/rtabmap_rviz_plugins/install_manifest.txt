@@ -1,5 +1,0 @@
-/home/user/slam-ws/install/rtabmap_rviz_plugins/include/rtabmap_rviz_plugins/MapGraphDisplay.h
-/home/user/slam-ws/install/rtabmap_rviz_plugins/include/rtabmap_rviz_plugins/visibility.h
-/home/user/slam-ws/install/rtabmap_rviz_plugins/include/rtabmap_rviz_plugins/InfoDisplay.h
-/home/user/slam-ws/install/rtabmap_rviz_plugins/include/rtabmap_rviz_plugins/MapCloudDisplay.h
-/home/user/slam-ws/install/rtabmap_rviz_plugins/lib/librtabmap_rviz_plugins.so

@@ -1,6 +1,0 @@
-#request
-int32[] ids
-bool images
-bool scan
-bool grid
-bool user_data

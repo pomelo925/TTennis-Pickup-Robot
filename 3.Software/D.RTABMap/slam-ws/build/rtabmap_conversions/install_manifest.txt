@@ -1,4 +1,0 @@
-/home/user/slam-ws/install/rtabmap_conversions/lib/librtabmap_conversions.so
-/home/user/slam-ws/install/rtabmap_conversions/include/rtabmap_conversions/MsgConversion.h
-/home/user/slam-ws/install/rtabmap_conversions/share/rtabmap_conversions/cmake/rtabmap_conversionsExport.cmake
-/home/user/slam-ws/install/rtabmap_conversions/share/rtabmap_conversions/cmake/rtabmap_conversionsExport-release.cmake

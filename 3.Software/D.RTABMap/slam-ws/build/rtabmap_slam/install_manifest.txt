@@ -1,5 +1,0 @@
-/home/user/slam-ws/install/rtabmap_slam/lib/librtabmap_slam_plugins.so
-/home/user/slam-ws/install/rtabmap_slam/include/rtabmap_slam/CoreWrapper.h
-/home/user/slam-ws/install/rtabmap_slam/include/rtabmap_slam/visibility.h
-/home/user/slam-ws/install/rtabmap_slam/share/rtabmap_slam/cmake/rtabmap_slamExport.cmake
-/home/user/slam-ws/install/rtabmap_slam/share/rtabmap_slam/cmake/rtabmap_slamExport-release.cmake
