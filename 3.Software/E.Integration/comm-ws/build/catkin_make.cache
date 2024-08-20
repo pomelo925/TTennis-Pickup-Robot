@@ -1,2 +1,0 @@
-firmware_commun/src/rosserial_msgs:firmware_commun/src/rosserial_server
--DCATKIN_DEVEL_PREFIX=/root/comm-ws/devel -DCMAKE_INSTALL_PREFIX=/root/comm-ws/install -G Unix Makefiles

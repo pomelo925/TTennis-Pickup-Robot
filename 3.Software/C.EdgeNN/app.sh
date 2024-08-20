@@ -18,7 +18,7 @@ fi
 # Determine the command based on the mode argument
 case "$1" in
   picture)
-    COMMAND="/home/edgeNN-ws/src/app/picture-mode/run.sh"
+    COMMAND="/home/app/picture-mode/run.sh"
     ;;
   null)
     COMMAND="/bin/bash"
@@ -42,7 +42,7 @@ find ../C.EdgeNN -type f -name "*.sh" -exec sudo chmod +x {} \;
 sudo udevadm control --reload-rules && sudo udevadm trigger
 
 export COMMAND 
-export DISPLAY=:0
+export DISPLAY=localhost:10.0
 xhost +local:docker
 cd docker
 

@@ -56,7 +56,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
 
 ################################################################################################
 # - DepthAI ROS Build stage
-#   - In this stage, I will clone and build the DepthAI ROS package.
+#   - In this stage, I will clone and build the DepthAI ROS package & foxglove.
 #   - reference: 
 #       - https://github.com/luxonis/depthai-ros/tree/ros-release
 ################################################################################################
@@ -67,9 +67,11 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     libusb-1.0-0-dev \
     python3-colcon-common-extensions \
     software-properties-common \
+    ## Install ROS Humble Foxglove
+    ros-humble-foxglove-bridge \
     && rm -rf /var/lib/apt/lists/
 
-ENV WS=/home/edgeNN-ws
+ENV WS=/home/dai-ws
 WORKDIR $WS
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
@@ -79,6 +81,12 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     ./src/depthai-ros/build.sh -s 0 -r 1 -m 1 && \
     rm -rf $WS/src $WS/log && \
     rm -rf /var/lib/apt/lists/*
+
+RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    pip \
+    && pip install depthai \ 
+    && rm -rf /var/lib/apt/lists/
 
 RUN echo "source /opt/ros/$ROS_DISTRO/setup.bash" >> ~/.bashrc && \
    echo "source $WS/install/setup.bash" >> ~/.bashrc 

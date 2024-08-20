@@ -15,7 +15,7 @@ x-shared-settings: &shared-settings
     - $HOME/.Xauthority:/root/.Xauthority
     - /dev/shm:/dev/shm
     
-    - ../slam-ws/src:/home/user/slam-ws/src
+    - ../slam-ws/src:/home/slam-ws/src
   environment:
     - DISPLAY=${DISPLAY}
     - COMMAND=${COMMAND}

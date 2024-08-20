@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC   -shared -Wl,-soname,librosserial_server_lookup.so -o /root/comm-ws/devel/lib/librosserial_server_lookup.so CMakeFiles/rosserial_server_lookup.dir/src/msg_lookup.cpp.o  /usr/lib/x86_64-linux-gnu/libpython3.8.so 

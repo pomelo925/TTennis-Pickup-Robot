@@ -1,8 +1,0 @@
-prefix=/root/comm-ws/install
-
-Name: firmware_commun
-Description: Description of firmware_commun
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

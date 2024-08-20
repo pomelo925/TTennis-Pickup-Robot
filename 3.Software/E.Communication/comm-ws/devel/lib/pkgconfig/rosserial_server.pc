@@ -1,0 +1,8 @@
+prefix=/root/comm-ws/devel
+
+Name: rosserial_server
+Description: Description of rosserial_server
+Version: 0.9.2
+Cflags: -I/root/comm-ws/src/firmware_commun/src/rosserial_server/include
+Libs: -L${prefix}/lib -lrosserial_server_lookup
+Requires: roscpp rosserial_msgs std_msgs topic_tools
