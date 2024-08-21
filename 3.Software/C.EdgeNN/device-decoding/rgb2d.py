@@ -1,4 +1,4 @@
-#usage: python3 rgb.py -conf model/best.json
+#usage: python3 rgb2d.py -conf model/best.json
 
 from depthai_sdk import OakCamera, ArgsParser
 import argparse
