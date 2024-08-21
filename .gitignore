@@ -1,10 +1,15 @@
 ### vscode ###
 .vscode
 
-### Backup fe7
-
-*oldVersions
-
 ### STM32 ###
 2.Firmware/Core-STM32H7/Debug/
 2.Firmware/Core-STM32H7/Release/
+2.Firmware/Core-STM32H7/.settings/
+2.Firmware/Core-STM32H7/*.launch
+
+
+### NextjsApp ###
+# dependencies
+3.Software/F.NextjsApp/ttennis-app/node_modules
+# next.js
+3.Software/F.NextjsApp/ttennis-app/.next
