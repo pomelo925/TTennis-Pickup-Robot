@@ -7,7 +7,10 @@
 
 FROM osrf/ros:humble-desktop-full AS base
 
+LABEL org.opencontainers.image.title="RTAB-Map Docker Image"
 LABEL org.opencontainers.image.authors="yoseph.huang@gmail.com"
+LABEL org.opencontainers.image.licenses="MIT"
+LABEL org.opencontainers.image.source="https://github.com/pomelo925/TTennis-Pickup-Robot/blob/main/3.Software/D.RTABMap/docker/Dockerfile"
 
 ARG USERNAME=user
 ARG USER_UID=1000

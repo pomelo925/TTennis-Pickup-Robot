@@ -39,8 +39,6 @@ docker compose -p edgenn down --volumes --remove-orphans
 find ../C.EdgeNN -type f -name "*.sh" -exec sudo chmod +x {} \;
 
 ## 2. environment setup  
-sudo udevadm control --reload-rules && sudo udevadm trigger
-
 export COMMAND 
 export DISPLAY=localhost:10.0
 xhost +local:docker

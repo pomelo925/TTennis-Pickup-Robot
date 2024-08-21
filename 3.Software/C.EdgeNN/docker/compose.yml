@@ -3,7 +3,7 @@ x-shared-settings: &shared-settings
     context: .  
     dockerfile: Dockerfile
     target: final
-  image: pomelo925/ttennis-humble:edgeNN
+  image: pomelo925/ttennis-humble:edgenn
   tty: true
   network_mode: host
   privileged: true
@@ -17,9 +17,10 @@ x-shared-settings: &shared-settings
     ## ref: https://github.com/luxonis/depthai-docs-website/blob/master/source/pages/troubleshooting.rst#udev-rules-on-linux
   
     - ../app:/home/app
+    - .../device-decoding:/home/dai-ws/src/device-decoding:ro,exclude=.cache
   environment:
     - DISPLAY=${DISPLAY}
-    # - COMMAND=${COMMAND}
+    - COMMAND=${COMMAND}
   devices:
     - /dev:/dev
 

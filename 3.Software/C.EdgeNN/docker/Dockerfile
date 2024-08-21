@@ -7,7 +7,10 @@
 
 FROM ros:humble-ros-base AS base
 
+LABEL org.opencontainers.image.title="EdgeNN Docker Image"
 LABEL org.opencontainers.image.authors="yoseph.huang@gmail.com"
+LABEL org.opencontainers.image.licenses="MIT"
+LABEL org.opencontainers.image.source="https://github.com/pomelo925/TTennis-Pickup-Robot/blob/main/3.Software/C.EdgeNN/docker/Dockerfile"
 
 ARG USERNAME=user
 ARG USER_UID=1000
@@ -64,29 +67,23 @@ FROM tools AS final
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
-    libusb-1.0-0-dev \
-    python3-colcon-common-extensions \
-    software-properties-common \
     ## Install ROS Humble Foxglove
     ros-humble-foxglove-bridge \
+    ## Python
+    python3 pip \
+    ## OpenGL dependencies
+    libgl1-mesa-glx  libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/
+
+## Install device-decoding dependencies
+RUN pip install \
+    depthai>=2.19.1.0 \
+    opencv-python \
+    depthai-sdk>=1.9.1.1 \
+    numpy>=1.18.5 
 
 ENV WS=/home/dai-ws
 WORKDIR $WS
-
-RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
-    git clone -b humble https://github.com/luxonis/depthai-ros.git src/depthai-ros && \
-    rosdep install --from-paths src --ignore-src -y && \
-    . /opt/ros/humble/setup.sh && \
-    ./src/depthai-ros/build.sh -s 0 -r 1 -m 1 && \
-    rm -rf $WS/src $WS/log && \
-    rm -rf /var/lib/apt/lists/*
-
-RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y \
-    pip \
-    && pip install depthai \ 
-    && rm -rf /var/lib/apt/lists/
 
 RUN echo "source /opt/ros/$ROS_DISTRO/setup.bash" >> ~/.bashrc && \
    echo "source $WS/install/setup.bash" >> ~/.bashrc 

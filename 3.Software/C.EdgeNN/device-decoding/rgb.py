@@ -6,7 +6,7 @@ import cv2
 
 # Parse arguments
 parser = argparse.ArgumentParser()
-parser.add_argument("-conf", "--config", help="Trained YOLO json config path", default='model/yolo.json', type=str)
+parser.add_argument("-conf", "--config", help="Trained YOLO json config path", default='model/best.json', type=str)
 args = ArgsParser.parseArgs(parser)
 
 # Define the callback function
@@ -40,13 +40,11 @@ def callback(packet):
         center_x = (bbox[0] + bbox[2]) // 2
         center_y = (bbox[1] + bbox[3]) // 2
         
-        # Get depth information (assuming spatial=True and depth information is available)
-        depth = detection.spatialCoordinates[2] if hasattr(detection, 'spatialCoordinates') else 0
         
-        # Display x, y, and depth information on the image
+        # Display x, y on the image
         label = f"{detection.label_str}: {detection.confidence:.2f}"
         cv2.putText(frame, label, (bbox[0], bbox[1] - 30), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
-        coord_label = f"x:{center_x} y:{center_y} depth:{depth:.2f}mm"
+        coord_label = f"x:{center_x} y:{center_y}"
         cv2.putText(frame, coord_label, (bbox[0], bbox[1] - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
     # Display the image
