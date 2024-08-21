@@ -19,10 +19,10 @@ fi
 # Determine the command based on the mode argument
 case "$1" in
   mapping)
-    COMMAND="/home/slam-ws/app/mapping-mode/run.sh"
+    COMMAND="/home/app/mapping/run.sh"
     ;;
   localization)
-    COMMAND="/home/slam-ws/app/localization-mode/run.sh"
+    COMMAND="/home/app/localization/run.sh"
     ;;
   null)
     COMMAND="/bin/bash"
