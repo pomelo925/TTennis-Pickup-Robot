@@ -1,69 +1,108 @@
-# TTennis Pickup Robot 桌球自動拾取智慧機器人
-> 2024年清華大學25級動力機械系畢業專題
+<center><h1> TTennis Pickup Robot 桌球自動拾取智慧機器人  </h1></center>
 
-> 本人負責項目為所有軟體、部分韌體及部分硬體，其餘非本人負責項目最終會清楚標註貢獻者。
+> 清華大學 動力機械系25級 畢業專題（2024）
 
-## 摘要
-本計畫旨在研發一台可以自動撿桌球且將桌球放入發球機的機器人，以減輕桌球運動員的負擔，並提高其訓練的效率。綜合評估了幾款現有自動撿球機器人的優缺點後，我們確立研究的主要目標為提升現有自動撿球機器人的功能，包括提高取球效率、增加集球倉容量、引入自動辨識球和動態避障功能等。具體研究方法為透過機器人的差動底盤、取球機構，以及深度相機的RGBD資訊、ROS(Robot Operating System)系統、Wi-Fi通訊等，達成此機器人能夠高效、快速地自動收集桌球，且提供建圖定位、撿球模式、供球模式和倒球模式等多元模式，且有利於使用者簡易操作的設備，從而提高運動員訓練的效率。
+> 本人（pomelo925）負責項目為全軟體、部分韌體及部分電路。
+> 非本人負責項目最終會清楚標註貢獻者。
 
+</br>
 
-## 研究動機與研究問題
-在桌球運動中，無論是業餘對打或專業訓練，球員經常須花費大量時間和精力在場上撿球，此單調而繁瑣的事情卻佔據一大部分的運動時間。尤其對於專業運動員，長時間反覆性的彎腰撿球不僅浪費訓練時間，也可能造成腰部疲勞或肌肉損傷。
+<center><h2> ⭐⭐⭐ 整體架構 ⭐⭐⭐</h2></center>
 
-鑒於以上，我們想研發一台智慧自動桌球拾取機器人，代替球員雙手拾球，使運動員能夠更有效率地訓練，而業餘者也能省免撿球麻煩而享受對打樂趣。此機器人主要用於一般性的娛樂或訓練場地等，自動尋找並拾取場上大數量的桌球，並將球供給球員。由於正式專業的桌球比賽上，為了確保賽場內無干擾物，球場上只允許有一顆桌球，按照慣例球員須自行撿球。此場景中機器人反而會影響球賽，因此我們設計的拾取機器人並不會用於正式比賽上。
+如下圖，本專題主要區分為以下四大部分。
 
-基於上述動機，我們需要考量以下問題：
-1. 自動撿桌球機器人的設計：我們須要設計一個能夠自主辨識、撿取和歸還球的機器人系統。這需要結合機器視覺、機器人控制、感知技術等多個領域的知識和技術，以確保機器人能夠正確地辨識並準確地撿取和歸還球。
-2. 效率和速度：自動撿桌球機器人的效率和速度對於其實用性至關重要。機器人的機構設計須最大程度地提高撿球效率，並且確保它在訓練場地中的操作速度足夠快，以滿足運動員的需求。
-3. 動態避障：拾取機器人會在桌球場上快速移動，如何在機器人執行任務的同時避開運動員也非常重要，若因避障影響撿球效率是可預期而難以避免的，然我們仍會思考如何更有效率地規劃避障演算法。
+![alt text](image.png)
 
 
-## 研究方法及步驟
-### 1. 機構設計
-機構目標是高效率地蒐集場上桌球，並能在機器內儲存至少200顆。初步的機構規劃可分為以下四個部分：
+</br>
 
-  * 差動底盤：負責機器的移動
-        差動底盤使用前方左右各一的膠輪作為主動輪，後方的兩顆萬向輪作為從動輪。這樣的配置讓機器能精確且快速地移動和轉向，同時後方的萬向輪在不影響機器轉向的前提下，能有效避免車體傾倒。另外，為了防止機器在移動過程中因地面不平整而打滑，作為主動輪的膠輪會採取懸吊的設計，使用彈簧進行避震。
-  
-  * intake機構：轉動滾筒蒐集地上桌球
-    負責蒐集場上桌球的 Intake 機構是機器人比賽中經常使用的設計，從文獻回顧的地方也可以看到不少現有機種也有使用，其特點是能夠快速地收集重量較輕的物體，非常適合本次計畫收集桌球的任務。我們計劃在機器的前端安裝三個較長的滾筒，這些滾筒由一顆直流馬達驅動，通過皮帶連接，使得它們能夠同時高速旋轉。當這些滾筒旋轉時，會一次性將多顆機器前方散落的桌球掃入機器體內，相較於現有機種intake只能一次捲入一顆，我們設計的機構能夠實現更快速且有效的蒐集任務。
-  
-  * 環形輸送帶：將桌球運送至集球倉
-    當桌球收集至機器體內後，我們會使用一個垂直的環形輸送帶來抬升這些桌球，靈感來源於水車。實現方式是在輸送帶上安裝許多籃子，使其沿著軌道循環，這些籃子會將桌球從機器體內抬升，然後將它們從集球倉的頂部落入集球倉中。這樣的設計可以將桌球穩定且快速地儲存到集球倉中，使得機器能夠持續進行蒐集任務。
-  
-  * 升降集球倉：用於儲存桌球。
-    桌球經由前面的流程落入集球倉內，基於一般桌球置球架的容量大概在200顆左右，所以我們訂定集球倉的預計容量也要達到至少200顆。同時，為了方便運動員取球，集球倉會具有抬升功能，當運動員需要使用時，集球倉將抬升至一個方便取球的高度。抬升的機構預計採取繩排伸縮，使用馬達將線材捲起，透過安裝在滑軌上的滑輪將整個集球倉拉起至足夠的高度，使運動員可以不用彎腰，直接伸手從集球倉拿取乒乓球。此外，有時運動員會用發球機進行訓練，因此集球倉的一側會由伺服馬達控制擋板，當集球倉抬升至發球機的高度時，擋板會放下，使得桌球因集球倉底部的傾斜而滾入發球機內，實現更加多樣化的功能。
+<center><h2> ⭐⭐ Hardware 硬體 ⭐⭐</h2></center>
+
+![alt text](image-1.png)
 
 
-### 2. 軟體架構
-   
-  軟體端部分，首先機器人藉由深度相機獲取RGBD資訊，利用Ultralytics YOLOv8對RGB影像推論桌球相對於機身的位置，並透過座標轉換取得桌球與我機中心之位置。影像系統將資訊發佈給主程式後，交由其規劃目標點並發佈目標點給導航系統，導航會規劃到達目標點的行走路徑，包含最短路徑與動靜態避障之間的權衡，最後發佈底盤移動速度給STM微晶片控制板，並驅動無刷及直流馬達。
+外購硬體主要有兩台相機 [Intel® RealSense™ Depth Camera D435](https://www.intelrealsense.com/depth-camera-d435/)、[Luxonis OAK-D](https://shop.luxonis.com/products/oak-d?srsltid=AfmBOoonQ7t1-zn0nqSzjS6hqH9pHZsBbMcbB3aGryrPGHOZsLWWNm30) 以及上位機 [iKOOLCORE R2](https://www.ikoolcore.com/en-tw/products/ikoolcore-r2?srsltid=AfmBOooM286Be_Vosi4SvQe132LjfMP1y9nNQp6Jv6tcy6CoUxvYuutZ)。
 
-  導航系統除了避障，另一部份是使用RGBD-SLAM建圖技術實現機器室內定位。這一切的軟體將交由上位機負責計算，我們採用能夠應對即時神經網絡辨識大量計算的Intel Alder Lake N95/i3-N300 iKOOLCORE R2 N300，它提供足夠的USB 3.2接口並支持4K@60fps的影像傳輸，並有被動冷卻設計，確保電腦能長時間在封閉的機器內部穩定運行而不熱當。
+</br>
 
-  接著是定位系統，考慮到SLAM建圖技術有即時計算需求，將採用RTAB-map作為基礎開發，透過對較少被訪問到的地圖點放入LTM(Long-Term Memory)中以減少運算量；而導航系統，則使用典型的navigation stack導航架構，move_base庫以gmapping整合定位建圖資訊並存入靜態地圖，爾後透過對我機及動靜態障礙物設立膨脹層以形成costmap，規劃與目標點之最佳全局與區域路徑。最後，主程式負責接收遙控器指令，並在行走時整合所有資訊，作為各系統間的溝通橋樑。
+我們自行設計 PCB 以增加複雜電路的穩定性與減少過多明線帶來的困擾。
 
-  軟體端開發環境上，我們選擇開發社群廣大且技術成熟的ROS(Robot Operating System)，其豐富開源的軟體包可滿足本次計畫需求。影像處理系統，將透過訂閱由realsense-ros發佈的訊息，使用ROS的PCL庫稀疏化影像(VoxelGrid Filter)，並配合DBSCAN聚類演算法分割不同物體之邊緣。
+包含以下三塊電路板：
 
-  ROS開發過程中，可搭配其內建視覺化工具Rviz及Gazebo，協助開發經過濾後的遮罩影像，和觀察機器人在模擬環境中的避障表現，盡量降低實機測試之風險。另外，機器人的軟體開發皆將基於docker虛擬化技術之上，所開發之應用程序也將以容器形式啟動，目的是提升程序的便攜性，若未來機器有量產需求，可輕易移植於其他相同硬體架構之主機上。
+* 電源分壓板：將 [18V工具機鋰電池](https://www.makitatools.com/products/details/BL1850B-2) 降壓至12V、5V、3.3V，同時支援 PD 快充。其中 DC-DC Bucker 皆採用可調式閉路電壓控制晶片，並充分考慮降噪濾波。PD 快充用以支援上位機的運作。
 
+* 邏輯電路板：運算單元為 Cortex M7 內核的 [STM32H723ZGT6](https://www.mouser.tw/ProductDetail/STMicroelectronics/STM32H723ZGT6?qs=sPbYRqrBIVkPaOxQT7wG%252BA%3D%3D)，包含讀取直流馬達之增量式編碼器、閉路控制直流馬達、ROS1 節點通訊等等。並引出 USART 通訊引腳、編碼器端子座、外部晶振時間源、CP2102 TTL 轉 Type-C 通訊等等。
 
-### 3. 感測器、韌體以及通訊：
-感測器與軔體(圖八中的淺橘色區塊)部分，機器人須配備廣角相機以盡可能地捕獲場地上乒乓球和運動員的動態資訊。由於有YOLO深度學習和RGBD SLAM的建圖需求，相機必須同時獲取RGB8和深度資訊，我們研究後選擇Intel® RealSense™ depth camera D435，其自身搭載Vision Processor D4計算單元，能減輕上位機計算負擔，同時可使用官方開源Intel® RealSense™ SDK 2.0，增強開發靈活性與適應性。
+* 馬達驅動板：電力直接由電源分壓板供給 12V，PWM 控制訊號則由邏輯電路板經軟排線傳遞，馬達驅動晶片為 [VNH5019](https://www.mouser.tw/ProductDetail/STMicroelectronics/EVAL-VNH5019-P1?qs=4b8myOmUP%252BuULWYKW0CsPg%3D%3D)。由於功率較大，與邏輯電路板做物理隔離，抗 EMI。 
 
-另一方面，在韌體計算單元上，我們選擇基於ARM架構的STM32H723ZG微晶片，以滿足對多個直流馬達的速度控制和timer設定需求。同時，它也支援SPI、I2C、ETH及USART等多種通訊協議，其中UART協議將作為rosserial通訊接口基礎，作為STM端和上位機ROS端溝通橋梁。在開發上將使用STM32CubeIDE撰寫與燒錄韌體程式碼。
-
-最後是遙控觸控螢幕，會安裝有Wi-Fi模組的ESP32，用於與機器人溝通。ESP32會接收螢幕按鈕上的觸控指令，並透過Wi-Fi發佈控制訊息給機器人。
+</br>
 
 
-## 預期結果
-考慮到智慧自動桌球機器人的實用性及商品化，以下場景為使用者首次使用此機器人時，應有的預期操作模式與結果。
-* 安裝桌邊遙控器：使用者可根據操作手冊安裝遙控器於桌球桌邊。
-* 開機：透過遙控器喚醒機器人。
-* 建圖定位：機器人須對新環境探索並做建圖，作為日後行走之地圖依據。此時使用者須清空場地不必要阻礙物。使用者點擊「探索環境」後，機器人便進入建圖模式，測試相機與底盤馬達運作正常後，開始根據演算法隨機探索地圖並生成靜態地圖。當所有環境皆存入後，機器會回到原點，並顯示「探索結束」。此步驟只須執行一次。
-* 撿球模式：此模式須確保已執行過建圖定位。機器人在撿球模式中，機器人將在桌球場中尋找並蒐集桌球，使用者可調整機器人移動速度。機器人會持續在場上尋找與蒐集(即便沒有桌球)，直至即將沒電、使用者呼叫、異物阻塞等情況機器人才會停止撿球。
-* 呼叫按鈕：使用者可隨時點擊觸控螢幕上的「呼叫」按鈕，機器人會立即停止當前工作，並移動至原點。
-* 供球模式：機器人將移動到球員身旁並佇立於原地，抬起集球箱供給球員進行發球練習。使用者可透過螢幕微調機器人的位置。
-* 倒球模式：或稱發球機模式。此模式會先確認使用者是否已安裝桌球發球機，或是否已在對面球桌安裝集球網。機器人會移動至合適位置，抬起集球箱後打開箱上之閘門，使球落入集球網中，供給桌球給發球機。
+<center><h2> ⭐⭐ Firmware 韌體 ⭐⭐ </h2></center>
 
-關於機器人在撿球表現上的預期細節，首先移動速度最高可至一米/秒，路徑上之桌球都能順利吸入機器內部，且整體運作聲音小於環境噪聲。集球倉預計至少可儲存200顆桌球，且不管何種位置或角度吸入桌球，機內之桌球流水線皆不會受到干涉。避障部分，若是於首次建圖中遇到之障礙物，將列為禁區而永不進入；若是於行進中遇到之新障礙物，將在一定距離時停止行走，並重新規劃新路徑行走。由於避障系統的核心訴求是「不可對使用者造成任何傷害」，因此我們會以安全為最高原則開發，若因避障影響撿球效率是可預期而難以避免的，然我們仍會思考如何更有效率地規劃避障演算法。
+開發平台為 [STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html)，下圖為本專案資料夾架構與各自任務。
+
+![alt text](image-2.png)
+
+此為 C/C++ 混編專案，並以任務導向將代碼封裝成獨立資料夾，透過解藕增價可移植性，實作細節可參閱[全端機器人技術筆記 -【韌體】STM32CubeIDE - C/C++ 混編專案架構](https://hackmd.io/@925/robot/%2F%40925%2Fstm-project)。
+
+架構圖中箭頭部分為針對底盤馬達控制中，ROS1 與 STM32 內部主要的通訊與變數關係。
+
+</br>
+
+<center><h2> ⭐⭐ Software 軟體 ⭐⭐ </h2></center>
+
+軟體複雜度較高，因此會拆分成較多部分說明。
+
+![alt text](image-3.png)
+
+這裡我簡述各區塊執行的任務，並於底下補充技術細節。後端軟體幾乎運行於 [ROS2](https://docs.ros.org/en/foxy/index.html) 平台之上。
+
+* 前端 - Nextjs / Framer Motion / Tailwind CSS
+  * 與用戶最直接的交互接口，可點擊螢幕使機器人執行任務，亦顯示機器人即時運動訊息。
+  * 本專案模板與架構很大程度地參考 [
+Cristian Mihai 的開源專案](https://www.youtube.com/watch?v=dImgZ_AH7uA&t=194s)。
+
+* 後端 - Coordinator 協調器
+  * 作為最上層的節點排程與協調器，依當前任務及情景動態調度必要資源。
+
+* 後端 - Navigation 導航
+  * 基於官方開源 [Nav2 導航堆棧](https://docs.nav2.org/)，開發 AMR 的路徑規劃、動靜態避障、代價地圖堆疊等。
+
+* 後端 - EdgeNN 神經網路邊緣運算
+  * [Luxonis OAK-D](https://shop.luxonis.com/products/oak-d?srsltid=AfmBOoonQ7t1-zn0nqSzjS6hqH9pHZsBbMcbB3aGryrPGHOZsLWWNm30)，即時偵測桌球、桌球桌、置球架以及運動員，並回傳空間座標資訊。
+
+* 後端 - RTAB-Map 建圖定位
+  * 使用開源 [RTAB-Map](https://introlab.github.io/rtabmap/) 為室內環境作三維建模，為導航節點提供定位的依據。
+
+* 後端 - Coomunication 通訊
+  * 基於 [rosserial](https://wiki.ros.org/rosserial) 實現 STM - ROS1 通訊。
+  * 基於 [Ros1 bridge](https://github.com/ros2/ros1_bridge) 實現 ROS1 - ROS2 通訊。
+
+</br>
+
+<center><h2> ⭐ 軟體後端 - EdgeNN ⭐ </h2></center>
+
+機上搭載嵌入式 AI RGBD 相機 [Luxonis OAK-D](https://shop.luxonis.com/products/oak-d?srsltid=AfmBOoonQ7t1-zn0nqSzjS6hqH9pHZsBbMcbB3aGryrPGHOZsLWWNm30)，大大減少了上位機的運算負擔。相機端給出偵測物件的空間座標資訊後，經過靜態與動態的座標轉換（基於 [tf2](https://docs.ros.org/en/foxy/Tutorials/Intermediate/Tf2/Tf2-Main.html)）後映射至導航的全局代價地圖中。
+
+本專案使用模型為 [Ultralytics](https://www.ultralytics.com/zh) 發佈的 [YOLOv8 模型](https://github.com/ultralytics/ultralytics)。此為當前 [depthai-experiments
+](https://github.com/luxonis/depthai-experiments) 能支援 [on-device programming](https://docs-old.luxonis.com/en/latest/pages/tutorials/on-device-programming/) 的最新模型。部署時須將 yolov8n 模型變體之權重檔轉為輕量化格式，實測幀率浮動於 6 ~ 10 hz 間。
+
+training set 主要由 [Roboflow Universe](https://universe.roboflow.com/) 上已 annotated 的開源資料集 [Ping Pong Detection Computer Vision Project](https://universe.roboflow.com/pingpong-ojuhj/ping-pong-detection-0guzq) 提供。資料再由 [Roboflow](https://roboflow.com/) 協助增強處理，並於本地端（RTX 4070、32GB RAM）滿載訓練。訓練細節可參考 [機器人全端技術筆記 -【軟體】影像處理 -【物件偵測】Training 階段](https://hackmd.io/@925/robot/%2F%40925%2Ftraining)。
+
+![alt text](image-5.png)
+
+最後，為了取得深度資訊，須使用 DepthAI 的 [YoloSpatialDetectionNetwork](https://docs.luxonis.com/software/depthai-components/nodes/yolo_spatial_detection_network/)，疊合相機原生深度資訊與 YOLO 物件屬性，計算出偵測物件合理的空間座標。這部分詳情可參閱 [機器人全端技術筆記 -【軟體】影像處理 -【物件偵測】Deploying 階段](https://hackmd.io/@925/robot/%2F%40925%2Fdeploy)。
+
+
+
+</br>
+
+<center><h2> ⭐ 軟體後端 - Communication ⭐ </h2></center>
+
+通訊節點如上所述，執行任務明確有二，「STM32 - ROS1 通訊」與「ROS1 - ROS2 通訊」。其實合理的架構是將 [microros](https://micro.ros.org/) 部署於 STM32 上，但礙於諸多測試錯誤且時間不夠。 
+
+關於 STM32 - ROS1 通訊較為簡單，詳情可參閱 [機器人全端技術筆記 -【韌體】STM32CubeIDE - STM x ROS1](https://hackmd.io/@925/robot/%2F%40925%2Fstmros)。
+
+關於 ROS1 - ROS2 通訊，十分感謝電資系朋友將 ROS2 Humble 版本的 ROS1 bridge 通訊之 Dockerfile 盡可能地做了容量優化，省下不少開發時間。這裡附上 Github：[YuZhong-Chen/ros2-essentials](https://github.com/YuZhong-Chen/ros2-essentials)、[j3soon/ros2-essentials](https://github.com/j3soon/ros2-essentials)。
+
