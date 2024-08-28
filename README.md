@@ -15,7 +15,7 @@
 
 如下圖，本專題主要區分為以下四大部分。
 
-![alt text](image.png)
+![alt text](/5.Docs/assets/overall.png)
 
 
 </br>
@@ -27,7 +27,7 @@
 外購硬體主要有兩台相機 [Intel® RealSense™ Depth Camera D435](https://www.intelrealsense.com/depth-camera-d435/)、[Luxonis OAK-D](https://shop.luxonis.com/products/oak-d?srsltid=AfmBOoonQ7t1-zn0nqSzjS6hqH9pHZsBbMcbB3aGryrPGHOZsLWWNm30) 以及上位機 [iKOOLCORE R2](https://www.ikoolcore.com/en-tw/products/ikoolcore-r2?srsltid=AfmBOooM286Be_Vosi4SvQe132LjfMP1y9nNQp6Jv6tcy6CoUxvYuutZ)。
 
 
-![alt text](image-1.png)
+![alt text](/5.Docs/assets/hardware.png)
 
 
 我們自行設計 PCB 以增加複雜電路的穩定性與減少過多明線帶來的困擾。包含以下三塊電路板：
@@ -47,7 +47,7 @@
 
 開發平台為 [STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html)，下圖為本專案資料夾架構與各自任務。
 
-![alt text](image-2.png)
+![alt text](/5.Docs/assets/stm32.png)
 
 此為 C/C++ 混編專案，並以任務導向將代碼封裝成獨立資料夾，透過解藕增價可移植性，架構圖中箭頭部分為針對底盤馬達控制中，ROS1 與 STM32 內部主要的通訊與變數關係。
 
@@ -61,7 +61,7 @@
 
 軟體複雜度較高，因此會拆分成較多部分說明。
 
-![alt text](image-3.png)
+![alt text](/5.Docs/assets/software.png)
 
 這裡我簡述各區塊執行的任務，並於底下補充技術細節。後端軟體幾乎運行於 [ROS2](https://docs.ros.org/en/foxy/index.html) 平台之上。
 
@@ -101,7 +101,7 @@ training set 主要由 [Roboflow Universe](https://universe.roboflow.com/) 上�
 
 > 訓練細節可參考 [機器人全端技術筆記 -【軟體】影像處理 -【物件偵測】Training 階段](https://hackmd.io/@925/robot/%2F%40925%2Ftraining)。
 
-![alt text](image-5.png)
+![alt text](/5.Docs/assets/yolov8.png)
 
 最後，為了取得深度資訊，須使用 DepthAI 的 [YoloSpatialDetectionNetwork](https://docs.luxonis.com/software/depthai-components/nodes/yolo_spatial_detection_network/)，疊合相機原生深度資訊與 YOLO 物件屬性，計算出偵測物件合理的空間座標。
 
