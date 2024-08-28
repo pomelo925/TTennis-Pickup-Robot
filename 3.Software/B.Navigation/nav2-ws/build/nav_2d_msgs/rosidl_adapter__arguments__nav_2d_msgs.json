@@ -1,0 +1,11 @@
+{
+  "package_name": "nav_2d_msgs",
+  "non_idl_tuples": [
+    "/home/nav2-ws/src/navigation2/nav2_dwb_controller/nav_2d_msgs:msg/Path2D.msg",
+    "/home/nav2-ws/src/navigation2/nav2_dwb_controller/nav_2d_msgs:msg/Pose2D32.msg",
+    "/home/nav2-ws/src/navigation2/nav2_dwb_controller/nav_2d_msgs:msg/Pose2DStamped.msg",
+    "/home/nav2-ws/src/navigation2/nav2_dwb_controller/nav_2d_msgs:msg/Twist2D.msg",
+    "/home/nav2-ws/src/navigation2/nav2_dwb_controller/nav_2d_msgs:msg/Twist2D32.msg",
+    "/home/nav2-ws/src/navigation2/nav2_dwb_controller/nav_2d_msgs:msg/Twist2DStamped.msg"
+  ]
+}

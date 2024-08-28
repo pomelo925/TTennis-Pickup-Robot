@@ -1,0 +1,1 @@
+/home/nav2-ws/build/nav2_msgs/rosidl_generator_c/nav2_msgs/msg/detail/collision_monitor_state__struct.h

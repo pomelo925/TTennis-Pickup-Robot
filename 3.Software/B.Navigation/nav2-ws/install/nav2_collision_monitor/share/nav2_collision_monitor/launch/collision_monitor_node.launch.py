@@ -1,0 +1,1 @@
+/home/nav2-ws/src/navigation2/nav2_collision_monitor/launch/collision_monitor_node.launch.py

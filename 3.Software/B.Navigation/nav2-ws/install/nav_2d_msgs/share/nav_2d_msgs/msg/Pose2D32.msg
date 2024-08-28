@@ -1,0 +1,1 @@
+/home/nav2-ws/src/navigation2/nav2_dwb_controller/nav_2d_msgs/msg/Pose2D32.msg
