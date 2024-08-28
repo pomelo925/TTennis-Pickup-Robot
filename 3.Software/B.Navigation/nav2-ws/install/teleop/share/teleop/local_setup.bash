@@ -1,1 +1,0 @@
-/home/nav2-ws/build/teleop/ament_cmake_environment_hooks/local_setup.bash

@@ -1,0 +1,32 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from nav2_msgs/msg/CollisionMonitorState.msg
+// generated code does not contain a copyright notice
+
+
+module nav2_msgs {
+  module msg {
+    module CollisionMonitorState_Constants {
+      @verbatim (language="comment", text=
+        "No action")
+      const uint8 DO_NOTHING = 0;
+      @verbatim (language="comment", text=
+        "Stop the robot")
+      const uint8 STOP = 1;
+      @verbatim (language="comment", text=
+        "Slowdown in percentage from current operating speed")
+      const uint8 SLOWDOWN = 2;
+      @verbatim (language="comment", text=
+        "Keep constant time interval before collision")
+      const uint8 APPROACH = 3;
+    };
+    @verbatim (language="comment", text=
+      "Action type for robot in Collision Monitor")
+    struct CollisionMonitorState {
+      uint8 action_type;
+
+      @verbatim (language="comment", text=
+        "Name of triggered polygon")
+      string polygon_name;
+    };
+  };
+};

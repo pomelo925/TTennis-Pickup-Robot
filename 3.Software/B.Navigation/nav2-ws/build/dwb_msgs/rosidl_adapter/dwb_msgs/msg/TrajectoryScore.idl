@@ -1,0 +1,26 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from dwb_msgs/msg/TrajectoryScore.msg
+// generated code does not contain a copyright notice
+
+#include "dwb_msgs/msg/CriticScore.idl"
+#include "dwb_msgs/msg/Trajectory2D.idl"
+
+module dwb_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "Complete scoring for a given twist.")
+    struct TrajectoryScore {
+      @verbatim (language="comment", text=
+        "The trajectory being scored")
+      dwb_msgs::msg::Trajectory2D traj;
+
+      @verbatim (language="comment", text=
+        "The Scores for each of the critics employed")
+      sequence<dwb_msgs::msg::CriticScore> scores;
+
+      @verbatim (language="comment", text=
+        "Convenience member that totals the critic scores")
+      float total;
+    };
+  };
+};

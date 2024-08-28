@@ -1,0 +1,18 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from dwb_msgs/srv/GenerateTwists.srv
+// generated code does not contain a copyright notice
+
+#include "nav_2d_msgs/msg/Twist2D.idl"
+
+module dwb_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "For a given velocity, generate which twist commands will be evaluated")
+    struct GenerateTwists_Request {
+      nav_2d_msgs::msg::Twist2D current_vel;
+    };
+    struct GenerateTwists_Response {
+      sequence<nav_2d_msgs::msg::Twist2D> twists;
+    };
+  };
+};

@@ -1,0 +1,4 @@
+source;share/dwb_core/local_setup.bash
+source;share/dwb_core/local_setup.dsv
+source;share/dwb_core/local_setup.sh
+source;share/dwb_core/local_setup.zsh

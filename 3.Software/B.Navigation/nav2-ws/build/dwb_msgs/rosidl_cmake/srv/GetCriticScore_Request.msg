@@ -1,0 +1,5 @@
+nav_2d_msgs/Pose2DStamped pose
+nav_2d_msgs/Twist2D velocity
+nav_2d_msgs/Path2D global_plan
+Trajectory2D traj
+string critic_name

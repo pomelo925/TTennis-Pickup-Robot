@@ -1,0 +1,27 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from nav2_msgs/action/Spin.action
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Duration.idl"
+
+module nav2_msgs {
+  module action {
+    @verbatim (language="comment", text=
+      "goal definition")
+    struct Spin_Goal {
+      float target_yaw;
+
+      builtin_interfaces::msg::Duration time_allowance;
+    };
+    @verbatim (language="comment", text=
+      "result definition")
+    struct Spin_Result {
+      builtin_interfaces::msg::Duration total_elapsed_time;
+    };
+    @verbatim (language="comment", text=
+      "feedback definition")
+    struct Spin_Feedback {
+      float angular_distance_traveled;
+    };
+  };
+};

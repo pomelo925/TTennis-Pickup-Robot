@@ -67,15 +67,25 @@ FROM tools AS final
 RUN echo "source /opt/ros/$ROS_DISTRO/setup.bash" >> ~/.bashrc
 WORKDIR /home/nav2-ws
 
-## NOTE:
-## Steps below should ideally be performed in a separate container and then mounted as a volume to the main container, 
+RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    ## Install ROS Humble Foxglove
+    ros-humble-foxglove-bridge \
+    && rm -rf /var/lib/apt/lists/
+
+
+##### NOTE #####
+## Steps below should ideally  performed in a seperate container, and then mounted as a volume to the main container, 
 ## as they require modifications that are better handled outside the Dockerfile.
 
-RUN apt-get update && \
-    git clone https://github.com/ros-planning/navigation2.git --branch $ROS_DISTRO src/navigation2 && \
-    rosdep install -y -r -q --from-paths src --ignore-src --rosdistro $ROS_DISTRO && \
-    /bin/bash -c 'source /opt/ros/$ROS_DISTRO/setup.bash; colcon build --symlink-install' \
-    && rm -rf /var/lib/apt/lists/*
+# WORKDIR /home/nav2-ws
+# RUN apt-get update && \
+#     git clone https://github.com/ros-planning/navigation2.git --branch $ROS_DISTRO src/navigation2 && \
+#     rosdep install -y -r -q --from-paths src --ignore-src --rosdistro $ROS_DISTRO && \
+#     /bin/bash -c 'source /opt/ros/$ROS_DISTRO/setup.bash; colcon build --symlink-install' \
+#     && rm -rf /var/lib/apt/lists/*
+
+#####
 
 
 ## Final configurations

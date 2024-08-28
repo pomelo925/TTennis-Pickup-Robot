@@ -1,0 +1,25 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from nav2_msgs/action/AssistedTeleop.action
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Duration.idl"
+
+module nav2_msgs {
+  module action {
+    @verbatim (language="comment", text=
+      "goal definition")
+    struct AssistedTeleop_Goal {
+      builtin_interfaces::msg::Duration time_allowance;
+    };
+    @verbatim (language="comment", text=
+      "result definition")
+    struct AssistedTeleop_Result {
+      builtin_interfaces::msg::Duration total_elapsed_time;
+    };
+    @verbatim (language="comment", text=
+      "feedback")
+    struct AssistedTeleop_Feedback {
+      builtin_interfaces::msg::Duration current_teleop_duration;
+    };
+  };
+};

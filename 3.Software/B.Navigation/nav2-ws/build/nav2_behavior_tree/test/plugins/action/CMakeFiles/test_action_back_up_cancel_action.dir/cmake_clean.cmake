@@ -1,0 +1,11 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/test_action_back_up_cancel_action.dir/test_back_up_cancel_node.cpp.o"
+  "CMakeFiles/test_action_back_up_cancel_action.dir/test_back_up_cancel_node.cpp.o.d"
+  "test_action_back_up_cancel_action"
+  "test_action_back_up_cancel_action.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/test_action_back_up_cancel_action.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
