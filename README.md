@@ -24,7 +24,7 @@
  <h2> ⭐⭐ Hardware 硬體 ⭐⭐</h2>
 </div>
 
-外購硬體主要有兩台相機 [Intel® RealSense™ Depth Camera D435](https://www.intelrealsense.com/depth-camera-d435/)、[Luxonis OAK-D](https://shop.luxonis.com/products/oak-d?srsltid=AfmBOoonQ7t1-zn0nqSzjS6hqH9pHZsBbMcbB3aGryrPGHOZsLWWNm30) 以及上位機 [iKOOLCORE R2](https://www.ikoolcore.com/en-tw/products/ikoolcore-r2?srsltid=AfmBOooM286Be_Vosi4SvQe132LjfMP1y9nNQp6Jv6tcy6CoUxvYuutZ)。
+外購硬體主要有相機 [Intel® RealSense™ Depth Camera D435](https://www.intelrealsense.com/depth-camera-d435/)、[Luxonis OAK-D](https://shop.luxonis.com/products/oak-d?srsltid=AfmBOoonQ7t1-zn0nqSzjS6hqH9pHZsBbMcbB3aGryrPGHOZsLWWNm30) 以及上位機 [iKOOLCORE R2](https://www.ikoolcore.com/en-tw/products/ikoolcore-r2?srsltid=AfmBOooM286Be_Vosi4SvQe132LjfMP1y9nNQp6Jv6tcy6CoUxvYuutZ)。
 
 
 ![alt text](/5.Docs/assets/hardware.png)
@@ -32,7 +32,7 @@
 
 我們自行設計 PCB 以增加複雜電路的穩定性與減少過多明線帶來的困擾。包含以下三塊電路板：
 
-* 電源分壓板：將 [18V工具機鋰電池](https://www.makitatools.com/products/details/BL1850B-2) 降壓至12V、5V、3.3V，同時支援 PD 快充。其中 DC-DC Bucker 皆採用可調式閉路電壓控制晶片，並充分考慮降噪濾波。PD 快充用以支援上位機的運作。
+* 電源分壓板：將 [18V工具機鋰電池](https://www.makitatools.com/products/details/BL1850B-2) 降壓至12V、5V、3.3V，同時支援 PD 快充，並且防電源反接及短路保護。其中 DC-DC Bucker 皆採用可調式閉路電壓控制晶片，並充分考慮降噪濾波。PD 快充用以支援上位機的運作。
 
 * 邏輯電路板：運算單元為 Cortex M7 內核的 [STM32H723ZGT6](https://www.mouser.tw/ProductDetail/STMicroelectronics/STM32H723ZGT6?qs=sPbYRqrBIVkPaOxQT7wG%252BA%3D%3D)，包含讀取直流馬達之增量式編碼器、閉路控制直流馬達、ROS1 節點通訊等等。並引出 USART 通訊引腳、編碼器端子座、外部晶振時間源、CP2102 TTL 轉 Type-C 通訊等等。
 
@@ -61,9 +61,11 @@
 
 軟體複雜度較高，因此會拆分成較多部分說明。
 
+所有軟體節點皆已封裝為 x86 arch Docker 容器。
+
 ![alt text](/5.Docs/assets/software.png)
 
-這裡我簡述各區塊執行的任務，並於底下補充技術細節。後端軟體幾乎運行於 [ROS2](https://docs.ros.org/en/foxy/index.html) 平台之上。
+這裡簡述各區塊任務，並於底下補述細節。後端軟體幾乎運行於 [ROS2](https://docs.ros.org/en/foxy/index.html) 平台之上。
 
 * 前端 - Nextjs / Framer Motion / Tailwind CSS
   * 與用戶最直接的交互接口，可點擊螢幕使機器人執行任務，亦顯示機器人即時運動訊息。
@@ -106,6 +108,16 @@ training set 主要由 [Roboflow Universe](https://universe.roboflow.com/) 上�
 最後，為了取得深度資訊，須使用 DepthAI 的 [YoloSpatialDetectionNetwork](https://docs.luxonis.com/software/depthai-components/nodes/yolo_spatial_detection_network/)，疊合相機原生深度資訊與 YOLO 物件屬性，計算出偵測物件合理的空間座標。
 
 > 此部分詳情可參閱 [機器人全端技術筆記 -【軟體】影像處理 -【物件偵測】Deploying 階段](https://hackmd.io/@925/robot/%2F%40925%2Fdeploy)。
+
+</br></br>
+
+<div align="center">
+ <h2> ⭐ 軟體後端 - RTAB-Map ⭐ </h2>
+</div>
+
+使用 [RTAB-Map](https://introlab.github.io/rtabmap/) 的主因為歷史悠久、有即時性需求且支援 ROS2（[rtabmap_ros](https://github.com/introlab/rtabmap_ros)），視覺來源為提供 RGBD 資訊的 [Intel® RealSense™ Depth Camera D435](https://www.intelrealsense.com/depth-camera-d435/)、視覺里程計以及底盤從動輪的里程計資訊，並做 EKF 融合。
+
+建圖定位狀況可由 [foxglove](https://foxglove.dev/ros) real-time 觀察，遠端時的效果比 ROS 原生的 [RViz](https://wiki.ros.org/rviz) 和 [Gazebo](https://gazebosim.org/home) 順暢許多。此外所有程序的 [foxglove bridge port](https://docs.foxglove.dev/docs/connecting-to-data/ros-foxglove-bridge/) 皆錯開，避免端口阻塞。
 
 </br></br>
 
