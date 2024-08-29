@@ -7,7 +7,8 @@ if [ -z "$1" ]; then
 fi
 
 ## 0. Define the variables
-RVIZ_ENABLED=true
+RVIZ_ENABLED=false
+FOXGLOVE_ENABLED=true
 
 MAP_NAME="$1"
 MAP_DIR="/home/app/_map_database"
@@ -21,8 +22,10 @@ fi
 
 
 ## 1. Launch Foxglove Bridge
-ros2 launch foxglove_bridge foxglove_bridge_launch.xml address:=127.0.0.1 port:=9010 &
-sleep 3
+if [ "$FOXGLOVE_ENABLED" = true ]; then
+    ros2 launch foxglove_bridge foxglove_bridge_launch.xml address:=127.0.0.1 port:=32000 &
+    sleep 3
+fi
 
 
 ## 2. Launch Intel Realsense D435
@@ -40,8 +43,7 @@ ros2 launch rtabmap_launch rtabmap.launch.py \
   approx_sync:=true \
   rviz:=false \
   qos:=2 &
-
-
+  
 # Optionally launch RViz
 if [ "$RVIZ_ENABLED" = true ]; then
     rviz2 -d /home/app/_gui_config/basic.rviz &
@@ -49,5 +51,4 @@ fi
 
 echo "Localization using ${DATABASE_PATH} initiated."
 
-# Keep the container running
 tail -f /dev/null
