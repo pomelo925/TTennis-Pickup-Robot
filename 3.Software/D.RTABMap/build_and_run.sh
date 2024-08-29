@@ -42,7 +42,6 @@ docker compose -p rtabmap down --volumes --remove-orphans
 
 ## 1. make scripts & library executable
 find ../D.RTABMap -type f -name "*.sh" -exec sudo chmod +x {} \;
-find ../D.RTABMap/slam-ws/install -type f -exec chmod +x {} \;
 
 ## 2. environment setup  
 export COMMAND 

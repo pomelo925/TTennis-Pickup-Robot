@@ -1,22 +1,53 @@
 #!/bin/bash
-source /home/slam-ws/install/setup.bash
 
-## launch Foxglove Bridge
-ros2 launch foxglove_bridge foxglove_bridge_launch.xml address:=127.0.0.1 &
-sleep 2
+# Check if a map file argument was provided
+if [ -z "$1" ]; then
+    echo "Usage: $0 MAP_NAME"
+    exit 1
+fi
 
-## launch Intel Realsense D435
+## 0. Define the variables
+RVIZ_ENABLED=true
+
+MAP_NAME="$1"
+MAP_DIR="/home/app/_map_database"
+DATABASE_PATH="${MAP_DIR}/${MAP_NAME}.db"
+
+# Check if the specified database file exists
+if [ ! -f "$DATABASE_PATH" ]; then
+    echo "Error: ${DATABASE_PATH} does not exist."
+    exit 1
+fi
+
+
+## 1. Launch Foxglove Bridge
+ros2 launch foxglove_bridge foxglove_bridge_launch.xml address:=127.0.0.1 port:=9010 &
+sleep 3
+
+
+## 2. Launch Intel Realsense D435
 ros2 launch realsense2_camera rs_launch.py align_depth.enable:=true &
 
-## launch RTAB-Map (Mapping Mode)
+
+# 3. Launch RTAB-Map (Localization Mode)
 ros2 launch rtabmap_launch rtabmap.launch.py \
   frame_id:=camera_link \
   rgb_topic:=/camera/camera/color/image_raw \
   camera_info_topic:=/camera/camera/color/camera_info \
   depth_topic:=/camera/camera/aligned_depth_to_color/image_raw \
-  database_path:=/home/user/slam-ws/src/app/00-map/rtabmap_1.db \
+  database_path:=${DATABASE_PATH} \
   localization:=true \
   approx_sync:=true \
-  log_level:=debug \
-  rviz:=true \
-  qos:=2
+  rviz:=false \
+  qos:=2 &
+
+
+# Optionally launch RViz
+if [ "$RVIZ_ENABLED" = true ]; then
+    rviz2 -d /home/app/_gui_config/basic.rviz &
+fi
+
+echo "Localization using ${DATABASE_PATH} initiated."
+
+# Keep the container running
+tail -f /dev/null

@@ -1,23 +1,45 @@
 #!/bin/bash
-source /home/slam-ws/install/setup.bash
 
-## launch Foxglove Bridge
-ros2 launch foxglove_bridge foxglove_bridge_launch.xml address:=127.0.0.1 &
+## 0. Define the variables
+RVIZ_ENABLED=true
+
+MAP_DIR="/home/app/_map_database"
+MAP_INDEX=1
+
+# Find the next available map index
+while [ -e "${MAP_DIR}/MAP_${MAP_INDEX}.db" ]; do
+    MAP_INDEX=$((MAP_INDEX + 1))
+done
+
+# Set the database file name
+DATABASE_PATH="${MAP_DIR}/MAP_${MAP_INDEX}.db"
+
+## 1. Launch Foxglove Bridge
+ros2 launch foxglove_bridge foxglove_bridge_launch.xml address:=127.0.0.1 port:=9000 &
 sleep 2
 
-## launch Intel Realsense D435
+## 2. Launch Intel Realsense D435
 ros2 launch realsense2_camera rs_launch.py align_depth.enable:=true &
 
-## launch RTAB-Map (Mapping Mode)
+## 3. Launch RTAB-Map (Mapping Mode)
 ros2 launch rtabmap_launch rtabmap.launch.py \
   args:="-d" \
   frame_id:=camera_link \
   rgb_topic:=/camera/camera/color/image_raw \
   camera_info_topic:=/camera/camera/color/camera_info \
   depth_topic:=/camera/camera/aligned_depth_to_color/image_raw \
+  database_path:=${DATABASE_PATH} \
   approx_sync:=true \
   rviz:=false \
-  qos:=2 
+  qos:=2 &
 
-## launch rviz 
-# rviz2 -d /home/user/slam-ws/src/app/mapping-mode/run.rviz
+
+# Optionally launch RViz
+if [ "$RVIZ_ENABLED" = true ]; then
+    rviz2 -d /home/app/_gui_config/basic.rviz &
+fi
+
+echo "RTAB-Map database saved as ${DATABASE_PATH}"
+
+# Keep the container running
+tail -f /dev/null
