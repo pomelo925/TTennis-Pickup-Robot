@@ -2,10 +2,15 @@
  <h1> TTennis Pickup Robot 桌球自動拾取智慧機器人 </h1>
 </div>
 
+
 > 清華大學 動力機械系25級 畢業專題（2024）
 
 > 本人（pomelo925）負責項目為全軟體、部分韌體及部分電路。
 > 非本人負責項目最終會清楚標註貢獻者。
+
+TTennis Pickup Robot 目標是在任意的桌球場中，自動化完成拾取，並抬升內置球架供運動員使用或將桌球傾倒於球架中，使選手能專注於訓練本身。TTennis Pickup Robot 具備動態避障能力，同時用戶可透過遙控器或螢幕來操控機器人，並調整機器人運動參數。
+
+TTennis Pickup Robot 任務簡單，但從機構設計、電路板設計、單晶片調適至上層的視覺處理、AI 模型部署、建圖定位與導航避障系統等皆針對應用場景開發。同時軟韌體算法全部開源，代碼已解藕封裝，所有運行節點以虛擬化容器形式運行，十分利於有程式背景的人對特定算法做二次開發。
 
 </br>
 
@@ -49,7 +54,7 @@
 
 ![alt text](/5.Docs/assets/stm32.png)
 
-此為 C/C++ 混編專案，並以任務導向將代碼封裝成獨立資料夾，透過解藕增價可移植性，架構圖中箭頭部分為針對底盤馬達控制中，ROS1 與 STM32 內部主要的通訊與變數關係。
+此為 C/C++ 混編專案，並將代碼封裝成以任務為導向的獨立資料夾，解藕並增加可移植性，架構圖中的箭頭部分，是針對底盤馬達PID調適中，ROS1、STM32、timer 間的變數傳遞關係。
 
 > 實作細節可參閱 [全端機器人技術筆記 -【韌體】STM32CubeIDE - C/C++ 混編專案架構](https://hackmd.io/@925/robot/%2F%40925%2Fstm-project)。
 
@@ -61,11 +66,11 @@
 
 軟體複雜度較高，因此會拆分成較多部分說明。
 
-所有軟體節點皆已封裝為 x86 arch Docker 容器。
+所有軟體的節點皆以 x86 arch Docker 容器形式啟動與結束，容器間共享網路與記憶體。
 
 ![alt text](/5.Docs/assets/software.png)
 
-這裡簡述各區塊任務，並於底下補述細節。後端軟體幾乎運行於 [ROS2](https://docs.ros.org/en/foxy/index.html) 平台之上。
+這裡簡述各區塊任務，並於底下補述細節。後端軟體幾乎運行於 [ROS2](https://docs.ros.org/en/foxy/index.html) 平台之上。開發工具主要使用 [Visual Studio Code](https://code.visualstudio.com/)、[Cursor](https://www.cursor.com/)、[MobaXTerm](https://mobaxterm.mobatek.net/) 及 [Foxglove](https://foxglove.dev/ros) 等。
 
 * 前端 - Nextjs / Framer Motion / Tailwind CSS
   * 與用戶最直接的交互接口，可點擊螢幕使機器人執行任務，亦顯示機器人即時運動訊息。
@@ -127,7 +132,10 @@ training set 主要由 [Roboflow Universe](https://universe.roboflow.com/) 上�
 
 通訊節點如上所述，執行任務明確有二，「STM32 - ROS1 通訊」與「ROS1 - ROS2 通訊」。其實合理的架構是將 [microros](https://micro.ros.org/) 部署於 STM32 上，但礙於諸多測試錯誤且時間不夠。 
 
-> 關於 STM32 - ROS1 通訊可參閱 [機器人全端技術筆記 -【韌體】STM32CubeIDE - STM x ROS1](https://hackmd.io/@925/robot/%2F%40925%2Fstmros)。
+關於 STM32 - ROS1 通訊，
+> STM32 - ROS1 通訊可參閱 [機器人全端技術筆記 -【韌體】STM32CubeIDE - STM x ROS1](https://hackmd.io/@925/robot/%2F%40925%2Fstmros)。
+
+</br>
 
 關於 ROS1 - ROS2 通訊，十分感謝電資系朋友將 ROS2 Humble 版本的 ROS1 bridge 通訊之 Dockerfile 盡可能地做了容量優化，省下不少開發時間。這裡附上 Github：[YuZhong-Chen/ros2-essentials](https://github.com/YuZhong-Chen/ros2-essentials)、[j3soon/ros2-essentials](https://github.com/j3soon/ros2-essentials)。
 
