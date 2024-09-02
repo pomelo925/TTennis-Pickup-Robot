@@ -16,9 +16,12 @@ x-shared-settings: &shared-settings
     - $HOME/.Xauthority:/root/.Xauthority
     - /dev/shm:/dev/shm
 
+    - ../app:/home/app
     - ../nav2-ws/build:/home/nav2-ws/build
     - ../nav2-ws/install:/home/nav2-ws/install
     - ../nav2-ws/src:/home/nav2-ws/src
+
+    - ./../D.RTABMAP/app/_map_database:/home/app/_map_database
   environment:
     - DISPLAY=${DISPLAY}
     - COMMAND=${COMMAND}

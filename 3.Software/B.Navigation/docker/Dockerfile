@@ -71,6 +71,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
     ## Install ROS Humble Foxglove
     ros-humble-foxglove-bridge \
+    ## Install Navigation2 dependencies
+    ros-humble-behaviortree-cpp-v3 ros-humble-bond-core \
     && rm -rf /var/lib/apt/lists/
 
 

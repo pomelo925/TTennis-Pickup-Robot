@@ -2,9 +2,9 @@
 
 # Usage function
 usage() {
-  echo "usage: $0 [mode]"
+  echo "usage: $0 [mode] [map_name]"
   echo "mode:"
-  echo "- mapping       To create a new map"
+  echo "- exploration   To create a new map"
   echo "- localization  To localize the robot in an existing map"
   echo "- null          To start without running any ROS node"
   exit 1
@@ -12,17 +12,25 @@ usage() {
 
 
 # Ensure mode argument is provided
-if [ $# -ne 1 ]; then
+if [ $# -lt 2 ]; then
   usage
 fi
 
 # Determine the command based on the mode argument
 case "$1" in
-  mapping)
-    COMMAND="/home/app/mapping/run.sh"
+  exploration)
+    if [ -f "./app/_map_database/$2.db" ]; then
+      echo "Map '$2' already exists. Please enter a new map name."
+      exit 1
+    fi
+    COMMAND="/home/app/exploration/run.sh $2"
     ;;
   localization)
-    COMMAND="/home/app/localization/run.sh MAP_1"
+    if [ ! -f "./app/_map_database/$2.db" ]; then
+      echo "Map '$2' does not exist. Terminating."
+      exit 1
+    fi
+    COMMAND="/home/app/localization/run.sh $2"
     ;;
   null)
     COMMAND="/bin/bash"

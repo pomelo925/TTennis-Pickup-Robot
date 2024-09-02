@@ -2,31 +2,35 @@
 
 # Usage function
 usage() {
-  echo "usage: $0 [mode]"
+  echo "usage: $0 [mode] [map_name]"
   echo "mode:"
-  echo "- exploration   To explore the environment automatically"
-  echo "- receiving     To wait and receive and waypoint then navigate to it"
-  echo "- teleop        To control the robot manually via keyboard"
+  echo "- exploration   To explore a new environment automatically."
+  echo "- localization  To load an existed map and localize itself in it."
   echo "- null          To start without running any ROS node"
   exit 1
 }
 
 
 # Ensure mode argument is provided
-if [ $# -ne 1 ]; then
+if [ $# -ne 2 ]; then
   usage
 fi
 
 # Determine the command based on the mode argument
 case "$1" in
   exploration)
-    COMMAND="/home/nav2-ws/src/app/exploration/run.sh"
+    if [ -f "./../D.RTABMap/app/_map_database/$2.db" ]; then
+      echo "Map $2 already exists. Please enter a new map name."
+      exit 1
+    fi
+    COMMAND="/home/app/exploration/run.sh $2"
     ;;
-  receiving)
-    COMMAND="/home/nav2-ws/src/app/receiving/run.sh"
-    ;;
-  teleop)
-    COMMAND="/home/nav2-ws/src/app/teleop/run.sh"
+  localization)
+    if [ ! -f "./../D.RTABMap/app/_map_database/$2.db" ]; then
+      echo "Map '$2' does not exist. Terminating."
+      exit 1
+    fi
+    COMMAND="/home/app/localization/run.sh $2"
     ;;
   null)
     COMMAND="/bin/bash"
@@ -36,7 +40,6 @@ case "$1" in
     usage
     ;;
 esac
-
 
 
 ## 0. clean container within same group
