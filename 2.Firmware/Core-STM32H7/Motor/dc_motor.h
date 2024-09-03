@@ -57,7 +57,7 @@ private:
   /* Target wheel speed (rps). Given by Chassis. */
   float _target_wheel_speed=0.f; 
   /* Current pulse. Given by Interrupt. */
-  int32_t _current_pulse=0;
+  int16_t _current_pulse=0;
   /* PWM target output. Fed to Interrupt. */
   float _target_PWM=0.f;
 
@@ -65,7 +65,7 @@ private:
   bool _is_inverse=false;
   bool _is_positive_direction;
 
-  static constexpr float MAX_PWM = 25600.f;
+  static constexpr float MAX_PWM = 6400.f;
   static constexpr float MAX_INTEGRAL = MAX_PWM;
 
   GPIO_TypeDef* _dirPort;
@@ -77,6 +77,5 @@ extern DC_MOTOR WheelRight;
 extern DC_MOTOR WheelLeft;
 // extern DC_MOTOR Intake;
 // extern DC_MOTOR Elevator;
-
 
 #endif

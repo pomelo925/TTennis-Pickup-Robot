@@ -8,6 +8,8 @@
 #include <chassis.h>
 #include <dc_motor.h>
 
+#include "../Encoder/encoder.h"
+
 CHASSIS Chassis;
 SpeedVector CHASSIS_CURRENT_SPEED, CHASSIS_TARGET_SPEED;
 

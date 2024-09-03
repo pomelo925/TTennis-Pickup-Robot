@@ -10,17 +10,20 @@
 #include <dc_motor.h>
 
 /** Timer **/
-extern TIM_HandleTypeDef htim2;
+extern TIM_HandleTypeDef htim1;
 extern TIM_HandleTypeDef htim3;
 extern TIM_HandleTypeDef htim4;
 extern TIM_HandleTypeDef htim5;
 extern TIM_HandleTypeDef htim6;
+extern TIM_HandleTypeDef htim8;
 extern TIM_HandleTypeDef htim15;
+extern TIM_HandleTypeDef htim23;
+extern TIM_HandleTypeDef htim24;
 
 
 /** Motors Instances**/
-DC_MOTOR WheelRight(GPIOE, GPIO_PIN_3);
-DC_MOTOR WheelLeft(GPIOC, GPIO_PIN_13);
+DC_MOTOR WheelRight(GPIOD, GPIO_PIN_3);
+DC_MOTOR WheelLeft(GPIOD, GPIO_PIN_4);
 // DC_MOTOR Intake;
 // DC_MOTOR Elevator;
 
@@ -31,27 +34,30 @@ DC_MOTOR WheelLeft(GPIOC, GPIO_PIN_13);
  */
 void DC_MOTOR::init(void){  
   /* 啟動對應 Timer */
-	HAL_TIM_Encoder_Start(&htim2, TIM_CHANNEL_1);
-	HAL_TIM_Encoder_Start(&htim2, TIM_CHANNEL_2);
-	HAL_TIM_Encoder_Start(&htim3, TIM_CHANNEL_1);
-	HAL_TIM_Encoder_Start(&htim3, TIM_CHANNEL_2);
-	HAL_TIM_Encoder_Start(&htim4, TIM_CHANNEL_1);
-	HAL_TIM_Encoder_Start(&htim4, TIM_CHANNEL_2);
-	HAL_TIM_Encoder_Start(&htim5, TIM_CHANNEL_1);
-	HAL_TIM_Encoder_Start(&htim5, TIM_CHANNEL_2);
+	HAL_TIM_Encoder_Start(&htim1, TIM_CHANNEL_ALL);
+	HAL_TIM_Encoder_Start(&htim3, TIM_CHANNEL_ALL);
+	HAL_TIM_Encoder_Start(&htim4, TIM_CHANNEL_ALL);
+	HAL_TIM_Encoder_Start(&htim5, TIM_CHANNEL_ALL);
+	HAL_TIM_Encoder_Start(&htim8, TIM_CHANNEL_ALL);
+	HAL_TIM_Encoder_Start(&htim24, TIM_CHANNEL_ALL);
+
+
 	HAL_TIM_Base_Start_IT(&htim6);
 
-	HAL_TIM_PWM_Start_IT(&htim15, TIM_CHANNEL_2);
 	HAL_TIM_PWM_Start_IT(&htim15, TIM_CHANNEL_1);
+	HAL_TIM_PWM_Start_IT(&htim15, TIM_CHANNEL_2);
+	HAL_TIM_PWM_Start_IT(&htim23, TIM_CHANNEL_1);
+	HAL_TIM_PWM_Start_IT(&htim23, TIM_CHANNEL_2);
+	HAL_TIM_PWM_Start_IT(&htim23, TIM_CHANNEL_3);
 
   // 初始化各個電機的參數
-  WheelRight.setPID(2.f, 200.f, 0.f);
+  WheelRight.setPID(2.5f, 80.f, 0.f);
   WheelRight.setInfo(1024.f, 26.f, 0.001f);
-  WheelRight.setInverse(false);
+  WheelRight.setInverse(true);
 
-  WheelLeft.setPID(2.f, 200.f, 0.f);
+  WheelLeft.setPID(2.5f, 80.f, 0.f);
   WheelLeft.setInfo(1024.f, 26.f, 0.001f);
-  WheelLeft.setInverse(false);
+  WheelLeft.setInverse(true);
 
   // Intake.setPID(2.5f, 100.f, 0.f);
   // Intake.setInfo(512.f, 20.8f, 0.001f);
