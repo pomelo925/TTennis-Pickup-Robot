@@ -73,6 +73,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     ros-humble-foxglove-bridge \
     ## Install Navigation2 dependencies
     ros-humble-behaviortree-cpp-v3 ros-humble-bond-core \
+    ros-humble-test-msg \
+    libceres-dev libfreeimage-dev \
     && rm -rf /var/lib/apt/lists/
 
 
@@ -86,8 +88,9 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
 #     rosdep install -y -r -q --from-paths src --ignore-src --rosdistro $ROS_DISTRO && \
 #     /bin/bash -c 'source /opt/ros/$ROS_DISTRO/setup.bash; colcon build --symlink-install' \
 #     && rm -rf /var/lib/apt/lists/*
-
 #####
+
+
 
 
 ## Final configurations

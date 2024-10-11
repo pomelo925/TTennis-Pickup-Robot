@@ -19,17 +19,9 @@ fi
 # Determine the command based on the mode argument
 case "$1" in
   exploration)
-    if [ -f "./../D.RTABMap/app/_map_database/$2.db" ]; then
-      echo "Map $2 already exists. Please enter a new map name."
-      exit 1
-    fi
     COMMAND="/home/app/exploration/run.sh $2"
     ;;
   localization)
-    if [ ! -f "./../D.RTABMap/app/_map_database/$2.db" ]; then
-      echo "Map '$2' does not exist. Terminating."
-      exit 1
-    fi
     COMMAND="/home/app/localization/run.sh $2"
     ;;
   null)

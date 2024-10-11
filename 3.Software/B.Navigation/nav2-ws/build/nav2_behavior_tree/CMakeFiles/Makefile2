@@ -1838,9 +1838,9 @@ gtest/CMakeFiles/gtest_main.dir/clean:
 # Target rules for target test/plugins/condition/CMakeFiles/test_condition_distance_traveled.dir
 
 # All Build rule for target.
+test/plugins/condition/CMakeFiles/test_condition_distance_traveled.dir/all: CMakeFiles/nav2_distance_traveled_condition_bt_node.dir/all
 test/plugins/condition/CMakeFiles/test_condition_distance_traveled.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/condition/CMakeFiles/test_condition_distance_traveled.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/condition/CMakeFiles/test_condition_distance_traveled.dir/all: CMakeFiles/nav2_distance_traveled_condition_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/condition/CMakeFiles/test_condition_distance_traveled.dir/build.make test/plugins/condition/CMakeFiles/test_condition_distance_traveled.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/condition/CMakeFiles/test_condition_distance_traveled.dir/build.make test/plugins/condition/CMakeFiles/test_condition_distance_traveled.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=71 "Built target test_condition_distance_traveled"
@@ -1866,9 +1866,9 @@ test/plugins/condition/CMakeFiles/test_condition_distance_traveled.dir/clean:
 # Target rules for target test/plugins/condition/CMakeFiles/test_condition_time_expired.dir
 
 # All Build rule for target.
+test/plugins/condition/CMakeFiles/test_condition_time_expired.dir/all: CMakeFiles/nav2_time_expired_condition_bt_node.dir/all
 test/plugins/condition/CMakeFiles/test_condition_time_expired.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/condition/CMakeFiles/test_condition_time_expired.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/condition/CMakeFiles/test_condition_time_expired.dir/all: CMakeFiles/nav2_time_expired_condition_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/condition/CMakeFiles/test_condition_time_expired.dir/build.make test/plugins/condition/CMakeFiles/test_condition_time_expired.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/condition/CMakeFiles/test_condition_time_expired.dir/build.make test/plugins/condition/CMakeFiles/test_condition_time_expired.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num= "Built target test_condition_time_expired"
@@ -1894,9 +1894,9 @@ test/plugins/condition/CMakeFiles/test_condition_time_expired.dir/clean:
 # Target rules for target test/plugins/condition/CMakeFiles/test_condition_path_expiring_timer.dir
 
 # All Build rule for target.
+test/plugins/condition/CMakeFiles/test_condition_path_expiring_timer.dir/all: CMakeFiles/nav2_path_expiring_timer_condition.dir/all
 test/plugins/condition/CMakeFiles/test_condition_path_expiring_timer.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/condition/CMakeFiles/test_condition_path_expiring_timer.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/condition/CMakeFiles/test_condition_path_expiring_timer.dir/all: CMakeFiles/nav2_path_expiring_timer_condition.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/condition/CMakeFiles/test_condition_path_expiring_timer.dir/build.make test/plugins/condition/CMakeFiles/test_condition_path_expiring_timer.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/condition/CMakeFiles/test_condition_path_expiring_timer.dir/build.make test/plugins/condition/CMakeFiles/test_condition_path_expiring_timer.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=80 "Built target test_condition_path_expiring_timer"
@@ -1922,9 +1922,9 @@ test/plugins/condition/CMakeFiles/test_condition_path_expiring_timer.dir/clean:
 # Target rules for target test/plugins/condition/CMakeFiles/test_condition_goal_reached.dir
 
 # All Build rule for target.
+test/plugins/condition/CMakeFiles/test_condition_goal_reached.dir/all: CMakeFiles/nav2_goal_reached_condition_bt_node.dir/all
 test/plugins/condition/CMakeFiles/test_condition_goal_reached.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/condition/CMakeFiles/test_condition_goal_reached.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/condition/CMakeFiles/test_condition_goal_reached.dir/all: CMakeFiles/nav2_goal_reached_condition_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/condition/CMakeFiles/test_condition_goal_reached.dir/build.make test/plugins/condition/CMakeFiles/test_condition_goal_reached.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/condition/CMakeFiles/test_condition_goal_reached.dir/build.make test/plugins/condition/CMakeFiles/test_condition_goal_reached.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=73 "Built target test_condition_goal_reached"
@@ -1950,9 +1950,9 @@ test/plugins/condition/CMakeFiles/test_condition_goal_reached.dir/clean:
 # Target rules for target test/plugins/condition/CMakeFiles/test_condition_goal_updated.dir
 
 # All Build rule for target.
+test/plugins/condition/CMakeFiles/test_condition_goal_updated.dir/all: CMakeFiles/nav2_goal_updated_condition_bt_node.dir/all
 test/plugins/condition/CMakeFiles/test_condition_goal_updated.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/condition/CMakeFiles/test_condition_goal_updated.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/condition/CMakeFiles/test_condition_goal_updated.dir/all: CMakeFiles/nav2_goal_updated_condition_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/condition/CMakeFiles/test_condition_goal_updated.dir/build.make test/plugins/condition/CMakeFiles/test_condition_goal_updated.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/condition/CMakeFiles/test_condition_goal_updated.dir/build.make test/plugins/condition/CMakeFiles/test_condition_goal_updated.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=74 "Built target test_condition_goal_updated"
@@ -1978,9 +1978,9 @@ test/plugins/condition/CMakeFiles/test_condition_goal_updated.dir/clean:
 # Target rules for target test/plugins/condition/CMakeFiles/test_condition_globally_updated_goal.dir
 
 # All Build rule for target.
+test/plugins/condition/CMakeFiles/test_condition_globally_updated_goal.dir/all: CMakeFiles/nav2_globally_updated_goal_condition_bt_node.dir/all
 test/plugins/condition/CMakeFiles/test_condition_globally_updated_goal.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/condition/CMakeFiles/test_condition_globally_updated_goal.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/condition/CMakeFiles/test_condition_globally_updated_goal.dir/all: CMakeFiles/nav2_globally_updated_goal_condition_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/condition/CMakeFiles/test_condition_globally_updated_goal.dir/build.make test/plugins/condition/CMakeFiles/test_condition_globally_updated_goal.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/condition/CMakeFiles/test_condition_globally_updated_goal.dir/build.make test/plugins/condition/CMakeFiles/test_condition_globally_updated_goal.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=72 "Built target test_condition_globally_updated_goal"
@@ -2006,9 +2006,9 @@ test/plugins/condition/CMakeFiles/test_condition_globally_updated_goal.dir/clean
 # Target rules for target test/plugins/condition/CMakeFiles/test_condition_initial_pose_received.dir
 
 # All Build rule for target.
+test/plugins/condition/CMakeFiles/test_condition_initial_pose_received.dir/all: CMakeFiles/nav2_initial_pose_received_condition_bt_node.dir/all
 test/plugins/condition/CMakeFiles/test_condition_initial_pose_received.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/condition/CMakeFiles/test_condition_initial_pose_received.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/condition/CMakeFiles/test_condition_initial_pose_received.dir/all: CMakeFiles/nav2_initial_pose_received_condition_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/condition/CMakeFiles/test_condition_initial_pose_received.dir/build.make test/plugins/condition/CMakeFiles/test_condition_initial_pose_received.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/condition/CMakeFiles/test_condition_initial_pose_received.dir/build.make test/plugins/condition/CMakeFiles/test_condition_initial_pose_received.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=75 "Built target test_condition_initial_pose_received"
@@ -2034,9 +2034,9 @@ test/plugins/condition/CMakeFiles/test_condition_initial_pose_received.dir/clean
 # Target rules for target test/plugins/condition/CMakeFiles/test_condition_transform_available.dir
 
 # All Build rule for target.
+test/plugins/condition/CMakeFiles/test_condition_transform_available.dir/all: CMakeFiles/nav2_transform_available_condition_bt_node.dir/all
 test/plugins/condition/CMakeFiles/test_condition_transform_available.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/condition/CMakeFiles/test_condition_transform_available.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/condition/CMakeFiles/test_condition_transform_available.dir/all: CMakeFiles/nav2_transform_available_condition_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/condition/CMakeFiles/test_condition_transform_available.dir/build.make test/plugins/condition/CMakeFiles/test_condition_transform_available.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/condition/CMakeFiles/test_condition_transform_available.dir/build.make test/plugins/condition/CMakeFiles/test_condition_transform_available.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=81 "Built target test_condition_transform_available"
@@ -2062,9 +2062,9 @@ test/plugins/condition/CMakeFiles/test_condition_transform_available.dir/clean:
 # Target rules for target test/plugins/condition/CMakeFiles/test_condition_is_stuck.dir
 
 # All Build rule for target.
+test/plugins/condition/CMakeFiles/test_condition_is_stuck.dir/all: CMakeFiles/nav2_is_stuck_condition_bt_node.dir/all
 test/plugins/condition/CMakeFiles/test_condition_is_stuck.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/condition/CMakeFiles/test_condition_is_stuck.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/condition/CMakeFiles/test_condition_is_stuck.dir/all: CMakeFiles/nav2_is_stuck_condition_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/condition/CMakeFiles/test_condition_is_stuck.dir/build.make test/plugins/condition/CMakeFiles/test_condition_is_stuck.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/condition/CMakeFiles/test_condition_is_stuck.dir/build.make test/plugins/condition/CMakeFiles/test_condition_is_stuck.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=79 "Built target test_condition_is_stuck"
@@ -2090,9 +2090,9 @@ test/plugins/condition/CMakeFiles/test_condition_is_stuck.dir/clean:
 # Target rules for target test/plugins/condition/CMakeFiles/test_condition_is_battery_charging.dir
 
 # All Build rule for target.
+test/plugins/condition/CMakeFiles/test_condition_is_battery_charging.dir/all: CMakeFiles/nav2_is_battery_charging_condition_bt_node.dir/all
 test/plugins/condition/CMakeFiles/test_condition_is_battery_charging.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/condition/CMakeFiles/test_condition_is_battery_charging.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/condition/CMakeFiles/test_condition_is_battery_charging.dir/all: CMakeFiles/nav2_is_battery_charging_condition_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/condition/CMakeFiles/test_condition_is_battery_charging.dir/build.make test/plugins/condition/CMakeFiles/test_condition_is_battery_charging.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/condition/CMakeFiles/test_condition_is_battery_charging.dir/build.make test/plugins/condition/CMakeFiles/test_condition_is_battery_charging.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=76 "Built target test_condition_is_battery_charging"
@@ -2118,9 +2118,9 @@ test/plugins/condition/CMakeFiles/test_condition_is_battery_charging.dir/clean:
 # Target rules for target test/plugins/condition/CMakeFiles/test_condition_is_battery_low.dir
 
 # All Build rule for target.
+test/plugins/condition/CMakeFiles/test_condition_is_battery_low.dir/all: CMakeFiles/nav2_is_battery_low_condition_bt_node.dir/all
 test/plugins/condition/CMakeFiles/test_condition_is_battery_low.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/condition/CMakeFiles/test_condition_is_battery_low.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/condition/CMakeFiles/test_condition_is_battery_low.dir/all: CMakeFiles/nav2_is_battery_low_condition_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/condition/CMakeFiles/test_condition_is_battery_low.dir/build.make test/plugins/condition/CMakeFiles/test_condition_is_battery_low.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/condition/CMakeFiles/test_condition_is_battery_low.dir/build.make test/plugins/condition/CMakeFiles/test_condition_is_battery_low.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=77 "Built target test_condition_is_battery_low"
@@ -2146,9 +2146,9 @@ test/plugins/condition/CMakeFiles/test_condition_is_battery_low.dir/clean:
 # Target rules for target test/plugins/condition/CMakeFiles/test_condition_is_path_valid.dir
 
 # All Build rule for target.
+test/plugins/condition/CMakeFiles/test_condition_is_path_valid.dir/all: CMakeFiles/nav2_is_path_valid_condition_bt_node.dir/all
 test/plugins/condition/CMakeFiles/test_condition_is_path_valid.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/condition/CMakeFiles/test_condition_is_path_valid.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/condition/CMakeFiles/test_condition_is_path_valid.dir/all: CMakeFiles/nav2_is_path_valid_condition_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/condition/CMakeFiles/test_condition_is_path_valid.dir/build.make test/plugins/condition/CMakeFiles/test_condition_is_path_valid.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/condition/CMakeFiles/test_condition_is_path_valid.dir/build.make test/plugins/condition/CMakeFiles/test_condition_is_path_valid.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=78 "Built target test_condition_is_path_valid"
@@ -2174,9 +2174,9 @@ test/plugins/condition/CMakeFiles/test_condition_is_path_valid.dir/clean:
 # Target rules for target test/plugins/decorator/CMakeFiles/test_decorator_distance_controller.dir
 
 # All Build rule for target.
+test/plugins/decorator/CMakeFiles/test_decorator_distance_controller.dir/all: CMakeFiles/nav2_distance_controller_bt_node.dir/all
 test/plugins/decorator/CMakeFiles/test_decorator_distance_controller.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/decorator/CMakeFiles/test_decorator_distance_controller.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/decorator/CMakeFiles/test_decorator_distance_controller.dir/all: CMakeFiles/nav2_distance_controller_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/decorator/CMakeFiles/test_decorator_distance_controller.dir/build.make test/plugins/decorator/CMakeFiles/test_decorator_distance_controller.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/decorator/CMakeFiles/test_decorator_distance_controller.dir/build.make test/plugins/decorator/CMakeFiles/test_decorator_distance_controller.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=86 "Built target test_decorator_distance_controller"
@@ -2202,9 +2202,9 @@ test/plugins/decorator/CMakeFiles/test_decorator_distance_controller.dir/clean:
 # Target rules for target test/plugins/decorator/CMakeFiles/test_decorator_speed_controller.dir
 
 # All Build rule for target.
+test/plugins/decorator/CMakeFiles/test_decorator_speed_controller.dir/all: CMakeFiles/nav2_speed_controller_bt_node.dir/all
 test/plugins/decorator/CMakeFiles/test_decorator_speed_controller.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/decorator/CMakeFiles/test_decorator_speed_controller.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/decorator/CMakeFiles/test_decorator_speed_controller.dir/all: CMakeFiles/nav2_speed_controller_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/decorator/CMakeFiles/test_decorator_speed_controller.dir/build.make test/plugins/decorator/CMakeFiles/test_decorator_speed_controller.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/decorator/CMakeFiles/test_decorator_speed_controller.dir/build.make test/plugins/decorator/CMakeFiles/test_decorator_speed_controller.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=89 "Built target test_decorator_speed_controller"
@@ -2230,9 +2230,9 @@ test/plugins/decorator/CMakeFiles/test_decorator_speed_controller.dir/clean:
 # Target rules for target test/plugins/decorator/CMakeFiles/test_decorator_rate_controller.dir
 
 # All Build rule for target.
+test/plugins/decorator/CMakeFiles/test_decorator_rate_controller.dir/all: CMakeFiles/nav2_rate_controller_bt_node.dir/all
 test/plugins/decorator/CMakeFiles/test_decorator_rate_controller.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/decorator/CMakeFiles/test_decorator_rate_controller.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/decorator/CMakeFiles/test_decorator_rate_controller.dir/all: CMakeFiles/nav2_rate_controller_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/decorator/CMakeFiles/test_decorator_rate_controller.dir/build.make test/plugins/decorator/CMakeFiles/test_decorator_rate_controller.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/decorator/CMakeFiles/test_decorator_rate_controller.dir/build.make test/plugins/decorator/CMakeFiles/test_decorator_rate_controller.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=88 "Built target test_decorator_rate_controller"
@@ -2258,9 +2258,9 @@ test/plugins/decorator/CMakeFiles/test_decorator_rate_controller.dir/clean:
 # Target rules for target test/plugins/decorator/CMakeFiles/test_goal_updater_node.dir
 
 # All Build rule for target.
+test/plugins/decorator/CMakeFiles/test_goal_updater_node.dir/all: CMakeFiles/nav2_goal_updater_node_bt_node.dir/all
 test/plugins/decorator/CMakeFiles/test_goal_updater_node.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/decorator/CMakeFiles/test_goal_updater_node.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/decorator/CMakeFiles/test_goal_updater_node.dir/all: CMakeFiles/nav2_goal_updater_node_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/decorator/CMakeFiles/test_goal_updater_node.dir/build.make test/plugins/decorator/CMakeFiles/test_goal_updater_node.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/decorator/CMakeFiles/test_goal_updater_node.dir/build.make test/plugins/decorator/CMakeFiles/test_goal_updater_node.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=93 "Built target test_goal_updater_node"
@@ -2286,9 +2286,9 @@ test/plugins/decorator/CMakeFiles/test_goal_updater_node.dir/clean:
 # Target rules for target test/plugins/decorator/CMakeFiles/test_single_trigger_node.dir
 
 # All Build rule for target.
+test/plugins/decorator/CMakeFiles/test_single_trigger_node.dir/all: CMakeFiles/nav2_single_trigger_bt_node.dir/all
 test/plugins/decorator/CMakeFiles/test_single_trigger_node.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/decorator/CMakeFiles/test_single_trigger_node.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/decorator/CMakeFiles/test_single_trigger_node.dir/all: CMakeFiles/nav2_single_trigger_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/decorator/CMakeFiles/test_single_trigger_node.dir/build.make test/plugins/decorator/CMakeFiles/test_single_trigger_node.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/decorator/CMakeFiles/test_single_trigger_node.dir/build.make test/plugins/decorator/CMakeFiles/test_single_trigger_node.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=97 "Built target test_single_trigger_node"
@@ -2342,9 +2342,9 @@ test/plugins/decorator/CMakeFiles/test_goal_updated_controller.dir/clean:
 # Target rules for target test/plugins/decorator/CMakeFiles/test_decorator_path_longer_on_approach.dir
 
 # All Build rule for target.
+test/plugins/decorator/CMakeFiles/test_decorator_path_longer_on_approach.dir/all: CMakeFiles/nav2_path_longer_on_approach_bt_node.dir/all
 test/plugins/decorator/CMakeFiles/test_decorator_path_longer_on_approach.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/decorator/CMakeFiles/test_decorator_path_longer_on_approach.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/decorator/CMakeFiles/test_decorator_path_longer_on_approach.dir/all: CMakeFiles/nav2_path_longer_on_approach_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/decorator/CMakeFiles/test_decorator_path_longer_on_approach.dir/build.make test/plugins/decorator/CMakeFiles/test_decorator_path_longer_on_approach.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/decorator/CMakeFiles/test_decorator_path_longer_on_approach.dir/build.make test/plugins/decorator/CMakeFiles/test_decorator_path_longer_on_approach.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=87 "Built target test_decorator_path_longer_on_approach"
@@ -2370,9 +2370,9 @@ test/plugins/decorator/CMakeFiles/test_decorator_path_longer_on_approach.dir/cle
 # Target rules for target test/plugins/control/CMakeFiles/test_control_recovery_node.dir
 
 # All Build rule for target.
+test/plugins/control/CMakeFiles/test_control_recovery_node.dir/all: CMakeFiles/nav2_recovery_node_bt_node.dir/all
 test/plugins/control/CMakeFiles/test_control_recovery_node.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/control/CMakeFiles/test_control_recovery_node.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/control/CMakeFiles/test_control_recovery_node.dir/all: CMakeFiles/nav2_recovery_node_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/control/CMakeFiles/test_control_recovery_node.dir/build.make test/plugins/control/CMakeFiles/test_control_recovery_node.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/control/CMakeFiles/test_control_recovery_node.dir/build.make test/plugins/control/CMakeFiles/test_control_recovery_node.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=83 "Built target test_control_recovery_node"
@@ -2398,9 +2398,9 @@ test/plugins/control/CMakeFiles/test_control_recovery_node.dir/clean:
 # Target rules for target test/plugins/control/CMakeFiles/test_control_pipeline_sequence.dir
 
 # All Build rule for target.
+test/plugins/control/CMakeFiles/test_control_pipeline_sequence.dir/all: CMakeFiles/nav2_pipeline_sequence_bt_node.dir/all
 test/plugins/control/CMakeFiles/test_control_pipeline_sequence.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/control/CMakeFiles/test_control_pipeline_sequence.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/control/CMakeFiles/test_control_pipeline_sequence.dir/all: CMakeFiles/nav2_pipeline_sequence_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/control/CMakeFiles/test_control_pipeline_sequence.dir/build.make test/plugins/control/CMakeFiles/test_control_pipeline_sequence.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/control/CMakeFiles/test_control_pipeline_sequence.dir/build.make test/plugins/control/CMakeFiles/test_control_pipeline_sequence.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=82 "Built target test_control_pipeline_sequence"
@@ -2426,9 +2426,9 @@ test/plugins/control/CMakeFiles/test_control_pipeline_sequence.dir/clean:
 # Target rules for target test/plugins/control/CMakeFiles/test_control_round_robin_node.dir
 
 # All Build rule for target.
+test/plugins/control/CMakeFiles/test_control_round_robin_node.dir/all: CMakeFiles/nav2_round_robin_node_bt_node.dir/all
 test/plugins/control/CMakeFiles/test_control_round_robin_node.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/control/CMakeFiles/test_control_round_robin_node.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/control/CMakeFiles/test_control_round_robin_node.dir/all: CMakeFiles/nav2_round_robin_node_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/control/CMakeFiles/test_control_round_robin_node.dir/build.make test/plugins/control/CMakeFiles/test_control_round_robin_node.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/control/CMakeFiles/test_control_round_robin_node.dir/build.make test/plugins/control/CMakeFiles/test_control_round_robin_node.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=84 "Built target test_control_round_robin_node"
@@ -2481,9 +2481,9 @@ test/plugins/action/CMakeFiles/test_bt_action_node.dir/clean:
 # Target rules for target test/plugins/action/CMakeFiles/test_action_spin_action.dir
 
 # All Build rule for target.
+test/plugins/action/CMakeFiles/test_action_spin_action.dir/all: CMakeFiles/nav2_spin_action_bt_node.dir/all
 test/plugins/action/CMakeFiles/test_action_spin_action.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/action/CMakeFiles/test_action_spin_action.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/action/CMakeFiles/test_action_spin_action.dir/all: CMakeFiles/nav2_spin_action_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_spin_action.dir/build.make test/plugins/action/CMakeFiles/test_action_spin_action.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_spin_action.dir/build.make test/plugins/action/CMakeFiles/test_action_spin_action.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=65 "Built target test_action_spin_action"
@@ -2509,9 +2509,9 @@ test/plugins/action/CMakeFiles/test_action_spin_action.dir/clean:
 # Target rules for target test/plugins/action/CMakeFiles/test_action_back_up_action.dir
 
 # All Build rule for target.
+test/plugins/action/CMakeFiles/test_action_back_up_action.dir/all: CMakeFiles/nav2_back_up_action_bt_node.dir/all
 test/plugins/action/CMakeFiles/test_action_back_up_action.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/action/CMakeFiles/test_action_back_up_action.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/action/CMakeFiles/test_action_back_up_action.dir/all: CMakeFiles/nav2_back_up_action_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_back_up_action.dir/build.make test/plugins/action/CMakeFiles/test_action_back_up_action.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_back_up_action.dir/build.make test/plugins/action/CMakeFiles/test_action_back_up_action.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=53 "Built target test_action_back_up_action"
@@ -2537,9 +2537,9 @@ test/plugins/action/CMakeFiles/test_action_back_up_action.dir/clean:
 # Target rules for target test/plugins/action/CMakeFiles/test_action_drive_on_heading.dir
 
 # All Build rule for target.
+test/plugins/action/CMakeFiles/test_action_drive_on_heading.dir/all: CMakeFiles/nav2_drive_on_heading_bt_node.dir/all
 test/plugins/action/CMakeFiles/test_action_drive_on_heading.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/action/CMakeFiles/test_action_drive_on_heading.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/action/CMakeFiles/test_action_drive_on_heading.dir/all: CMakeFiles/nav2_drive_on_heading_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_drive_on_heading.dir/build.make test/plugins/action/CMakeFiles/test_action_drive_on_heading.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_drive_on_heading.dir/build.make test/plugins/action/CMakeFiles/test_action_drive_on_heading.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=59 "Built target test_action_drive_on_heading"
@@ -2565,9 +2565,9 @@ test/plugins/action/CMakeFiles/test_action_drive_on_heading.dir/clean:
 # Target rules for target test/plugins/action/CMakeFiles/test_action_wait_action.dir
 
 # All Build rule for target.
+test/plugins/action/CMakeFiles/test_action_wait_action.dir/all: CMakeFiles/nav2_wait_action_bt_node.dir/all
 test/plugins/action/CMakeFiles/test_action_wait_action.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/action/CMakeFiles/test_action_wait_action.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/action/CMakeFiles/test_action_wait_action.dir/all: CMakeFiles/nav2_wait_action_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_wait_action.dir/build.make test/plugins/action/CMakeFiles/test_action_wait_action.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_wait_action.dir/build.make test/plugins/action/CMakeFiles/test_action_wait_action.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=67 "Built target test_action_wait_action"
@@ -2593,9 +2593,9 @@ test/plugins/action/CMakeFiles/test_action_wait_action.dir/clean:
 # Target rules for target test/plugins/action/CMakeFiles/test_action_assisted_teleop_action.dir
 
 # All Build rule for target.
+test/plugins/action/CMakeFiles/test_action_assisted_teleop_action.dir/all: CMakeFiles/nav2_assisted_teleop_action_bt_node.dir/all
 test/plugins/action/CMakeFiles/test_action_assisted_teleop_action.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/action/CMakeFiles/test_action_assisted_teleop_action.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/action/CMakeFiles/test_action_assisted_teleop_action.dir/all: CMakeFiles/nav2_assisted_teleop_action_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_assisted_teleop_action.dir/build.make test/plugins/action/CMakeFiles/test_action_assisted_teleop_action.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_assisted_teleop_action.dir/build.make test/plugins/action/CMakeFiles/test_action_assisted_teleop_action.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=51 "Built target test_action_assisted_teleop_action"
@@ -2621,9 +2621,9 @@ test/plugins/action/CMakeFiles/test_action_assisted_teleop_action.dir/clean:
 # Target rules for target test/plugins/action/CMakeFiles/test_action_controller_cancel_action.dir
 
 # All Build rule for target.
+test/plugins/action/CMakeFiles/test_action_controller_cancel_action.dir/all: CMakeFiles/nav2_controller_cancel_bt_node.dir/all
 test/plugins/action/CMakeFiles/test_action_controller_cancel_action.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/action/CMakeFiles/test_action_controller_cancel_action.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/action/CMakeFiles/test_action_controller_cancel_action.dir/all: CMakeFiles/nav2_controller_cancel_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_controller_cancel_action.dir/build.make test/plugins/action/CMakeFiles/test_action_controller_cancel_action.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_controller_cancel_action.dir/build.make test/plugins/action/CMakeFiles/test_action_controller_cancel_action.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=58 "Built target test_action_controller_cancel_action"
@@ -2649,9 +2649,9 @@ test/plugins/action/CMakeFiles/test_action_controller_cancel_action.dir/clean:
 # Target rules for target test/plugins/action/CMakeFiles/test_action_wait_cancel_action.dir
 
 # All Build rule for target.
+test/plugins/action/CMakeFiles/test_action_wait_cancel_action.dir/all: CMakeFiles/nav2_wait_cancel_bt_node.dir/all
 test/plugins/action/CMakeFiles/test_action_wait_cancel_action.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/action/CMakeFiles/test_action_wait_cancel_action.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/action/CMakeFiles/test_action_wait_cancel_action.dir/all: CMakeFiles/nav2_wait_cancel_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_wait_cancel_action.dir/build.make test/plugins/action/CMakeFiles/test_action_wait_cancel_action.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_wait_cancel_action.dir/build.make test/plugins/action/CMakeFiles/test_action_wait_cancel_action.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=68 "Built target test_action_wait_cancel_action"
@@ -2677,9 +2677,9 @@ test/plugins/action/CMakeFiles/test_action_wait_cancel_action.dir/clean:
 # Target rules for target test/plugins/action/CMakeFiles/test_action_spin_cancel_action.dir
 
 # All Build rule for target.
+test/plugins/action/CMakeFiles/test_action_spin_cancel_action.dir/all: CMakeFiles/nav2_spin_cancel_bt_node.dir/all
 test/plugins/action/CMakeFiles/test_action_spin_cancel_action.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/action/CMakeFiles/test_action_spin_cancel_action.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/action/CMakeFiles/test_action_spin_cancel_action.dir/all: CMakeFiles/nav2_spin_cancel_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_spin_cancel_action.dir/build.make test/plugins/action/CMakeFiles/test_action_spin_cancel_action.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_spin_cancel_action.dir/build.make test/plugins/action/CMakeFiles/test_action_spin_cancel_action.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=66 "Built target test_action_spin_cancel_action"
@@ -2705,9 +2705,9 @@ test/plugins/action/CMakeFiles/test_action_spin_cancel_action.dir/clean:
 # Target rules for target test/plugins/action/CMakeFiles/test_action_back_up_cancel_action.dir
 
 # All Build rule for target.
+test/plugins/action/CMakeFiles/test_action_back_up_cancel_action.dir/all: CMakeFiles/nav2_back_up_cancel_bt_node.dir/all
 test/plugins/action/CMakeFiles/test_action_back_up_cancel_action.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/action/CMakeFiles/test_action_back_up_cancel_action.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/action/CMakeFiles/test_action_back_up_cancel_action.dir/all: CMakeFiles/nav2_back_up_cancel_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_back_up_cancel_action.dir/build.make test/plugins/action/CMakeFiles/test_action_back_up_cancel_action.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_back_up_cancel_action.dir/build.make test/plugins/action/CMakeFiles/test_action_back_up_cancel_action.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=54 "Built target test_action_back_up_cancel_action"
@@ -2733,9 +2733,9 @@ test/plugins/action/CMakeFiles/test_action_back_up_cancel_action.dir/clean:
 # Target rules for target test/plugins/action/CMakeFiles/test_action_assisted_teleop_cancel_action.dir
 
 # All Build rule for target.
+test/plugins/action/CMakeFiles/test_action_assisted_teleop_cancel_action.dir/all: CMakeFiles/nav2_assisted_teleop_cancel_bt_node.dir/all
 test/plugins/action/CMakeFiles/test_action_assisted_teleop_cancel_action.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/action/CMakeFiles/test_action_assisted_teleop_cancel_action.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/action/CMakeFiles/test_action_assisted_teleop_cancel_action.dir/all: CMakeFiles/nav2_assisted_teleop_cancel_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_assisted_teleop_cancel_action.dir/build.make test/plugins/action/CMakeFiles/test_action_assisted_teleop_cancel_action.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_assisted_teleop_cancel_action.dir/build.make test/plugins/action/CMakeFiles/test_action_assisted_teleop_cancel_action.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=52 "Built target test_action_assisted_teleop_cancel_action"
@@ -2761,9 +2761,9 @@ test/plugins/action/CMakeFiles/test_action_assisted_teleop_cancel_action.dir/cle
 # Target rules for target test/plugins/action/CMakeFiles/test_action_drive_on_heading_cancel_action.dir
 
 # All Build rule for target.
+test/plugins/action/CMakeFiles/test_action_drive_on_heading_cancel_action.dir/all: CMakeFiles/nav2_drive_on_heading_cancel_bt_node.dir/all
 test/plugins/action/CMakeFiles/test_action_drive_on_heading_cancel_action.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/action/CMakeFiles/test_action_drive_on_heading_cancel_action.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/action/CMakeFiles/test_action_drive_on_heading_cancel_action.dir/all: CMakeFiles/nav2_drive_on_heading_cancel_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_drive_on_heading_cancel_action.dir/build.make test/plugins/action/CMakeFiles/test_action_drive_on_heading_cancel_action.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_drive_on_heading_cancel_action.dir/build.make test/plugins/action/CMakeFiles/test_action_drive_on_heading_cancel_action.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=60 "Built target test_action_drive_on_heading_cancel_action"
@@ -2789,9 +2789,9 @@ test/plugins/action/CMakeFiles/test_action_drive_on_heading_cancel_action.dir/cl
 # Target rules for target test/plugins/action/CMakeFiles/test_action_clear_costmap_service.dir
 
 # All Build rule for target.
+test/plugins/action/CMakeFiles/test_action_clear_costmap_service.dir/all: CMakeFiles/nav2_clear_costmap_service_bt_node.dir/all
 test/plugins/action/CMakeFiles/test_action_clear_costmap_service.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/action/CMakeFiles/test_action_clear_costmap_service.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/action/CMakeFiles/test_action_clear_costmap_service.dir/all: CMakeFiles/nav2_clear_costmap_service_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_clear_costmap_service.dir/build.make test/plugins/action/CMakeFiles/test_action_clear_costmap_service.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_clear_costmap_service.dir/build.make test/plugins/action/CMakeFiles/test_action_clear_costmap_service.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=55 "Built target test_action_clear_costmap_service"
@@ -2817,9 +2817,9 @@ test/plugins/action/CMakeFiles/test_action_clear_costmap_service.dir/clean:
 # Target rules for target test/plugins/action/CMakeFiles/test_action_reinitialize_global_localization_service.dir
 
 # All Build rule for target.
+test/plugins/action/CMakeFiles/test_action_reinitialize_global_localization_service.dir/all: CMakeFiles/nav2_reinitialize_global_localization_service_bt_node.dir/all
 test/plugins/action/CMakeFiles/test_action_reinitialize_global_localization_service.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/action/CMakeFiles/test_action_reinitialize_global_localization_service.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/action/CMakeFiles/test_action_reinitialize_global_localization_service.dir/all: CMakeFiles/nav2_reinitialize_global_localization_service_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_reinitialize_global_localization_service.dir/build.make test/plugins/action/CMakeFiles/test_action_reinitialize_global_localization_service.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_reinitialize_global_localization_service.dir/build.make test/plugins/action/CMakeFiles/test_action_reinitialize_global_localization_service.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=63 "Built target test_action_reinitialize_global_localization_service"
@@ -2845,9 +2845,9 @@ test/plugins/action/CMakeFiles/test_action_reinitialize_global_localization_serv
 # Target rules for target test/plugins/action/CMakeFiles/test_action_compute_path_to_pose_action.dir
 
 # All Build rule for target.
+test/plugins/action/CMakeFiles/test_action_compute_path_to_pose_action.dir/all: CMakeFiles/nav2_compute_path_to_pose_action_bt_node.dir/all
 test/plugins/action/CMakeFiles/test_action_compute_path_to_pose_action.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/action/CMakeFiles/test_action_compute_path_to_pose_action.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/action/CMakeFiles/test_action_compute_path_to_pose_action.dir/all: CMakeFiles/nav2_compute_path_to_pose_action_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_compute_path_to_pose_action.dir/build.make test/plugins/action/CMakeFiles/test_action_compute_path_to_pose_action.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_compute_path_to_pose_action.dir/build.make test/plugins/action/CMakeFiles/test_action_compute_path_to_pose_action.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=57 "Built target test_action_compute_path_to_pose_action"
@@ -2873,9 +2873,9 @@ test/plugins/action/CMakeFiles/test_action_compute_path_to_pose_action.dir/clean
 # Target rules for target test/plugins/action/CMakeFiles/test_action_compute_path_through_poses_action.dir
 
 # All Build rule for target.
+test/plugins/action/CMakeFiles/test_action_compute_path_through_poses_action.dir/all: CMakeFiles/nav2_compute_path_through_poses_action_bt_node.dir/all
 test/plugins/action/CMakeFiles/test_action_compute_path_through_poses_action.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/action/CMakeFiles/test_action_compute_path_through_poses_action.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/action/CMakeFiles/test_action_compute_path_through_poses_action.dir/all: CMakeFiles/nav2_compute_path_through_poses_action_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_compute_path_through_poses_action.dir/build.make test/plugins/action/CMakeFiles/test_action_compute_path_through_poses_action.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_compute_path_through_poses_action.dir/build.make test/plugins/action/CMakeFiles/test_action_compute_path_through_poses_action.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=56 "Built target test_action_compute_path_through_poses_action"
@@ -2901,9 +2901,9 @@ test/plugins/action/CMakeFiles/test_action_compute_path_through_poses_action.dir
 # Target rules for target test/plugins/action/CMakeFiles/test_action_smooth_path_action.dir
 
 # All Build rule for target.
+test/plugins/action/CMakeFiles/test_action_smooth_path_action.dir/all: CMakeFiles/nav2_smooth_path_action_bt_node.dir/all
 test/plugins/action/CMakeFiles/test_action_smooth_path_action.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/action/CMakeFiles/test_action_smooth_path_action.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/action/CMakeFiles/test_action_smooth_path_action.dir/all: CMakeFiles/nav2_smooth_path_action_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_smooth_path_action.dir/build.make test/plugins/action/CMakeFiles/test_action_smooth_path_action.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_smooth_path_action.dir/build.make test/plugins/action/CMakeFiles/test_action_smooth_path_action.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=64 "Built target test_action_smooth_path_action"
@@ -2929,9 +2929,9 @@ test/plugins/action/CMakeFiles/test_action_smooth_path_action.dir/clean:
 # Target rules for target test/plugins/action/CMakeFiles/test_action_follow_path_action.dir
 
 # All Build rule for target.
+test/plugins/action/CMakeFiles/test_action_follow_path_action.dir/all: CMakeFiles/nav2_follow_path_action_bt_node.dir/all
 test/plugins/action/CMakeFiles/test_action_follow_path_action.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/action/CMakeFiles/test_action_follow_path_action.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/action/CMakeFiles/test_action_follow_path_action.dir/all: CMakeFiles/nav2_follow_path_action_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_follow_path_action.dir/build.make test/plugins/action/CMakeFiles/test_action_follow_path_action.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_follow_path_action.dir/build.make test/plugins/action/CMakeFiles/test_action_follow_path_action.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num= "Built target test_action_follow_path_action"
@@ -2957,9 +2957,9 @@ test/plugins/action/CMakeFiles/test_action_follow_path_action.dir/clean:
 # Target rules for target test/plugins/action/CMakeFiles/test_action_navigate_to_pose_action.dir
 
 # All Build rule for target.
+test/plugins/action/CMakeFiles/test_action_navigate_to_pose_action.dir/all: CMakeFiles/nav2_navigate_to_pose_action_bt_node.dir/all
 test/plugins/action/CMakeFiles/test_action_navigate_to_pose_action.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/action/CMakeFiles/test_action_navigate_to_pose_action.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/action/CMakeFiles/test_action_navigate_to_pose_action.dir/all: CMakeFiles/nav2_navigate_to_pose_action_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_navigate_to_pose_action.dir/build.make test/plugins/action/CMakeFiles/test_action_navigate_to_pose_action.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_navigate_to_pose_action.dir/build.make test/plugins/action/CMakeFiles/test_action_navigate_to_pose_action.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=62 "Built target test_action_navigate_to_pose_action"
@@ -2985,9 +2985,9 @@ test/plugins/action/CMakeFiles/test_action_navigate_to_pose_action.dir/clean:
 # Target rules for target test/plugins/action/CMakeFiles/test_action_navigate_through_poses_action.dir
 
 # All Build rule for target.
+test/plugins/action/CMakeFiles/test_action_navigate_through_poses_action.dir/all: CMakeFiles/nav2_navigate_through_poses_action_bt_node.dir/all
 test/plugins/action/CMakeFiles/test_action_navigate_through_poses_action.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/action/CMakeFiles/test_action_navigate_through_poses_action.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/action/CMakeFiles/test_action_navigate_through_poses_action.dir/all: CMakeFiles/nav2_navigate_through_poses_action_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_navigate_through_poses_action.dir/build.make test/plugins/action/CMakeFiles/test_action_navigate_through_poses_action.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_action_navigate_through_poses_action.dir/build.make test/plugins/action/CMakeFiles/test_action_navigate_through_poses_action.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=61 "Built target test_action_navigate_through_poses_action"
@@ -3013,9 +3013,9 @@ test/plugins/action/CMakeFiles/test_action_navigate_through_poses_action.dir/cle
 # Target rules for target test/plugins/action/CMakeFiles/test_truncate_path_action.dir
 
 # All Build rule for target.
+test/plugins/action/CMakeFiles/test_truncate_path_action.dir/all: CMakeFiles/nav2_truncate_path_action_bt_node.dir/all
 test/plugins/action/CMakeFiles/test_truncate_path_action.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/action/CMakeFiles/test_truncate_path_action.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/action/CMakeFiles/test_truncate_path_action.dir/all: CMakeFiles/nav2_truncate_path_action_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_truncate_path_action.dir/build.make test/plugins/action/CMakeFiles/test_truncate_path_action.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_truncate_path_action.dir/build.make test/plugins/action/CMakeFiles/test_truncate_path_action.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=99 "Built target test_truncate_path_action"
@@ -3041,9 +3041,9 @@ test/plugins/action/CMakeFiles/test_truncate_path_action.dir/clean:
 # Target rules for target test/plugins/action/CMakeFiles/test_truncate_path_local_action.dir
 
 # All Build rule for target.
+test/plugins/action/CMakeFiles/test_truncate_path_local_action.dir/all: CMakeFiles/nav2_truncate_path_local_action_bt_node.dir/all
 test/plugins/action/CMakeFiles/test_truncate_path_local_action.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/action/CMakeFiles/test_truncate_path_local_action.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/action/CMakeFiles/test_truncate_path_local_action.dir/all: CMakeFiles/nav2_truncate_path_local_action_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_truncate_path_local_action.dir/build.make test/plugins/action/CMakeFiles/test_truncate_path_local_action.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_truncate_path_local_action.dir/build.make test/plugins/action/CMakeFiles/test_truncate_path_local_action.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=100 "Built target test_truncate_path_local_action"
@@ -3069,9 +3069,9 @@ test/plugins/action/CMakeFiles/test_truncate_path_local_action.dir/clean:
 # Target rules for target test/plugins/action/CMakeFiles/test_remove_passed_goals_action.dir
 
 # All Build rule for target.
+test/plugins/action/CMakeFiles/test_remove_passed_goals_action.dir/all: CMakeFiles/nav2_remove_passed_goals_action_bt_node.dir/all
 test/plugins/action/CMakeFiles/test_remove_passed_goals_action.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/action/CMakeFiles/test_remove_passed_goals_action.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/action/CMakeFiles/test_remove_passed_goals_action.dir/all: CMakeFiles/nav2_remove_passed_goals_action_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_remove_passed_goals_action.dir/build.make test/plugins/action/CMakeFiles/test_remove_passed_goals_action.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_remove_passed_goals_action.dir/build.make test/plugins/action/CMakeFiles/test_remove_passed_goals_action.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=96 "Built target test_remove_passed_goals_action"
@@ -3097,9 +3097,9 @@ test/plugins/action/CMakeFiles/test_remove_passed_goals_action.dir/clean:
 # Target rules for target test/plugins/action/CMakeFiles/test_get_pose_from_path_action.dir
 
 # All Build rule for target.
+test/plugins/action/CMakeFiles/test_get_pose_from_path_action.dir/all: CMakeFiles/nav2_get_pose_from_path_action_bt_node.dir/all
 test/plugins/action/CMakeFiles/test_get_pose_from_path_action.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/action/CMakeFiles/test_get_pose_from_path_action.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/action/CMakeFiles/test_get_pose_from_path_action.dir/all: CMakeFiles/nav2_get_pose_from_path_action_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_get_pose_from_path_action.dir/build.make test/plugins/action/CMakeFiles/test_get_pose_from_path_action.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_get_pose_from_path_action.dir/build.make test/plugins/action/CMakeFiles/test_get_pose_from_path_action.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=90 "Built target test_get_pose_from_path_action"
@@ -3125,9 +3125,9 @@ test/plugins/action/CMakeFiles/test_get_pose_from_path_action.dir/clean:
 # Target rules for target test/plugins/action/CMakeFiles/test_planner_selector_node.dir
 
 # All Build rule for target.
+test/plugins/action/CMakeFiles/test_planner_selector_node.dir/all: CMakeFiles/nav2_planner_selector_bt_node.dir/all
 test/plugins/action/CMakeFiles/test_planner_selector_node.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/action/CMakeFiles/test_planner_selector_node.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/action/CMakeFiles/test_planner_selector_node.dir/all: CMakeFiles/nav2_planner_selector_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_planner_selector_node.dir/build.make test/plugins/action/CMakeFiles/test_planner_selector_node.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_planner_selector_node.dir/build.make test/plugins/action/CMakeFiles/test_planner_selector_node.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=94 "Built target test_planner_selector_node"
@@ -3153,9 +3153,9 @@ test/plugins/action/CMakeFiles/test_planner_selector_node.dir/clean:
 # Target rules for target test/plugins/action/CMakeFiles/test_controller_selector_node.dir
 
 # All Build rule for target.
+test/plugins/action/CMakeFiles/test_controller_selector_node.dir/all: CMakeFiles/nav2_controller_selector_bt_node.dir/all
 test/plugins/action/CMakeFiles/test_controller_selector_node.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/action/CMakeFiles/test_controller_selector_node.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/action/CMakeFiles/test_controller_selector_node.dir/all: CMakeFiles/nav2_controller_selector_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_controller_selector_node.dir/build.make test/plugins/action/CMakeFiles/test_controller_selector_node.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_controller_selector_node.dir/build.make test/plugins/action/CMakeFiles/test_controller_selector_node.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=85 "Built target test_controller_selector_node"
@@ -3181,9 +3181,9 @@ test/plugins/action/CMakeFiles/test_controller_selector_node.dir/clean:
 # Target rules for target test/plugins/action/CMakeFiles/test_smoother_selector_node.dir
 
 # All Build rule for target.
+test/plugins/action/CMakeFiles/test_smoother_selector_node.dir/all: CMakeFiles/nav2_smoother_selector_bt_node.dir/all
 test/plugins/action/CMakeFiles/test_smoother_selector_node.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/plugins/action/CMakeFiles/test_smoother_selector_node.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/plugins/action/CMakeFiles/test_smoother_selector_node.dir/all: CMakeFiles/nav2_smoother_selector_bt_node.dir/all
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_smoother_selector_node.dir/build.make test/plugins/action/CMakeFiles/test_smoother_selector_node.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/plugins/action/CMakeFiles/test_smoother_selector_node.dir/build.make test/plugins/action/CMakeFiles/test_smoother_selector_node.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_behavior_tree/CMakeFiles --progress-num=98 "Built target test_smoother_selector_node"

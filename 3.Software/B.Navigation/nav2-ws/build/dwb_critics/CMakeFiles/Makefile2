@@ -201,9 +201,9 @@ CMakeFiles/dwb_critics.dir/clean:
 # Target rules for target test/CMakeFiles/prefer_forward_tests.dir
 
 # All Build rule for target.
+test/CMakeFiles/prefer_forward_tests.dir/all: CMakeFiles/dwb_critics.dir/all
 test/CMakeFiles/prefer_forward_tests.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/CMakeFiles/prefer_forward_tests.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/CMakeFiles/prefer_forward_tests.dir/all: CMakeFiles/dwb_critics.dir/all
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/prefer_forward_tests.dir/build.make test/CMakeFiles/prefer_forward_tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/prefer_forward_tests.dir/build.make test/CMakeFiles/prefer_forward_tests.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/dwb_critics/CMakeFiles --progress-num=24,25 "Built target prefer_forward_tests"
@@ -229,9 +229,9 @@ test/CMakeFiles/prefer_forward_tests.dir/clean:
 # Target rules for target test/CMakeFiles/base_obstacle_tests.dir
 
 # All Build rule for target.
+test/CMakeFiles/base_obstacle_tests.dir/all: CMakeFiles/dwb_critics.dir/all
 test/CMakeFiles/base_obstacle_tests.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/CMakeFiles/base_obstacle_tests.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/CMakeFiles/base_obstacle_tests.dir/all: CMakeFiles/dwb_critics.dir/all
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/base_obstacle_tests.dir/build.make test/CMakeFiles/base_obstacle_tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/base_obstacle_tests.dir/build.make test/CMakeFiles/base_obstacle_tests.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/dwb_critics/CMakeFiles --progress-num=3,4 "Built target base_obstacle_tests"
@@ -257,9 +257,9 @@ test/CMakeFiles/base_obstacle_tests.dir/clean:
 # Target rules for target test/CMakeFiles/obstacle_footprint_tests.dir
 
 # All Build rule for target.
+test/CMakeFiles/obstacle_footprint_tests.dir/all: CMakeFiles/dwb_critics.dir/all
 test/CMakeFiles/obstacle_footprint_tests.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/CMakeFiles/obstacle_footprint_tests.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/CMakeFiles/obstacle_footprint_tests.dir/all: CMakeFiles/dwb_critics.dir/all
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/obstacle_footprint_tests.dir/build.make test/CMakeFiles/obstacle_footprint_tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/obstacle_footprint_tests.dir/build.make test/CMakeFiles/obstacle_footprint_tests.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/dwb_critics/CMakeFiles --progress-num=22,23 "Built target obstacle_footprint_tests"
@@ -285,9 +285,9 @@ test/CMakeFiles/obstacle_footprint_tests.dir/clean:
 # Target rules for target test/CMakeFiles/alignment_util_tests.dir
 
 # All Build rule for target.
+test/CMakeFiles/alignment_util_tests.dir/all: CMakeFiles/dwb_critics.dir/all
 test/CMakeFiles/alignment_util_tests.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/CMakeFiles/alignment_util_tests.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/CMakeFiles/alignment_util_tests.dir/all: CMakeFiles/dwb_critics.dir/all
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/alignment_util_tests.dir/build.make test/CMakeFiles/alignment_util_tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/alignment_util_tests.dir/build.make test/CMakeFiles/alignment_util_tests.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/dwb_critics/CMakeFiles --progress-num=1,2 "Built target alignment_util_tests"
@@ -313,9 +313,9 @@ test/CMakeFiles/alignment_util_tests.dir/clean:
 # Target rules for target test/CMakeFiles/twirling_tests.dir
 
 # All Build rule for target.
+test/CMakeFiles/twirling_tests.dir/all: CMakeFiles/dwb_critics.dir/all
 test/CMakeFiles/twirling_tests.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/CMakeFiles/twirling_tests.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/CMakeFiles/twirling_tests.dir/all: CMakeFiles/dwb_critics.dir/all
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/twirling_tests.dir/build.make test/CMakeFiles/twirling_tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/twirling_tests.dir/build.make test/CMakeFiles/twirling_tests.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/dwb_critics/CMakeFiles --progress-num=26,27 "Built target twirling_tests"

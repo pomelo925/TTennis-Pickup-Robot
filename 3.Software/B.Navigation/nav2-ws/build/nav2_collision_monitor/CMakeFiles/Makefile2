@@ -227,9 +227,9 @@ CMakeFiles/collision_monitor.dir/clean:
 # Target rules for target test/CMakeFiles/kinematics_test.dir
 
 # All Build rule for target.
+test/CMakeFiles/kinematics_test.dir/all: CMakeFiles/collision_monitor_core.dir/all
 test/CMakeFiles/kinematics_test.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/CMakeFiles/kinematics_test.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/CMakeFiles/kinematics_test.dir/all: CMakeFiles/collision_monitor_core.dir/all
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/kinematics_test.dir/build.make test/CMakeFiles/kinematics_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/kinematics_test.dir/build.make test/CMakeFiles/kinematics_test.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_collision_monitor/CMakeFiles --progress-num=18,19 "Built target kinematics_test"
@@ -255,9 +255,9 @@ test/CMakeFiles/kinematics_test.dir/clean:
 # Target rules for target test/CMakeFiles/sources_test.dir
 
 # All Build rule for target.
+test/CMakeFiles/sources_test.dir/all: CMakeFiles/collision_monitor_core.dir/all
 test/CMakeFiles/sources_test.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/CMakeFiles/sources_test.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/CMakeFiles/sources_test.dir/all: CMakeFiles/collision_monitor_core.dir/all
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/sources_test.dir/build.make test/CMakeFiles/sources_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/sources_test.dir/build.make test/CMakeFiles/sources_test.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_collision_monitor/CMakeFiles --progress-num=22,23 "Built target sources_test"
@@ -283,9 +283,9 @@ test/CMakeFiles/sources_test.dir/clean:
 # Target rules for target test/CMakeFiles/polygons_test.dir
 
 # All Build rule for target.
+test/CMakeFiles/polygons_test.dir/all: CMakeFiles/collision_monitor_core.dir/all
 test/CMakeFiles/polygons_test.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/CMakeFiles/polygons_test.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/CMakeFiles/polygons_test.dir/all: CMakeFiles/collision_monitor_core.dir/all
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/polygons_test.dir/build.make test/CMakeFiles/polygons_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/polygons_test.dir/build.make test/CMakeFiles/polygons_test.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_collision_monitor/CMakeFiles --progress-num=20,21 "Built target polygons_test"
@@ -311,9 +311,9 @@ test/CMakeFiles/polygons_test.dir/clean:
 # Target rules for target test/CMakeFiles/collision_monitor_node_test.dir
 
 # All Build rule for target.
+test/CMakeFiles/collision_monitor_node_test.dir/all: CMakeFiles/collision_monitor_core.dir/all
 test/CMakeFiles/collision_monitor_node_test.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/CMakeFiles/collision_monitor_node_test.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/CMakeFiles/collision_monitor_node_test.dir/all: CMakeFiles/collision_monitor_core.dir/all
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/collision_monitor_node_test.dir/build.make test/CMakeFiles/collision_monitor_node_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/collision_monitor_node_test.dir/build.make test/CMakeFiles/collision_monitor_node_test.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_collision_monitor/CMakeFiles --progress-num=12,13 "Built target collision_monitor_node_test"

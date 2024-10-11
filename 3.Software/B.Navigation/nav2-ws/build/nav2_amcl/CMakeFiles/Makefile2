@@ -205,10 +205,10 @@ CMakeFiles/nav2_amcl_uninstall.dir/clean:
 # Target rules for target CMakeFiles/amcl.dir
 
 # All Build rule for target.
+CMakeFiles/amcl.dir/all: CMakeFiles/amcl_core.dir/all
 CMakeFiles/amcl.dir/all: src/pf/CMakeFiles/pf_lib.dir/all
 CMakeFiles/amcl.dir/all: src/map/CMakeFiles/map_lib.dir/all
 CMakeFiles/amcl.dir/all: src/sensors/CMakeFiles/sensors_lib.dir/all
-CMakeFiles/amcl.dir/all: CMakeFiles/amcl_core.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/amcl.dir/build.make CMakeFiles/amcl.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/amcl.dir/build.make CMakeFiles/amcl.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_amcl/CMakeFiles --progress-num=1,2 "Built target amcl"

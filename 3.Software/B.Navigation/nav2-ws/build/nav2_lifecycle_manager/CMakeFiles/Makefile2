@@ -223,9 +223,9 @@ CMakeFiles/lifecycle_manager.dir/clean:
 # Target rules for target test/CMakeFiles/test_lifecycle_gtest.dir
 
 # All Build rule for target.
+test/CMakeFiles/test_lifecycle_gtest.dir/all: CMakeFiles/nav2_lifecycle_manager_core.dir/all
 test/CMakeFiles/test_lifecycle_gtest.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/CMakeFiles/test_lifecycle_gtest.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/CMakeFiles/test_lifecycle_gtest.dir/all: CMakeFiles/nav2_lifecycle_manager_core.dir/all
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/test_lifecycle_gtest.dir/build.make test/CMakeFiles/test_lifecycle_gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/test_lifecycle_gtest.dir/build.make test/CMakeFiles/test_lifecycle_gtest.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_lifecycle_manager/CMakeFiles --progress-num=12,13 "Built target test_lifecycle_gtest"
@@ -251,9 +251,9 @@ test/CMakeFiles/test_lifecycle_gtest.dir/clean:
 # Target rules for target test/CMakeFiles/test_bond_gtest.dir
 
 # All Build rule for target.
+test/CMakeFiles/test_bond_gtest.dir/all: CMakeFiles/nav2_lifecycle_manager_core.dir/all
 test/CMakeFiles/test_bond_gtest.dir/all: gtest/CMakeFiles/gtest.dir/all
 test/CMakeFiles/test_bond_gtest.dir/all: gtest/CMakeFiles/gtest_main.dir/all
-test/CMakeFiles/test_bond_gtest.dir/all: CMakeFiles/nav2_lifecycle_manager_core.dir/all
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/test_bond_gtest.dir/build.make test/CMakeFiles/test_bond_gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/test_bond_gtest.dir/build.make test/CMakeFiles/test_bond_gtest.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nav2-ws/build/nav2_lifecycle_manager/CMakeFiles --progress-num=10,11 "Built target test_bond_gtest"
