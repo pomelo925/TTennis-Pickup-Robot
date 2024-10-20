@@ -2,7 +2,7 @@
 
 #######################
 ####  User Config  ####
-FOXGLOVE_ENABLED=true
+FOXGLOVE_ENABLED=false
 
 MAP_DIR="/home/app/_map_database"
 #######################
@@ -20,10 +20,11 @@ if [ "$FOXGLOVE_ENABLED" = true ]; then
 fi
 
 ## 2. Publish TF2
+source install/setup.bash
 ros2 run tf2_ros static_transform_publisher 0 0 0 0 0 0 odom base_link &
 
 ## 3. Launch NAV2
-ros2 launch nav2_bringup navigation_launch.py use_sim_time:=False &
+ros2 launch nav2_bringup navigation_launch.py use_sim_time:=False map:=/rtabmap/map &
 
 ## 4. Launch RVIZ
 ros2 launch nav2_bringup rviz_launch.py &

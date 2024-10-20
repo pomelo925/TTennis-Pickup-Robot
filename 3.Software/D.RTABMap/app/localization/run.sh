@@ -3,7 +3,7 @@
 #######################
 ####  User Config  ####
 RVIZ_ENABLED=false
-FOXGLOVE_ENABLED=true
+FOXGLOVE_ENABLED=false
 
 MAP_DIR="/home/app/_map_database"
 #######################
@@ -37,7 +37,7 @@ ros2 launch rtabmap_launch rtabmap.launch.py \
   camera_info_topic:=/camera/camera/color/camera_info \
   depth_topic:=/camera/camera/aligned_depth_to_color/image_raw \
   database_path:=${DATABASE_PATH} \
-  log_level:=warn \
+  log_level:=debug \
   localization:=true \
   approx_sync:=false \
   rviz:=false \

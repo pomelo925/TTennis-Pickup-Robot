@@ -71,15 +71,11 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
     ## Install ROS Humble Foxglove
     ros-humble-foxglove-bridge \
-    ## Install Navigation2 dependencies
-    ros-humble-behaviortree-cpp-v3 ros-humble-bond-core \
-    ros-humble-test-msg \
-    libceres-dev libfreeimage-dev \
     && rm -rf /var/lib/apt/lists/
 
 
 ##### NOTE #####
-## Steps below should ideally  performed in a seperate container, and then mounted as a volume to the main container, 
+## Steps below should ideally performed in a seperate container, and then mounted as a volume to the main container, 
 ## as they require modifications that are better handled outside the Dockerfile.
 
 # WORKDIR /home/nav2-ws

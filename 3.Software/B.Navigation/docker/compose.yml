@@ -21,7 +21,6 @@ x-shared-settings: &shared-settings
     - ../nav2-ws/install:/home/nav2-ws/install
     - ../nav2-ws/src:/home/nav2-ws/src
 
-    # - ../../D.RTABMAP/app/_map_database:/home/app/_map_database
   environment:
     - DISPLAY=${DISPLAY}
     - COMMAND=${COMMAND}
