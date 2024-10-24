@@ -8,6 +8,7 @@
 #include "ros.h"
 #include <ros1.h>
 #include <chassis.h>
+#include <intake.hpp>
 
 ros::NodeHandle nh;
 
@@ -49,6 +50,7 @@ namespace ROS1 {
    */
   void spinCycle(void){
     nh.spinOnce();
+    Chassis.run();
     return;
   }
 
@@ -81,8 +83,7 @@ namespace ROS1 {
    * @param std_msgs::Bool
    */
   void callback_Intake(const std_msgs::Bool &msg){
-    // if(msg.data) runIntake = true;
-    // else runIntake = false;
+     Intake_temp.mode=msg.data;
     return;
   }
 

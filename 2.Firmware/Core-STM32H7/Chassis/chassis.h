@@ -23,8 +23,10 @@ public:
   
 private:
   /* Kinectics Arguments (mks)*/
-  const float _wheel_distance = 0.2f;
-  const float _wheel_radius = 0.05f;
+  const float _driving_wheel_distance = 0.2016f;
+  const float _driving_wheel_radius = 0.05f;
+  const float _driven_wheel_distance = 0.339f;
+  const float _driven_wheel_radius = 0.04775f;
 
   /* functions */
   void update_wheel_speed(void);

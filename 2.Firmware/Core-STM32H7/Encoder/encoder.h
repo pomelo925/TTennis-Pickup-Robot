@@ -21,9 +21,16 @@ public:
   void setInverse(bool is_inverse);
 
   float get_current_wheel_speed(void) const;
+<<<<<<< HEAD
+  void updateCurrentSpeed(void);
+private:
+//  void updateCurrentSpeed(void);
+  void updateCurrentDistance(void);
+=======
 
 private:
   void updateCurrentSpeed(int16_t currentPulse);
+>>>>>>> 07a38791ac489d39095a155272587fe0c2386512
 
   /* PID parameters */
   float _kp=0.f, _ki=0.f, _kd=0.f;
@@ -35,6 +42,11 @@ private:
   float _encoder_res=0.f;
   /* Current wheel speed (rps). */
   float _current_wheel_speed=0.f;
+<<<<<<< HEAD
+  /* Current wheel distance(m). */
+  float _current_wheel_distance=0.f;
+=======
+>>>>>>> 07a38791ac489d39095a155272587fe0c2386512
   /* Current pulse. Given by Interrupt. */
   int16_t _current_pulse=0;
   /* Inverse direction */
@@ -43,8 +55,13 @@ private:
 };
 
 /** ENCODER **/
+<<<<<<< HEAD
+//extern ENCODER EncoderRight;
+//extern ENCODER EncoderLeft;
+=======
 extern ENCODER EncoderRight;
 extern ENCODER EncoderLeft;
+>>>>>>> 07a38791ac489d39095a155272587fe0c2386512
 
 
 #endif

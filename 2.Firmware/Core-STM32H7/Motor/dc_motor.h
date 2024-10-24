@@ -28,6 +28,7 @@ public:
   
   float get_current_wheel_speed(void) const;
   float get_target_pwm(void) const;
+//  float get_current_wheel_distance(void);
   
   GPIO_PinState getDirection(void) const;
   uint32_t getPWMValue(void) const;
@@ -37,6 +38,7 @@ public:
 
 private:
   void updateCurrentSpeed(int16_t currentPulse);
+//  void updateCurrentDistance(void);
   void updateTargetPWM();
 
   /* PID parameters */ 
@@ -48,12 +50,17 @@ private:
   /* Encoder resolution */
   float _encoder_res=0.f;
   /* Error parameters */ 
-  float _error=0.f, _integral=0.f, _error_last=0.f;
+  float _error=0.f, _error_last=0.f;
+  float _integral = 0.f;
   /* Previous error */
   float _previous_error=0.f;
 
   /* Current wheel speed (rps). */
   float _current_wheel_speed=0.f;  
+  /* Current wheel distance (m). */
+//  float _current_wheel_distance=0.f;
+  /* Total wheel distance (m). */
+//  float _total_wheel_distance=0.f;
   /* Target wheel speed (rps). Given by Chassis. */
   float _target_wheel_speed=0.f; 
   /* Current pulse. Given by Interrupt. */
@@ -75,7 +82,9 @@ private:
 /** DC_MOTOR **/
 extern DC_MOTOR WheelRight;
 extern DC_MOTOR WheelLeft;
-// extern DC_MOTOR Intake;
+extern DC_MOTOR Intake;
 // extern DC_MOTOR Elevator;
+extern DC_MOTOR EncoderRight;
+extern DC_MOTOR EncoderLeft;
 
 #endif
