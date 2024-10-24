@@ -32,8 +32,8 @@ void CHASSIS::run(void){
 void CHASSIS::update_wheel_speed(void){
   const float x = CHASSIS_TARGET_SPEED.x;
   const float theta = CHASSIS_TARGET_SPEED.theta;
-  WheelRight.set_target_wheel_speed((2*x + theta*_wheel_distance) / (2*_wheel_radius));
-  WheelLeft.set_target_wheel_speed((2*x - theta*_wheel_distance) / (2*_wheel_radius));
+  WheelRight.set_target_wheel_speed((2*x + theta*_driving_wheel_distance) / (2*_driving_wheel_radius));
+  WheelLeft.set_target_wheel_speed(-(2*x - theta*_driving_wheel_distance) / (2*_driving_wheel_radius));
   return;
 }
 
@@ -43,7 +43,7 @@ void CHASSIS::update_wheel_speed(void){
  * @param void
  */
 void CHASSIS::update_chassis_speed(void){
-  CHASSIS_CURRENT_SPEED.x = (WheelRight.get_current_wheel_speed() + WheelLeft.get_current_wheel_speed()) * _wheel_radius / 2;
-  CHASSIS_CURRENT_SPEED.theta = (WheelRight.get_current_wheel_speed() - WheelLeft.get_current_wheel_speed()) * _wheel_radius / _wheel_distance;
+  CHASSIS_CURRENT_SPEED.x = (WheelRight.get_current_wheel_speed() + WheelLeft.get_current_wheel_speed()) * _driven_wheel_radius / 2;
+  CHASSIS_CURRENT_SPEED.theta = (WheelRight.get_current_wheel_speed() - WheelLeft.get_current_wheel_speed()) * _driven_wheel_radius / _driven_wheel_distance;
   return;
 }

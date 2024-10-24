@@ -349,7 +349,11 @@ TIM4.IPParameters=EncoderMode
 TIM5.EncoderMode=TIM_ENCODERMODE_TI12
 TIM5.IPParameters=EncoderMode
 TIM6.IPParameters=Prescaler,Period
+<<<<<<< HEAD
+TIM6.Period=9999
+=======
 TIM6.Period=999
+>>>>>>> 07a38791ac489d39095a155272587fe0c2386512
 TIM6.Prescaler=255
 USART1.IPParameters=VirtualMode-Asynchronous
 USART1.VirtualMode-Asynchronous=VM_ASYNC
