@@ -94,8 +94,7 @@ def generate_launch_description():
 
     declare_use_composition_cmd = DeclareLaunchArgument(
         'use_composition', default_value='False',
-        description='Use+
-        composed bringup if True')
+        description='Use composed bringup if True')
 
     declare_container_name_cmd = DeclareLaunchArgument(
         'container_name', default_value='nav2_container',

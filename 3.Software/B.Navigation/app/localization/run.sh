@@ -24,7 +24,7 @@ source install/setup.bash
 ros2 run tf2_ros static_transform_publisher 0 0 0 0 0 0 odom base_link &
 
 ## 3. Launch NAV2
-ros2 launch nav2_bringup navigation_launch.py use_sim_time:=False map:=/rtabmap/map &
+ros2 launch nav2_bringup navigation_launch.py use_sim_time:=false map:=/rtabmap/map &
 
 ## 4. Launch RVIZ
 rviz2 -d /home/app/_gui_config/basic.rviz &
