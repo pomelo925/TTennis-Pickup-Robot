@@ -5,7 +5,7 @@
  *      Author: renee0630
  */
 
-#include <encoder.h>
+#include "../Encoder/encoder.h"
 
 #include "stm32h7xx_hal.h"
 
@@ -13,11 +13,10 @@
 /** Timer **/
 extern TIM_HandleTypeDef htim1;
 extern TIM_HandleTypeDef htim3;
-float WheelRadius = 95.5/2;
 
 /** Encoder Instances**/
-//ENCODER EncoderRight;
-//ENCODER EncoderLeft;
+ENCODER EncoderRight;
+ENCODER EncoderLeft;
 
 
 /**
@@ -44,20 +43,10 @@ void ENCODER::init(void){
 /**
  * @brief 更新當前輪速 (rad/s)
  */
-void ENCODER::updateCurrentSpeed(void) {
-//  _current_pulse = currentPulse;
-//  float speed = (_current_pulse / 4 / 1000.f / 1.f / 0.001f) * 2.f * M_PI;
-//  _current_wheel_speed = _is_inverse ? speed : -speed;
-  return;
-}
-
-
-/**
- * @brief 更新當前距離 (m)
- */
-void ENCODER::updateCurrentDistance(void) {
-  float distance = (_current_pulse / _encoder_res) * (2 * M_PI * WheelRadius) / _sr_ratio;
-  _current_wheel_distance = distance;
+void ENCODER::updateCurrentSpeed(const int16_t currentPulse) {
+  _current_pulse = currentPulse;
+  float speed = (_current_pulse / 4 / 1000.f / 1.f / 0.001f) * 2.f * M_PI;
+  _current_wheel_speed = _is_inverse ? speed : -speed;
   return;
 }
 
@@ -73,16 +62,7 @@ float ENCODER::get_current_wheel_speed(void) const {
 
 
 /**
- * @brief 取得當前距離 (m)
- * @param void
- * @return 當前距離 (m)
- */
-float ENCODER::get_current_wheel_speed(void) {
-    return _current_wheel_distance;
-}
-
-/**
- * @brief 設置編碼器訊息
+ * @brief 設置電機訊息
  * @param encoder_res 編碼器分辨率
  * @param sr_ratio 齒輪比
  * @param interval 時間間隔
@@ -95,7 +75,7 @@ void ENCODER::setInfo(float encoder_res, float sr_ratio, float interval) {
 
 
 /**
- * @brief 設置編碼器旋轉方向
+ * @brief 設置電機旋轉方向
  * @param is_inverse 是否反向旋轉
  */
 void ENCODER::setInverse(bool is_inverse){
@@ -110,6 +90,5 @@ void ENCODER::setInverse(bool is_inverse){
  */
 void ENCODER::update(int16_t currentCount) {
   updateCurrentSpeed(currentCount);
-  updateCurrentDistance();
   return;
 }

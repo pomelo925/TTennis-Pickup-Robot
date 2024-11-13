@@ -11,28 +11,21 @@
 
 /** Timer **/
 extern TIM_HandleTypeDef htim1;
-extern TIM_HandleTypeDef htim1;
 extern TIM_HandleTypeDef htim3;
 extern TIM_HandleTypeDef htim4;
 extern TIM_HandleTypeDef htim5;
 extern TIM_HandleTypeDef htim6;
 extern TIM_HandleTypeDef htim8;
-extern TIM_HandleTypeDef htim8;
 extern TIM_HandleTypeDef htim15;
 extern TIM_HandleTypeDef htim23;
 extern TIM_HandleTypeDef htim24;
-
-int count =0;
 
 
 /** Motors Instances**/
 DC_MOTOR WheelRight(GPIOD, GPIO_PIN_3);
 DC_MOTOR WheelLeft(GPIOD, GPIO_PIN_4);
-DC_MOTOR Intake(GPIOD, GPIO_PIN_2);
+// DC_MOTOR Intake;
 // DC_MOTOR Elevator;
-DC_MOTOR EncoderRight(GPIOD, GPIO_PIN_10);
-DC_MOTOR EncoderLeft(GPIOD, GPIO_PIN_11);
-
 
 
 /**
@@ -49,51 +42,30 @@ void DC_MOTOR::init(void){
 	HAL_TIM_Encoder_Start(&htim24, TIM_CHANNEL_ALL);
 
 
-	HAL_TIM_Encoder_Start(&htim1, TIM_CHANNEL_ALL);
-	HAL_TIM_Encoder_Start(&htim3, TIM_CHANNEL_ALL);
-	HAL_TIM_Encoder_Start(&htim4, TIM_CHANNEL_ALL);
-	HAL_TIM_Encoder_Start(&htim5, TIM_CHANNEL_ALL);
-	HAL_TIM_Encoder_Start(&htim8, TIM_CHANNEL_ALL);
-	HAL_TIM_Encoder_Start(&htim24, TIM_CHANNEL_ALL);
-
-
 	HAL_TIM_Base_Start_IT(&htim6);
 
-	HAL_TIM_PWM_Start_IT(&htim15, TIM_CHANNEL_1);
 	HAL_TIM_PWM_Start_IT(&htim15, TIM_CHANNEL_1);
 	HAL_TIM_PWM_Start_IT(&htim15, TIM_CHANNEL_2);
 	HAL_TIM_PWM_Start_IT(&htim23, TIM_CHANNEL_1);
 	HAL_TIM_PWM_Start_IT(&htim23, TIM_CHANNEL_2);
 	HAL_TIM_PWM_Start_IT(&htim23, TIM_CHANNEL_3);
-	HAL_TIM_PWM_Start_IT(&htim23, TIM_CHANNEL_1);
-	HAL_TIM_PWM_Start_IT(&htim23, TIM_CHANNEL_2);
-	HAL_TIM_PWM_Start_IT(&htim23, TIM_CHANNEL_3);
 
   // 初始化各個電機的參數
-  WheelRight.setPID(800.f, 15000.f, 0.f);
-  WheelRight.setInfo(1024.f, 26.f, 0.01f);
+  WheelRight.setPID(2.5f, 80.f, 0.f);
+  WheelRight.setInfo(1024.f, 26.f, 0.001f);
   WheelRight.setInverse(true);
 
-  WheelLeft.setPID(800.f, 15000.f, 0.f);
-  WheelLeft.setInfo(1024.f, 26.f, 0.01f);
+  WheelLeft.setPID(2.5f, 80.f, 0.f);
+  WheelLeft.setInfo(1024.f, 26.f, 0.001f);
   WheelLeft.setInverse(true);
 
-  Intake.setPID(0.f, 0.f, 0.f);
-  Intake.setInfo(1024.f, 26.f, 0.01f);
-  Intake.setInverse(false);
+  // Intake.setPID(2.5f, 100.f, 0.f);
+  // Intake.setInfo(512.f, 20.8f, 0.001f);
+  // Intake.setInverse(false);
 
   // Elevator.setPID(2.5f, 100.f, 0.f);
   // Elevator.setInfo(512.f, 20.8f, 0.001f);
   // Elevator.setInverse(false);
-  EncoderRight.setPID(0.f, 0.f, 0.f);
-  EncoderRight.setInfo(1000.f, 1.f, 0.01f);
-  EncoderRight.setInverse(true);
-//  EncoderRight._total_wheel_distance = 0.f;
-
-  EncoderLeft.setPID(0.f, 0.f, 0.f);
-  EncoderLeft.setInfo(1000.f, 1.f, 0.01f);
-  EncoderLeft.setInverse(true);
-//  EncoderLeft._total_wheel_distance = 0.f;
 
   return;
 }
@@ -116,23 +88,14 @@ void DC_MOTOR::updateCurrentSpeed(const int16_t currentPulse) {
  */
 void DC_MOTOR::updateTargetPWM(void) {
   _error = _target_wheel_speed - _current_wheel_speed;
+  _integral += (_error * _interval);
 
-//  static bool flag=true;
-  if (count < 6) {
-	  _integral = 0.f;
+  // 防止積分飽和
+  if (_target_wheel_speed == 0) {
+    _integral = 0;
+  } else {
+    _integral = std::clamp(_integral, -MAX_INTEGRAL / _ki, MAX_INTEGRAL / _ki);
   }
-  else {
-	  _integral += (_error * _interval);
-  }
-  count ++;
-
-//  if (_target_wheel_speed == 0) {
-//	  _integral *= 0.9;
-//  }
-
-  // 防止積分飽和_error
-   _integral = std::clamp(_integral, -MAX_INTEGRAL / _ki, MAX_INTEGRAL / _ki);
-
 
   float derivative = (_error - _previous_error) / _interval;
   _previous_error = _error;
@@ -149,15 +112,6 @@ void DC_MOTOR::updateTargetPWM(void) {
   return;
 }
 
-
-/**
-// * @brief 更新當前距離 (m)
-// */
-//void DC_MOTOR::updateCurrentDistance(void) {
-//  float distance = (_current_pulse / _encoder_res) * (2 * M_PI * WheelRadius) / _sr_ratio;
-//  _current_wheel_distance = distance/1.5;
-//  return;
-//}
 
 /**
  * @brief 取得當前輪速 (rad/s)
@@ -178,21 +132,13 @@ float DC_MOTOR::get_target_pwm(void) const {
   return _target_PWM;
 };
 
-/**
- * @brief 取得當前距離 (m)
- * @param void
- * @return 當前距離 (m)
- */
-//float DC_MOTOR::get_current_wheel_distance(void) {
-//    return _current_wheel_distance;
-//}
 
 /**
  * @brief 設定目標輪速 (rad/s)
  * @param speed 目標輪速
  */
 void DC_MOTOR::set_target_wheel_speed(float speed){
-  _target_wheel_speed = speed /2;
+  _target_wheel_speed = speed;
   return;
 };
 
@@ -240,8 +186,6 @@ void DC_MOTOR::setInverse(bool is_inverse){
 void DC_MOTOR::update(int16_t currentCount) {
   updateCurrentSpeed(currentCount);
   updateTargetPWM();
-//  updateCurrentDistance();
-//  _total_wheel_distance += _current_wheel_distance;
   return;
 }
 
@@ -266,4 +210,3 @@ GPIO_PinState DC_MOTOR::getDirection(void) const {
 uint32_t DC_MOTOR::getPWMValue(void) const {
   return static_cast<uint32_t>(fabs(_target_PWM));
 }
-

@@ -27,6 +27,6 @@ ros2 run tf2_ros static_transform_publisher 0 0 0 0 0 0 odom base_link &
 ros2 launch nav2_bringup navigation_launch.py use_sim_time:=False map:=/rtabmap/map &
 
 ## 4. Launch RVIZ
-ros2 launch nav2_bringup rviz_launch.py &
+rviz2 -d /home/app/_gui_config/basic.rviz &
 
 tail -f /dev/null

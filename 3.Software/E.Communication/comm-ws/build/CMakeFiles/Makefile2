@@ -55,6 +55,7 @@ CMAKE_BINARY_DIR = /root/comm-ws/build
 # The main recursive "all" target.
 all: gtest/all
 all: firmware_commun/src/rosserial_msgs/all
+all: flask_esp8266/all
 all: firmware_commun/src/rosserial_server/all
 
 .PHONY : all
@@ -62,6 +63,7 @@ all: firmware_commun/src/rosserial_server/all
 # The main recursive "preinstall" target.
 preinstall: gtest/preinstall
 preinstall: firmware_commun/src/rosserial_msgs/preinstall
+preinstall: flask_esp8266/preinstall
 preinstall: firmware_commun/src/rosserial_server/preinstall
 
 .PHONY : preinstall
@@ -74,6 +76,7 @@ clean: CMakeFiles/tests.dir/clean
 clean: CMakeFiles/download_extra_data.dir/clean
 clean: gtest/clean
 clean: firmware_commun/src/rosserial_msgs/clean
+clean: flask_esp8266/clean
 clean: firmware_commun/src/rosserial_server/clean
 
 .PHONY : clean
@@ -114,9 +117,9 @@ firmware_commun/src/rosserial_msgs/clean: firmware_commun/src/rosserial_msgs/CMa
 # Directory level rules for directory firmware_commun/src/rosserial_server
 
 # Recursive "all" directory target.
-firmware_commun/src/rosserial_server/all: firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all
-firmware_commun/src/rosserial_server/all: firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_lookup.dir/all
 firmware_commun/src/rosserial_server/all: firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all
+firmware_commun/src/rosserial_server/all: firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_lookup.dir/all
+firmware_commun/src/rosserial_server/all: firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all
 firmware_commun/src/rosserial_server/all: firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all
 
 .PHONY : firmware_commun/src/rosserial_server/all
@@ -127,32 +130,49 @@ firmware_commun/src/rosserial_server/preinstall:
 .PHONY : firmware_commun/src/rosserial_server/preinstall
 
 # Recursive "clean" directory target.
-firmware_commun/src/rosserial_server/clean: firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
-firmware_commun/src/rosserial_server/clean: firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
 firmware_commun/src/rosserial_server/clean: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_cpp.dir/clean
-firmware_commun/src/rosserial_server/clean: firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
-firmware_commun/src/rosserial_server/clean: firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
-firmware_commun/src/rosserial_server/clean: firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
-firmware_commun/src/rosserial_server/clean: firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
-firmware_commun/src/rosserial_server/clean: firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
-firmware_commun/src/rosserial_server/clean: firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
-firmware_commun/src/rosserial_server/clean: firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
-firmware_commun/src/rosserial_server/clean: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir/clean
-firmware_commun/src/rosserial_server/clean: firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/clean
-firmware_commun/src/rosserial_server/clean: firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
-firmware_commun/src/rosserial_server/clean: firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_py.dir/clean
-firmware_commun/src/rosserial_server/clean: firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_py.dir/clean
-firmware_commun/src/rosserial_server/clean: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/clean
 firmware_commun/src/rosserial_server/clean: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/clean
-firmware_commun/src/rosserial_server/clean: firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_eus.dir/clean
-firmware_commun/src/rosserial_server/clean: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_nodejs.dir/clean
-firmware_commun/src/rosserial_server/clean: firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
-firmware_commun/src/rosserial_server/clean: firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_lookup.dir/clean
+firmware_commun/src/rosserial_server/clean: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir/clean
 firmware_commun/src/rosserial_server/clean: firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/clean
+firmware_commun/src/rosserial_server/clean: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_nodejs.dir/clean
+firmware_commun/src/rosserial_server/clean: firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_lookup.dir/clean
+firmware_commun/src/rosserial_server/clean: firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/clean
 firmware_commun/src/rosserial_server/clean: firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/clean
-firmware_commun/src/rosserial_server/clean: firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+firmware_commun/src/rosserial_server/clean: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/clean
 
 .PHONY : firmware_commun/src/rosserial_server/clean
+
+#=============================================================================
+# Directory level rules for directory flask_esp8266
+
+# Recursive "all" directory target.
+flask_esp8266/all:
+
+.PHONY : flask_esp8266/all
+
+# Recursive "preinstall" directory target.
+flask_esp8266/preinstall:
+
+.PHONY : flask_esp8266/preinstall
+
+# Recursive "clean" directory target.
+flask_esp8266/clean: flask_esp8266/CMakeFiles/std_msgs_generate_messages_py.dir/clean
+flask_esp8266/clean: flask_esp8266/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
+flask_esp8266/clean: flask_esp8266/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+flask_esp8266/clean: flask_esp8266/CMakeFiles/roscpp_generate_messages_eus.dir/clean
+flask_esp8266/clean: flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+flask_esp8266/clean: flask_esp8266/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+flask_esp8266/clean: flask_esp8266/CMakeFiles/roscpp_generate_messages_py.dir/clean
+flask_esp8266/clean: flask_esp8266/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
+flask_esp8266/clean: flask_esp8266/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
+flask_esp8266/clean: flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+flask_esp8266/clean: flask_esp8266/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+flask_esp8266/clean: flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+flask_esp8266/clean: flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+flask_esp8266/clean: flask_esp8266/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+flask_esp8266/clean: flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+
+.PHONY : flask_esp8266/clean
 
 #=============================================================================
 # Directory level rules for directory gtest
@@ -571,8 +591,8 @@ firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_gencpp.dir/clean:
 # All Build rule for target.
 firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages.dir/all: firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/all
 firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages.dir/all: firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/all
-firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages.dir/all: firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all
 firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages.dir/all: firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all
+firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages.dir/all: firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all
 firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages.dir/all: firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/all
 	$(MAKE) -f firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages.dir/build.make firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages.dir/depend
 	$(MAKE) -f firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages.dir/build.make firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages.dir/build
@@ -875,58 +895,409 @@ firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_l
 .PHONY : firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/clean
 
 #=============================================================================
-# Target rules for target firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_py.dir
+# Target rules for target flask_esp8266/CMakeFiles/std_msgs_generate_messages_py.dir
 
 # All Build rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_py"
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+flask_esp8266/CMakeFiles/std_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f flask_esp8266/CMakeFiles/std_msgs_generate_messages_py.dir/build.make flask_esp8266/CMakeFiles/std_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f flask_esp8266/CMakeFiles/std_msgs_generate_messages_py.dir/build.make flask_esp8266/CMakeFiles/std_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_py"
+.PHONY : flask_esp8266/CMakeFiles/std_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
-firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+flask_esp8266/CMakeFiles/std_msgs_generate_messages_py.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 flask_esp8266/CMakeFiles/std_msgs_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+.PHONY : flask_esp8266/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_py: firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+std_msgs_generate_messages_py: flask_esp8266/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 
-.PHONY : rosgraph_msgs_generate_messages_py
+.PHONY : std_msgs_generate_messages_py
 
 # clean rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+flask_esp8266/CMakeFiles/std_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f flask_esp8266/CMakeFiles/std_msgs_generate_messages_py.dir/build.make flask_esp8266/CMakeFiles/std_msgs_generate_messages_py.dir/clean
+.PHONY : flask_esp8266/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 
 #=============================================================================
-# Target rules for target firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_lisp.dir
+# Target rules for target flask_esp8266/CMakeFiles/std_msgs_generate_messages_nodejs.dir
 
 # All Build rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_lisp.dir/all:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_lisp.dir/depend
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_lisp"
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+flask_esp8266/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f flask_esp8266/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make flask_esp8266/CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f flask_esp8266/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make flask_esp8266/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_nodejs"
+.PHONY : flask_esp8266/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
-firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_lisp.dir/rule: cmake_check_build_system
+flask_esp8266/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 flask_esp8266/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+.PHONY : flask_esp8266/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-roscpp_generate_messages_lisp: firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+std_msgs_generate_messages_nodejs: flask_esp8266/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : std_msgs_generate_messages_nodejs
+
+# clean rule for target.
+flask_esp8266/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f flask_esp8266/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make flask_esp8266/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
+.PHONY : flask_esp8266/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target flask_esp8266/CMakeFiles/roscpp_generate_messages_cpp.dir
+
+# All Build rule for target.
+flask_esp8266/CMakeFiles/roscpp_generate_messages_cpp.dir/all:
+	$(MAKE) -f flask_esp8266/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make flask_esp8266/CMakeFiles/roscpp_generate_messages_cpp.dir/depend
+	$(MAKE) -f flask_esp8266/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make flask_esp8266/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_cpp"
+.PHONY : flask_esp8266/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+flask_esp8266/CMakeFiles/roscpp_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 flask_esp8266/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
+.PHONY : flask_esp8266/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_cpp: flask_esp8266/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+.PHONY : roscpp_generate_messages_cpp
+
+# clean rule for target.
+flask_esp8266/CMakeFiles/roscpp_generate_messages_cpp.dir/clean:
+	$(MAKE) -f flask_esp8266/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make flask_esp8266/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+.PHONY : flask_esp8266/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target flask_esp8266/CMakeFiles/roscpp_generate_messages_eus.dir
+
+# All Build rule for target.
+flask_esp8266/CMakeFiles/roscpp_generate_messages_eus.dir/all:
+	$(MAKE) -f flask_esp8266/CMakeFiles/roscpp_generate_messages_eus.dir/build.make flask_esp8266/CMakeFiles/roscpp_generate_messages_eus.dir/depend
+	$(MAKE) -f flask_esp8266/CMakeFiles/roscpp_generate_messages_eus.dir/build.make flask_esp8266/CMakeFiles/roscpp_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_eus"
+.PHONY : flask_esp8266/CMakeFiles/roscpp_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+flask_esp8266/CMakeFiles/roscpp_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 flask_esp8266/CMakeFiles/roscpp_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
+.PHONY : flask_esp8266/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_eus: flask_esp8266/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+
+.PHONY : roscpp_generate_messages_eus
+
+# clean rule for target.
+flask_esp8266/CMakeFiles/roscpp_generate_messages_eus.dir/clean:
+	$(MAKE) -f flask_esp8266/CMakeFiles/roscpp_generate_messages_eus.dir/build.make flask_esp8266/CMakeFiles/roscpp_generate_messages_eus.dir/clean
+.PHONY : flask_esp8266/CMakeFiles/roscpp_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir
+
+# All Build rule for target.
+flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_nodejs"
+.PHONY : flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
+.PHONY : flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_nodejs: flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_nodejs
+
+# clean rule for target.
+flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+.PHONY : flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target flask_esp8266/CMakeFiles/std_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+flask_esp8266/CMakeFiles/std_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f flask_esp8266/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make flask_esp8266/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f flask_esp8266/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make flask_esp8266/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_lisp"
+.PHONY : flask_esp8266/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+flask_esp8266/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 flask_esp8266/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
+.PHONY : flask_esp8266/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_lisp: flask_esp8266/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : std_msgs_generate_messages_lisp
+
+# clean rule for target.
+flask_esp8266/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f flask_esp8266/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make flask_esp8266/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+.PHONY : flask_esp8266/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target flask_esp8266/CMakeFiles/roscpp_generate_messages_py.dir
+
+# All Build rule for target.
+flask_esp8266/CMakeFiles/roscpp_generate_messages_py.dir/all:
+	$(MAKE) -f flask_esp8266/CMakeFiles/roscpp_generate_messages_py.dir/build.make flask_esp8266/CMakeFiles/roscpp_generate_messages_py.dir/depend
+	$(MAKE) -f flask_esp8266/CMakeFiles/roscpp_generate_messages_py.dir/build.make flask_esp8266/CMakeFiles/roscpp_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_py"
+.PHONY : flask_esp8266/CMakeFiles/roscpp_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+flask_esp8266/CMakeFiles/roscpp_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 flask_esp8266/CMakeFiles/roscpp_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
+.PHONY : flask_esp8266/CMakeFiles/roscpp_generate_messages_py.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_py: flask_esp8266/CMakeFiles/roscpp_generate_messages_py.dir/rule
+
+.PHONY : roscpp_generate_messages_py
+
+# clean rule for target.
+flask_esp8266/CMakeFiles/roscpp_generate_messages_py.dir/clean:
+	$(MAKE) -f flask_esp8266/CMakeFiles/roscpp_generate_messages_py.dir/build.make flask_esp8266/CMakeFiles/roscpp_generate_messages_py.dir/clean
+.PHONY : flask_esp8266/CMakeFiles/roscpp_generate_messages_py.dir/clean
+
+#=============================================================================
+# Target rules for target flask_esp8266/CMakeFiles/std_msgs_generate_messages_eus.dir
+
+# All Build rule for target.
+flask_esp8266/CMakeFiles/std_msgs_generate_messages_eus.dir/all:
+	$(MAKE) -f flask_esp8266/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make flask_esp8266/CMakeFiles/std_msgs_generate_messages_eus.dir/depend
+	$(MAKE) -f flask_esp8266/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make flask_esp8266/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_eus"
+.PHONY : flask_esp8266/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+flask_esp8266/CMakeFiles/std_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 flask_esp8266/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
+.PHONY : flask_esp8266/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_eus: flask_esp8266/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+
+.PHONY : std_msgs_generate_messages_eus
+
+# clean rule for target.
+flask_esp8266/CMakeFiles/std_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) -f flask_esp8266/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make flask_esp8266/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
+.PHONY : flask_esp8266/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target flask_esp8266/CMakeFiles/roscpp_generate_messages_nodejs.dir
+
+# All Build rule for target.
+flask_esp8266/CMakeFiles/roscpp_generate_messages_nodejs.dir/all:
+	$(MAKE) -f flask_esp8266/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make flask_esp8266/CMakeFiles/roscpp_generate_messages_nodejs.dir/depend
+	$(MAKE) -f flask_esp8266/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make flask_esp8266/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_nodejs"
+.PHONY : flask_esp8266/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+flask_esp8266/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 flask_esp8266/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
+.PHONY : flask_esp8266/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_nodejs: flask_esp8266/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+
+.PHONY : roscpp_generate_messages_nodejs
+
+# clean rule for target.
+flask_esp8266/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f flask_esp8266/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make flask_esp8266/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
+.PHONY : flask_esp8266/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
+
+# All Build rule for target.
+flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_cpp"
+.PHONY : flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
+.PHONY : flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_cpp: flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# clean rule for target.
+flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+.PHONY : flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target flask_esp8266/CMakeFiles/std_msgs_generate_messages_cpp.dir
+
+# All Build rule for target.
+flask_esp8266/CMakeFiles/std_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f flask_esp8266/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make flask_esp8266/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f flask_esp8266/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make flask_esp8266/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_cpp"
+.PHONY : flask_esp8266/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+flask_esp8266/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 flask_esp8266/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
+.PHONY : flask_esp8266/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_cpp: flask_esp8266/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : std_msgs_generate_messages_cpp
+
+# clean rule for target.
+flask_esp8266/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f flask_esp8266/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make flask_esp8266/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+.PHONY : flask_esp8266/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir
+
+# All Build rule for target.
+flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all:
+	$(MAKE) -f flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/depend
+	$(MAKE) -f flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_eus"
+.PHONY : flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
+.PHONY : flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_eus: flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_eus
+
+# clean rule for target.
+flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) -f flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+.PHONY : flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_lisp"
+.PHONY : flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
+.PHONY : flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_lisp: flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_lisp
+
+# clean rule for target.
+flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+.PHONY : flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target flask_esp8266/CMakeFiles/roscpp_generate_messages_lisp.dir
+
+# All Build rule for target.
+flask_esp8266/CMakeFiles/roscpp_generate_messages_lisp.dir/all:
+	$(MAKE) -f flask_esp8266/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make flask_esp8266/CMakeFiles/roscpp_generate_messages_lisp.dir/depend
+	$(MAKE) -f flask_esp8266/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make flask_esp8266/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_lisp"
+.PHONY : flask_esp8266/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+flask_esp8266/CMakeFiles/roscpp_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 flask_esp8266/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
+.PHONY : flask_esp8266/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_lisp: flask_esp8266/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 
 .PHONY : roscpp_generate_messages_lisp
 
 # clean rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_lisp.dir/clean:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+flask_esp8266/CMakeFiles/roscpp_generate_messages_lisp.dir/clean:
+	$(MAKE) -f flask_esp8266/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make flask_esp8266/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+.PHONY : flask_esp8266/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_py"
+.PHONY : flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
+.PHONY : flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_py: flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_py
+
+# clean rule for target.
+flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+.PHONY : flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
 
 #=============================================================================
 # Target rules for target firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_cpp.dir
@@ -956,193 +1327,31 @@ firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_cp
 .PHONY : firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_cpp.dir/clean
 
 #=============================================================================
-# Target rules for target firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
+# Target rules for target firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir
 
 # All Build rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/depend
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_lisp"
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/all:
+	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/depend
+	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target topic_tools_generate_messages_eus"
+.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
-firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+topic_tools_generate_messages_eus: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
 
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# clean rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
-
-#=============================================================================
-# Target rules for target firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir
-
-# All Build rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/depend
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_eus"
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-
-# Build rule for subdir invocation for target.
-firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_eus: firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_eus
+.PHONY : topic_tools_generate_messages_eus
 
 # clean rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
-
-#=============================================================================
-# Target rules for target firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_cpp.dir
-
-# All Build rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_cpp.dir/all:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_cpp"
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_cpp: firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : std_msgs_generate_messages_cpp
-
-# clean rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
-
-#=============================================================================
-# Target rules for target firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_nodejs.dir
-
-# All Build rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_nodejs.dir/all:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_nodejs.dir/depend
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_nodejs"
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-
-# Build rule for subdir invocation for target.
-firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_nodejs: firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-.PHONY : roscpp_generate_messages_nodejs
-
-# clean rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
-
-#=============================================================================
-# Target rules for target firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_eus.dir
-
-# All Build rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_eus.dir/all:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_eus.dir/depend
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_eus"
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_eus.dir/all
-
-# Build rule for subdir invocation for target.
-firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_eus: firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-.PHONY : std_msgs_generate_messages_eus
-
-# clean rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_eus.dir/clean:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
-
-#=============================================================================
-# Target rules for target firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_lisp.dir
-
-# All Build rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_lisp.dir/all:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_lisp"
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : std_msgs_generate_messages_lisp
-
-# clean rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
-
-#=============================================================================
-# Target rules for target firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir
-
-# All Build rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/depend
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_nodejs"
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-
-# Build rule for subdir invocation for target.
-firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_nodejs: firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_nodejs
-
-# clean rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/clean:
+	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/clean
+.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/clean
 
 #=============================================================================
 # Target rules for target firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir
@@ -1172,218 +1381,56 @@ firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_li
 .PHONY : firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir/clean
 
 #=============================================================================
-# Target rules for target firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir
+# Target rules for target firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir
 
 # All Build rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_eus.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_py.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_py.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_eus.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_nodejs.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_lookup.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_cpp.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/depend
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num=31,32 "Built target rosserial_server_socket_node"
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: flask_esp8266/CMakeFiles/std_msgs_generate_messages_py.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: flask_esp8266/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: flask_esp8266/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: flask_esp8266/CMakeFiles/roscpp_generate_messages_eus.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: flask_esp8266/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: flask_esp8266/CMakeFiles/roscpp_generate_messages_py.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: flask_esp8266/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: flask_esp8266/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: flask_esp8266/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: flask_esp8266/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_cpp.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_nodejs.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_lookup.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/all
+	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/depend
+	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num=29,30 "Built target rosserial_server_serial_node"
+.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all
 
 # Build rule for subdir invocation for target.
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/rule: cmake_check_build_system
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 22
-	$(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/rule
+.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/rule
 
 # Convenience name for target.
-rosserial_server_socket_node: firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/rule
+rosserial_server_serial_node: firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/rule
 
-.PHONY : rosserial_server_socket_node
-
-# clean rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/clean:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/clean
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/clean
-
-#=============================================================================
-# Target rules for target firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_nodejs.dir
-
-# All Build rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_nodejs"
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-
-# Build rule for subdir invocation for target.
-firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_nodejs: firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : std_msgs_generate_messages_nodejs
+.PHONY : rosserial_server_serial_node
 
 # clean rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
-
-#=============================================================================
-# Target rules for target firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_py.dir
-
-# All Build rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_py.dir/all:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_py.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_py.dir/depend
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_py.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_py"
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-.PHONY : std_msgs_generate_messages_py
-
-# clean rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_py.dir/clean:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_py.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_py.dir/clean
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_py.dir/clean
-
-#=============================================================================
-# Target rules for target firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_py.dir
-
-# All Build rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_py.dir/all:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_py.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_py.dir/depend
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_py.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_py"
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_py: firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-.PHONY : roscpp_generate_messages_py
-
-# clean rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_py.dir/clean:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_py.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_py.dir/clean
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_py.dir/clean
-
-#=============================================================================
-# Target rules for target firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir
-
-# All Build rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/all:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/depend
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target topic_tools_generate_messages_py"
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/rule
-
-# Convenience name for target.
-topic_tools_generate_messages_py: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/rule
-
-.PHONY : topic_tools_generate_messages_py
-
-# clean rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/clean:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/clean
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/clean
-
-#=============================================================================
-# Target rules for target firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir
-
-# All Build rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/all:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/depend
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target topic_tools_generate_messages_eus"
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/all
-
-# Build rule for subdir invocation for target.
-firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-topic_tools_generate_messages_eus: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
-
-.PHONY : topic_tools_generate_messages_eus
-
-# clean rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/clean:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/clean
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/clean
-
-#=============================================================================
-# Target rules for target firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_eus.dir
-
-# All Build rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_eus.dir/all:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_eus.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_eus.dir/depend
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_eus.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_eus"
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_eus.dir/all
-
-# Build rule for subdir invocation for target.
-firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_eus: firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-.PHONY : roscpp_generate_messages_eus
-
-# clean rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_eus.dir/clean:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_eus.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_eus.dir/clean
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_eus.dir/clean
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/clean:
+	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/clean
+.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/clean
 
 #=============================================================================
 # Target rules for target firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_nodejs.dir
@@ -1413,33 +1460,6 @@ firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_no
 .PHONY : firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_nodejs.dir/clean
 
 #=============================================================================
-# Target rules for target firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_cpp.dir
-
-# All Build rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_cpp.dir/all:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_cpp.dir/depend
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_cpp"
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_cpp: firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-.PHONY : roscpp_generate_messages_cpp
-
-# clean rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_cpp.dir/clean:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
-
-#=============================================================================
 # Target rules for target firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_lookup.dir
 
 # All Build rule for target.
@@ -1467,56 +1487,56 @@ firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_lookup.dir/clea
 .PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_lookup.dir/clean
 
 #=============================================================================
-# Target rules for target firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir
+# Target rules for target firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir
 
 # All Build rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_eus.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_py.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_py.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_eus.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_nodejs.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_lookup.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_cpp.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/depend
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num=29,30 "Built target rosserial_server_serial_node"
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: flask_esp8266/CMakeFiles/std_msgs_generate_messages_py.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: flask_esp8266/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: flask_esp8266/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: flask_esp8266/CMakeFiles/roscpp_generate_messages_eus.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: flask_esp8266/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: flask_esp8266/CMakeFiles/roscpp_generate_messages_py.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: flask_esp8266/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: flask_esp8266/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: flask_esp8266/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: flask_esp8266/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_cpp.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_nodejs.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_lookup.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/all
+	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/depend
+	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num=31,32 "Built target rosserial_server_socket_node"
+.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all
 
 # Build rule for subdir invocation for target.
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/rule: cmake_check_build_system
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 22
-	$(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/rule
+.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/rule
 
 # Convenience name for target.
-rosserial_server_serial_node: firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/rule
+rosserial_server_socket_node: firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/rule
 
-.PHONY : rosserial_server_serial_node
+.PHONY : rosserial_server_socket_node
 
 # clean rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/clean:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/clean
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/clean
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/clean:
+	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/clean
+.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/clean
 
 #=============================================================================
 # Target rules for target firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir
@@ -1524,30 +1544,30 @@ firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir
 # All Build rule for target.
 firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/all
 firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_eus.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_py.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_py.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_eus.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_nodejs.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_lookup.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
 firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all
 firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: firmware_commun/src/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: flask_esp8266/CMakeFiles/std_msgs_generate_messages_py.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: flask_esp8266/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: flask_esp8266/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: flask_esp8266/CMakeFiles/roscpp_generate_messages_eus.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: flask_esp8266/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: flask_esp8266/CMakeFiles/roscpp_generate_messages_py.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: flask_esp8266/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: flask_esp8266/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: flask_esp8266/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: flask_esp8266/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: flask_esp8266/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
 firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_cpp.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_nodejs.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_lookup.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/all
 	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/depend
 	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num=33,34 "Built target rosserial_server_udp_socket_node"
@@ -1571,31 +1591,31 @@ firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node
 .PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/clean
 
 #=============================================================================
-# Target rules for target firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
+# Target rules for target firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir
 
 # All Build rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_cpp"
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/all:
+	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/depend
+	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/comm-ws/build/CMakeFiles --progress-num= "Built target topic_tools_generate_messages_py"
+.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
-firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/comm-ws/build/CMakeFiles 0
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+topic_tools_generate_messages_py: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/rule
 
-.PHONY : rosgraph_msgs_generate_messages_cpp
+.PHONY : topic_tools_generate_messages_py
 
 # clean rule for target.
-firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
-	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/clean:
+	$(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/clean
+.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

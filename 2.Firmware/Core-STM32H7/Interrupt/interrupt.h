@@ -8,7 +8,6 @@
 #ifndef INTERRUPT_H_
 #define INTERRUPT_H_
 
-#include <encoder.h>
 #include "stm32h7xx_hal.h"
 
 extern TIM_HandleTypeDef htim1;
@@ -22,20 +21,11 @@ extern TIM_HandleTypeDef htim15;
 extern TIM_HandleTypeDef htim23;
 extern TIM_HandleTypeDef htim24;
 
-<<<<<<< HEAD
-extern int t1;
-extern int pulse;
-extern float speedData[1000];
-
-extern float encoder_right[4000];
-extern float encoder_left[4000];
-=======
 extern int t;
 extern int pulse;
 extern float speedData[1000];
 extern float encoderRight;
 extern float encoderLeft;
->>>>>>> 07a38791ac489d39095a155272587fe0c2386512
 
 #define RIGHT_DIR_PORT GPIOD
 #define RIGHT_DIR_PIN GPIO_PIN_3

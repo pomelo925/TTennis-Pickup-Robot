@@ -132,6 +132,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/root/comm-ws/build/gtest/cmake_install.cmake")
   include("/root/comm-ws/build/firmware_commun/src/rosserial_msgs/cmake_install.cmake")
+  include("/root/comm-ws/build/flask_esp8266/cmake_install.cmake")
   include("/root/comm-ws/build/firmware_commun/src/rosserial_server/cmake_install.cmake")
 
 endif()

@@ -53,8 +53,8 @@ find ../D.RTABMap -type f -name "*.sh" -exec sudo chmod +x {} \;
 
 ## 2. environment setup  
 export COMMAND 
-# export DISPLAY=localhost:10.0
-export DISPLAY=:0
+export DISPLAY=localhost:10.0
+# export DISPLAY=:0
 xhost +local:docker
 cd docker
 

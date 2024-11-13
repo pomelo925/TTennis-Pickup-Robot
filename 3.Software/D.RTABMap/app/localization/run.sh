@@ -3,7 +3,7 @@
 #######################
 ####  User Config  ####
 RVIZ_ENABLED=false
-FOXGLOVE_ENABLED=false
+FOXGLOVE_ENABLED=true
 
 MAP_DIR="/home/app/_map_database"
 #######################
@@ -39,7 +39,7 @@ ros2 launch rtabmap_launch rtabmap.launch.py \
   database_path:=${DATABASE_PATH} \
   log_level:=debug \
   localization:=true \
-  approx_sync:=false \
+  approx_sync:=true \
   rviz:=false \
   qos:=2 &
   

@@ -1,0 +1,8 @@
+prefix=/root/comm-ws/devel
+
+Name: flask_esp8266
+Description: Description of flask_esp8266
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

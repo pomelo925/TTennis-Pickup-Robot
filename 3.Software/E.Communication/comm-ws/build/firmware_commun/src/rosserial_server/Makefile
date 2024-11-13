@@ -92,15 +92,16 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
+# Special rule for the target test
+test/fast: test
 
-.PHONY : list_install_components/fast
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -124,16 +125,15 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
 
-# Special rule for the target test
-test/fast: test
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
 
-.PHONY : test/fast
+.PHONY : list_install_components/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,36 +168,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /root/comm-ws/build && $(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_py: firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	cd /root/comm-ws/build && $(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /root/comm-ws/build && $(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_lisp: firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-.PHONY : roscpp_generate_messages_lisp
-
-# fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	cd /root/comm-ws/build && $(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
-
-# Convenience name for target.
 firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule:
 	cd /root/comm-ws/build && $(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
 .PHONY : firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
@@ -211,201 +181,6 @@ topic_tools_generate_messages_cpp: firmware_commun/src/rosserial_server/CMakeFil
 topic_tools_generate_messages_cpp/fast:
 	cd /root/comm-ws/build && $(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_cpp.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_cpp.dir/build
 .PHONY : topic_tools_generate_messages_cpp/fast
-
-# Convenience name for target.
-firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /root/comm-ws/build && $(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	cd /root/comm-ws/build && $(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
-	cd /root/comm-ws/build && $(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_eus: firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_eus
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_eus/fast:
-	cd /root/comm-ws/build && $(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
-.PHONY : rosgraph_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /root/comm-ws/build && $(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_cpp: firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	cd /root/comm-ws/build && $(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
-	cd /root/comm-ws/build && $(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_nodejs: firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-.PHONY : roscpp_generate_messages_nodejs
-
-# fast build rule for target.
-roscpp_generate_messages_nodejs/fast:
-	cd /root/comm-ws/build && $(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
-.PHONY : roscpp_generate_messages_nodejs/fast
-
-# Convenience name for target.
-firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
-	cd /root/comm-ws/build && $(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_eus: firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-.PHONY : std_msgs_generate_messages_eus
-
-# fast build rule for target.
-std_msgs_generate_messages_eus/fast:
-	cd /root/comm-ws/build && $(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-.PHONY : std_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /root/comm-ws/build && $(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /root/comm-ws/build && $(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
-	cd /root/comm-ws/build && $(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_nodejs: firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_nodejs/fast:
-	cd /root/comm-ws/build && $(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
-.PHONY : rosgraph_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule:
-	cd /root/comm-ws/build && $(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-topic_tools_generate_messages_lisp: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
-
-.PHONY : topic_tools_generate_messages_lisp
-
-# fast build rule for target.
-topic_tools_generate_messages_lisp/fast:
-	cd /root/comm-ws/build && $(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir/build
-.PHONY : topic_tools_generate_messages_lisp/fast
-
-# Convenience name for target.
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/rule:
-	cd /root/comm-ws/build && $(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/rule
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/rule
-
-# Convenience name for target.
-rosserial_server_socket_node: firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/rule
-
-.PHONY : rosserial_server_socket_node
-
-# fast build rule for target.
-rosserial_server_socket_node/fast:
-	cd /root/comm-ws/build && $(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/build
-.PHONY : rosserial_server_socket_node/fast
-
-# Convenience name for target.
-firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
-	cd /root/comm-ws/build && $(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_nodejs: firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : std_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	cd /root/comm-ws/build && $(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /root/comm-ws/build && $(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	cd /root/comm-ws/build && $(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_py.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /root/comm-ws/build && $(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_py: firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-.PHONY : roscpp_generate_messages_py
-
-# fast build rule for target.
-roscpp_generate_messages_py/fast:
-	cd /root/comm-ws/build && $(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_py.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
-
-# Convenience name for target.
-firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/rule:
-	cd /root/comm-ws/build && $(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/rule
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/rule
-
-# Convenience name for target.
-topic_tools_generate_messages_py: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/rule
-
-.PHONY : topic_tools_generate_messages_py
-
-# fast build rule for target.
-topic_tools_generate_messages_py/fast:
-	cd /root/comm-ws/build && $(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/build
-.PHONY : topic_tools_generate_messages_py/fast
 
 # Convenience name for target.
 firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_eus.dir/rule:
@@ -423,64 +198,19 @@ topic_tools_generate_messages_eus/fast:
 .PHONY : topic_tools_generate_messages_eus/fast
 
 # Convenience name for target.
-firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
-	cd /root/comm-ws/build && $(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule:
+	cd /root/comm-ws/build && $(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
+.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-roscpp_generate_messages_eus: firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+topic_tools_generate_messages_lisp: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
 
-.PHONY : roscpp_generate_messages_eus
+.PHONY : topic_tools_generate_messages_lisp
 
 # fast build rule for target.
-roscpp_generate_messages_eus/fast:
-	cd /root/comm-ws/build && $(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_eus.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_eus.dir/build
-.PHONY : roscpp_generate_messages_eus/fast
-
-# Convenience name for target.
-firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule:
-	cd /root/comm-ws/build && $(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-topic_tools_generate_messages_nodejs: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule
-
-.PHONY : topic_tools_generate_messages_nodejs
-
-# fast build rule for target.
-topic_tools_generate_messages_nodejs/fast:
-	cd /root/comm-ws/build && $(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_nodejs.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_nodejs.dir/build
-.PHONY : topic_tools_generate_messages_nodejs/fast
-
-# Convenience name for target.
-firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /root/comm-ws/build && $(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_cpp: firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-.PHONY : roscpp_generate_messages_cpp
-
-# fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	cd /root/comm-ws/build && $(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
-
-# Convenience name for target.
-firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_lookup.dir/rule:
-	cd /root/comm-ws/build && $(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_lookup.dir/rule
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_lookup.dir/rule
-
-# Convenience name for target.
-rosserial_server_lookup: firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_lookup.dir/rule
-
-.PHONY : rosserial_server_lookup
-
-# fast build rule for target.
-rosserial_server_lookup/fast:
-	cd /root/comm-ws/build && $(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_lookup.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_lookup.dir/build
-.PHONY : rosserial_server_lookup/fast
+topic_tools_generate_messages_lisp/fast:
+	cd /root/comm-ws/build && $(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir/build
+.PHONY : topic_tools_generate_messages_lisp/fast
 
 # Convenience name for target.
 firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/rule:
@@ -498,6 +228,51 @@ rosserial_server_serial_node/fast:
 .PHONY : rosserial_server_serial_node/fast
 
 # Convenience name for target.
+firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule:
+	cd /root/comm-ws/build && $(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule
+.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+topic_tools_generate_messages_nodejs: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule
+
+.PHONY : topic_tools_generate_messages_nodejs
+
+# fast build rule for target.
+topic_tools_generate_messages_nodejs/fast:
+	cd /root/comm-ws/build && $(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_nodejs.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_nodejs.dir/build
+.PHONY : topic_tools_generate_messages_nodejs/fast
+
+# Convenience name for target.
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_lookup.dir/rule:
+	cd /root/comm-ws/build && $(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_lookup.dir/rule
+.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_lookup.dir/rule
+
+# Convenience name for target.
+rosserial_server_lookup: firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_lookup.dir/rule
+
+.PHONY : rosserial_server_lookup
+
+# fast build rule for target.
+rosserial_server_lookup/fast:
+	cd /root/comm-ws/build && $(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_lookup.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_lookup.dir/build
+.PHONY : rosserial_server_lookup/fast
+
+# Convenience name for target.
+firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/rule:
+	cd /root/comm-ws/build && $(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/rule
+.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/rule
+
+# Convenience name for target.
+rosserial_server_socket_node: firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/rule
+
+.PHONY : rosserial_server_socket_node
+
+# fast build rule for target.
+rosserial_server_socket_node/fast:
+	cd /root/comm-ws/build && $(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/build
+.PHONY : rosserial_server_socket_node/fast
+
+# Convenience name for target.
 firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/rule:
 	cd /root/comm-ws/build && $(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/rule
 .PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/rule
@@ -513,19 +288,19 @@ rosserial_server_udp_socket_node/fast:
 .PHONY : rosserial_server_udp_socket_node/fast
 
 # Convenience name for target.
-firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /root/comm-ws/build && $(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/rule:
+	cd /root/comm-ws/build && $(MAKE) -f CMakeFiles/Makefile2 firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/rule
+.PHONY : firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+topic_tools_generate_messages_py: firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/rule
 
-.PHONY : rosgraph_msgs_generate_messages_cpp
+.PHONY : topic_tools_generate_messages_py
 
 # fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /root/comm-ws/build && $(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+topic_tools_generate_messages_py/fast:
+	cd /root/comm-ws/build && $(MAKE) -f firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/build.make firmware_commun/src/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/build
+.PHONY : topic_tools_generate_messages_py/fast
 
 src/msg_lookup.o: src/msg_lookup.cpp.o
 
@@ -642,36 +417,21 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... roscpp_generate_messages_lisp"
-	@echo "... topic_tools_generate_messages_cpp"
-	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... install/local"
-	@echo "... rosgraph_msgs_generate_messages_eus"
-	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... roscpp_generate_messages_nodejs"
-	@echo "... std_msgs_generate_messages_eus"
 	@echo "... install"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... list_install_components"
-	@echo "... rosgraph_msgs_generate_messages_nodejs"
-	@echo "... topic_tools_generate_messages_lisp"
-	@echo "... rosserial_server_socket_node"
-	@echo "... std_msgs_generate_messages_nodejs"
-	@echo "... std_msgs_generate_messages_py"
-	@echo "... roscpp_generate_messages_py"
-	@echo "... topic_tools_generate_messages_py"
+	@echo "... topic_tools_generate_messages_cpp"
 	@echo "... topic_tools_generate_messages_eus"
-	@echo "... edit_cache"
-	@echo "... roscpp_generate_messages_eus"
-	@echo "... topic_tools_generate_messages_nodejs"
-	@echo "... rebuild_cache"
-	@echo "... roscpp_generate_messages_cpp"
-	@echo "... rosserial_server_lookup"
-	@echo "... rosserial_server_serial_node"
-	@echo "... rosserial_server_udp_socket_node"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... test"
+	@echo "... topic_tools_generate_messages_lisp"
+	@echo "... rosserial_server_serial_node"
+	@echo "... topic_tools_generate_messages_nodejs"
+	@echo "... rosserial_server_lookup"
+	@echo "... rosserial_server_socket_node"
+	@echo "... rosserial_server_udp_socket_node"
+	@echo "... edit_cache"
+	@echo "... topic_tools_generate_messages_py"
+	@echo "... rebuild_cache"
+	@echo "... list_install_components"
 	@echo "... src/msg_lookup.o"
 	@echo "... src/msg_lookup.i"
 	@echo "... src/msg_lookup.s"

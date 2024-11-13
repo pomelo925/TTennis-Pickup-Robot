@@ -54,7 +54,11 @@ services:
             source /root/comm-ws/devel/setup.bash && 
             cd /root/comm-ws &&
             sudo chmod 777 /dev/ttyUSB0 &&
-            roslaunch rosserial_server stm32.launch"
+            roslaunch rosserial_server stm32.launch &
+            cd /root/comm-ws/src/flask_esp8266/src &&
+            python app.py & 
+            cd /root/comm-ws &&
+            rosrun flask_esp8266 button_press_publisher.py"
         
 
   # ros2:
