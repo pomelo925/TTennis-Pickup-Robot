@@ -73,6 +73,10 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     ros-humble-foxglove-bridge \
     ## Install Navigation2 dependencies
     ros-humble-nav2-rviz-plugins \
+    ## Install Turtlebot3 dependencies
+    ros-humble-gazebo-* \
+    ros-humble-cartographer ros-humble-cartographer-ros \
+    ros-humble-dynamixel-sdk ros-humble-turtlebot3-msgs ros-humble-turtlebot3 \
     && rm -rf /var/lib/apt/lists/
 
 
