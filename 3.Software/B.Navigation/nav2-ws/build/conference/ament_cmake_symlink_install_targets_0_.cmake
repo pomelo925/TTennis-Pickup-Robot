@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/nav2-ws/build/conference/libnav.a" "/home/nav2-ws/build/conference/demo_nav_retrieval" "/home/nav2-ws/build/conference/demo_retrieval_supply" "TARGETS" "nav" "demo_nav_retrieval" "demo_retrieval_supply" "DESTINATION" "lib/conference")

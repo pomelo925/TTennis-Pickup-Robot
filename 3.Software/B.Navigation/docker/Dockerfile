@@ -95,8 +95,6 @@ RUN apt-get update && \
 #####
 
 
-
-
 ## Final configurations
 # USER $USERNAME
 CMD ["/bin/bash"]

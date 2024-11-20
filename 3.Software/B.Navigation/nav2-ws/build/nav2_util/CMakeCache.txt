@@ -303,7 +303,7 @@ _gtest_header_file:FILEPATH=/opt/ros/humble/src/gtest_vendor/include/gtest/gtest
 _gtest_src_file:FILEPATH=/opt/ros/humble/src/gtest_vendor/src/gtest.cc
 
 //Path to a library.
-_lib:FILEPATH=/opt/ros/humble/lib/libstd_srvs__rosidl_typesupport_fastrtps_cpp.so
+_lib:FILEPATH=/opt/ros/humble/lib/libtest_msgs__rosidl_typesupport_fastrtps_cpp.so
 
 //The directory containing a CMake configuration file for action_msgs.
 action_msgs_DIR:PATH=/opt/ros/humble/share/action_msgs/cmake
@@ -654,7 +654,7 @@ std_msgs_DIR:PATH=/opt/ros/humble/share/std_msgs/cmake
 std_srvs_DIR:PATH=/opt/ros/humble/share/std_srvs/cmake
 
 //The directory containing a CMake configuration file for test_msgs.
-test_msgs_DIR:PATH=test_msgs_DIR-NOTFOUND
+test_msgs_DIR:PATH=/opt/ros/humble/share/test_msgs/cmake
 
 //The directory containing a CMake configuration file for tf2.
 tf2_DIR:PATH=/opt/ros/humble/share/tf2/cmake

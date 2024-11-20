@@ -17,7 +17,8 @@ x-shared-settings: &shared-settings
     ## ref: https://github.com/luxonis/depthai-docs-website/blob/master/source/pages/troubleshooting.rst#udev-rules-on-linux
   
     - ../app:/home/app
-    - ../device-decoding:/home/dai-ws/src/device-decoding:ro,exclude=.cache
+    # - ../device-decoding:/home/dai-ws/device-decoding:ro,exclude=.cache
+    - ../device-decoding:/home/dai-ws/device-decoding:exclude=.cache
   environment:
     - DISPLAY=${DISPLAY}
     - COMMAND=${COMMAND}

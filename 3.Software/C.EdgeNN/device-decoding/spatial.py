@@ -9,6 +9,7 @@ BLOB_PATH = "model/best.blob"
 
 # Label texts
 labelMap = [
+    "beacon",
     "pongballs"
 ]
 
@@ -57,7 +58,7 @@ def create_pipeline():
     spatialDetectionNetwork.setDepthUpperThreshold(5000)
 
     # Yolo specific parameters
-    spatialDetectionNetwork.setNumClasses(1)
+    spatialDetectionNetwork.setNumClasses(2)
     spatialDetectionNetwork.setCoordinateSize(4)
     spatialDetectionNetwork.setAnchors([10,14, 23,27, 37,58, 81,82, 135,169, 344,319])
     spatialDetectionNetwork.setAnchorMasks({ "side26": [1,2,3], "side13": [3,4,5] })
@@ -137,7 +138,7 @@ def process_detection(frame, detection, height, width):
     try:
         label = labelMap[detection.label]
     except:
-        label = "pongballs"
+        label = "unknown"
 
     if ENABLE_GUI_CV:
         cv2.putText(frame, str(label), (x1 + 10, y1 + 20), cv2.FONT_HERSHEY_TRIPLEX, 0.5, COLOR)

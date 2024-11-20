@@ -85,7 +85,6 @@ RUN pip install \
 ENV WS=/home/dai-ws
 WORKDIR $WS
 
-RUN echo "source /opt/ros/$ROS_DISTRO/setup.bash" >> ~/.bashrc && \
-   echo "source $WS/install/setup.bash" >> ~/.bashrc 
+RUN echo "source /opt/ros/$ROS_DISTRO/setup.bash" >> ~/.bashrc 
 
 CMD ["/bin/bash"]
