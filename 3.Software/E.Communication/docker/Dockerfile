@@ -120,8 +120,6 @@ RUN source install/setup.bash && \
 COPY ./start-bridge.sh /start-bridge.sh 
 RUN chmod +x /start-bridge.sh
 
-USER user
-WORKDIR /
 CMD ["/bin/bash"]
 
 ################################################################################################
