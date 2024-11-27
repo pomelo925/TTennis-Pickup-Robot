@@ -1,0 +1,38 @@
+#############################
+###   shared settings     ###
+#############################
+x-shared-settings: &shared-settings
+  build: 
+    context: .  
+    dockerfile: Dockerfile
+  image: pomelo925/ttennis-humble:coordinator
+  stdin_open: true
+  tty: true
+  network_mode: host
+  privileged: true
+  volumes:
+    - /dev/bus/usb:/dev/bus/usb
+    - /tmp/.X11-unix:/tmp/.X11-unix
+    - $HOME/.Xauthority:/root/.Xauthority
+    - /dev/shm:/dev/shm
+
+    - ../app:/home/app
+    - ../main-ws/build:/home/main-ws/build
+    - ../main-ws/install:/home/main-ws/install
+    - ../main-ws/src:/home/main-ws/src
+
+  environment:
+    - DISPLAY=${DISPLAY}
+    - COMMAND=${COMMAND}
+  devices:
+    - /dev/bus/usb:/dev/bus/usb
+    
+
+#############################
+###   Container Startup   ###
+#############################
+services:
+  navigation-deployment:
+    <<: *shared-settings
+    container_name: navigation-deployment
+    command: "/bin/bash -c \"${COMMAND}\""

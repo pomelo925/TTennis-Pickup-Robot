@@ -96,6 +96,15 @@ Cristian Mihai 的開源專案](https://www.youtube.com/watch?v=dImgZ_AH7uA&t=19
 </br></br>
 
 <div align="center">
+ <h2> ⭐ 軟體前端 - Nextjs x Framer Motion⭐ </h2>
+</div>
+
+介面 DEMO 示例，僅：
+![alt text](/5.Docs/assets/webui.gif)
+
+</br></br>
+
+<div align="center">
  <h2> ⭐ 軟體後端 - EdgeNN ⭐ </h2>
 </div>
 
