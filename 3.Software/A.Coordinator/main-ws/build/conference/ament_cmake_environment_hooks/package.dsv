@@ -1,0 +1,4 @@
+source;share/conference/local_setup.bash
+source;share/conference/local_setup.dsv
+source;share/conference/local_setup.sh
+source;share/conference/local_setup.zsh

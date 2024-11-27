@@ -1,8 +1,10 @@
 #include "conference/nav.hpp"
+#include "conference/intake.hpp"
 
 int main(int argc, char * argv[]) {
   rclcpp::init(argc, argv);
   auto node = rclcpp::Node::make_shared("demo_retrieval_supply");
+
   Nav::init(node);
 
   // 逆時鐘轉 2 秒

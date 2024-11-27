@@ -1,0 +1,1 @@
+/home/main-ws/build/conference/ament_cmake_environment_hooks/local_setup.sh

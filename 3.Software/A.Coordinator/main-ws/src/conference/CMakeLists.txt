@@ -14,15 +14,18 @@ find_package(geometry_msgs REQUIRED)
 #########################################################
 include_directories(include)
 
+add_library(intake src/intake.cpp)
+ament_target_dependencies(intake rclcpp std_msgs)
+
 add_library(nav src/nav.cpp)
 ament_target_dependencies(nav rclcpp geometry_msgs)
 
 
 add_executable(demo_nav_retrieval src/demo_nav_retrieval.cpp)
-target_link_libraries(demo_nav_retrieval nav)
+target_link_libraries(demo_nav_retrieval nav intake)
 
 add_executable(demo_retrieval_supply src/demo_retrieval_supply.cpp)
-target_link_libraries(demo_retrieval_supply nav)
+target_link_libraries(demo_retrieval_supply nav intake)
 
 install(TARGETS
   nav

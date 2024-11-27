@@ -7,7 +7,6 @@
 
 class Nav{
 public:
-
   static void init(const rclcpp::Node::SharedPtr &node);
 
   static void move_straight(int time_ms);

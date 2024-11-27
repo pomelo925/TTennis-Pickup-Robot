@@ -3,6 +3,7 @@
 rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr Nav::cmd_vel_pub_ = nullptr;
 rclcpp::Node::SharedPtr Nav::node_ = nullptr;
 
+
 /**
  * @brief 初始化 Nav，提供共享節點指標
  * @param node ROS2 節點
@@ -12,6 +13,8 @@ void Nav::init(const rclcpp::Node::SharedPtr &node) {
     node_ = node;
     cmd_vel_pub_ = node_->create_publisher<geometry_msgs::msg::Twist>("/cmd_vel", 10);
     RCLCPP_INFO(node_->get_logger(), "Nav initialized with shared publisher.");
+  } else {
+    RCLCPP_WARN(node_->get_logger(), "Nav already initialized.");
   }
   
   return;

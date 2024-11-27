@@ -1,4 +1,5 @@
 #include "conference/nav.hpp"
+#include "conference/intake.hpp"
 
 int main(int argc, char * argv[]) {
   rclcpp::init(argc, argv);
