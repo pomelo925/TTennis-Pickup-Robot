@@ -1,7 +1,9 @@
 /home/main-ws/build/conference/CMakeFiles/uninstall.dir
 /home/main-ws/build/conference/CMakeFiles/conference_uninstall.dir
-/home/main-ws/build/conference/CMakeFiles/intake.dir
 /home/main-ws/build/conference/CMakeFiles/nav.dir
+/home/main-ws/build/conference/CMakeFiles/intake.dir
+/home/main-ws/build/conference/CMakeFiles/elevator.dir
+/home/main-ws/build/conference/CMakeFiles/basket.dir
 /home/main-ws/build/conference/CMakeFiles/demo_nav_retrieval.dir
 /home/main-ws/build/conference/CMakeFiles/demo_retrieval_supply.dir
 /home/main-ws/build/conference/CMakeFiles/test.dir

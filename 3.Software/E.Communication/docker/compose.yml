@@ -57,12 +57,12 @@ services:
             roslaunch rosserial_server stm32.launch"
         
 
-  # ros2:
-  #   image: osrf/ros:humble-desktop-full
-  #   container_name: ros2
-  #   stdin_open: true
-  #   tty: true
-  #   network_mode: host
-  #   volumes:
-  #     # Shared Memory
-  #     - /dev/shm:/dev/shm
+  ros2:
+    image: osrf/ros:humble-desktop-full
+    container_name: ros2
+    stdin_open: true
+    tty: true
+    network_mode: host
+    volumes:
+      # Shared Memory
+      - /dev/shm:/dev/shm

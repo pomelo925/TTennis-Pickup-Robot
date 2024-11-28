@@ -94,6 +94,8 @@ demo_retrieval_supply: CMakeFiles/demo_retrieval_supply.dir/src/demo_retrieval_s
 demo_retrieval_supply: CMakeFiles/demo_retrieval_supply.dir/build.make
 demo_retrieval_supply: libnav.a
 demo_retrieval_supply: libintake.a
+demo_retrieval_supply: libelevator.a
+demo_retrieval_supply: libbasket.a
 demo_retrieval_supply: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_c.so
 demo_retrieval_supply: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_c.so
 demo_retrieval_supply: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_cpp.so

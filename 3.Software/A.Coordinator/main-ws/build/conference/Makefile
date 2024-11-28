@@ -198,6 +198,19 @@ conference_uninstall/fast:
 .PHONY : conference_uninstall/fast
 
 #=============================================================================
+# Target rules for targets named nav
+
+# Build rule for target.
+nav: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 nav
+.PHONY : nav
+
+# fast build rule for target.
+nav/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/build
+.PHONY : nav/fast
+
+#=============================================================================
 # Target rules for targets named intake
 
 # Build rule for target.
@@ -211,17 +224,30 @@ intake/fast:
 .PHONY : intake/fast
 
 #=============================================================================
-# Target rules for targets named nav
+# Target rules for targets named elevator
 
 # Build rule for target.
-nav: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 nav
-.PHONY : nav
+elevator: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 elevator
+.PHONY : elevator
 
 # fast build rule for target.
-nav/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/build
-.PHONY : nav/fast
+elevator/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/elevator.dir/build.make CMakeFiles/elevator.dir/build
+.PHONY : elevator/fast
+
+#=============================================================================
+# Target rules for targets named basket
+
+# Build rule for target.
+basket: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 basket
+.PHONY : basket
+
+# fast build rule for target.
+basket/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/basket.dir/build.make CMakeFiles/basket.dir/build
+.PHONY : basket/fast
 
 #=============================================================================
 # Target rules for targets named demo_nav_retrieval
@@ -248,6 +274,30 @@ demo_retrieval_supply: cmake_check_build_system
 demo_retrieval_supply/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_retrieval_supply.dir/build.make CMakeFiles/demo_retrieval_supply.dir/build
 .PHONY : demo_retrieval_supply/fast
+
+src/basket.o: src/basket.cpp.o
+.PHONY : src/basket.o
+
+# target to build an object file
+src/basket.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/basket.dir/build.make CMakeFiles/basket.dir/src/basket.cpp.o
+.PHONY : src/basket.cpp.o
+
+src/basket.i: src/basket.cpp.i
+.PHONY : src/basket.i
+
+# target to preprocess a source file
+src/basket.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/basket.dir/build.make CMakeFiles/basket.dir/src/basket.cpp.i
+.PHONY : src/basket.cpp.i
+
+src/basket.s: src/basket.cpp.s
+.PHONY : src/basket.s
+
+# target to generate assembly for a file
+src/basket.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/basket.dir/build.make CMakeFiles/basket.dir/src/basket.cpp.s
+.PHONY : src/basket.cpp.s
 
 src/demo_nav_retrieval.o: src/demo_nav_retrieval.cpp.o
 .PHONY : src/demo_nav_retrieval.o
@@ -296,6 +346,30 @@ src/demo_retrieval_supply.s: src/demo_retrieval_supply.cpp.s
 src/demo_retrieval_supply.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_retrieval_supply.dir/build.make CMakeFiles/demo_retrieval_supply.dir/src/demo_retrieval_supply.cpp.s
 .PHONY : src/demo_retrieval_supply.cpp.s
+
+src/elevator.o: src/elevator.cpp.o
+.PHONY : src/elevator.o
+
+# target to build an object file
+src/elevator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/elevator.dir/build.make CMakeFiles/elevator.dir/src/elevator.cpp.o
+.PHONY : src/elevator.cpp.o
+
+src/elevator.i: src/elevator.cpp.i
+.PHONY : src/elevator.i
+
+# target to preprocess a source file
+src/elevator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/elevator.dir/build.make CMakeFiles/elevator.dir/src/elevator.cpp.i
+.PHONY : src/elevator.cpp.i
+
+src/elevator.s: src/elevator.cpp.s
+.PHONY : src/elevator.s
+
+# target to generate assembly for a file
+src/elevator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/elevator.dir/build.make CMakeFiles/elevator.dir/src/elevator.cpp.s
+.PHONY : src/elevator.cpp.s
 
 src/intake.o: src/intake.cpp.o
 .PHONY : src/intake.o
@@ -360,16 +434,24 @@ help:
 	@echo "... test"
 	@echo "... conference_uninstall"
 	@echo "... uninstall"
+	@echo "... basket"
 	@echo "... demo_nav_retrieval"
 	@echo "... demo_retrieval_supply"
+	@echo "... elevator"
 	@echo "... intake"
 	@echo "... nav"
+	@echo "... src/basket.o"
+	@echo "... src/basket.i"
+	@echo "... src/basket.s"
 	@echo "... src/demo_nav_retrieval.o"
 	@echo "... src/demo_nav_retrieval.i"
 	@echo "... src/demo_nav_retrieval.s"
 	@echo "... src/demo_retrieval_supply.o"
 	@echo "... src/demo_retrieval_supply.i"
 	@echo "... src/demo_retrieval_supply.s"
+	@echo "... src/elevator.o"
+	@echo "... src/elevator.i"
+	@echo "... src/elevator.s"
 	@echo "... src/intake.o"
 	@echo "... src/intake.i"
 	@echo "... src/intake.s"

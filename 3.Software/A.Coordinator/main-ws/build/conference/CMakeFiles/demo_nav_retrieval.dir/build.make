@@ -94,6 +94,8 @@ demo_nav_retrieval: CMakeFiles/demo_nav_retrieval.dir/src/demo_nav_retrieval.cpp
 demo_nav_retrieval: CMakeFiles/demo_nav_retrieval.dir/build.make
 demo_nav_retrieval: libnav.a
 demo_nav_retrieval: libintake.a
+demo_nav_retrieval: libelevator.a
+demo_nav_retrieval: libbasket.a
 demo_nav_retrieval: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_c.so
 demo_nav_retrieval: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_c.so
 demo_nav_retrieval: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_cpp.so

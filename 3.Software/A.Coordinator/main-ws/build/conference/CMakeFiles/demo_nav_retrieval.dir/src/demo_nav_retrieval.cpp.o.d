@@ -610,4 +610,10 @@ CMakeFiles/demo_nav_retrieval.dir/src/demo_nav_retrieval.cpp.o: \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/bool.hpp \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__struct.hpp \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__builder.hpp \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__traits.hpp
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__traits.hpp \
+ /home/main-ws/src/conference/include/conference/elevator.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/int32.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int32__struct.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int32__builder.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int32__traits.hpp \
+ /home/main-ws/src/conference/include/conference/basket.hpp

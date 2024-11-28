@@ -679,8 +679,10 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/uninstall.dir/DependInfo.cmake"
   "CMakeFiles/conference_uninstall.dir/DependInfo.cmake"
-  "CMakeFiles/intake.dir/DependInfo.cmake"
   "CMakeFiles/nav.dir/DependInfo.cmake"
+  "CMakeFiles/intake.dir/DependInfo.cmake"
+  "CMakeFiles/elevator.dir/DependInfo.cmake"
+  "CMakeFiles/basket.dir/DependInfo.cmake"
   "CMakeFiles/demo_nav_retrieval.dir/DependInfo.cmake"
   "CMakeFiles/demo_retrieval_supply.dir/DependInfo.cmake"
   )

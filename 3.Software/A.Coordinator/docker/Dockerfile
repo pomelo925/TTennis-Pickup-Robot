@@ -64,5 +64,5 @@ FROM tools AS final
 RUN echo "source /opt/ros/$ROS_DISTRO/setup.bash" >> ~/.bashrc
 
 ## Final configurations
-# USER $USERNAME
+USER $USERNAME
 CMD ["/bin/bash"]

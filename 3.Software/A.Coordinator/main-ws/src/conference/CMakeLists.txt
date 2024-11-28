@@ -14,21 +14,29 @@ find_package(geometry_msgs REQUIRED)
 #########################################################
 include_directories(include)
 
-add_library(intake src/intake.cpp)
-ament_target_dependencies(intake rclcpp std_msgs)
-
 add_library(nav src/nav.cpp)
 ament_target_dependencies(nav rclcpp geometry_msgs)
 
+add_library(intake src/intake.cpp)
+ament_target_dependencies(intake rclcpp std_msgs)
+
+add_library(elevator src/elevator.cpp)
+ament_target_dependencies(elevator rclcpp std_msgs)
+
+add_library(basket src/basket.cpp)
+ament_target_dependencies(basket rclcpp std_msgs)
 
 add_executable(demo_nav_retrieval src/demo_nav_retrieval.cpp)
-target_link_libraries(demo_nav_retrieval nav intake)
+target_link_libraries(demo_nav_retrieval nav intake elevator basket)
 
 add_executable(demo_retrieval_supply src/demo_retrieval_supply.cpp)
-target_link_libraries(demo_retrieval_supply nav intake)
+target_link_libraries(demo_retrieval_supply nav intake elevator basket) 
 
 install(TARGETS
   nav
+  intake
+  elevator
+  basket
   demo_nav_retrieval 
   demo_retrieval_supply
   DESTINATION lib/${PROJECT_NAME})

@@ -63,8 +63,10 @@ CMAKE_BINARY_DIR = /home/main-ws/build/conference
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/intake.dir/all
 all: CMakeFiles/nav.dir/all
+all: CMakeFiles/intake.dir/all
+all: CMakeFiles/elevator.dir/all
+all: CMakeFiles/basket.dir/all
 all: CMakeFiles/demo_nav_retrieval.dir/all
 all: CMakeFiles/demo_retrieval_supply.dir/all
 .PHONY : all
@@ -76,8 +78,10 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/uninstall.dir/clean
 clean: CMakeFiles/conference_uninstall.dir/clean
-clean: CMakeFiles/intake.dir/clean
 clean: CMakeFiles/nav.dir/clean
+clean: CMakeFiles/intake.dir/clean
+clean: CMakeFiles/elevator.dir/clean
+clean: CMakeFiles/basket.dir/clean
 clean: CMakeFiles/demo_nav_retrieval.dir/clean
 clean: CMakeFiles/demo_retrieval_supply.dir/clean
 .PHONY : clean
@@ -135,39 +139,13 @@ CMakeFiles/conference_uninstall.dir/clean:
 .PHONY : CMakeFiles/conference_uninstall.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/intake.dir
-
-# All Build rule for target.
-CMakeFiles/intake.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/intake.dir/build.make CMakeFiles/intake.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/intake.dir/build.make CMakeFiles/intake.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/main-ws/build/conference/CMakeFiles --progress-num=5,6 "Built target intake"
-.PHONY : CMakeFiles/intake.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/intake.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/main-ws/build/conference/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/intake.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/main-ws/build/conference/CMakeFiles 0
-.PHONY : CMakeFiles/intake.dir/rule
-
-# Convenience name for target.
-intake: CMakeFiles/intake.dir/rule
-.PHONY : intake
-
-# clean rule for target.
-CMakeFiles/intake.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/intake.dir/build.make CMakeFiles/intake.dir/clean
-.PHONY : CMakeFiles/intake.dir/clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/nav.dir
 
 # All Build rule for target.
 CMakeFiles/nav.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/main-ws/build/conference/CMakeFiles --progress-num=7,8 "Built target nav"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/main-ws/build/conference/CMakeFiles --progress-num=11,12 "Built target nav"
 .PHONY : CMakeFiles/nav.dir/all
 
 # Build rule for subdir invocation for target.
@@ -187,19 +165,99 @@ CMakeFiles/nav.dir/clean:
 .PHONY : CMakeFiles/nav.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/intake.dir
+
+# All Build rule for target.
+CMakeFiles/intake.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/intake.dir/build.make CMakeFiles/intake.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/intake.dir/build.make CMakeFiles/intake.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/main-ws/build/conference/CMakeFiles --progress-num=9,10 "Built target intake"
+.PHONY : CMakeFiles/intake.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/intake.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/main-ws/build/conference/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/intake.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/main-ws/build/conference/CMakeFiles 0
+.PHONY : CMakeFiles/intake.dir/rule
+
+# Convenience name for target.
+intake: CMakeFiles/intake.dir/rule
+.PHONY : intake
+
+# clean rule for target.
+CMakeFiles/intake.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/intake.dir/build.make CMakeFiles/intake.dir/clean
+.PHONY : CMakeFiles/intake.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/elevator.dir
+
+# All Build rule for target.
+CMakeFiles/elevator.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/elevator.dir/build.make CMakeFiles/elevator.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/elevator.dir/build.make CMakeFiles/elevator.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/main-ws/build/conference/CMakeFiles --progress-num=7,8 "Built target elevator"
+.PHONY : CMakeFiles/elevator.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/elevator.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/main-ws/build/conference/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/elevator.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/main-ws/build/conference/CMakeFiles 0
+.PHONY : CMakeFiles/elevator.dir/rule
+
+# Convenience name for target.
+elevator: CMakeFiles/elevator.dir/rule
+.PHONY : elevator
+
+# clean rule for target.
+CMakeFiles/elevator.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/elevator.dir/build.make CMakeFiles/elevator.dir/clean
+.PHONY : CMakeFiles/elevator.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/basket.dir
+
+# All Build rule for target.
+CMakeFiles/basket.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/basket.dir/build.make CMakeFiles/basket.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/basket.dir/build.make CMakeFiles/basket.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/main-ws/build/conference/CMakeFiles --progress-num=1,2 "Built target basket"
+.PHONY : CMakeFiles/basket.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/basket.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/main-ws/build/conference/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/basket.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/main-ws/build/conference/CMakeFiles 0
+.PHONY : CMakeFiles/basket.dir/rule
+
+# Convenience name for target.
+basket: CMakeFiles/basket.dir/rule
+.PHONY : basket
+
+# clean rule for target.
+CMakeFiles/basket.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/basket.dir/build.make CMakeFiles/basket.dir/clean
+.PHONY : CMakeFiles/basket.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/demo_nav_retrieval.dir
 
 # All Build rule for target.
-CMakeFiles/demo_nav_retrieval.dir/all: CMakeFiles/intake.dir/all
 CMakeFiles/demo_nav_retrieval.dir/all: CMakeFiles/nav.dir/all
+CMakeFiles/demo_nav_retrieval.dir/all: CMakeFiles/intake.dir/all
+CMakeFiles/demo_nav_retrieval.dir/all: CMakeFiles/elevator.dir/all
+CMakeFiles/demo_nav_retrieval.dir/all: CMakeFiles/basket.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_nav_retrieval.dir/build.make CMakeFiles/demo_nav_retrieval.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_nav_retrieval.dir/build.make CMakeFiles/demo_nav_retrieval.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/main-ws/build/conference/CMakeFiles --progress-num=1,2 "Built target demo_nav_retrieval"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/main-ws/build/conference/CMakeFiles --progress-num=3,4 "Built target demo_nav_retrieval"
 .PHONY : CMakeFiles/demo_nav_retrieval.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/demo_nav_retrieval.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/main-ws/build/conference/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/main-ws/build/conference/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/demo_nav_retrieval.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/main-ws/build/conference/CMakeFiles 0
 .PHONY : CMakeFiles/demo_nav_retrieval.dir/rule
@@ -217,16 +275,18 @@ CMakeFiles/demo_nav_retrieval.dir/clean:
 # Target rules for target CMakeFiles/demo_retrieval_supply.dir
 
 # All Build rule for target.
-CMakeFiles/demo_retrieval_supply.dir/all: CMakeFiles/intake.dir/all
 CMakeFiles/demo_retrieval_supply.dir/all: CMakeFiles/nav.dir/all
+CMakeFiles/demo_retrieval_supply.dir/all: CMakeFiles/intake.dir/all
+CMakeFiles/demo_retrieval_supply.dir/all: CMakeFiles/elevator.dir/all
+CMakeFiles/demo_retrieval_supply.dir/all: CMakeFiles/basket.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_retrieval_supply.dir/build.make CMakeFiles/demo_retrieval_supply.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_retrieval_supply.dir/build.make CMakeFiles/demo_retrieval_supply.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/main-ws/build/conference/CMakeFiles --progress-num=3,4 "Built target demo_retrieval_supply"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/main-ws/build/conference/CMakeFiles --progress-num=5,6 "Built target demo_retrieval_supply"
 .PHONY : CMakeFiles/demo_retrieval_supply.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/demo_retrieval_supply.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/main-ws/build/conference/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/main-ws/build/conference/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/demo_retrieval_supply.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/main-ws/build/conference/CMakeFiles 0
 .PHONY : CMakeFiles/demo_retrieval_supply.dir/rule

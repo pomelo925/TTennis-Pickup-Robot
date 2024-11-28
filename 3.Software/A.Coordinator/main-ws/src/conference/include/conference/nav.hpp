@@ -22,11 +22,9 @@ private:
 
   constexpr static int _linear_acclearation_time_ms = 500;
   constexpr static int _linear_deceleration_time_ms = 500;
-  constexpr static double _linear_max_speed = 1.5;
-  constexpr static double _linear_speed = 1.5;
+  constexpr static double _linear_max_speed = 0.5;
 
   constexpr static int _angular_acclearation_time_ms = 500;
   constexpr static int _angular_deceleration_time_ms = 500;
-  constexpr static double _angular_max_speed = 1.5;
-  constexpr static double _angular_speed = 1.5;
+  constexpr static double _angular_max_speed = 1.57;
 };
