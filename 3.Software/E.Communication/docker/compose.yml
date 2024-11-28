@@ -4,6 +4,7 @@ services:
     container_name: ros-core
     command: "rosmaster --core"
     network_mode: host
+    stop_grace_period: 1s
     healthcheck:
       # The healthcheck is required for ros1-bridge to wait until roscore is ready.
       test: /ros_entrypoint.sh bash -c "rostopic list || exit 1"
@@ -17,6 +18,7 @@ services:
       target: release
     image: pomelo925/ttennis-humble:communication
     container_name: ros2-ros1-bridge-ws
+    stop_grace_period: 1s
     depends_on:
       ros-core:
         # The healthcheck is required for ros1-bridge to wait until roscore is ready.
@@ -46,6 +48,7 @@ services:
     volumes:
       - ../comm-ws:/root/comm-ws
       - /dev/bus/usb:/dev/bus/usb
+    stop_grace_period: 1s
     depends_on:
       ros-core:
         condition: service_healthy
@@ -63,6 +66,7 @@ services:
     stdin_open: true
     tty: true
     network_mode: host
+    stop_grace_period: 1s
     volumes:
       # Shared Memory
       - /dev/shm:/dev/shm

@@ -12,6 +12,7 @@ int main(int argc, char * argv[]) {
   Elevator::init(node);
   Basket::init(node);
 
+/*********/
   // 逆時鐘轉 2 秒
   Nav::counter_clockwise(2000);
   // 直走 3 秒
@@ -19,7 +20,10 @@ int main(int argc, char * argv[]) {
   // 順時鐘轉 2 秒
   Nav::clockwise(2000);
 
+
+
+/*********/
+
   rclcpp::shutdown();
-  
   return 0;
 }

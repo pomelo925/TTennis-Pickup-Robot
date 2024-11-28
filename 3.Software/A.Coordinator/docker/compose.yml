@@ -11,24 +11,17 @@ x-shared-settings: &shared-settings
   tty: true
   network_mode: host
   privileged: true
+  stop_grace_period: 1s
 
-  devices:
-    - /dev:/dev
-    
 
 #############################
 ###   Container Startup   ###
 #############################
 services:
-  navigation-deployment:
+  coordinator-deployment:
     <<: *shared-settings
-    container_name: navigation-deployment
-
-    command: "/bin/bash -c \"${COMMAND}\""
-    environment:
-    - DISPLAY=${DISPLAY}
-    - COMMAND=${COMMAND}
-
+    container_name: coordinator-deployment
+    
     volumes:
     - /dev/shm:/dev/shm
 
@@ -36,3 +29,9 @@ services:
     - ../main-ws/build:/home/main-ws/build
     - ../main-ws/install:/home/main-ws/install
     - ../main-ws/src:/home/main-ws/src
+
+    environment:
+    - DISPLAY=${DISPLAY}
+    - COMMAND=${COMMAND}
+    
+    command: "/bin/bash -c \"${COMMAND}\""
