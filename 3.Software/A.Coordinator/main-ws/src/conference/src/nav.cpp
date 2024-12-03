@@ -136,4 +136,6 @@ void Nav::_publish_speed(double linear, double angular, int duration_ms) {
     cmd_vel_pub_->publish(twist);
     rclcpp::sleep_for(std::chrono::milliseconds(100));
   }
+
+  return;
 }

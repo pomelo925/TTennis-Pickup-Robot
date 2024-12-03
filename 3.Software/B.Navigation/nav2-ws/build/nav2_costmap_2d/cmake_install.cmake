@@ -58,7 +58,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/liblayers.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/liblayers.so"
-         OLD_RPATH "/home/nav2-ws/install/nav2_util/lib:/home/nav2-ws/install/nav2_msgs/lib:/opt/ros/humble/lib:/home/nav2-ws/install/nav2_voxel_grid/lib:/home/nav2-ws/build/nav2_costmap_2d:"
+         OLD_RPATH "/home/nav2-ws/install/nav2_util/lib:/home/nav2-ws/install/nav2_msgs/lib:/home/nav2-ws/install/nav2_voxel_grid/lib:/home/nav2-ws/build/nav2_costmap_2d:/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/liblayers.so")
@@ -81,7 +81,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libfilters.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libfilters.so"
-         OLD_RPATH "/home/nav2-ws/install/nav2_util/lib:/home/nav2-ws/install/nav2_msgs/lib:/opt/ros/humble/lib:/home/nav2-ws/install/nav2_voxel_grid/lib:/home/nav2-ws/build/nav2_costmap_2d:"
+         OLD_RPATH "/home/nav2-ws/install/nav2_util/lib:/home/nav2-ws/install/nav2_msgs/lib:/home/nav2-ws/install/nav2_voxel_grid/lib:/home/nav2-ws/build/nav2_costmap_2d:/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libfilters.so")
@@ -104,7 +104,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libnav2_costmap_2d_core.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libnav2_costmap_2d_core.so"
-         OLD_RPATH "/opt/ros/humble/lib:/home/nav2-ws/install/nav2_msgs/lib:/home/nav2-ws/install/nav2_util/lib:/home/nav2-ws/install/nav2_voxel_grid/lib:"
+         OLD_RPATH "/home/nav2-ws/install/nav2_msgs/lib:/home/nav2-ws/install/nav2_util/lib:/home/nav2-ws/install/nav2_voxel_grid/lib:/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libnav2_costmap_2d_core.so")
@@ -127,7 +127,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libnav2_costmap_2d_client.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libnav2_costmap_2d_client.so"
-         OLD_RPATH "/home/nav2-ws/install/nav2_util/lib:/home/nav2-ws/install/nav2_msgs/lib:/opt/ros/humble/lib:/home/nav2-ws/install/nav2_voxel_grid/lib:/home/nav2-ws/build/nav2_costmap_2d:"
+         OLD_RPATH "/home/nav2-ws/install/nav2_util/lib:/home/nav2-ws/install/nav2_msgs/lib:/home/nav2-ws/install/nav2_voxel_grid/lib:/home/nav2-ws/build/nav2_costmap_2d:/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libnav2_costmap_2d_client.so")

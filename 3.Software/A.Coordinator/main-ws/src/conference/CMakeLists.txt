@@ -29,6 +29,9 @@ ament_target_dependencies(basket rclcpp std_msgs)
 add_executable(demo_nav_retrieval src/demo_nav_retrieval.cpp)
 target_link_libraries(demo_nav_retrieval nav intake elevator basket)
 
+# add_executable(demo_retrieval_drop src/demo_retrieval_drop.cpp)
+# target_link_libraries(demo_retrieval_drop nav intake elevator basket)
+
 add_executable(demo_retrieval_supply src/demo_retrieval_supply.cpp)
 target_link_libraries(demo_retrieval_supply nav intake elevator basket) 
 
@@ -38,6 +41,7 @@ install(TARGETS
   elevator
   basket
   demo_nav_retrieval 
+  # demo_retrieval_drop
   demo_retrieval_supply
   DESTINATION lib/${PROJECT_NAME})
 #########################################################
