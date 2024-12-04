@@ -310,7 +310,7 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install("TARGETS" "nav" "intake" "elevator" "basket" "demo_nav_retrieval" "demo_retrieval_supply" "DESTINATION" "lib/conference")
+# install("TARGETS" "nav" "intake" "elevator" "basket" "demo_nav_retrieval" "demo_retrieval_drop" "demo_retrieval_supply" "DESTINATION" "lib/conference")
 include("/home/main-ws/build/conference/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(FILES "/home/main-ws/build/conference/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/conference" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

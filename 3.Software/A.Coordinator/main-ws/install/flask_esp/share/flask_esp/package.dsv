@@ -1,0 +1,8 @@
+source;share/flask_esp/hook/cmake_prefix_path.ps1
+source;share/flask_esp/hook/cmake_prefix_path.dsv
+source;share/flask_esp/hook/cmake_prefix_path.sh
+source;share/flask_esp/local_setup.bash
+source;share/flask_esp/local_setup.dsv
+source;share/flask_esp/local_setup.ps1
+source;share/flask_esp/local_setup.sh
+source;share/flask_esp/local_setup.zsh

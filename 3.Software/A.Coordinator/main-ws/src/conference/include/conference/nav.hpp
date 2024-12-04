@@ -20,11 +20,11 @@ private:
   static void _publish_speed(double linear, double angular, int duration_ms);
   static void _publish_acceleration(double max_linear, double max_angular, int duration_ms, bool is_acceleration);
 
-  constexpr static int _linear_acclearation_time_ms = 2000;
+  constexpr static int _linear_acclearation_time_ms = 3000;
   constexpr static int _linear_deceleration_time_ms = 500;
-  constexpr static double _linear_max_speed = 0.15;
+  constexpr static double _linear_max_speed = 0.2;
 
   constexpr static int _angular_acclearation_time_ms = 1000;
-  constexpr static int _angular_deceleration_time_ms = 500;
-  constexpr static double _angular_max_speed = 1.0;
+  constexpr static int _angular_deceleration_time_ms = 800;
+  constexpr static double _angular_max_speed = 0.5;
 };

@@ -51,8 +51,15 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     usbutils \
     udev \ 
     x11-apps \ 
+    python3-pip \
+    python3-requests \
     && rm -rf /var/lib/apt/lists/*
 
+## Configure Python alias
+RUN echo "alias python=python3" >> ~/.bashrc
+
+## Install Flask using pip
+RUN pip3 install Flask
 
 ################################################################################################
 # - Final stage
@@ -61,7 +68,9 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
 
 FROM tools AS final
 
-RUN echo "source /opt/ros/$ROS_DISTRO/setup.bash" >> ~/.bashrc
+## Source ROS setup in .bashrc
+RUN echo "source /opt/ros/$ROS_DISTRO/setup.bash" >> ~/.bashrc && \
+    echo "source /home/main-ws/install/setup.bash" >> ~/.bashrc
 
 ## Final configurations
 USER $USERNAME

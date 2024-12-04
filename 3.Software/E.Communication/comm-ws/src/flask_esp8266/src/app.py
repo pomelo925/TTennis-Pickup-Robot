@@ -4,8 +4,6 @@ import json
 app = Flask(__name__)
 
 # 用於儲存每個按鈕的最新狀態
-# button1_status = 0
-# button2_status = 0
 button1_press_count = 0  # 累積按鈕按下的次數
 button2_press_count = 0  # 累積按鈕按下的次數
 button1_last = 0

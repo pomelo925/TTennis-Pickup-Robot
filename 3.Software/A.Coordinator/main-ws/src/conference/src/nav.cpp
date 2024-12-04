@@ -96,7 +96,7 @@ void Nav::counter_clockwise(int time_ms) {
 void Nav::_publish_acceleration(double max_linear, double max_angular, int duration_ms, bool is_acceleration) {
   geometry_msgs::msg::Twist twist;
 
-  int steps = duration_ms / 100;  // 每 0.1 秒更新一次速度
+  int steps = duration_ms / 10;  // 每 0.01 秒更新一次速度
   double linear_step = max_linear / steps;
   double angular_step = max_angular / steps;
 
@@ -105,7 +105,7 @@ void Nav::_publish_acceleration(double max_linear, double max_angular, int durat
     twist.linear.x = factor * linear_step;
     twist.angular.z = factor * angular_step;
     cmd_vel_pub_->publish(twist);
-    rclcpp::sleep_for(std::chrono::milliseconds(100));
+    rclcpp::sleep_for(std::chrono::milliseconds(10));
   }
 
   // 確保最後速度為 0（減速階段結束時）
@@ -134,7 +134,7 @@ void Nav::_publish_speed(double linear, double angular, int duration_ms) {
 
   while (std::chrono::steady_clock::now() < end_time) {
     cmd_vel_pub_->publish(twist);
-    rclcpp::sleep_for(std::chrono::milliseconds(100));
+    rclcpp::sleep_for(std::chrono::milliseconds(10));
   }
 
   return;

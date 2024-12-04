@@ -13,19 +13,19 @@ int main(int argc, char * argv[]) {
   Basket::init(node);
 
 /*********/
-  // // 加入延遲，穩定初始狀態
+  // 加入延遲，穩定初始狀態
   rclcpp::sleep_for(std::chrono::milliseconds(500)); // 延遲 500 毫秒
 
   /* 移動到球桌旁，並收集球 */
 
   // 開啟 intake 機構
-  Intake::turn_on(true);
+  Intake::turn_on(2500);
   // 直走 5.5 秒
-  Nav::move_straight(3000);
-  // // 順時針旋轉
-  // Nav::clockwise(2000);
+  Nav::move_straight(5000);
+
   // 關閉 intake 機構
-  Intake::turn_on(false);
+  Intake::turn_on(3500, 2500);
+  Intake::turn_on(0);
 
   /* 升降集球倉，讓球員拿球 */
 
@@ -38,7 +38,7 @@ int main(int argc, char * argv[]) {
 
   /* 移動回原位 */
   // 直走 5.5 秒
-  Nav::move_straight(3000);
+  Nav::move_straight(5000);
   
 /*********/
 

@@ -673,27 +673,27 @@ CMakeFiles/demo_retrieval_supply.dir/src/demo_retrieval_supply.cpp.o: /home/main
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp \
   /home/main-ws/src/conference/include/conference/intake.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/int32.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int32__struct.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int32__builder.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int32__traits.hpp \
+  /home/main-ws/src/conference/include/conference/basket.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/bool.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__struct.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__builder.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__traits.hpp \
-  /home/main-ws/src/conference/include/conference/basket.hpp \
-  /home/main-ws/src/conference/include/conference/elevator.hpp \
-  /opt/ros/humble/include/std_msgs/std_msgs/msg/int32.hpp \
-  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int32__struct.hpp \
-  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int32__builder.hpp \
-  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int32__traits.hpp
+  /home/main-ws/src/conference/include/conference/elevator.hpp
 
-
-/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int32__builder.hpp:
-
-/opt/ros/humble/include/std_msgs/std_msgs/msg/int32.hpp:
 
 /home/main-ws/src/conference/include/conference/elevator.hpp:
 
 /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__traits.hpp:
 
 /opt/ros/humble/include/std_msgs/std_msgs/msg/bool.hpp:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int32__builder.hpp:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/int32.hpp:
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp:
 

@@ -1,2 +1,0 @@
-/usr/bin/ar qc libelevator.a CMakeFiles/elevator.dir/src/elevator.cpp.o
-/usr/bin/ranlib libelevator.a

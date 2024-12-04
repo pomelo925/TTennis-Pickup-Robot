@@ -1,2 +1,0 @@
-/usr/bin/ar qc libbasket.a CMakeFiles/basket.dir/src/basket.cpp.o
-/usr/bin/ranlib libbasket.a

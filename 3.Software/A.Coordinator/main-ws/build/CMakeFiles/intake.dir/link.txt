@@ -1,2 +1,0 @@
-/usr/bin/ar qc libintake.a CMakeFiles/intake.dir/src/intake.cpp.o
-/usr/bin/ranlib libintake.a

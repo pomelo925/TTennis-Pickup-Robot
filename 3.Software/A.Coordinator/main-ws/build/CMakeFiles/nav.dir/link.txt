@@ -1,2 +1,0 @@
-/usr/bin/ar qc libnav.a CMakeFiles/nav.dir/src/nav.cpp.o
-/usr/bin/ranlib libnav.a

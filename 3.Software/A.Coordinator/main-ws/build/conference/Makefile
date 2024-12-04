@@ -263,6 +263,19 @@ demo_nav_retrieval/fast:
 .PHONY : demo_nav_retrieval/fast
 
 #=============================================================================
+# Target rules for targets named demo_retrieval_drop
+
+# Build rule for target.
+demo_retrieval_drop: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_retrieval_drop
+.PHONY : demo_retrieval_drop
+
+# fast build rule for target.
+demo_retrieval_drop/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_retrieval_drop.dir/build.make CMakeFiles/demo_retrieval_drop.dir/build
+.PHONY : demo_retrieval_drop/fast
+
+#=============================================================================
 # Target rules for targets named demo_retrieval_supply
 
 # Build rule for target.
@@ -322,6 +335,30 @@ src/demo_nav_retrieval.s: src/demo_nav_retrieval.cpp.s
 src/demo_nav_retrieval.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_nav_retrieval.dir/build.make CMakeFiles/demo_nav_retrieval.dir/src/demo_nav_retrieval.cpp.s
 .PHONY : src/demo_nav_retrieval.cpp.s
+
+src/demo_retrieval_drop.o: src/demo_retrieval_drop.cpp.o
+.PHONY : src/demo_retrieval_drop.o
+
+# target to build an object file
+src/demo_retrieval_drop.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_retrieval_drop.dir/build.make CMakeFiles/demo_retrieval_drop.dir/src/demo_retrieval_drop.cpp.o
+.PHONY : src/demo_retrieval_drop.cpp.o
+
+src/demo_retrieval_drop.i: src/demo_retrieval_drop.cpp.i
+.PHONY : src/demo_retrieval_drop.i
+
+# target to preprocess a source file
+src/demo_retrieval_drop.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_retrieval_drop.dir/build.make CMakeFiles/demo_retrieval_drop.dir/src/demo_retrieval_drop.cpp.i
+.PHONY : src/demo_retrieval_drop.cpp.i
+
+src/demo_retrieval_drop.s: src/demo_retrieval_drop.cpp.s
+.PHONY : src/demo_retrieval_drop.s
+
+# target to generate assembly for a file
+src/demo_retrieval_drop.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_retrieval_drop.dir/build.make CMakeFiles/demo_retrieval_drop.dir/src/demo_retrieval_drop.cpp.s
+.PHONY : src/demo_retrieval_drop.cpp.s
 
 src/demo_retrieval_supply.o: src/demo_retrieval_supply.cpp.o
 .PHONY : src/demo_retrieval_supply.o
@@ -436,6 +473,7 @@ help:
 	@echo "... uninstall"
 	@echo "... basket"
 	@echo "... demo_nav_retrieval"
+	@echo "... demo_retrieval_drop"
 	@echo "... demo_retrieval_supply"
 	@echo "... elevator"
 	@echo "... intake"
@@ -446,6 +484,9 @@ help:
 	@echo "... src/demo_nav_retrieval.o"
 	@echo "... src/demo_nav_retrieval.i"
 	@echo "... src/demo_nav_retrieval.s"
+	@echo "... src/demo_retrieval_drop.o"
+	@echo "... src/demo_retrieval_drop.i"
+	@echo "... src/demo_retrieval_drop.s"
 	@echo "... src/demo_retrieval_supply.o"
 	@echo "... src/demo_retrieval_supply.i"
 	@echo "... src/demo_retrieval_supply.s"

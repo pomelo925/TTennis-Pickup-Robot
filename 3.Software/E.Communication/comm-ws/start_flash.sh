@@ -9,7 +9,7 @@ sudo apt-get --reinstall install python3-requests
 # 設定 Python3 別名
 echo "Setting alias for Python..."
 if ! grep -q "alias python=python3" ~/.bashrc; then
-  echo "alias python=python3" >> ~/.bashrc
+  echo "alias python=python3" >> ~/.bashrcc
   source ~/.bashrc
 fi
 
