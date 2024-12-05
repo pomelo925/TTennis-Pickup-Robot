@@ -1,1 +1,2 @@
 *.db filter=lfs diff=lfs merge=lfs -texte
+*.gif filter=lfs diff=lfs merge=lfs -texte

@@ -12,6 +12,15 @@ TTennis Pickup Robot 目標是在任意的桌球場中，自動化完成拾取�
 
 TTennis Pickup Robot 從機構設計、電路板設計、單晶片調適至上層的視覺處理、AI 模型部署、建圖定位與導航避障系統等皆是我們針對特殊的應用場景做開發，並不直接使用市面上的套件。同時軟韌體算法全部開源，代碼已解藕封裝，所有運行節點以虛擬化容器形式運行，十分利於有程式背景的人對特定算法做二次開發。
 
+
+<br/>
+
+![alt text](/5.Docs/assets/webui.gif)
+<center>
+<p> 以 Nextjs / Framer Motion / Tailwind CSS 製作的 Web 操控介面。 <p>
+</center>
+
+
 </br>
 
 <div align="center">
