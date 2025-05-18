@@ -5,6 +5,8 @@
 /home/main-ws/install/conference/lib/conference/demo_nav_retrieval
 /home/main-ws/install/conference/lib/conference/demo_retrieval_drop
 /home/main-ws/install/conference/lib/conference/demo_retrieval_supply
+/home/main-ws/install/conference/lib/conference/demo_intake
+/home/main-ws/install/conference/lib/conference/demo_elevator
 /home/main-ws/install/conference/share/ament_index/resource_index/package_run_dependencies/conference
 /home/main-ws/install/conference/share/ament_index/resource_index/parent_prefix_path/conference
 /home/main-ws/install/conference/share/conference/environment/ament_prefix_path.sh

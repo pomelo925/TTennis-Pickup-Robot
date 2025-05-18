@@ -14,19 +14,28 @@ int main(int argc, char * argv[]) {
 
 /*********/
   // 加入延遲，穩定初始狀態
-  rclcpp::sleep_for(std::chrono::milliseconds(500)); // 延遲 500 毫秒
+  rclcpp::sleep_for(std::chrono::milliseconds(1000)); // 延遲 1000 毫秒
 
   /* 移動到置球架，並收集球 */
 
   // 開啟 intake 機構
-  Intake::turn_on(2000);
-  // 直走 5.5 秒
-  Nav::move_straight(5000);
-  // // 順時針旋轉
-  Nav::clockwise(4000);
+  Intake::turn_on(2300);
+  
+  // 直走
+  Nav::move_straight(8300);
+  // 逆時針旋轉
+  Nav::counter_clockwise(3600);
+  // 直走
+  Nav::move_straight(7200);
+  // 逆時針旋轉
+  Nav::counter_clockwise(5000);
+  // 倒退
+  Nav::move_backward(1000);
+  
   // 關閉 intake 機構
   Intake::turn_on(3200, 2500);
   Intake::turn_on(0);
+
 
   /* 升降集球倉並開啟閘門放球 */
 
@@ -39,9 +48,14 @@ int main(int argc, char * argv[]) {
   // 降下集球倉
   Elevator::set_mode(2);
 
+
   /* 移動回原位 */
-  // 直走 5.5 秒
-  Nav::move_straight(3000);
+  // 直走
+  Nav::move_straight(1000);
+  // 逆時針旋轉
+  Nav::counter_clockwise(4900);
+  // 倒退
+  Nav::move_backward(3500);
   
 /*********/
 

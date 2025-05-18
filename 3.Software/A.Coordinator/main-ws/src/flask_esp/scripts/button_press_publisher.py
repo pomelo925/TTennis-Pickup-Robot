@@ -13,7 +13,7 @@ class ButtonPressPublisher(Node):
 
     def fetch_button_press_count(self):
         try:
-            response = requests.get("http://192.168.50.140:5000/")  # Flask 伺服器的主頁面
+            response = requests.get("http://172.20.10.9:5000/")  # Flask 伺服器的主頁面
             if response.status_code == 200:
                 # 按照伺服器返回的格式解析按壓次數
                 text = response.text

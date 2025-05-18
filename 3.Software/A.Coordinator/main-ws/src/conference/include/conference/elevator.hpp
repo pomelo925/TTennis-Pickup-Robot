@@ -23,7 +23,7 @@ private:
   static void _publish_on(bool is_on, int duration_ms);
 
   constexpr static int _elevator_rise_time_ms = 8000;
-  constexpr static int _elevator_decline_time_ms = 9000;
+  constexpr static int _elevator_decline_time_ms = 7000;
   constexpr static int _elevator_stop_time_ms = 3000;
 
   constexpr static int _door_on_time_ms = 2000;

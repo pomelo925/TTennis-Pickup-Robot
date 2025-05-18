@@ -10,6 +10,7 @@ public:
   static void init(const rclcpp::Node::SharedPtr &node);
 
   static void move_straight(int time_ms);
+  static void move_backward(int time_ms);
   static void clockwise(int time_ms);
   static void counter_clockwise(int time_ms);
 
@@ -22,9 +23,11 @@ private:
 
   constexpr static int _linear_acclearation_time_ms = 3000;
   constexpr static int _linear_deceleration_time_ms = 500;
-  constexpr static double _linear_max_speed = 0.2;
+  constexpr static double _linear_max_speed = 0.25;
+  constexpr static double _linear_low_speed = 0.15;
 
   constexpr static int _angular_acclearation_time_ms = 1000;
   constexpr static int _angular_deceleration_time_ms = 800;
   constexpr static double _angular_max_speed = 0.5;
+  constexpr static double _angular_low_speed = 0.25;
 };

@@ -686,4 +686,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/demo_nav_retrieval.dir/DependInfo.cmake"
   "CMakeFiles/demo_retrieval_drop.dir/DependInfo.cmake"
   "CMakeFiles/demo_retrieval_supply.dir/DependInfo.cmake"
+  "CMakeFiles/demo_intake.dir/DependInfo.cmake"
+  "CMakeFiles/demo_elevator.dir/DependInfo.cmake"
   )

@@ -52,8 +52,9 @@ TTennis Pickup Robot 從機構設計、電路板設計、單晶片調適至上�
 
 * 馬達驅動板：電力直接由電源分壓板供給 12V，PWM 控制訊號則由邏輯電路板經軟排線傳遞，馬達驅動晶片為 [VNH5019](https://www.mouser.tw/ProductDetail/STMicroelectronics/EVAL-VNH5019-P1?qs=4b8myOmUP%252BuULWYKW0CsPg%3D%3D)。由於功率較大，與邏輯電路板做物理隔離，抗 EMI。 
 
-</br></br>
+![alt text](/5.Docs/assets)
 
+</br></br>
 
 <div align="center">
     <h2>⭐⭐ Firmware 韌體 ⭐⭐</h2>

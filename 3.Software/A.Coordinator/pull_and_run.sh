@@ -4,9 +4,12 @@
 usage() {
   echo "usage: $0 [mode]"
   echo "mode:"
-  echo "- demo1   Nav + Retrieval"
-  echo "- demo2   Retrieval + Supply"
-  echo "- null    To start without running any ROS node"
+  echo "- nav_retrieval      Nav + Retrieval"
+  echo "- retrieval_drop     Retrieval + Drop"
+  echo "- retrieval_supply   Retrieval + Supply"
+  echo "- intake             Only Intake"
+  echo "- elevator           Only Elevator Drop"
+  echo "- null               To start without running any ROS node"
   exit 1
 }
 
@@ -18,11 +21,20 @@ fi
 
 # Determine the command based on the mode argument
 case "$1" in
-  demo1)
+  nav_retrieval)
     COMMAND="/home/app/nav_retrieval.sh"
     ;;
-  demo2)
+  retrieval_drop)
+    COMMAND="/home/app/retrieval_drop.sh"
+    ;;
+  retrieval_supply)
     COMMAND="/home/app/retrieval_supply.sh"
+    ;;
+  intake)
+    COMMAND="/home/app/intake.sh"
+    ;;
+  elevator)
+    COMMAND="/home/app/elevator.sh"
     ;;
   null)
     COMMAND="/bin/bash"

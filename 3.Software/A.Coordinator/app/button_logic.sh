@@ -37,11 +37,11 @@ while true; do
   if [[ "$BUTTON2_COUNT" != "$LAST_BUTTON2_COUNT" && -n "$READY_SCRIPT" ]]; then
     echo "Executing script: $READY_SCRIPT"
     bash "$READY_SCRIPT"
+    echo "Script completed: $READY_SCRIPT"
     READY_SCRIPT=""
     LAST_BUTTON2_COUNT="$BUTTON2_COUNT"
   fi
 
-  echo "Script End..."
   # 暫停片刻避免高 CPU 使用率
   sleep 0.1
 done

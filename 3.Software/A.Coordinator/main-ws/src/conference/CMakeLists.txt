@@ -37,6 +37,12 @@ target_link_libraries(demo_retrieval_drop nav intake elevator basket)
 add_executable(demo_retrieval_supply src/demo_retrieval_supply.cpp)
 target_link_libraries(demo_retrieval_supply nav intake elevator basket) 
 
+add_executable(demo_intake src/demo_intake.cpp)
+target_link_libraries(demo_intake nav intake elevator basket) 
+
+add_executable(demo_elevator src/demo_elevator.cpp)
+target_link_libraries(demo_elevator nav intake elevator basket) 
+
 
 
 install(TARGETS
@@ -47,6 +53,8 @@ install(TARGETS
   demo_nav_retrieval 
   demo_retrieval_drop
   demo_retrieval_supply
+  demo_intake
+  demo_elevator
   DESTINATION lib/${PROJECT_NAME})
 #########################################################
 

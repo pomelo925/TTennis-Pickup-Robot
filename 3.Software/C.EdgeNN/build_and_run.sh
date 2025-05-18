@@ -1,24 +1,4 @@
-#!/bin/bash
-
-# Usage function
-usage() {
-  echo "usage: $0 [mode]"
-  echo "mode:"
-  echo "- rgb2d         Turn on OAK-D & detect objects (YOLOv8) & show 2D bounding boxes"
-  echo "- spatial       Turn on OAK-D & detect objects (YOLOv8) & show spatial information"
-  echo "- spatial-ros   Turn on OAK-D & detect objects (YOLOv8) & publish spatial information to ROS"
-  echo "- null          To start without running any node"
-  exit 1
-}
-
-
-# Ensure mode argument is provided
-if [ $# -ne 1 ]; then
-  usage
-fi
-
-# Determine the command based on the mode argument
-case "$1" in
+n
   rgb2d)
     COMMAND="/home/app/rgb2d/run.sh"
     ;;

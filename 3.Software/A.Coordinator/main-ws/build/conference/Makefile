@@ -288,6 +288,32 @@ demo_retrieval_supply/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_retrieval_supply.dir/build.make CMakeFiles/demo_retrieval_supply.dir/build
 .PHONY : demo_retrieval_supply/fast
 
+#=============================================================================
+# Target rules for targets named demo_intake
+
+# Build rule for target.
+demo_intake: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_intake
+.PHONY : demo_intake
+
+# fast build rule for target.
+demo_intake/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_intake.dir/build.make CMakeFiles/demo_intake.dir/build
+.PHONY : demo_intake/fast
+
+#=============================================================================
+# Target rules for targets named demo_elevator
+
+# Build rule for target.
+demo_elevator: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_elevator
+.PHONY : demo_elevator
+
+# fast build rule for target.
+demo_elevator/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_elevator.dir/build.make CMakeFiles/demo_elevator.dir/build
+.PHONY : demo_elevator/fast
+
 src/basket.o: src/basket.cpp.o
 .PHONY : src/basket.o
 
@@ -311,6 +337,54 @@ src/basket.s: src/basket.cpp.s
 src/basket.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/basket.dir/build.make CMakeFiles/basket.dir/src/basket.cpp.s
 .PHONY : src/basket.cpp.s
+
+src/demo_elevator.o: src/demo_elevator.cpp.o
+.PHONY : src/demo_elevator.o
+
+# target to build an object file
+src/demo_elevator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_elevator.dir/build.make CMakeFiles/demo_elevator.dir/src/demo_elevator.cpp.o
+.PHONY : src/demo_elevator.cpp.o
+
+src/demo_elevator.i: src/demo_elevator.cpp.i
+.PHONY : src/demo_elevator.i
+
+# target to preprocess a source file
+src/demo_elevator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_elevator.dir/build.make CMakeFiles/demo_elevator.dir/src/demo_elevator.cpp.i
+.PHONY : src/demo_elevator.cpp.i
+
+src/demo_elevator.s: src/demo_elevator.cpp.s
+.PHONY : src/demo_elevator.s
+
+# target to generate assembly for a file
+src/demo_elevator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_elevator.dir/build.make CMakeFiles/demo_elevator.dir/src/demo_elevator.cpp.s
+.PHONY : src/demo_elevator.cpp.s
+
+src/demo_intake.o: src/demo_intake.cpp.o
+.PHONY : src/demo_intake.o
+
+# target to build an object file
+src/demo_intake.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_intake.dir/build.make CMakeFiles/demo_intake.dir/src/demo_intake.cpp.o
+.PHONY : src/demo_intake.cpp.o
+
+src/demo_intake.i: src/demo_intake.cpp.i
+.PHONY : src/demo_intake.i
+
+# target to preprocess a source file
+src/demo_intake.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_intake.dir/build.make CMakeFiles/demo_intake.dir/src/demo_intake.cpp.i
+.PHONY : src/demo_intake.cpp.i
+
+src/demo_intake.s: src/demo_intake.cpp.s
+.PHONY : src/demo_intake.s
+
+# target to generate assembly for a file
+src/demo_intake.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_intake.dir/build.make CMakeFiles/demo_intake.dir/src/demo_intake.cpp.s
+.PHONY : src/demo_intake.cpp.s
 
 src/demo_nav_retrieval.o: src/demo_nav_retrieval.cpp.o
 .PHONY : src/demo_nav_retrieval.o
@@ -472,6 +546,8 @@ help:
 	@echo "... conference_uninstall"
 	@echo "... uninstall"
 	@echo "... basket"
+	@echo "... demo_elevator"
+	@echo "... demo_intake"
 	@echo "... demo_nav_retrieval"
 	@echo "... demo_retrieval_drop"
 	@echo "... demo_retrieval_supply"
@@ -481,6 +557,12 @@ help:
 	@echo "... src/basket.o"
 	@echo "... src/basket.i"
 	@echo "... src/basket.s"
+	@echo "... src/demo_elevator.o"
+	@echo "... src/demo_elevator.i"
+	@echo "... src/demo_elevator.s"
+	@echo "... src/demo_intake.o"
+	@echo "... src/demo_intake.i"
+	@echo "... src/demo_intake.s"
 	@echo "... src/demo_nav_retrieval.o"
 	@echo "... src/demo_nav_retrieval.i"
 	@echo "... src/demo_nav_retrieval.s"

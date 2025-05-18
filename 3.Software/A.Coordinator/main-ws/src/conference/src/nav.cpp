@@ -29,14 +29,36 @@ void Nav::move_straight(int time_ms) {
   // 只有加速和減速階段
   if (time_ms <= _linear_acclearation_time_ms + _linear_deceleration_time_ms) {
     int half_time = time_ms / 2;
-    _publish_acceleration(_linear_max_speed, 0.0, half_time, true);
-    _publish_acceleration(_linear_max_speed, 0.0, time_ms - half_time, false);
+    _publish_acceleration(_linear_low_speed, 0.0, half_time, true);
+    _publish_acceleration(_linear_low_speed, 0.0, time_ms - half_time, false);
   } // 完整的加速、穩定、減速階段
   else {
     int steady_time = time_ms - _linear_acclearation_time_ms - _linear_deceleration_time_ms;
     _publish_acceleration(_linear_max_speed, 0.0, _linear_acclearation_time_ms, true);
     _publish_speed(_linear_max_speed, 0.0, steady_time);
     _publish_acceleration(_linear_max_speed, 0.0, _linear_deceleration_time_ms, false);
+  }
+
+  return;
+}
+
+
+/**
+ * @brief backward，時間
+ * @param time_ms 行走時間（毫秒）
+ */
+void Nav::move_backward(int time_ms) {
+  // 只有加速和減速階段
+  if (time_ms <= _linear_acclearation_time_ms + _linear_deceleration_time_ms) {
+    int half_time = time_ms / 2;
+    _publish_acceleration(-_linear_low_speed, 0.0, half_time, true);
+    _publish_acceleration(-_linear_low_speed, 0.0, time_ms - half_time, false);
+  } // 完整的加速、穩定、減速階段
+  else {
+    int steady_time = time_ms - _linear_acclearation_time_ms - _linear_deceleration_time_ms;
+    _publish_acceleration(-_linear_max_speed, 0.0, _linear_acclearation_time_ms, true);
+    _publish_speed(-_linear_max_speed, 0.0, steady_time);
+    _publish_acceleration(-_linear_max_speed, 0.0, _linear_deceleration_time_ms, false);
   }
 
   return;
@@ -51,8 +73,8 @@ void Nav::clockwise(int time_ms) {
   if (time_ms <= _angular_acclearation_time_ms + _angular_deceleration_time_ms) {
   // 只有加速和減速階段
     int half_time = time_ms / 2;
-    _publish_acceleration(0.0, -_angular_max_speed, half_time, true);  
-    _publish_acceleration(0.0, -_angular_max_speed, time_ms - half_time, false);  
+    _publish_acceleration(0.0, -_angular_low_speed, half_time, true);  
+    _publish_acceleration(0.0, -_angular_low_speed, time_ms - half_time, false);  
   } // 完整的加速、穩定、減速階段
   else {
     int steady_time = time_ms - _angular_acclearation_time_ms - _angular_deceleration_time_ms;
@@ -73,8 +95,8 @@ void Nav::counter_clockwise(int time_ms) {
   if (time_ms <= _angular_acclearation_time_ms + _angular_deceleration_time_ms) {
   // 只有加速和減速階段
     int half_time = time_ms / 2;
-    _publish_acceleration(0.0, _angular_max_speed, half_time, true);  
-    _publish_acceleration(0.0, _angular_max_speed, time_ms - half_time, false);  
+    _publish_acceleration(0.0, _angular_low_speed, half_time, true);  
+    _publish_acceleration(0.0, _angular_low_speed, time_ms - half_time, false);  
   } // 完整的加速、穩定、減速階段
   else {
     int steady_time = time_ms - _angular_acclearation_time_ms - _angular_deceleration_time_ms;
